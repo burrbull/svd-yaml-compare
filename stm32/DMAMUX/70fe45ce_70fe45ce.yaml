@@ -1,0 +1,601 @@
+---
+- register:
+    name: C0CR
+    displayName: C0CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C1CR
+    displayName: C1CR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C2CR
+    displayName: C2CR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C3CR
+    displayName: C3CR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C4CR
+    displayName: C4CR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C5CR
+    displayName: C5CR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C6CR
+    displayName: C6CR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C7CR
+    displayName: C7CR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C8CR
+    displayName: C8CR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C9CR
+    displayName: C9CR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C10CR
+    displayName: C10CR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C11CR
+    displayName: C11CR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C12CR
+    displayName: C12CR
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C13CR
+    displayName: C13CR
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C14CR
+    displayName: C14CR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: C15CR
+    displayName: C15CR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 7
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SOF
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CFR
+    displayName: CFR
+    addressOffset: 132
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CSOF
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: RG0CR
+    displayName: RG0CR
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIG_ID
+        bitOffset: 0
+        bitWidth: 5
+      - name: OIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: GE
+        bitOffset: 16
+        bitWidth: 1
+      - name: GPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: GNBREQ
+        bitOffset: 19
+        bitWidth: 5
+- register:
+    name: RG1CR
+    displayName: RG1CR
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIG_ID
+        bitOffset: 0
+        bitWidth: 5
+      - name: OIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: GE
+        bitOffset: 16
+        bitWidth: 1
+      - name: GPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: GNBREQ
+        bitOffset: 19
+        bitWidth: 5
+- register:
+    name: RG2CR
+    displayName: RG2CR
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIG_ID
+        bitOffset: 0
+        bitWidth: 5
+      - name: OIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: GE
+        bitOffset: 16
+        bitWidth: 1
+      - name: GPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: GNBREQ
+        bitOffset: 19
+        bitWidth: 5
+- register:
+    name: RG3CR
+    displayName: RG3CR
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIG_ID
+        bitOffset: 0
+        bitWidth: 5
+      - name: OIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: GE
+        bitOffset: 16
+        bitWidth: 1
+      - name: GPOL
+        bitOffset: 17
+        bitWidth: 2
+      - name: GNBREQ
+        bitOffset: 19
+        bitWidth: 5
+- register:
+    name: RGSR
+    displayName: RGSR
+    addressOffset: 320
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: OF
+        bitOffset: 0
+        bitWidth: 4
+- register:
+    name: RGCFR
+    displayName: RGCFR
+    addressOffset: 324
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: COF
+        bitOffset: 0
+        bitWidth: 4

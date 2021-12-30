@@ -1,0 +1,100 @@
+---
+- register:
+    name: KR
+    displayName: KR
+    addressOffset: 0
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 16
+        enumeratedValues:
+          - name: KEY
+            usage: read-write
+            values:
+              - name: Enable
+                value: 21845
+              - name: Reset
+                value: 43690
+              - name: Start
+                value: 52428
+- register:
+    name: PR
+    displayName: PR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PR
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: PR
+            usage: read-write
+            values:
+              - name: DivideBy4
+                value: 0
+              - name: DivideBy8
+                value: 1
+              - name: DivideBy16
+                value: 2
+              - name: DivideBy32
+                value: 3
+              - name: DivideBy64
+                value: 4
+              - name: DivideBy128
+                value: 5
+              - name: DivideBy256
+                value: 6
+              - name: DivideBy256bis
+                value: 7
+- register:
+    name: RLR
+    displayName: RLR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 4095
+    fields:
+      - name: RL
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PVU
+        bitOffset: 0
+        bitWidth: 1
+      - name: RVU
+        bitOffset: 1
+        bitWidth: 1
+      - name: WVU
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: WINR
+    displayName: WINR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 4095
+    fields:
+      - name: WIN
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4095

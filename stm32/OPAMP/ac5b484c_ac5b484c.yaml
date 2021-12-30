@@ -1,0 +1,142 @@
+---
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 65793
+    fields:
+      - name: OPA1PD
+        bitOffset: 0
+        bitWidth: 1
+      - name: S3SEL1
+        bitOffset: 1
+        bitWidth: 1
+      - name: S4SEL1
+        bitOffset: 2
+        bitWidth: 1
+      - name: S5SEL1
+        bitOffset: 3
+        bitWidth: 1
+      - name: S6SEL1
+        bitOffset: 4
+        bitWidth: 1
+      - name: OPA1CAL_L
+        bitOffset: 5
+        bitWidth: 1
+      - name: OPA1CAL_H
+        bitOffset: 6
+        bitWidth: 1
+      - name: OPA1LPM
+        bitOffset: 7
+        bitWidth: 1
+      - name: OPA2PD
+        bitOffset: 8
+        bitWidth: 1
+      - name: S3SEL2
+        bitOffset: 9
+        bitWidth: 1
+      - name: S4SEL2
+        bitOffset: 10
+        bitWidth: 1
+      - name: S5SEL2
+        bitOffset: 11
+        bitWidth: 1
+      - name: S6SEL2
+        bitOffset: 12
+        bitWidth: 1
+      - name: OPA2CAL_L
+        bitOffset: 13
+        bitWidth: 1
+      - name: OPA2CAL_H
+        bitOffset: 14
+        bitWidth: 1
+      - name: OPA2LPM
+        bitOffset: 15
+        bitWidth: 1
+      - name: OPA3PD
+        bitOffset: 16
+        bitWidth: 1
+      - name: S3SEL3
+        bitOffset: 17
+        bitWidth: 1
+      - name: S4SEL3
+        bitOffset: 18
+        bitWidth: 1
+      - name: S5SEL3
+        bitOffset: 19
+        bitWidth: 1
+      - name: S6SEL3
+        bitOffset: 20
+        bitWidth: 1
+      - name: OPA3CAL_L
+        bitOffset: 21
+        bitWidth: 1
+      - name: OPA3CAL_H
+        bitOffset: 22
+        bitWidth: 1
+      - name: OPA3LPM
+        bitOffset: 23
+        bitWidth: 1
+      - name: ANAWSEL1
+        bitOffset: 24
+        bitWidth: 1
+      - name: ANAWSEL2
+        bitOffset: 25
+        bitWidth: 1
+      - name: ANAWSEL3
+        bitOffset: 26
+        bitWidth: 1
+      - name: S7SEL2
+        bitOffset: 27
+        bitWidth: 1
+      - name: AOP_RANGE
+        bitOffset: 28
+        bitWidth: 1
+      - name: OPA1CALOUT
+        bitOffset: 29
+        bitWidth: 1
+      - name: OPA2CALOUT
+        bitOffset: 30
+        bitWidth: 1
+      - name: OPA3CALOUT
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: OTR
+    displayName: OTR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AO1_OPT_OFFSET_TRIM
+        bitOffset: 0
+        bitWidth: 10
+      - name: AO2_OPT_OFFSET_TRIM
+        bitOffset: 10
+        bitWidth: 10
+      - name: AO3_OPT_OFFSET_TRIM
+        bitOffset: 20
+        bitWidth: 10
+      - name: OT_USER
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: LPOTR
+    displayName: LPOTR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AO1_OPT_OFFSET_TRIM_LP
+        bitOffset: 0
+        bitWidth: 10
+      - name: AO2_OPT_OFFSET_TRIM_LP
+        bitOffset: 10
+        bitWidth: 10
+      - name: AO3_OPT_OFFSET_TRIM_LP
+        bitOffset: 20
+        bitWidth: 10

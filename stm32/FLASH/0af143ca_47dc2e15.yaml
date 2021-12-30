@@ -1,0 +1,168 @@
+---
+- register:
+    name: ACR
+    displayName: ACR
+    addressOffset: 0
+    size: 32
+    resetValue: 48
+    fields:
+      - name: LATENCY
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: LATENCY
+            usage: read-write
+            values:
+              - name: WS0
+                value: 0
+              - name: WS1
+                value: 1
+              - name: WS2
+                value: 2
+      - name: HLFCYA
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: PRFTBE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: PRFTBS
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+- register:
+    name: KEYR
+    displayName: KEYR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: OPTKEYR
+    displayName: OPTKEYR
+    addressOffset: 8
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: OPTKEY
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 12
+    size: 32
+    resetValue: 0
+    fields:
+      - name: BSY
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: PGERR
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: WRPRTERR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: EOP
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 128
+    fields:
+      - name: PG
+        bitOffset: 0
+        bitWidth: 1
+      - name: PER
+        bitOffset: 1
+        bitWidth: 1
+      - name: MER
+        bitOffset: 2
+        bitWidth: 1
+      - name: OPTPG
+        bitOffset: 4
+        bitWidth: 1
+      - name: OPTER
+        bitOffset: 5
+        bitWidth: 1
+      - name: STRT
+        bitOffset: 6
+        bitWidth: 1
+      - name: LOCK
+        bitOffset: 7
+        bitWidth: 1
+      - name: OPTWRE
+        bitOffset: 9
+        bitWidth: 1
+      - name: ERRIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: EOPIE
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: AR
+    displayName: AR
+    addressOffset: 20
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: FAR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: OBR
+    displayName: OBR
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 67108860
+    fields:
+      - name: OPTERR
+        bitOffset: 0
+        bitWidth: 1
+      - name: RDPRT
+        bitOffset: 1
+        bitWidth: 1
+      - name: WDG_SW
+        bitOffset: 2
+        bitWidth: 1
+      - name: nRST_STOP
+        bitOffset: 3
+        bitWidth: 1
+      - name: nRST_STDBY
+        bitOffset: 4
+        bitWidth: 1
+      - name: Data0
+        bitOffset: 10
+        bitWidth: 8
+      - name: Data1
+        bitOffset: 18
+        bitWidth: 8
+- register:
+    name: WRPR
+    displayName: WRPR
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 4294967295
+    fields:
+      - name: WRP
+        bitOffset: 0
+        bitWidth: 32

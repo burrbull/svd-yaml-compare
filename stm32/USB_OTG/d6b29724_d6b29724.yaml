@@ -1,0 +1,1036 @@
+---
+- register:
+    name: FS_DCFG
+    displayName: FS_DCFG
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 35651584
+    fields:
+      - name: DSPD
+        bitOffset: 0
+        bitWidth: 2
+      - name: NZLSOHSK
+        bitOffset: 2
+        bitWidth: 1
+      - name: DAD
+        bitOffset: 4
+        bitWidth: 7
+      - name: PFIVL
+        bitOffset: 11
+        bitWidth: 2
+- register:
+    name: FS_DCTL
+    displayName: FS_DCTL
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: RWUSIG
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: SDIS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: GINSTS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+      - name: GONSTS
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+      - name: TCTL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: SGINAK
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: CGINAK
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: SGONAK
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: CGONAK
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: POPRGDNE
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+- register:
+    name: FS_DSTS
+    displayName: FS_DSTS
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 16
+    fields:
+      - name: SUSPSTS
+        bitOffset: 0
+        bitWidth: 1
+      - name: ENUMSPD
+        bitOffset: 1
+        bitWidth: 2
+      - name: EERR
+        bitOffset: 3
+        bitWidth: 1
+      - name: FNSOF
+        bitOffset: 8
+        bitWidth: 14
+- register:
+    name: FS_DIEPMSK
+    displayName: FS_DIEPMSK
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDM
+        bitOffset: 1
+        bitWidth: 1
+      - name: TOM
+        bitOffset: 3
+        bitWidth: 1
+      - name: ITTXFEMSK
+        bitOffset: 4
+        bitWidth: 1
+      - name: INEPNMM
+        bitOffset: 5
+        bitWidth: 1
+      - name: INEPNEM
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: FS_DOEPMSK
+    displayName: FS_DOEPMSK
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDM
+        bitOffset: 1
+        bitWidth: 1
+      - name: STUPM
+        bitOffset: 3
+        bitWidth: 1
+      - name: OTEPDM
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: FS_DAINT
+    displayName: FS_DAINT
+    addressOffset: 24
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: IEPINT
+        bitOffset: 0
+        bitWidth: 16
+      - name: OEPINT
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: FS_DAINTMSK
+    displayName: FS_DAINTMSK
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IEPM
+        bitOffset: 0
+        bitWidth: 16
+      - name: OEPINT
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: DVBUSDIS
+    displayName: DVBUSDIS
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 6103
+    fields:
+      - name: VBUSDT
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DVBUSPULSE
+    displayName: DVBUSPULSE
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 1464
+    fields:
+      - name: DVBUSP
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: DIEPEMPMSK
+    displayName: DIEPEMPMSK
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INEPTXFEM
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: FS_DIEPCTL0
+    displayName: FS_DIEPCTL0
+    addressOffset: 256
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-only
+      - name: STALL
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: TXFNUM
+        bitOffset: 22
+        bitWidth: 4
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: DIEPINT0
+    displayName: DIEPINT0
+    addressOffset: 264
+    size: 32
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TOC
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ITTXFE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: INEPNE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: TXFE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+- register:
+    name: DIEPTSIZ0
+    displayName: DIEPTSIZ0
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 7
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 2
+- register:
+    name: DTXFSTS0
+    displayName: DTXFSTS0
+    addressOffset: 280
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: INEPTFSAV
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DIEPCTL1
+    displayName: DIEPCTL1
+    addressOffset: 288
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: TXFNUM
+        bitOffset: 22
+        bitWidth: 4
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM_SD1PID
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DIEPINT1
+    displayName: DIEPINT1
+    addressOffset: 296
+    size: 32
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TOC
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ITTXFE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: INEPNE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: TXFE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+- register:
+    name: DIEPTSIZ1
+    displayName: DIEPTSIZ1
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: MCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DTXFSTS1
+    displayName: DTXFSTS1
+    addressOffset: 312
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: INEPTFSAV
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DIEPCTL2
+    displayName: DIEPCTL2
+    addressOffset: 320
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: TXFNUM
+        bitOffset: 22
+        bitWidth: 4
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DIEPINT2
+    displayName: DIEPINT2
+    addressOffset: 328
+    size: 32
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TOC
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ITTXFE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: INEPNE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: TXFE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+- register:
+    name: DIEPTSIZ2
+    displayName: DIEPTSIZ2
+    addressOffset: 336
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: MCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DTXFSTS2
+    displayName: DTXFSTS2
+    addressOffset: 344
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: INEPTFSAV
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DIEPCTL3
+    displayName: DIEPCTL3
+    addressOffset: 352
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: TXFNUM
+        bitOffset: 22
+        bitWidth: 4
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DIEPINT3
+    displayName: DIEPINT3
+    addressOffset: 360
+    size: 32
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TOC
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ITTXFE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: INEPNE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: TXFE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+- register:
+    name: DIEPTSIZ3
+    displayName: DIEPTSIZ3
+    addressOffset: 368
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: MCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DTXFSTS3
+    displayName: DTXFSTS3
+    addressOffset: 376
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: INEPTFSAV
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DOEPCTL0
+    displayName: DOEPCTL0
+    addressOffset: 768
+    size: 32
+    resetValue: 32768
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 2
+        access: read-only
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-only
+      - name: SNPM
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: write-only
+- register:
+    name: DOEPINT0
+    displayName: DOEPINT0
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+      - name: STUP
+        bitOffset: 3
+        bitWidth: 1
+      - name: OTEPDIS
+        bitOffset: 4
+        bitWidth: 1
+      - name: B2BSTUP
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: DOEPTSIZ0
+    displayName: DOEPTSIZ0
+    addressOffset: 784
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 7
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 1
+      - name: STUPCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DOEPCTL1
+    displayName: DOEPCTL1
+    addressOffset: 800
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: SNPM
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DOEPINT1
+    displayName: DOEPINT1
+    addressOffset: 808
+    size: 32
+    access: read-write
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+      - name: STUP
+        bitOffset: 3
+        bitWidth: 1
+      - name: OTEPDIS
+        bitOffset: 4
+        bitWidth: 1
+      - name: B2BSTUP
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: DOEPTSIZ1
+    displayName: DOEPTSIZ1
+    addressOffset: 816
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: RXDPID_STUPCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DOEPCTL2
+    displayName: DOEPCTL2
+    addressOffset: 832
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: SNPM
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DOEPINT2
+    displayName: DOEPINT2
+    addressOffset: 840
+    size: 32
+    access: read-write
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+      - name: STUP
+        bitOffset: 3
+        bitWidth: 1
+      - name: OTEPDIS
+        bitOffset: 4
+        bitWidth: 1
+      - name: B2BSTUP
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: DOEPTSIZ2
+    displayName: DOEPTSIZ2
+    addressOffset: 848
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: RXDPID_STUPCNT
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: DOEPCTL3
+    displayName: DOEPCTL3
+    addressOffset: 864
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+        access: read-write
+      - name: USBAEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EONUM_DPID
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: NAKSTS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: SNPM
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: Stall
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: CNAK
+        bitOffset: 26
+        bitWidth: 1
+        access: write-only
+      - name: SNAK
+        bitOffset: 27
+        bitWidth: 1
+        access: write-only
+      - name: SD0PID_SEVNFRM
+        bitOffset: 28
+        bitWidth: 1
+        access: write-only
+      - name: SODDFRM
+        bitOffset: 29
+        bitWidth: 1
+        access: write-only
+      - name: EPDIS
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: EPENA
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DOEPINT3
+    displayName: DOEPINT3
+    addressOffset: 872
+    size: 32
+    access: read-write
+    resetValue: 128
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: EPDISD
+        bitOffset: 1
+        bitWidth: 1
+      - name: STUP
+        bitOffset: 3
+        bitWidth: 1
+      - name: OTEPDIS
+        bitOffset: 4
+        bitWidth: 1
+      - name: B2BSTUP
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: DOEPTSIZ3
+    displayName: DOEPTSIZ3
+    addressOffset: 880
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: RXDPID_STUPCNT
+        bitOffset: 29
+        bitWidth: 2

@@ -1,0 +1,518 @@
+---
+- register:
+    name: ACR
+    addressOffset: 0
+    resetValue: 55
+    fields:
+      - name: LATENCY
+        bitOffset: 0
+        bitWidth: 4
+      - name: WRHIGHFREQ
+        bitOffset: 4
+        bitWidth: 2
+- cluster:
+    dim: 2
+    dimIncrement: 256
+    dimIndex:
+      - "1"
+      - "2"
+    name: BANK%s
+    addressOffset: 4
+    children:
+      - register:
+          name: KEYR
+          addressOffset: 0
+          access: write-only
+          resetValue: 0
+          fields:
+            - name: KEYR
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: CR
+          addressOffset: 8
+          resetValue: 49
+          fields:
+            - name: LOCK
+              bitOffset: 0
+              bitWidth: 1
+            - name: PG
+              bitOffset: 1
+              bitWidth: 1
+            - name: SER
+              bitOffset: 2
+              bitWidth: 1
+            - name: BER
+              bitOffset: 3
+              bitWidth: 1
+            - name: PSIZE
+              bitOffset: 4
+              bitWidth: 2
+            - name: FW
+              bitOffset: 6
+              bitWidth: 1
+            - name: START
+              bitOffset: 7
+              bitWidth: 1
+            - name: SNB
+              bitOffset: 8
+              bitWidth: 3
+            - name: CRC_EN
+              bitOffset: 15
+              bitWidth: 1
+            - name: EOPIE
+              bitOffset: 16
+              bitWidth: 1
+            - name: WRPERRIE
+              bitOffset: 17
+              bitWidth: 1
+            - name: PGSERRIE
+              bitOffset: 18
+              bitWidth: 1
+            - name: STRBERRIE
+              bitOffset: 19
+              bitWidth: 1
+            - name: INCERRIE
+              bitOffset: 21
+              bitWidth: 1
+            - name: OPERRIE
+              bitOffset: 22
+              bitWidth: 1
+            - name: RDPERRIE
+              bitOffset: 23
+              bitWidth: 1
+            - name: RDSERRIE
+              bitOffset: 24
+              bitWidth: 1
+            - name: SNECCERRIE
+              bitOffset: 25
+              bitWidth: 1
+            - name: DBECCERRIE
+              bitOffset: 26
+              bitWidth: 1
+            - name: CRCENDIE
+              bitOffset: 27
+              bitWidth: 1
+            - name: CRCRDERRIE
+              bitOffset: 28
+              bitWidth: 1
+      - register:
+          name: SR
+          addressOffset: 12
+          resetValue: 0
+          fields:
+            - name: BSY
+              bitOffset: 0
+              bitWidth: 1
+            - name: WBNE
+              bitOffset: 1
+              bitWidth: 1
+            - name: QW
+              bitOffset: 2
+              bitWidth: 1
+            - name: CRC_BUSY
+              bitOffset: 3
+              bitWidth: 1
+            - name: EOP
+              bitOffset: 16
+              bitWidth: 1
+            - name: WRPERR
+              bitOffset: 17
+              bitWidth: 1
+            - name: PGSERR
+              bitOffset: 18
+              bitWidth: 1
+            - name: STRBERR
+              bitOffset: 19
+              bitWidth: 1
+            - name: INCERR
+              bitOffset: 21
+              bitWidth: 1
+            - name: OPERR
+              bitOffset: 22
+              bitWidth: 1
+            - name: RDPERR
+              bitOffset: 23
+              bitWidth: 1
+            - name: RDSERR
+              bitOffset: 24
+              bitWidth: 1
+            - name: SNECCERR
+              bitOffset: 25
+              bitWidth: 1
+            - name: DBECCERR
+              bitOffset: 26
+              bitWidth: 1
+            - name: CRCEND
+              bitOffset: 27
+              bitWidth: 1
+            - name: CRCRDERR
+              bitOffset: 28
+              bitWidth: 1
+      - register:
+          name: CCR
+          addressOffset: 16
+          resetValue: 0
+          fields:
+            - name: CLR_EOP
+              bitOffset: 16
+              bitWidth: 1
+            - name: CLR_WRPERR
+              bitOffset: 17
+              bitWidth: 1
+            - name: CLR_PGSERR
+              bitOffset: 18
+              bitWidth: 1
+            - name: CLR_STRBERR
+              bitOffset: 19
+              bitWidth: 1
+            - name: CLR_INCERR
+              bitOffset: 21
+              bitWidth: 1
+            - name: CLR_OPERR
+              bitOffset: 22
+              bitWidth: 1
+            - name: CLR_RDPERR
+              bitOffset: 23
+              bitWidth: 1
+            - name: CLR_RDSERR
+              bitOffset: 24
+              bitWidth: 1
+            - name: CLR_SNECCERR
+              bitOffset: 25
+              bitWidth: 1
+            - name: CLR_DBECCERR
+              bitOffset: 26
+              bitWidth: 1
+            - name: CLR_CRCEND
+              bitOffset: 27
+              bitWidth: 1
+            - name: CLR_CRCRDERR
+              bitOffset: 28
+              bitWidth: 1
+      - register:
+          name: PRAR_CUR
+          addressOffset: 36
+          resetValue: 0
+          fields:
+            - name: PROT_AREA_START
+              bitOffset: 0
+              bitWidth: 12
+            - name: PROT_AREA_END
+              bitOffset: 16
+              bitWidth: 12
+            - name: DMEP
+              bitOffset: 31
+              bitWidth: 1
+      - register:
+          name: PRAR_PRG
+          addressOffset: 40
+          resetValue: 0
+          fields:
+            - name: PROT_AREA_START
+              bitOffset: 0
+              bitWidth: 12
+            - name: PROT_AREA_END
+              bitOffset: 16
+              bitWidth: 12
+            - name: DMEP
+              bitOffset: 31
+              bitWidth: 1
+      - register:
+          name: SCAR_CUR
+          addressOffset: 44
+          resetValue: 0
+          fields:
+            - name: SEC_AREA_START
+              bitOffset: 0
+              bitWidth: 12
+            - name: SEC_AREA_END
+              bitOffset: 16
+              bitWidth: 12
+            - name: DMES
+              bitOffset: 31
+              bitWidth: 1
+      - register:
+          name: SCAR_PRG
+          addressOffset: 48
+          resetValue: 0
+          fields:
+            - name: SEC_AREA_START
+              bitOffset: 0
+              bitWidth: 12
+            - name: SEC_AREA_END
+              bitOffset: 16
+              bitWidth: 12
+            - name: DMES
+              bitOffset: 31
+              bitWidth: 1
+      - register:
+          name: WPSN_CURR
+          addressOffset: 52
+          resetValue: 0
+          fields:
+            - name: WRPSn
+              bitOffset: 0
+              bitWidth: 8
+      - register:
+          name: WPSN_PRGR
+          addressOffset: 56
+          resetValue: 0
+          fields:
+            - name: WRPSn
+              bitOffset: 0
+              bitWidth: 8
+      - register:
+          name: CRCCR
+          addressOffset: 76
+          resetValue: 1835008
+          fields:
+            - name: CRC_SECT
+              bitOffset: 0
+              bitWidth: 3
+            - name: CRC_BY_SECT
+              bitOffset: 8
+              bitWidth: 1
+            - name: ADD_SECT
+              bitOffset: 9
+              bitWidth: 1
+            - name: CLEAN_SECT
+              bitOffset: 10
+              bitWidth: 1
+            - name: START_CRC
+              bitOffset: 16
+              bitWidth: 1
+            - name: CLEAN_CRC
+              bitOffset: 17
+              bitWidth: 1
+            - name: CRC_BURST
+              bitOffset: 20
+              bitWidth: 2
+            - name: ALL_BANK
+              bitOffset: 22
+              bitWidth: 1
+      - register:
+          name: CRCSADDR
+          addressOffset: 80
+          resetValue: 0
+          fields:
+            - name: CRC_START_ADDR
+              bitOffset: 2
+              bitWidth: 18
+      - register:
+          name: CRCEADDR
+          addressOffset: 84
+          resetValue: 0
+          fields:
+            - name: CRC_END_ADDR
+              bitOffset: 2
+              bitWidth: 18
+      - register:
+          name: FAR
+          addressOffset: 92
+          resetValue: 0
+          fields:
+            - name: FAIL_ECC_ADDR
+              bitOffset: 0
+              bitWidth: 15
+- register:
+    name: OPTKEYR
+    addressOffset: 8
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: OPTKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: OPTCR
+    addressOffset: 24
+    resetValue: 1
+    fields:
+      - name: OPTLOCK
+        bitOffset: 0
+        bitWidth: 1
+      - name: OPTSTART
+        bitOffset: 1
+        bitWidth: 1
+      - name: MER
+        bitOffset: 4
+        bitWidth: 1
+      - name: OPTCHANGEERRIE
+        bitOffset: 30
+        bitWidth: 1
+      - name: SWAP_BANK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: OPTSR_CUR
+    addressOffset: 28
+    resetValue: 0
+    fields:
+      - name: OPT_BUSY
+        bitOffset: 0
+        bitWidth: 1
+      - name: BOR_LEV
+        bitOffset: 2
+        bitWidth: 2
+      - name: IWDG_SW
+        bitOffset: 4
+        bitWidth: 1
+      - name: IWDG2_SW
+        bitOffset: 5
+        bitWidth: 1
+      - name: NRST_STOP_D1
+        bitOffset: 6
+        bitWidth: 1
+      - name: RST_STDY_D1
+        bitOffset: 7
+        bitWidth: 1
+      - name: RDP
+        bitOffset: 8
+        bitWidth: 8
+      - name: IWDG_FZ_STOP
+        bitOffset: 17
+        bitWidth: 1
+      - name: IWDG_FZ_SDBY
+        bitOffset: 18
+        bitWidth: 1
+      - name: ST_RAM_SIZE
+        bitOffset: 19
+        bitWidth: 2
+      - name: SECURITY
+        bitOffset: 21
+        bitWidth: 1
+      - name: BOOT_CM4
+        bitOffset: 22
+        bitWidth: 1
+      - name: BOOT_CM7
+        bitOffset: 23
+        bitWidth: 1
+      - name: NRST_STOP_D2
+        bitOffset: 24
+        bitWidth: 1
+      - name: NRST_STBY_D2
+        bitOffset: 25
+        bitWidth: 1
+      - name: IO_HSLV
+        bitOffset: 29
+        bitWidth: 1
+      - name: OPTCHANGEERR
+        bitOffset: 30
+        bitWidth: 1
+      - name: SWAP_BANK_OPT
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: OPTSR_PRG
+    addressOffset: 32
+    resetValue: 0
+    fields:
+      - name: BOR_LEV
+        bitOffset: 2
+        bitWidth: 2
+      - name: IWDG_SW
+        bitOffset: 4
+        bitWidth: 1
+      - name: IWDG2_SW
+        bitOffset: 5
+        bitWidth: 1
+      - name: NRST_STOP_D1
+        bitOffset: 6
+        bitWidth: 1
+      - name: NRST_STDY_D1
+        bitOffset: 7
+        bitWidth: 1
+      - name: RDP
+        bitOffset: 8
+        bitWidth: 8
+      - name: IWDG_FZ_STOP
+        bitOffset: 17
+        bitWidth: 1
+      - name: IWDG_FZ_SDBY
+        bitOffset: 18
+        bitWidth: 1
+      - name: ST_RAM_SIZE
+        bitOffset: 19
+        bitWidth: 2
+      - name: SECURITY
+        bitOffset: 21
+        bitWidth: 1
+      - name: BOOT_CM4
+        bitOffset: 22
+        bitWidth: 1
+      - name: BOOT_CM7
+        bitOffset: 23
+        bitWidth: 1
+      - name: NRST_STOP_D2
+        bitOffset: 24
+        bitWidth: 1
+      - name: NRST_STBY_D2
+        bitOffset: 25
+        bitWidth: 1
+      - name: IO_HSLV
+        bitOffset: 29
+        bitWidth: 1
+      - name: SWAP_BANK_OPT
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: OPTCCR
+    addressOffset: 36
+    resetValue: 0
+    fields:
+      - name: CLR_OPTCHANGEERR
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: BOOT7_CURR
+    addressOffset: 64
+    resetValue: 0
+    fields:
+      - name: BOOT_CM7_ADD0
+        bitOffset: 0
+        bitWidth: 16
+      - name: BOOT_CM7_ADD1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: BOOT7_PRGR
+    addressOffset: 68
+    resetValue: 0
+    fields:
+      - name: BOOT_CM7_ADD0
+        bitOffset: 0
+        bitWidth: 16
+      - name: BOOT_CM7_ADD1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: BOOT4_CURR
+    addressOffset: 72
+    resetValue: 0
+    fields:
+      - name: BOOT_CM4_ADD0
+        bitOffset: 0
+        bitWidth: 16
+      - name: BOOT_CM4_ADD1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: BOOT4_PRGR
+    addressOffset: 76
+    resetValue: 0
+    fields:
+      - name: BOOT_CM4_ADD0
+        bitOffset: 0
+        bitWidth: 16
+      - name: BOOT_CM4_ADD1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CRCDATAR
+    addressOffset: 92
+    resetValue: 0
+    fields:
+      - name: CRC_DATA
+        bitOffset: 0
+        bitWidth: 32

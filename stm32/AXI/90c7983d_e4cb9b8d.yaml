@@ -1,0 +1,723 @@
+---
+- register:
+    name: PERIPH_ID_4
+    displayName: PERIPH_ID_4
+    addressOffset: 8144
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: JEP106CON
+        bitOffset: 0
+        bitWidth: 4
+      - name: KCOUNT4
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: PERIPH_ID_0
+    displayName: PERIPH_ID_0
+    addressOffset: 8160
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PARTNUM
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: PERIPH_ID_1
+    displayName: PERIPH_ID_1
+    addressOffset: 8164
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PARTNUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: JEP106I
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: PERIPH_ID_2
+    displayName: PERIPH_ID_2
+    addressOffset: 8168
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: JEP106ID
+        bitOffset: 0
+        bitWidth: 3
+      - name: JEDEC
+        bitOffset: 3
+        bitWidth: 1
+      - name: REVISION
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: PERIPH_ID_3
+    displayName: PERIPH_ID_3
+    addressOffset: 8172
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: CUST_MOD_NUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: REV_AND
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: COMP_ID_0
+    displayName: COMP_ID_0
+    addressOffset: 8176
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PREAMBLE
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: COMP_ID_1
+    displayName: COMP_ID_1
+    addressOffset: 8180
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PREAMBLE
+        bitOffset: 0
+        bitWidth: 4
+      - name: CLASS
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: COMP_ID_2
+    displayName: COMP_ID_2
+    addressOffset: 8184
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PREAMBLE
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: COMP_ID_3
+    displayName: COMP_ID_3
+    addressOffset: 8188
+    size: 32
+    access: read-only
+    resetValue: 4
+    fields:
+      - name: PREAMBLE
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: TARG1_FN_MOD_ISS_BM
+    displayName: TARG1_FN_MOD_ISS_BM
+    addressOffset: 8200
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG1_FN_MOD2
+    displayName: TARG1_FN_MOD2
+    addressOffset: 8228
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: BYPASS_MERGE
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: TARG1_FN_MOD_LB
+    displayName: TARG1_FN_MOD_LB
+    addressOffset: 8236
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: FN_MOD_LB
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: TARG1_FN_MOD
+    displayName: TARG1_FN_MOD
+    addressOffset: 8456
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG2_FN_MOD_ISS_BM
+    displayName: TARG2_FN_MOD_ISS_BM
+    addressOffset: 12296
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG2_FN_MOD2
+    displayName: TARG2_FN_MOD2
+    addressOffset: 12324
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: BYPASS_MERGE
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: TARG2_FN_MOD_LB
+    displayName: TARG2_FN_MOD_LB
+    addressOffset: 12332
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: FN_MOD_LB
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: TARG2_FN_MOD
+    displayName: TARG2_FN_MOD
+    addressOffset: 12552
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG3_FN_MOD_ISS_BM
+    displayName: TARG3_FN_MOD_ISS_BM
+    addressOffset: 16392
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG4_FN_MOD_ISS_BM
+    displayName: TARG4_FN_MOD_ISS_BM
+    addressOffset: 20488
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG5_FN_MOD_ISS_BM
+    displayName: TARG5_FN_MOD_ISS_BM
+    addressOffset: 24584
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG6_FN_MOD_ISS_BM
+    displayName: TARG6_FN_MOD_ISS_BM
+    addressOffset: 28680
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG7_FN_MOD_ISS_BM
+    displayName: TARG7_FN_MOD_ISS_BM
+    addressOffset: 32780
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: TARG7_FN_MOD2
+    displayName: TARG7_FN_MOD2
+    addressOffset: 32804
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: BYPASS_MERGE
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: TARG7_FN_MOD
+    displayName: TARG7_FN_MOD
+    addressOffset: 33032
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: INI1_FN_MOD2
+    displayName: INI1_FN_MOD2
+    addressOffset: 270372
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: BYPASS_MERGE
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: INI1_FN_MOD_AHB
+    displayName: INI1_FN_MOD_AHB
+    addressOffset: 270376
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: RD_INC_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WR_INC_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: INI1_READ_QOS
+    displayName: INI1_READ_QOS
+    addressOffset: 270592
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI1_WRITE_QOS
+    displayName: INI1_WRITE_QOS
+    addressOffset: 270596
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI1_FN_MOD
+    displayName: INI1_FN_MOD
+    addressOffset: 270600
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+- register:
+    name: INI2_READ_QOS
+    displayName: INI2_READ_QOS
+    addressOffset: 274688
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI2_WRITE_QOS
+    displayName: INI2_WRITE_QOS
+    addressOffset: 274692
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI2_FN_MOD
+    displayName: INI2_FN_MOD
+    addressOffset: 274696
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+- register:
+    name: INI3_FN_MOD2
+    displayName: INI3_FN_MOD2
+    addressOffset: 278564
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: BYPASS_MERGE
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: INI3_FN_MOD_AHB
+    displayName: INI3_FN_MOD_AHB
+    addressOffset: 278568
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: RD_INC_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+      - name: WR_INC_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: INI3_READ_QOS
+    displayName: INI3_READ_QOS
+    addressOffset: 278784
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI3_WRITE_QOS
+    displayName: INI3_WRITE_QOS
+    addressOffset: 278788
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI3_FN_MOD
+    displayName: INI3_FN_MOD
+    addressOffset: 278792
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+- register:
+    name: INI4_READ_QOS
+    displayName: INI4_READ_QOS
+    addressOffset: 282880
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI4_WRITE_QOS
+    displayName: INI4_WRITE_QOS
+    addressOffset: 282884
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI4_FN_MOD
+    displayName: INI4_FN_MOD
+    addressOffset: 282888
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+- register:
+    name: INI5_READ_QOS
+    displayName: INI5_READ_QOS
+    addressOffset: 286976
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI5_WRITE_QOS
+    displayName: INI5_WRITE_QOS
+    addressOffset: 286980
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI5_FN_MOD
+    displayName: INI5_FN_MOD
+    addressOffset: 286984
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+- register:
+    name: INI6_READ_QOS
+    displayName: INI6_READ_QOS
+    addressOffset: 291072
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AR_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI6_WRITE_QOS
+    displayName: INI6_WRITE_QOS
+    addressOffset: 291076
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: AW_QOS
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: INI6_FN_MOD
+    displayName: INI6_FN_MOD
+    addressOffset: 291080
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: READ_ISS_OVERRIDE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: READ_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1
+      - name: WRITE_ISS_OVERRIDE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRITE_ISS_OVERRIDE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Force1
+                value: 1

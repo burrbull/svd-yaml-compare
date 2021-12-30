@@ -1,0 +1,543 @@
+---
+- register:
+    name: POWER
+    displayName: POWER
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PWRCTRL
+        bitOffset: 0
+        bitWidth: 2
+      - name: VSWITCH
+        bitOffset: 2
+        bitWidth: 1
+      - name: VSWITCHEN
+        bitOffset: 3
+        bitWidth: 1
+      - name: DIRPOL
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: CLKCR
+    displayName: CLKCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLKDIV
+        bitOffset: 0
+        bitWidth: 10
+      - name: PWRSAV
+        bitOffset: 12
+        bitWidth: 1
+      - name: WIDBUS
+        bitOffset: 14
+        bitWidth: 2
+      - name: NEGEDGE
+        bitOffset: 16
+        bitWidth: 1
+      - name: HWFC_EN
+        bitOffset: 17
+        bitWidth: 1
+      - name: DDR
+        bitOffset: 18
+        bitWidth: 1
+      - name: BUSSPEED
+        bitOffset: 19
+        bitWidth: 1
+      - name: SELCLKRX
+        bitOffset: 20
+        bitWidth: 2
+- register:
+    name: ARGR
+    displayName: ARGR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CMDARG
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: CMDR
+    displayName: CMDR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CMDINDEX
+        bitOffset: 0
+        bitWidth: 6
+      - name: CMDTRANS
+        bitOffset: 6
+        bitWidth: 1
+      - name: CMDSTOP
+        bitOffset: 7
+        bitWidth: 1
+      - name: WAITRESP
+        bitOffset: 8
+        bitWidth: 2
+      - name: WAITINT
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITPEND
+        bitOffset: 11
+        bitWidth: 1
+      - name: CPSMEN
+        bitOffset: 12
+        bitWidth: 1
+      - name: DTHOLD
+        bitOffset: 13
+        bitWidth: 1
+      - name: BOOTMODE
+        bitOffset: 14
+        bitWidth: 1
+      - name: BOOTEN
+        bitOffset: 15
+        bitWidth: 1
+      - name: CMDSUSPEND
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: RESPCMDR
+    displayName: RESPCMDR
+    addressOffset: 16
+    size: 32
+    access: read-only
+    resetValue: 2747653377
+    fields:
+      - name: RESPCMD
+        bitOffset: 0
+        bitWidth: 6
+- register:
+    name: RESP1R
+    displayName: RESP1R
+    addressOffset: 20
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CARDSTATUS1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: RESP2R
+    displayName: RESP2R
+    addressOffset: 24
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CARDSTATUS2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: RESP3R
+    displayName: RESP3R
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CARDSTATUS3
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: RESP4R
+    displayName: RESP4R
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CARDSTATUS4
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DTIMER
+    displayName: DTIMER
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DATATIME
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DLENR
+    displayName: DLENR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DATALENGTH
+        bitOffset: 0
+        bitWidth: 25
+- register:
+    name: DCTRL
+    displayName: DCTRL
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: DTDIR
+        bitOffset: 1
+        bitWidth: 1
+      - name: DTMODE
+        bitOffset: 2
+        bitWidth: 2
+      - name: DBLOCKSIZE
+        bitOffset: 4
+        bitWidth: 4
+      - name: RWSTART
+        bitOffset: 8
+        bitWidth: 1
+      - name: RWSTOP
+        bitOffset: 9
+        bitWidth: 1
+      - name: RWMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: SDIOEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: BOOTACKEN
+        bitOffset: 12
+        bitWidth: 1
+      - name: FIFORST
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: DCNTR
+    displayName: DCNTR
+    addressOffset: 48
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DATACOUNT
+        bitOffset: 0
+        bitWidth: 25
+- register:
+    name: STAR
+    displayName: STAR
+    addressOffset: 52
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CCRCFAIL
+        bitOffset: 0
+        bitWidth: 1
+      - name: DCRCFAIL
+        bitOffset: 1
+        bitWidth: 1
+      - name: CTIMEOUT
+        bitOffset: 2
+        bitWidth: 1
+      - name: DTIMEOUT
+        bitOffset: 3
+        bitWidth: 1
+      - name: TXUNDERR
+        bitOffset: 4
+        bitWidth: 1
+      - name: RXOVERR
+        bitOffset: 5
+        bitWidth: 1
+      - name: CMDREND
+        bitOffset: 6
+        bitWidth: 1
+      - name: CMDSENT
+        bitOffset: 7
+        bitWidth: 1
+      - name: DATAEND
+        bitOffset: 8
+        bitWidth: 1
+      - name: DHOLD
+        bitOffset: 9
+        bitWidth: 1
+      - name: DBCKEND
+        bitOffset: 10
+        bitWidth: 1
+      - name: DABORT
+        bitOffset: 11
+        bitWidth: 1
+      - name: DPSMACT
+        bitOffset: 12
+        bitWidth: 1
+      - name: CPSMACT
+        bitOffset: 13
+        bitWidth: 1
+      - name: TXFIFOHE
+        bitOffset: 14
+        bitWidth: 1
+      - name: RXFIFOHF
+        bitOffset: 15
+        bitWidth: 1
+      - name: TXFIFOF
+        bitOffset: 16
+        bitWidth: 1
+      - name: RXFIFOF
+        bitOffset: 17
+        bitWidth: 1
+      - name: TXFIFOE
+        bitOffset: 18
+        bitWidth: 1
+      - name: RXFIFOE
+        bitOffset: 19
+        bitWidth: 1
+      - name: BUSYD0
+        bitOffset: 20
+        bitWidth: 1
+      - name: BUSYD0END
+        bitOffset: 21
+        bitWidth: 1
+      - name: SDIOIT
+        bitOffset: 22
+        bitWidth: 1
+      - name: ACKFAIL
+        bitOffset: 23
+        bitWidth: 1
+      - name: ACKTIMEOUT
+        bitOffset: 24
+        bitWidth: 1
+      - name: VSWEND
+        bitOffset: 25
+        bitWidth: 1
+      - name: CKSTOP
+        bitOffset: 26
+        bitWidth: 1
+      - name: IDMATE
+        bitOffset: 27
+        bitWidth: 1
+      - name: IDMABTC
+        bitOffset: 28
+        bitWidth: 1
+- register:
+    name: ICR
+    displayName: ICR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCRCFAILC
+        bitOffset: 0
+        bitWidth: 1
+      - name: DCRCFAILC
+        bitOffset: 1
+        bitWidth: 1
+      - name: CTIMEOUTC
+        bitOffset: 2
+        bitWidth: 1
+      - name: DTIMEOUTC
+        bitOffset: 3
+        bitWidth: 1
+      - name: TXUNDERRC
+        bitOffset: 4
+        bitWidth: 1
+      - name: RXOVERRC
+        bitOffset: 5
+        bitWidth: 1
+      - name: CMDRENDC
+        bitOffset: 6
+        bitWidth: 1
+      - name: CMDSENTC
+        bitOffset: 7
+        bitWidth: 1
+      - name: DATAENDC
+        bitOffset: 8
+        bitWidth: 1
+      - name: DHOLDC
+        bitOffset: 9
+        bitWidth: 1
+      - name: DBCKENDC
+        bitOffset: 10
+        bitWidth: 1
+      - name: DABORTC
+        bitOffset: 11
+        bitWidth: 1
+      - name: BUSYD0ENDC
+        bitOffset: 21
+        bitWidth: 1
+      - name: SDIOITC
+        bitOffset: 22
+        bitWidth: 1
+      - name: ACKFAILC
+        bitOffset: 23
+        bitWidth: 1
+      - name: ACKTIMEOUTC
+        bitOffset: 24
+        bitWidth: 1
+      - name: VSWENDC
+        bitOffset: 25
+        bitWidth: 1
+      - name: CKSTOPC
+        bitOffset: 26
+        bitWidth: 1
+      - name: IDMATEC
+        bitOffset: 27
+        bitWidth: 1
+      - name: IDMABTCC
+        bitOffset: 28
+        bitWidth: 1
+- register:
+    name: MASKR
+    displayName: MASKR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCRCFAILIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: DCRCFAILIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: CTIMEOUTIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: DTIMEOUTIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: TXUNDERRIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: RXOVERRIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: CMDRENDIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: CMDSENTIE
+        bitOffset: 7
+        bitWidth: 1
+      - name: DATAENDIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: DHOLDIE
+        bitOffset: 9
+        bitWidth: 1
+      - name: DBCKENDIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: DABORTIE
+        bitOffset: 11
+        bitWidth: 1
+      - name: TXFIFOHEIE
+        bitOffset: 14
+        bitWidth: 1
+      - name: RXFIFOHFIE
+        bitOffset: 15
+        bitWidth: 1
+      - name: RXFIFOFIE
+        bitOffset: 17
+        bitWidth: 1
+      - name: TXFIFOEIE
+        bitOffset: 18
+        bitWidth: 1
+      - name: BUSYD0ENDIE
+        bitOffset: 21
+        bitWidth: 1
+      - name: SDIOITIE
+        bitOffset: 22
+        bitWidth: 1
+      - name: ACKFAILIE
+        bitOffset: 23
+        bitWidth: 1
+      - name: ACKTIMEOUTIE
+        bitOffset: 24
+        bitWidth: 1
+      - name: VSWENDIE
+        bitOffset: 25
+        bitWidth: 1
+      - name: CKSTOPIE
+        bitOffset: 26
+        bitWidth: 1
+      - name: IDMABTCIE
+        bitOffset: 28
+        bitWidth: 1
+- register:
+    name: ACKTIMER
+    displayName: ACKTIMER
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ACKTIME
+        bitOffset: 0
+        bitWidth: 25
+- register:
+    name: IDMACTRLR
+    displayName: IDMACTRLR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IDMAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: IDMABMODE
+        bitOffset: 1
+        bitWidth: 1
+      - name: IDMABACT
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: IDMABSIZER
+    displayName: IDMABSIZER
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IDMABNDT
+        bitOffset: 5
+        bitWidth: 8
+- register:
+    name: IDMABASE0R
+    displayName: IDMABASE0R
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IDMABASE0
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IDMABASE1R
+    displayName: IDMABASE1R
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IDMABASE1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: FIFOR
+    displayName: FIFOR
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FIFODATA
+        bitOffset: 0
+        bitWidth: 32

@@ -1,0 +1,202 @@
+---
+- register:
+    name: MTLOMR
+    displayName: MTLOMR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTXSTS
+        bitOffset: 1
+        bitWidth: 1
+      - name: CNTPRST
+        bitOffset: 8
+        bitWidth: 1
+      - name: CNTCLR
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: MTLISR
+    displayName: MTLISR
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: Q0IS
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: MTLTxQOMR
+    displayName: MTLTxQOMR
+    addressOffset: 256
+    size: 32
+    resetValue: 458760
+    fields:
+      - name: FTQ
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: TSF
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TXQEN
+        bitOffset: 2
+        bitWidth: 2
+        access: read-only
+      - name: TTC
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: TQS
+        bitOffset: 16
+        bitWidth: 3
+        access: read-write
+- register:
+    name: MTLTxQUR
+    displayName: MTLTxQUR
+    addressOffset: 260
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: UFFRMCNT
+        bitOffset: 0
+        bitWidth: 11
+      - name: UFCNTOVF
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: MTLTxQDR
+    displayName: MTLTxQDR
+    addressOffset: 264
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TXQPAUSED
+        bitOffset: 0
+        bitWidth: 1
+      - name: TRCSTS
+        bitOffset: 1
+        bitWidth: 2
+      - name: TWCSTS
+        bitOffset: 3
+        bitWidth: 1
+      - name: TXQSTS
+        bitOffset: 4
+        bitWidth: 1
+      - name: TXSTSFSTS
+        bitOffset: 5
+        bitWidth: 1
+      - name: PTXQ
+        bitOffset: 16
+        bitWidth: 3
+      - name: STXSTSF
+        bitOffset: 20
+        bitWidth: 3
+- register:
+    name: MTLQICSR
+    displayName: MTLQICSR
+    addressOffset: 300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TXUNFIS
+        bitOffset: 0
+        bitWidth: 1
+      - name: TXUIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: RXOVFIS
+        bitOffset: 16
+        bitWidth: 1
+      - name: RXOIE
+        bitOffset: 24
+        bitWidth: 1
+- register:
+    name: MTLRxQOMR
+    displayName: MTLRxQOMR
+    addressOffset: 304
+    size: 32
+    resetValue: 7340032
+    fields:
+      - name: RTC
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      - name: FUP
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: FEP
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: RSF
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: DIS_TCP_EF
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: EHFC
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: RFA
+        bitOffset: 8
+        bitWidth: 3
+        access: read-write
+      - name: RFD
+        bitOffset: 14
+        bitWidth: 3
+        access: read-write
+      - name: RQS
+        bitOffset: 20
+        bitWidth: 3
+        access: read-only
+- register:
+    name: MTLRxQMPOCR
+    displayName: MTLRxQMPOCR
+    addressOffset: 308
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: OVFPKTCNT
+        bitOffset: 0
+        bitWidth: 11
+      - name: OVFCNTOVF
+        bitOffset: 11
+        bitWidth: 1
+      - name: MISPKTCNT
+        bitOffset: 16
+        bitWidth: 11
+      - name: MISCNTOVF
+        bitOffset: 27
+        bitWidth: 1
+- register:
+    name: MTLRxQDR
+    displayName: MTLRxQDR
+    addressOffset: 312
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RWCSTS
+        bitOffset: 0
+        bitWidth: 1
+      - name: RRCSTS
+        bitOffset: 1
+        bitWidth: 2
+      - name: RXQSTS
+        bitOffset: 4
+        bitWidth: 2
+      - name: PRXQ
+        bitOffset: 16
+        bitWidth: 14

@@ -1,0 +1,192 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: START
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: STARTW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+      - name: MODE
+        bitOffset: 8
+        bitWidth: 6
+        enumeratedValues:
+          - name: MODE
+            usage: read-write
+            values:
+              - name: MontgomeryCompExp
+                value: 0
+              - name: MontgomeryComp
+                value: 1
+              - name: MontgomeryExp
+                value: 2
+              - name: RSA
+                value: 7
+              - name: ModularInv
+                value: 8
+              - name: ArithmeticAdd
+                value: 9
+              - name: ArithmeticSub
+                value: 10
+              - name: ArithmeticMul
+                value: 11
+              - name: ArithmeticComp
+                value: 12
+              - name: ModularRed
+                value: 13
+              - name: ModularAdd
+                value: 14
+              - name: ModularSub
+                value: 15
+              - name: ModularMul
+                value: 16
+              - name: MontgomeryCompScalar
+                value: 32
+              - name: MontgomeryScalar
+                value: 34
+              - name: ECDSASign
+                value: 36
+              - name: ECDSAVerif
+                value: 38
+              - name: Elliptic
+                value: 40
+      - name: PROCENDIE
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: PROCENDIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RAMERRIE
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: RAMERRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ADDRERRIE
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADDRERRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: BUSY
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: BUSY
+            usage: read-write
+            values:
+              - name: Idle
+                value: 0
+              - name: Busy
+                value: 1
+      - name: PROCENDF
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: PROCENDF
+            usage: read-write
+            values:
+              - name: InProgress
+                value: 0
+              - name: Completed
+                value: 1
+      - name: RAMERRF
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: RAMERRF
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+      - name: ADDRERRF
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADDRERRF
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+- register:
+    name: CLRFR
+    displayName: CLRFR
+    addressOffset: 8
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PROCENDFC
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: PROCENDFC
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: RAMERRFC
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: RAMERRFC
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: ADDRERRFC
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADDRERRFC
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1

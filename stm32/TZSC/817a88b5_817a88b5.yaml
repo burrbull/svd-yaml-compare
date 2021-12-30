@@ -1,0 +1,93 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LCK
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: SECCFGR1
+    displayName: SECCFGR1
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AESSEC
+        bitOffset: 2
+        bitWidth: 1
+      - name: RNGSEC
+        bitOffset: 3
+        bitWidth: 1
+      - name: PKASEC
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: PRIVCFGR1
+    displayName: PRIVCFGR1
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AESPRIV
+        bitOffset: 2
+        bitWidth: 1
+      - name: RNGPRIV
+        bitOffset: 3
+        bitWidth: 1
+      - name: SUBGHZSPIPRIV
+        bitOffset: 4
+        bitWidth: 1
+      - name: PKAPRIV
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: MPCWM1_UPWMR
+    displayName: MPCWM1_UPWMR
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LGTH
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: MPCWM1_UPWWMR
+    displayName: MPCWM1_UPWWMR
+    addressOffset: 308
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LGTH
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: MPCWM2_UPWMR
+    displayName: MPCWM2_UPWMR
+    addressOffset: 312
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LGTH
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: MPCWM3_UPWMR
+    displayName: MPCWM3_UPWMR
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LGTH
+        bitOffset: 16
+        bitWidth: 12

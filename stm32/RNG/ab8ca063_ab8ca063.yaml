@@ -1,0 +1,53 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RNGEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: IE
+        bitOffset: 3
+        bitWidth: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: DRDY
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: CECS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: SECS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+      - name: CEIS
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: SEIS
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RNDATA
+        bitOffset: 0
+        bitWidth: 32

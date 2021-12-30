@@ -1,0 +1,5589 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 131
+    fields:
+      - name: HSION
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: HSION
+            usage: read-write
+            values:
+              - name: "Off"
+                value: 0
+              - name: "On"
+                value: 1
+      - name: HSIKERON
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: HSIRDY
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: HSIRDYR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+      - name: HSIDIV
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: HSIDIV
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 2
+              - name: Div8
+                value: 3
+      - name: HSIDIVF
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: HSIDIVFR
+            usage: read
+            values:
+              - name: NotPropagated
+                value: 0
+              - name: Propagated
+                value: 1
+      - name: CSION
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: CSIRDY
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: CSIKERON
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: HSI48ON
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: HSI48RDY
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: D1CKRDY
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: D2CKRDY
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: HSEON
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: HSERDY
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: HSEBYP
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - name: HSEBYP
+            usage: read-write
+            values:
+              - name: NotBypassed
+                value: 0
+              - name: Bypassed
+                value: 1
+      - name: HSECSSON
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: PLL1ON
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: PLL1RDY
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: PLL2ON
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: PLL2RDY
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+      - name: PLL3ON
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSION
+            values: []
+      - name: PLL3RDY
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: HSIRDYR
+            values: []
+- register:
+    name: HSICFGR
+    addressOffset: 4
+    access: read-write
+    fields:
+      - name: HSICAL
+        bitOffset: 0
+        bitWidth: 12
+      - name: HSITRIM
+        bitOffset: 24
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: CRRCR
+    displayName: CRRCR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: HSI48CAL
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: CSICFGR
+    addressOffset: 12
+    access: read-write
+    fields:
+      - name: CSICAL
+        bitOffset: 0
+        bitWidth: 10
+      - name: CSITRIM
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+- register:
+    name: CFGR
+    displayName: CFGR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SW
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SW
+            usage: read-write
+            values:
+              - name: HSI
+                value: 0
+              - name: CSI
+                value: 1
+              - name: HSE
+                value: 2
+              - name: PLL1
+                value: 3
+      - name: SWS
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - name: SWSR
+            usage: read
+            values:
+              - name: HSI
+                value: 0
+              - name: CSI
+                value: 1
+              - name: HSE
+                value: 2
+              - name: PLL1
+                value: 3
+      - name: STOPWUCK
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: STOPWUCK
+            usage: read-write
+            values:
+              - name: HSI
+                value: 0
+              - name: CSI
+                value: 1
+      - name: STOPKERWUCK
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: STOPWUCK
+            values: []
+      - name: RTCPRE
+        bitOffset: 8
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: HRTIMSEL
+        bitOffset: 14
+        bitWidth: 1
+      - name: TIMPRE
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIMPRE
+            usage: read-write
+            values:
+              - name: DefaultX2
+                value: 0
+              - name: DefaultX4
+                value: 1
+      - name: MCO1PRE
+        bitOffset: 18
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+      - name: MCO1
+        bitOffset: 22
+        bitWidth: 3
+        enumeratedValues:
+          - name: MCO1
+            usage: read-write
+            values:
+              - name: HSI
+                value: 0
+              - name: LSE
+                value: 1
+              - name: HSE
+                value: 2
+              - name: PLL1_Q
+                value: 3
+              - name: HSI48
+                value: 4
+      - name: MCO2PRE
+        bitOffset: 25
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+      - name: MCO2
+        bitOffset: 29
+        bitWidth: 3
+        enumeratedValues:
+          - name: MCO2
+            usage: read-write
+            values:
+              - name: SYSCLK
+                value: 0
+              - name: PLL2_P
+                value: 1
+              - name: HSE
+                value: 2
+              - name: PLL1_P
+                value: 3
+              - name: CSI
+                value: 4
+              - name: LSI
+                value: 5
+- register:
+    name: D1CFGR
+    displayName: D1CFGR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HPRE
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: HPRE
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 8
+              - name: Div4
+                value: 9
+              - name: Div8
+                value: 10
+              - name: Div16
+                value: 11
+              - name: Div64
+                value: 12
+              - name: Div128
+                value: 13
+              - name: Div256
+                value: 14
+              - name: Div512
+                value: 15
+      - name: D1PPRE
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: D1PPRE
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 4
+              - name: Div4
+                value: 5
+              - name: Div8
+                value: 6
+              - name: Div16
+                value: 7
+      - name: D1CPRE
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: HPRE
+            values: []
+- register:
+    name: D2CFGR
+    displayName: D2CFGR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: D2PPRE1
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: D2PPRE1
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 4
+              - name: Div4
+                value: 5
+              - name: Div8
+                value: 6
+              - name: Div16
+                value: 7
+      - name: D2PPRE2
+        bitOffset: 8
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: D2PPRE1
+            values: []
+- register:
+    name: D3CFGR
+    displayName: D3CFGR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: D3PPRE
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: D3PPRE
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 4
+              - name: Div4
+                value: 5
+              - name: Div8
+                value: 6
+              - name: Div16
+                value: 7
+- register:
+    name: PLLCKSELR
+    displayName: PLLCKSELR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 33686016
+    fields:
+      - name: PLLSRC
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: PLLSRC
+            usage: read-write
+            values:
+              - name: HSI
+                value: 0
+              - name: CSI
+                value: 1
+              - name: HSE
+                value: 2
+              - name: None
+                value: 3
+      - name: DIVM1
+        bitOffset: 4
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: DIVM2
+        bitOffset: 12
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: DIVM3
+        bitOffset: 20
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+- register:
+    name: PLLCFGR
+    displayName: PLLCFGR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 33488896
+    fields:
+      - name: PLL1FRACEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: PLL1FRACEN
+            usage: read-write
+            values:
+              - name: Reset
+                value: 0
+              - name: Set
+                value: 1
+      - name: PLL1VCOSEL
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: PLL1VCOSEL
+            usage: read-write
+            values:
+              - name: WideVCO
+                value: 0
+              - name: MediumVCO
+                value: 1
+      - name: PLL1RGE
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - name: PLL1RGE
+            usage: read-write
+            values:
+              - name: Range1
+                value: 0
+              - name: Range2
+                value: 1
+              - name: Range4
+                value: 2
+              - name: Range8
+                value: 3
+      - name: PLL2FRACEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PLL1FRACEN
+            values: []
+      - name: PLL2VCOSEL
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PLL1VCOSEL
+            values: []
+      - name: PLL2RGE
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PLL1RGE
+            values: []
+      - name: PLL3FRACEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PLL1FRACEN
+            values: []
+      - name: PLL3VCOSEL
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PLL1VCOSEL
+            values: []
+      - name: PLL3RGE
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PLL1RGE
+            values: []
+      - name: DIVP1EN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: DIVP1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DIVQ1EN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVR1EN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVP2EN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVQ2EN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVR2EN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVP3EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVQ3EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+      - name: DIVR3EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIVP1EN
+            values: []
+- register:
+    name: PLL1DIVR
+    displayName: PLL1DIVR
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 16843392
+    fields:
+      - name: DIVN1
+        bitOffset: 0
+        bitWidth: 9
+        writeConstraint:
+          Range:
+            minimum: 3
+            maximum: 511
+      - name: DIVP1
+        bitOffset: 9
+        bitWidth: 7
+        enumeratedValues:
+          - name: DIVP1
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 3
+              - name: Div6
+                value: 5
+              - name: Div8
+                value: 7
+              - name: Div10
+                value: 9
+              - name: Div12
+                value: 11
+              - name: Div14
+                value: 13
+              - name: Div16
+                value: 15
+              - name: Div18
+                value: 17
+              - name: Div20
+                value: 19
+              - name: Div22
+                value: 21
+              - name: Div24
+                value: 23
+              - name: Div26
+                value: 25
+              - name: Div28
+                value: 27
+              - name: Div30
+                value: 29
+              - name: Div32
+                value: 31
+              - name: Div34
+                value: 33
+              - name: Div36
+                value: 35
+              - name: Div38
+                value: 37
+              - name: Div40
+                value: 39
+              - name: Div42
+                value: 41
+              - name: Div44
+                value: 43
+              - name: Div46
+                value: 45
+              - name: Div48
+                value: 47
+              - name: Div50
+                value: 49
+              - name: Div52
+                value: 51
+              - name: Div54
+                value: 53
+              - name: Div56
+                value: 55
+              - name: Div58
+                value: 57
+              - name: Div60
+                value: 59
+              - name: Div62
+                value: 61
+              - name: Div64
+                value: 63
+              - name: Div66
+                value: 65
+              - name: Div68
+                value: 67
+              - name: Div70
+                value: 69
+              - name: Div72
+                value: 71
+              - name: Div74
+                value: 73
+              - name: Div76
+                value: 75
+              - name: Div78
+                value: 77
+              - name: Div80
+                value: 79
+              - name: Div82
+                value: 81
+              - name: Div84
+                value: 83
+              - name: Div86
+                value: 85
+              - name: Div88
+                value: 87
+              - name: Div90
+                value: 89
+              - name: Div92
+                value: 91
+              - name: Div94
+                value: 93
+              - name: Div96
+                value: 95
+              - name: Div98
+                value: 97
+              - name: Div100
+                value: 99
+              - name: Div102
+                value: 101
+              - name: Div104
+                value: 103
+              - name: Div106
+                value: 105
+              - name: Div108
+                value: 107
+              - name: Div110
+                value: 109
+              - name: Div112
+                value: 111
+              - name: Div114
+                value: 113
+              - name: Div116
+                value: 115
+              - name: Div118
+                value: 117
+              - name: Div120
+                value: 119
+              - name: Div122
+                value: 121
+              - name: Div124
+                value: 123
+              - name: Div126
+                value: 125
+              - name: Div128
+                value: 127
+      - name: DIVQ1
+        bitOffset: 16
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: DIVR1
+        bitOffset: 24
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: PLL1FRACR
+    displayName: PLL1FRACR
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FRACN1
+        bitOffset: 3
+        bitWidth: 13
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 8191
+- register:
+    name: PLL2DIVR
+    displayName: PLL2DIVR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 16843392
+    fields:
+      - name: DIVN2
+        bitOffset: 0
+        bitWidth: 9
+        writeConstraint:
+          Range:
+            minimum: 3
+            maximum: 511
+      - name: DIVP2
+        bitOffset: 9
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: DIVQ2
+        bitOffset: 16
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: DIVR2
+        bitOffset: 24
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: PLL2FRACR
+    displayName: PLL2FRACR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FRACN2
+        bitOffset: 3
+        bitWidth: 13
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 8191
+- register:
+    name: PLL3DIVR
+    displayName: PLL3DIVR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 16843392
+    fields:
+      - name: DIVN3
+        bitOffset: 0
+        bitWidth: 9
+        writeConstraint:
+          Range:
+            minimum: 3
+            maximum: 511
+      - name: DIVP3
+        bitOffset: 9
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: DIVQ3
+        bitOffset: 16
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: DIVR3
+        bitOffset: 24
+        bitWidth: 7
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: PLL3FRACR
+    displayName: PLL3FRACR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FRACN3
+        bitOffset: 3
+        bitWidth: 13
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 8191
+- register:
+    name: D1CCIPR
+    displayName: D1CCIPR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FMCSEL
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: FMCSEL
+            usage: read-write
+            values:
+              - name: RCC_HCLK3
+                value: 0
+              - name: PLL1_Q
+                value: 1
+              - name: PLL2_R
+                value: 2
+              - name: PER
+                value: 3
+      - name: OCTOSPISEL
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: FMCSEL
+            values: []
+      - name: SDMMCSEL
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: SDMMCSEL
+            usage: read-write
+            values:
+              - name: PLL1_Q
+                value: 0
+              - name: PLL2_R
+                value: 1
+      - name: CKPERSEL
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKPERSEL
+            usage: read-write
+            values:
+              - name: HSI
+                value: 0
+              - name: CSI
+                value: 1
+              - name: HSE
+                value: 2
+- register:
+    name: D2CCIP1R
+    displayName: D2CCIP1R
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SAI1SEL
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SAI1SEL
+            usage: read-write
+            values:
+              - name: PLL1_Q
+                value: 0
+              - name: PLL2_P
+                value: 1
+              - name: PLL3_P
+                value: 2
+              - name: I2S_CKIN
+                value: 3
+              - name: PER
+                value: 4
+      - name: SPI123SEL
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SAI1SEL
+            values: []
+      - name: SPI45SEL
+        bitOffset: 16
+        bitWidth: 3
+        enumeratedValues:
+          - name: SPI45SEL
+            usage: read-write
+            values:
+              - name: APB
+                value: 0
+              - name: PLL2_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI_KER
+                value: 3
+              - name: CSI_KER
+                value: 4
+              - name: HSE
+                value: 5
+      - name: SPDIFSEL
+        bitOffset: 20
+        bitWidth: 2
+        enumeratedValues:
+          - name: SPDIFSEL
+            usage: read-write
+            values:
+              - name: PLL1_Q
+                value: 0
+              - name: PLL2_R
+                value: 1
+              - name: PLL3_R
+                value: 2
+              - name: HSI_KER
+                value: 3
+      - name: DFSDM1SEL
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - name: DFSDM1SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK2
+                value: 0
+              - name: SYS
+                value: 1
+      - name: FDCANSEL
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - name: FDCANSEL
+            usage: read-write
+            values:
+              - name: HSE
+                value: 0
+              - name: PLL1_Q
+                value: 1
+              - name: PLL2_Q
+                value: 2
+      - name: SWPMISEL
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWPMISEL
+            usage: read-write
+            values:
+              - name: PCLK
+                value: 0
+              - name: HSI_KER
+                value: 1
+- register:
+    name: D2CCIP2R
+    displayName: D2CCIP2R
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: USART234578SEL
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: USART234578SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK1
+                value: 0
+              - name: PLL2_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI_KER
+                value: 3
+              - name: CSI_KER
+                value: 4
+              - name: LSE
+                value: 5
+      - name: USART16910SEL
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - name: USART16910SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK2
+                value: 0
+              - name: PLL2_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI_KER
+                value: 3
+              - name: CSI_KER
+                value: 4
+              - name: LSE
+                value: 5
+      - name: RNGSEL
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: RNGSEL
+            usage: read-write
+            values:
+              - name: HSI48
+                value: 0
+              - name: PLL1_Q
+                value: 1
+              - name: LSE
+                value: 2
+              - name: LSI
+                value: 3
+      - name: I2C1235SEL
+        bitOffset: 12
+        bitWidth: 2
+        enumeratedValues:
+          - name: I2C1235SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK1
+                value: 0
+              - name: PLL3_R
+                value: 1
+              - name: HSI_KER
+                value: 2
+              - name: CSI_KER
+                value: 3
+      - name: USBSEL
+        bitOffset: 20
+        bitWidth: 2
+        enumeratedValues:
+          - name: USBSEL
+            usage: read-write
+            values:
+              - name: DISABLE
+                value: 0
+              - name: PLL1_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI48
+                value: 3
+      - name: CECSEL
+        bitOffset: 22
+        bitWidth: 2
+        enumeratedValues:
+          - name: CECSEL
+            usage: read-write
+            values:
+              - name: LSE
+                value: 0
+              - name: LSI
+                value: 1
+              - name: CSI_KER
+                value: 2
+      - name: LPTIM1SEL
+        bitOffset: 28
+        bitWidth: 3
+        enumeratedValues:
+          - name: LPTIM1SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK1
+                value: 0
+              - name: PLL2_P
+                value: 1
+              - name: PLL3_R
+                value: 2
+              - name: LSE
+                value: 3
+              - name: LSI
+                value: 4
+              - name: PER
+                value: 5
+- register:
+    name: D3CCIPR
+    displayName: D3CCIPR
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LPUART1SEL
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: LPUART1SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK_D3
+                value: 0
+              - name: PLL2_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI_KER
+                value: 3
+              - name: CSI_KER
+                value: 4
+              - name: LSE
+                value: 5
+      - name: I2C4SEL
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: I2C4SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK4
+                value: 0
+              - name: PLL3_R
+                value: 1
+              - name: HSI_KER
+                value: 2
+              - name: CSI_KER
+                value: 3
+      - name: LPTIM2SEL
+        bitOffset: 10
+        bitWidth: 3
+        enumeratedValues:
+          - name: LPTIM2SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK4
+                value: 0
+              - name: PLL2_P
+                value: 1
+              - name: PLL3_R
+                value: 2
+              - name: LSE
+                value: 3
+              - name: LSI
+                value: 4
+              - name: PER
+                value: 5
+      - name: LPTIM345SEL
+        bitOffset: 13
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: LPTIM2SEL
+            values: []
+      - name: ADCSEL
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - name: ADCSEL
+            usage: read-write
+            values:
+              - name: PLL2_P
+                value: 0
+              - name: PLL3_R
+                value: 1
+              - name: PER
+                value: 2
+      - name: SAI4ASEL
+        bitOffset: 21
+        bitWidth: 3
+        enumeratedValues:
+          - name: SAI4ASEL
+            usage: read-write
+            values:
+              - name: PLL1_Q
+                value: 0
+              - name: PLL2_P
+                value: 1
+              - name: PLL3_P
+                value: 2
+              - name: I2S_CKIN
+                value: 3
+              - name: PER
+                value: 4
+      - name: SAI4BSEL
+        bitOffset: 24
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SAI4ASEL
+            values: []
+      - name: SPI6SEL
+        bitOffset: 28
+        bitWidth: 3
+        enumeratedValues:
+          - name: SPI6SEL
+            usage: read-write
+            values:
+              - name: RCC_PCLK4
+                value: 0
+              - name: PLL2_Q
+                value: 1
+              - name: PLL3_Q
+                value: 2
+              - name: HSI_KER
+                value: 3
+              - name: CSI_KER
+                value: 4
+              - name: HSE
+                value: 5
+- register:
+    name: CIER
+    displayName: CIER
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSIRDYIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSIRDYIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LSERDYIE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: HSIRDYIE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: HSERDYIE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: CSIRDYIE
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: HSI48RDYIE
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: PLL1RDYIE
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: PLL2RDYIE
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: PLL3RDYIE
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+      - name: LSECSSIE
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYIE
+            values: []
+- register:
+    name: CIFR
+    displayName: CIFR
+    addressOffset: 100
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: LSIRDYF
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSERDYF
+        bitOffset: 1
+        bitWidth: 1
+      - name: HSIRDYF
+        bitOffset: 2
+        bitWidth: 1
+      - name: HSERDYF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CSIRDY
+        bitOffset: 4
+        bitWidth: 1
+      - name: HSI48RDYF
+        bitOffset: 5
+        bitWidth: 1
+      - name: PLL1RDYF
+        bitOffset: 6
+        bitWidth: 1
+      - name: PLL2RDYF
+        bitOffset: 7
+        bitWidth: 1
+      - name: PLL3RDYF
+        bitOffset: 8
+        bitWidth: 1
+      - name: LSECSSF
+        bitOffset: 9
+        bitWidth: 1
+      - name: HSECSSF
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: CICR
+    displayName: CICR
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSIRDYC
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSIRDYC
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: LSERDYC
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: HSIRDYC
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: HSERDYC
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: HSE_ready_Interrupt_Clear
+        bitOffset: 4
+        bitWidth: 1
+      - name: HSI48RDYC
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: PLL1RDYC
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: PLL2RDYC
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: PLL3RDYC
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: LSECSSC
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+      - name: HSECSSC
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LSIRDYC
+            values: []
+- register:
+    name: BDCR
+    displayName: BDCR
+    addressOffset: 112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSEON
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSEON
+            usage: read-write
+            values:
+              - name: "Off"
+                value: 0
+              - name: "On"
+                value: 1
+      - name: LSERDY
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSERDYR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+      - name: LSEBYP
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSEBYP
+            usage: read-write
+            values:
+              - name: NotBypassed
+                value: 0
+              - name: Bypassed
+                value: 1
+      - name: LSEDRV
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: LSEDRV
+            usage: read-write
+            values:
+              - name: Lowest
+                value: 0
+              - name: MediumLow
+                value: 1
+              - name: MediumHigh
+                value: 2
+              - name: Highest
+                value: 3
+      - name: LSECSSON
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSECSSON
+            usage: read-write
+            values:
+              - name: SecurityOff
+                value: 0
+              - name: SecurityOn
+                value: 1
+      - name: LSECSSD
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSECSSDR
+            usage: read
+            values:
+              - name: NoFailure
+                value: 0
+              - name: Failure
+                value: 1
+      - name: RTCSEL
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: RTCSEL
+            usage: read-write
+            values:
+              - name: NoClock
+                value: 0
+              - name: LSE
+                value: 1
+              - name: LSI
+                value: 2
+              - name: HSE
+                value: 3
+      - name: RTCEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: RTCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BDRST
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: BDRST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 116
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSION
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSION
+            usage: read-write
+            values:
+              - name: "Off"
+                value: 0
+              - name: "On"
+                value: 1
+      - name: LSIRDY
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: LSIRDYR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+- register:
+    name: AHB3RSTR
+    displayName: AHB3RSTR
+    addressOffset: 124
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MDMARST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MDMARST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: DMA2DRST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: FMCRST
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: OCTOSPI1RST
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: SDMMC1RST
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: OCTOSPI2RST
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: IOMNGRRST
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: OTFD1RST
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: OTFD2RST
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+      - name: CPURST
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMARST
+            values: []
+- register:
+    name: AHB1RSTR
+    displayName: AHB1RSTR
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMA1RST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMA1RST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: DMA2RST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1RST
+            values: []
+      - name: ADC12RST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1RST
+            values: []
+      - name: ETH1MACRST
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1RST
+            values: []
+      - name: USB1OTGRST
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1RST
+            values: []
+- register:
+    name: AHB2RSTR
+    displayName: AHB2RSTR
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CAMITFRST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CAMITFRST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: CRYPTRST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+      - name: HASHRST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+      - name: RNGRST
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+      - name: SDMMC2RST
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+      - name: FMACRST
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+      - name: CORDICRST
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CAMITFRST
+            values: []
+- register:
+    name: AHB4RSTR
+    displayName: AHB4RSTR
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GPIOARST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: GPIOARST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: GPIOBRST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOCRST
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIODRST
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOERST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOFRST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOGRST
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOHRST
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOIRST
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOJRST
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: GPIOKRST
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: CRCRST
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: BDMARST
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: ADC3RST
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+      - name: HSEMRST
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOARST
+            values: []
+- register:
+    name: APB3RSTR
+    displayName: APB3RSTR
+    addressOffset: 140
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTDCRST
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: LTDCRST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+- register:
+    name: APB1LRSTR
+    displayName: APB1LRSTR
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2RST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM2RST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: TIM3RST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM4RST
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM5RST
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM6RST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM7RST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM12RST
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM13RST
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: TIM14RST
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: LPTIM1RST
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: SPI2RST
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: SPI3RST
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: SPDIFRXRST
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: USART2RST
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: USART3RST
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: UART4RST
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: UART5RST
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: I2C1RST
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: I2C2RST
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: I2C3RST
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: I2C5RST
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: CECRST
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: DAC12RST
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: UART7RST
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+      - name: UART8RST
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2RST
+            values: []
+- register:
+    name: APB1HRSTR
+    displayName: APB1HRSTR
+    addressOffset: 148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRSRST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRSRST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: SWPMIRST
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+      - name: OPAMPRST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+      - name: MDIOSRST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+      - name: FDCANRST
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+      - name: TIM23RST
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+      - name: TIM24RST
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSRST
+            values: []
+- register:
+    name: APB2RSTR
+    displayName: APB2RSTR
+    addressOffset: 152
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1RST
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM1RST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: TIM8RST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: USART1RST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: USART6RST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SPI1RST
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SPI4RST
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: TIM15RST
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: TIM16RST
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: TIM17RST
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SPI5RST
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SAI1RST
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SAI2RST
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: SAI3RST
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+      - name: DFSDM1RST
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1RST
+            values: []
+- register:
+    name: APB4RSTR
+    displayName: APB4RSTR
+    addressOffset: 156
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGRST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SYSCFGRST
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: LPUART1RST
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: SPI6RST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: I2C4RST
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: LPTIM2RST
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: LPTIM3RST
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: LPTIM4RST
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: LPTIM5RST
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: COMP12RST
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: VREFRST
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: SAI4RST
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+      - name: DTSRST
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGRST
+            values: []
+- register:
+    name: GCR
+    displayName: GCR
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: WW1RSC
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: WW1RSC
+            usage: read-write
+            values:
+              - name: Clear
+                value: 0
+              - name: Set
+                value: 1
+- register:
+    name: D3AMR
+    displayName: D3AMR
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BDMAAMEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: BDMAAMEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPUART1AMEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: SPI6AMEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: I2C4AMEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: LPTIM2AMEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: LPTIM3AMEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: LPTIM4AMEN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: LPTIM5AMEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: COMP12AMEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: VREFAMEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: RTCAMEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: CRCAMEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: SAI4AMEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: ADC3AMEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: DTSAMEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: BKPSRAMAMEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+      - name: SRAM4AMEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BDMAAMEN
+            values: []
+- register:
+    name: RSR
+    displayName: RSR
+    addressOffset: 208
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RMVF
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: RMVF
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Clear
+                value: 1
+      - name: CPURSTF
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: CPURSTFR
+            usage: read
+            values:
+              - name: NoResetOccoured
+                value: 0
+              - name: ResetOccourred
+                value: 1
+      - name: D1RSTF
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: D2RSTF
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: BORRSTF
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: PINRSTF
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: PORRSTF
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: SFTRSTF
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: IWDG1RSTF
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: WWDG1RSTF
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: LPWRRSTF
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+- register:
+    name: AHB3ENR
+    displayName: AHB3ENR
+    addressOffset: 212
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MDMAEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MDMAEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2DEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: FMCEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: OCTOSPI1EN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: SDMMC1EN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: OCTOSPI2EN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: IOMNGREN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: OTFD1EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: OTFD2EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+- register:
+    name: AHB1ENR
+    displayName: AHB1ENR
+    addressOffset: 216
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMA1EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMA1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ADC12EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1MACEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1TXEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1RXEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB1OTGEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB1ULPIEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+- register:
+    name: AHB2ENR
+    displayName: AHB2ENR
+    addressOffset: 220
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCMIEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DCMIEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CRYPTEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: HASHEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: RNGEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SDMMC2EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: FMACEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: CORDICEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SRAM1EN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SRAM2EN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+- register:
+    name: AHB4ENR
+    displayName: AHB4ENR
+    addressOffset: 224
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GPIOAEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: GPIOAEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GPIOBEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOCEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIODEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOEEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOFEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOGEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOHEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOIEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOJEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOKEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: CRCEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: BDMAEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: ADC3EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: HSEMEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: BKPRAMEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+- register:
+    name: APB3ENR
+    displayName: APB3ENR
+    addressOffset: 228
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTDCEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: LTDCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WWDG1EN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LTDCEN
+            values: []
+- register:
+    name: APB1LENR
+    displayName: APB1LENR
+    addressOffset: 232
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM2EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM3EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM4EN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM5EN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM6EN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM7EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM12EN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM13EN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM14EN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: LPTIM1EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPI2EN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPI3EN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPDIFRXEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: USART2EN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: USART3EN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART4EN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART5EN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C1EN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C2EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C3EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C5EN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: CECEN
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: DAC12EN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART7EN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART8EN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+- register:
+    name: APB1HENR
+    displayName: APB1HENR
+    addressOffset: 236
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRSEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRSEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SWPMIEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: OPAMPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: MDIOSEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: FDCANEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: TIM23EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: TIM24EN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+- register:
+    name: APB2ENR
+    displayName: APB2ENR
+    addressOffset: 240
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM8EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: USART1EN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: USART6EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI1EN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI4EN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM15EN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM16EN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM17EN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI5EN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI1EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI2EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI3EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: DFSDM1EN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+- register:
+    name: APB4ENR
+    displayName: APB4ENR
+    addressOffset: 244
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SYSCFGEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPUART1EN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: SPI6EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: I2C4EN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM2EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM3EN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM4EN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM5EN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: COMP12EN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: VREFEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: RTCAPBEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: SAI4EN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: DTSEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+- register:
+    name: AHB3LPENR
+    displayName: AHB3LPENR
+    addressOffset: 252
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MDMALPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MDMALPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2DLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: FLITFLPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: FMCLPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OCTOSPI1LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: SDMMC1LPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OCTOSPI2LPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: IOMNGRLPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OTFD1LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OTFD2LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: D1DTCM1LPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: DTCM2LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: ITCMLPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: AXISRAMLPEN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+- register:
+    name: AHB1LPENR
+    displayName: AHB1LPENR
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMA1LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMA1LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ADC12LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1MACLPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1TXLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1RXLPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: USB1OTGLPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: USB1ULPILPEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+- register:
+    name: AHB2LPENR
+    displayName: AHB2LPENR
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCMILPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DCMILPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CRYPTLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: HASHLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: RNGLPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SDMMC2LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: FMACLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: CORDICLPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SRAM1LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SRAM2LPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+- register:
+    name: AHB4LPENR
+    displayName: AHB4LPENR
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GPIOALPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: GPIOALPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GPIOBLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOCLPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIODLPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOELPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOFLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOGLPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOHLPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOILPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOJLPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOKLPEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: CRCLPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: BDMALPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: ADC3LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: BKPRAMLPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: SRAM4LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+- register:
+    name: APB3LPENR
+    displayName: APB3LPENR
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTDCLPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: LTDCLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WWDG1LPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LTDCLPEN
+            values: []
+- register:
+    name: APB1LLPENR
+    displayName: APB1LLPENR
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM2LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM3LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM4LPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM5LPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM6LPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM7LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM12LPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM13LPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM14LPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: LPTIM1LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPI2LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPI3LPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPDIFRXLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: USART2LPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: USART3LPEN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART4LPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART5LPEN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C1LPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C2LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C3LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C5LPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: CECLPEN
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: DAC12LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART7LPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART8LPEN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+- register:
+    name: APB1HLPENR
+    displayName: APB1HLPENR
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRSLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRSLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SWPMILPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: OPAMPLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: MDIOSLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: FDCANLPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: TIM23LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: TIM24LPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+- register:
+    name: APB2LPENR
+    displayName: APB2LPENR
+    addressOffset: 280
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM1LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM8LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: USART1LPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: USART6LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI1LPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI4LPEN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM15LPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM16LPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM17LPEN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI5LPEN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI1LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI2LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI3LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: DFSDM1LPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+- register:
+    name: APB4LPENR
+    displayName: APB4LPENR
+    addressOffset: 284
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SYSCFGLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPUART1LPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: SPI6LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: I2C4LPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM2LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM3LPEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM4LPEN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM5LPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: COMP12LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: VREFLPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: RTCAPBLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: SAI4LPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: DTSLPEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+- register:
+    name: C1_RSR
+    displayName: C1_RSR
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RMVF
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: RMVF
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Clear
+                value: 1
+      - name: CPURSTF
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: CPURSTFR
+            usage: read
+            values:
+              - name: NoResetOccoured
+                value: 0
+              - name: ResetOccourred
+                value: 1
+      - name: D1RSTF
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: D2RSTF
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: BORRSTF
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: PINRSTF
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: PORRSTF
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: SFTRSTF
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: IWDG1RSTF
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: WWDG1RSTF
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+      - name: LPWRRSTF
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CPURSTFR
+            values: []
+- register:
+    name: C1_AHB3ENR
+    displayName: C1_AHB3ENR
+    addressOffset: 308
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MDMAEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MDMAEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2DEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: JPGDECEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: FMCEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: QSPIEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+      - name: SDMMC1EN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMAEN
+            values: []
+- register:
+    name: C1_AHB1ENR
+    displayName: C1_AHB1ENR
+    addressOffset: 312
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMA1EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMA1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ADC12EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1MACEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1TXEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: ETH1RXEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB1OTGEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB1ULPIEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB2OTGEN
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+      - name: USB2ULPIEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1EN
+            values: []
+- register:
+    name: C1_AHB2ENR
+    displayName: C1_AHB2ENR
+    addressOffset: 316
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCMIEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DCMIEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CRYPTEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: HASHEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: RNGEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SDMMC2EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SRAM1EN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SRAM2EN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+      - name: SRAM3EN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMIEN
+            values: []
+- register:
+    name: C1_AHB4ENR
+    displayName: C1_AHB4ENR
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GPIOAEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: GPIOAEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GPIOBEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOCEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIODEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOEEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOFEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOGEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOHEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOIEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOJEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: GPIOKEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: CRCEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: BDMAEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: ADC3EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: HSEMEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+      - name: BKPRAMEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOAEN
+            values: []
+- register:
+    name: C1_APB3ENR
+    displayName: C1_APB3ENR
+    addressOffset: 324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTDCEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: LTDCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WWDG1EN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LTDCEN
+            values: []
+- register:
+    name: C1_APB1LENR
+    displayName: C1_APB1LENR
+    addressOffset: 328
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM2EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM3EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM4EN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM5EN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM6EN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM7EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM12EN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM13EN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: TIM14EN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: LPTIM1EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPI2EN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPI3EN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: SPDIFRXEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: USART2EN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: USART3EN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART4EN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART5EN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C1EN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C2EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: I2C3EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: CECEN
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: DAC12EN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART7EN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+      - name: UART8EN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2EN
+            values: []
+- register:
+    name: C1_APB1HENR
+    displayName: C1_APB1HENR
+    addressOffset: 332
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRSEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRSEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SWPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: OPAMPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: MDIOSEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+      - name: FDCANEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSEN
+            values: []
+- register:
+    name: C1_APB2ENR
+    displayName: C1_APB2ENR
+    addressOffset: 336
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM8EN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: USART1EN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: USART6EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI1EN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI4EN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM15EN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM16EN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: TIM17EN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SPI5EN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI1EN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI2EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: SAI3EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: DFSDM1EN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+      - name: HRTIMEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1EN
+            values: []
+- register:
+    name: C1_APB4ENR
+    displayName: C1_APB4ENR
+    addressOffset: 340
+    size: 32
+    access: read-write
+    resetValue: 65536
+    fields:
+      - name: SYSCFGEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SYSCFGEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPUART1EN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: SPI6EN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: I2C4EN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM2EN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM3EN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM4EN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: LPTIM5EN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: COMP12EN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: VREFEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: RTCAPBEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+      - name: SAI4EN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGEN
+            values: []
+- register:
+    name: C1_AHB3LPENR
+    displayName: C1_AHB3LPENR
+    addressOffset: 348
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MDMALPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MDMALPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2DLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: FLASHPREN
+        bitOffset: 8
+        bitWidth: 1
+      - name: FMCLPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OCTOSPI1LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: SDMMC1LPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OCTOSPI2LPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: IOMNGRLPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OTFD1LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: OTFD2LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: D1DTCM1LPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: DTCM2LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: ITCMLPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+      - name: AXISRAMLPEN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MDMALPEN
+            values: []
+- register:
+    name: C1_AHB1LPENR
+    displayName: C1_AHB1LPENR
+    addressOffset: 352
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMA1LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMA1LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMA2LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ADC12LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1MACLPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1TXLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: ETH1RXLPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: USB1OTGLPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+      - name: USB1ULPILPEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMA1LPEN
+            values: []
+- register:
+    name: C1_AHB2LPENR
+    displayName: C1_AHB2LPENR
+    addressOffset: 356
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCMILPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DCMILPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CRYPTLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: HASHLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: RNGLPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SDMMC2LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: FMACLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: CORDICLPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SRAM1LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+      - name: SRAM2LPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DCMILPEN
+            values: []
+- register:
+    name: C1_AHB4LPENR
+    displayName: C1_AHB4LPENR
+    addressOffset: 360
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GPIOALPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: GPIOALPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GPIOBLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOCLPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIODLPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOELPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOFLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOGLPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOHLPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOILPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOJLPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: GPIOKLPEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: CRCLPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: BDMALPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: ADC3LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: BKPRAMLPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+      - name: SRAM4LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: GPIOALPEN
+            values: []
+- register:
+    name: C1_APB3LPENR
+    displayName: C1_APB3LPENR
+    addressOffset: 364
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTDCLPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: LTDCLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WWDG1LPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LTDCLPEN
+            values: []
+- register:
+    name: C1_APB1LLPENR
+    displayName: C1_APB1LLPENR
+    addressOffset: 368
+    size: 32
+    access: read-write
+    resetValue: 3909078015
+    fields:
+      - name: TIM2LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM2LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM3LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM4LPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM5LPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM6LPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM7LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM12LPEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM13LPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: TIM14LPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: LPTIM1LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPI2LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPI3LPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: SPDIFRXLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: USART2LPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: USART3LPEN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART4LPEN
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART5LPEN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C1LPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C2LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C3LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: I2C5LPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: CECLPEN
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: DAC12LPEN
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART7LPEN
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+      - name: UART8LPEN
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM2LPEN
+            values: []
+- register:
+    name: C1_APB1HLPENR
+    displayName: C1_APB1HLPENR
+    addressOffset: 372
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRSLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRSLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SWPMILPEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: OPAMPLPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: MDIOSLPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: FDCANLPEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: TIM23LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+      - name: TIM24LPEN
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CRSLPEN
+            values: []
+- register:
+    name: C1_APB2LPENR
+    displayName: C1_APB2LPENR
+    addressOffset: 376
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1LPEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIM1LPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TIM8LPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: USART1LPEN
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: USART6LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI1LPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI4LPEN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM15LPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM16LPEN
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: TIM17LPEN
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SPI5LPEN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI1LPEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI2LPEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: SAI3LPEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+      - name: DFSDM1LPEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TIM1LPEN
+            values: []
+- register:
+    name: C1_APB4LPENR
+    displayName: C1_APB4LPENR
+    addressOffset: 380
+    size: 32
+    access: read-write
+    resetValue: 69328554
+    fields:
+      - name: SYSCFGLPEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SYSCFGLPEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPUART1LPEN
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: SPI6LPEN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: I2C4LPEN
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM2LPEN
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM3LPEN
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM4LPEN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: LPTIM5LPEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: COMP12LPEN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: VREFLPEN
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: RTCAPBLPEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: SAI4LPEN
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []
+      - name: DTSLPEN
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SYSCFGLPEN
+            values: []

@@ -1,0 +1,79 @@
+---
+- register:
+    name: CSR
+    addressOffset: 28
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP1EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: COMP1_INP_DAC
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: COMP1MODE
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+      - name: COMP1INSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: COMP1OUTSEL
+        bitOffset: 8
+        bitWidth: 3
+        access: read-write
+      - name: COMP1POL
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: COMP1HYST
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      - name: COMP1OUT
+        bitOffset: 14
+        bitWidth: 1
+        access: read-only
+      - name: COMP1LOCK
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: COMP2EN
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+      - name: COMP2MODE
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write
+      - name: COMP2INSEL
+        bitOffset: 20
+        bitWidth: 3
+        access: read-write
+      - name: WNDWEN
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      - name: COMP2OUTSEL
+        bitOffset: 24
+        bitWidth: 3
+        access: read-write
+      - name: COMP2POL
+        bitOffset: 27
+        bitWidth: 1
+        access: read-write
+      - name: COMP2HYST
+        bitOffset: 28
+        bitWidth: 2
+        access: read-write
+      - name: COMP2OUT
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: COMP2LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write

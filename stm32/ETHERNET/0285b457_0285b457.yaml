@@ -1,0 +1,386 @@
+---
+- register:
+    name: MACCR
+    displayName: MACCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 32768
+    fields:
+      - name: RE
+        bitOffset: 2
+        bitWidth: 1
+      - name: TE
+        bitOffset: 3
+        bitWidth: 1
+      - name: DC
+        bitOffset: 4
+        bitWidth: 1
+      - name: BL
+        bitOffset: 5
+        bitWidth: 2
+      - name: APCS
+        bitOffset: 7
+        bitWidth: 1
+      - name: RD
+        bitOffset: 9
+        bitWidth: 1
+      - name: IPCO
+        bitOffset: 10
+        bitWidth: 1
+      - name: DM
+        bitOffset: 11
+        bitWidth: 1
+      - name: LM
+        bitOffset: 12
+        bitWidth: 1
+      - name: ROD
+        bitOffset: 13
+        bitWidth: 1
+      - name: FES
+        bitOffset: 14
+        bitWidth: 1
+      - name: CSD
+        bitOffset: 16
+        bitWidth: 1
+      - name: IFG
+        bitOffset: 17
+        bitWidth: 3
+      - name: JD
+        bitOffset: 22
+        bitWidth: 1
+      - name: WD
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: MACFFR
+    displayName: MACFFR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PM
+        bitOffset: 0
+        bitWidth: 1
+      - name: HU
+        bitOffset: 1
+        bitWidth: 1
+      - name: HM
+        bitOffset: 2
+        bitWidth: 1
+      - name: DAIF
+        bitOffset: 3
+        bitWidth: 1
+      - name: PAM
+        bitOffset: 4
+        bitWidth: 1
+      - name: BFD
+        bitOffset: 5
+        bitWidth: 1
+      - name: PCF
+        bitOffset: 6
+        bitWidth: 2
+      - name: SAIF
+        bitOffset: 8
+        bitWidth: 1
+      - name: SAF
+        bitOffset: 9
+        bitWidth: 1
+      - name: HPF
+        bitOffset: 10
+        bitWidth: 1
+      - name: RA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MACHTHR
+    displayName: MACHTHR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HTH
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MACHTLR
+    displayName: MACHTLR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HTL
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MACMIIAR
+    displayName: MACMIIAR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MB
+        bitOffset: 0
+        bitWidth: 1
+      - name: MW
+        bitOffset: 1
+        bitWidth: 1
+      - name: CR
+        bitOffset: 2
+        bitWidth: 3
+      - name: MR
+        bitOffset: 6
+        bitWidth: 5
+      - name: PA
+        bitOffset: 11
+        bitWidth: 5
+- register:
+    name: MACMIIDR
+    displayName: MACMIIDR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MD
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: MACFCR
+    displayName: MACFCR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FCB_BPA
+        bitOffset: 0
+        bitWidth: 1
+      - name: TFCE
+        bitOffset: 1
+        bitWidth: 1
+      - name: RFCE
+        bitOffset: 2
+        bitWidth: 1
+      - name: UPFD
+        bitOffset: 3
+        bitWidth: 1
+      - name: PLT
+        bitOffset: 4
+        bitWidth: 2
+      - name: ZQPD
+        bitOffset: 7
+        bitWidth: 1
+      - name: PT
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: MACVLANTR
+    displayName: MACVLANTR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: VLANTI
+        bitOffset: 0
+        bitWidth: 16
+      - name: VLANTC
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: MACRWUFFR
+    displayName: MACRWUFFR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: MACPMTCSR
+    displayName: MACPMTCSR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PD
+        bitOffset: 0
+        bitWidth: 1
+      - name: MPE
+        bitOffset: 1
+        bitWidth: 1
+      - name: WFE
+        bitOffset: 2
+        bitWidth: 1
+      - name: MPR
+        bitOffset: 5
+        bitWidth: 1
+      - name: WFR
+        bitOffset: 6
+        bitWidth: 1
+      - name: GU
+        bitOffset: 9
+        bitWidth: 1
+      - name: WFFRPR
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MACSR
+    displayName: MACSR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PMTS
+        bitOffset: 3
+        bitWidth: 1
+      - name: MMCS
+        bitOffset: 4
+        bitWidth: 1
+      - name: MMCRS
+        bitOffset: 5
+        bitWidth: 1
+      - name: MMCTS
+        bitOffset: 6
+        bitWidth: 1
+      - name: TSTS
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: MACIMR
+    displayName: MACIMR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PMTIM
+        bitOffset: 3
+        bitWidth: 1
+      - name: TSTIM
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: MACA0HR
+    displayName: MACA0HR
+    addressOffset: 64
+    size: 32
+    resetValue: 1114111
+    fields:
+      - name: MACA0H
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+      - name: MO
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: MACA0LR
+    displayName: MACA0LR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA0L
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MACA1HR
+    displayName: MACA1HR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: MACA1H
+        bitOffset: 0
+        bitWidth: 16
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MACA1LR
+    displayName: MACA1LR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA1L
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MACA2HR
+    displayName: MACA2HR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 80
+    fields:
+      - name: ETH_MACA2HR
+        bitOffset: 0
+        bitWidth: 16
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MACA2LR
+    displayName: MACA2LR
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA2L
+        bitOffset: 0
+        bitWidth: 31
+- register:
+    name: MACA3HR
+    displayName: MACA3HR
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: MACA3H
+        bitOffset: 0
+        bitWidth: 16
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MACA3LR
+    displayName: MACA3LR
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MBCA3L
+        bitOffset: 0
+        bitWidth: 32

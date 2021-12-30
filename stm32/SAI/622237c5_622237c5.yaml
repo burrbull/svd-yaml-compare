@@ -1,0 +1,291 @@
+---
+- cluster:
+    dim: 2
+    dimIncrement: 32
+    dimIndex:
+      - A
+      - B
+    name: CH%s
+    addressOffset: 4
+    children:
+      - register:
+          name: CR1
+          displayName: ACR1
+          addressOffset: 0
+          size: 32
+          access: read-write
+          resetValue: 64
+          fields:
+            - name: MODE
+              bitOffset: 0
+              bitWidth: 2
+            - name: PRTCFG
+              bitOffset: 2
+              bitWidth: 2
+            - name: DS
+              bitOffset: 5
+              bitWidth: 3
+            - name: LSBFIRST
+              bitOffset: 8
+              bitWidth: 1
+            - name: CKSTR
+              bitOffset: 9
+              bitWidth: 1
+            - name: SYNCEN
+              bitOffset: 10
+              bitWidth: 2
+            - name: MONO
+              bitOffset: 12
+              bitWidth: 1
+            - name: OUTDRIV
+              bitOffset: 13
+              bitWidth: 1
+            - name: SAIEN
+              bitOffset: 16
+              bitWidth: 1
+            - name: DMAEN
+              bitOffset: 17
+              bitWidth: 1
+            - name: NODIV
+              bitOffset: 19
+              bitWidth: 1
+            - name: MCKDIV
+              bitOffset: 20
+              bitWidth: 6
+            - name: OSR
+              bitOffset: 26
+              bitWidth: 1
+            - name: MCKEN
+              bitOffset: 27
+              bitWidth: 1
+      - register:
+          name: CR2
+          displayName: ACR2
+          addressOffset: 4
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FTH
+              bitOffset: 0
+              bitWidth: 3
+            - name: FFLUSH
+              bitOffset: 3
+              bitWidth: 1
+            - name: TRIS
+              bitOffset: 4
+              bitWidth: 1
+            - name: MUTE
+              bitOffset: 5
+              bitWidth: 1
+            - name: MUTEVAL
+              bitOffset: 6
+              bitWidth: 1
+            - name: MUTECN
+              bitOffset: 7
+              bitWidth: 6
+            - name: CPL
+              bitOffset: 13
+              bitWidth: 1
+            - name: COMP
+              bitOffset: 14
+              bitWidth: 2
+      - register:
+          name: FRCR
+          displayName: AFRCR
+          addressOffset: 8
+          size: 32
+          access: read-write
+          resetValue: 7
+          fields:
+            - name: FRL
+              bitOffset: 0
+              bitWidth: 8
+            - name: FSALL
+              bitOffset: 8
+              bitWidth: 7
+            - name: FSDEF
+              bitOffset: 16
+              bitWidth: 1
+            - name: FSPOL
+              bitOffset: 17
+              bitWidth: 1
+            - name: FSOFF
+              bitOffset: 18
+              bitWidth: 1
+      - register:
+          name: SLOTR
+          displayName: ASLOTR
+          addressOffset: 12
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FBOFF
+              bitOffset: 0
+              bitWidth: 5
+            - name: SLOTSZ
+              bitOffset: 6
+              bitWidth: 2
+            - name: NBSLOT
+              bitOffset: 8
+              bitWidth: 4
+            - name: SLOTEN
+              bitOffset: 16
+              bitWidth: 16
+      - register:
+          name: IM
+          displayName: AIM
+          addressOffset: 16
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: OVRUDRIE
+              bitOffset: 0
+              bitWidth: 1
+            - name: MUTEDETIE
+              bitOffset: 1
+              bitWidth: 1
+            - name: WCKCFGIE
+              bitOffset: 2
+              bitWidth: 1
+            - name: FREQIE
+              bitOffset: 3
+              bitWidth: 1
+            - name: CNRDYIE
+              bitOffset: 4
+              bitWidth: 1
+            - name: AFSDETIE
+              bitOffset: 5
+              bitWidth: 1
+            - name: LFSDETIE
+              bitOffset: 6
+              bitWidth: 1
+      - register:
+          name: SR
+          displayName: ASR
+          addressOffset: 20
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: OVRUDR
+              bitOffset: 0
+              bitWidth: 1
+            - name: MUTEDET
+              bitOffset: 1
+              bitWidth: 1
+            - name: WCKCFG
+              bitOffset: 2
+              bitWidth: 1
+            - name: FREQ
+              bitOffset: 3
+              bitWidth: 1
+            - name: CNRDY
+              bitOffset: 4
+              bitWidth: 1
+            - name: AFSDET
+              bitOffset: 5
+              bitWidth: 1
+            - name: LFSDET
+              bitOffset: 6
+              bitWidth: 1
+            - name: FLVL
+              bitOffset: 16
+              bitWidth: 3
+      - register:
+          name: CLRFR
+          displayName: ACLRFR
+          addressOffset: 24
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: COVRUDR
+              bitOffset: 0
+              bitWidth: 1
+            - name: CMUTEDET
+              bitOffset: 1
+              bitWidth: 1
+            - name: CWCKCFG
+              bitOffset: 2
+              bitWidth: 1
+            - name: CCNRDY
+              bitOffset: 4
+              bitWidth: 1
+            - name: CAFSDET
+              bitOffset: 5
+              bitWidth: 1
+            - name: CLFSDET
+              bitOffset: 6
+              bitWidth: 1
+      - register:
+          name: DR
+          displayName: ADR
+          addressOffset: 28
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DATA
+              bitOffset: 0
+              bitWidth: 32
+- register:
+    name: PDMCR
+    displayName: PDMCR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PDMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: MICNBR
+        bitOffset: 4
+        bitWidth: 2
+      - name: CKEN1
+        bitOffset: 8
+        bitWidth: 1
+      - name: CKEN2
+        bitOffset: 9
+        bitWidth: 1
+      - name: CKEN3
+        bitOffset: 10
+        bitWidth: 1
+      - name: CKEN4
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: PDMDLY
+    displayName: PDMDLY
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DLYM1L
+        bitOffset: 0
+        bitWidth: 3
+      - name: DLYM1R
+        bitOffset: 4
+        bitWidth: 3
+      - name: DLYM2L
+        bitOffset: 8
+        bitWidth: 3
+      - name: DLYM2R
+        bitOffset: 12
+        bitWidth: 3
+      - name: DLYM3L
+        bitOffset: 16
+        bitWidth: 3
+      - name: DLYM3R
+        bitOffset: 20
+        bitWidth: 3
+      - name: DLYM4L
+        bitOffset: 24
+        bitWidth: 3
+      - name: DLYM4R
+        bitOffset: 28
+        bitWidth: 3

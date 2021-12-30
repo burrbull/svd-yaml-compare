@@ -1,0 +1,347 @@
+---
+- register:
+    name: COMP2_CSR
+    addressOffset: 32
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP2EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: COMP2_INP_DAC
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: COMP2INMSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP2INMSEL
+            usage: read-write
+            values:
+              - name: OneQuarterVRef
+                value: 0
+              - name: OneHalfVRef
+                value: 1
+              - name: ThreeQuarterVRef
+                value: 2
+              - name: VRef
+                value: 3
+              - name: PA4_DAC1_CH1
+                value: 4
+              - name: DAC1_CH2
+                value: 5
+              - name: PA2
+                value: 6
+      - name: COMP2OUTSEL
+        bitOffset: 10
+        bitWidth: 4
+        access: read-write
+        enumeratedValues:
+          - name: COMP2OUTSEL
+            usage: read-write
+            values:
+              - name: NoSelection
+                value: 0
+              - name: Timer1BreakInput
+                value: 1
+              - name: Timer1BreakInput2
+                value: 2
+              - name: Timer1OCRefClearInput
+                value: 6
+              - name: Timer1InputCapture1
+                value: 7
+              - name: Timer2InputCapture4
+                value: 8
+              - name: Timer2OCRefClearInput
+                value: 9
+              - name: Timer3InputCapture1
+                value: 10
+              - name: Timer3OCRefClearInput
+                value: 11
+      - name: COMP2POL
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2POL
+            usage: read-write
+            values:
+              - name: NotInverted
+                value: 0
+              - name: Inverted
+                value: 1
+      - name: COMP2_BLANKING
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP2_BLANKING
+            usage: read-write
+            values:
+              - name: NoBlanking
+                value: 0
+              - name: TIM1OC5
+                value: 1
+              - name: TIM2OC3
+                value: 2
+              - name: TIM3OC3
+                value: 3
+      - name: COMP2OUT
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP2OUT
+            usage: read-write
+            values:
+              - name: Low
+                value: 0
+              - name: High
+                value: 1
+      - name: COMP2LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2LOCK
+            usage: read-write
+            values:
+              - name: Unlocked
+                value: 0
+              - name: Locked
+                value: 1
+- register:
+    name: COMP4_CSR
+    addressOffset: 40
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP4EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP4EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: COMP4INMSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP4INMSEL
+            usage: read-write
+            values:
+              - name: OneQuarterVRef
+                value: 0
+              - name: OneHalfVRef
+                value: 1
+              - name: ThreeQuarterVRef
+                value: 2
+              - name: VRef
+                value: 3
+              - name: PA4_DAC1_CH1
+                value: 4
+              - name: DAC1_CH2
+                value: 5
+              - name: PB2
+                value: 7
+      - name: COMP4OUTSEL
+        bitOffset: 10
+        bitWidth: 4
+        access: read-write
+        enumeratedValues:
+          - name: COMP4OUTSEL
+            usage: read-write
+            values:
+              - name: NoSelection
+                value: 0
+              - name: Timer1BreakInput
+                value: 1
+              - name: Timer1BreakInput2
+                value: 2
+              - name: Timer3InputCapture3
+                value: 6
+              - name: Timer15InputCapture2
+                value: 8
+              - name: Timer15OCRefClearInput
+                value: 10
+              - name: Timer3OCRefClearInput
+                value: 11
+      - name: COMP4POL
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP4POL
+            usage: read-write
+            values:
+              - name: NotInverted
+                value: 0
+              - name: Inverted
+                value: 1
+      - name: COMP4_BLANKING
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP4_BLANKING
+            usage: read-write
+            values:
+              - name: NoBlanking
+                value: 0
+              - name: TIM3OC4
+                value: 1
+              - name: TIM15OC1
+                value: 3
+      - name: COMP4OUT
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP4OUT
+            usage: read-write
+            values:
+              - name: Low
+                value: 0
+              - name: High
+                value: 1
+      - name: COMP4LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP4LOCK
+            usage: read-write
+            values:
+              - name: Unlocked
+                value: 0
+              - name: Locked
+                value: 1
+- register:
+    name: COMP6_CSR
+    addressOffset: 48
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP6EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP6EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: COMP6INMSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP6INMSEL
+            usage: read-write
+            values:
+              - name: OneQuarterVRef
+                value: 0
+              - name: OneHalfVRef
+                value: 1
+              - name: ThreeQuarterVRef
+                value: 2
+              - name: VRef
+                value: 3
+              - name: PA4_DAC1_CH1
+                value: 4
+              - name: DAC1_CH2
+                value: 5
+              - name: PB15
+                value: 7
+      - name: COMP6OUTSEL
+        bitOffset: 10
+        bitWidth: 4
+        access: read-write
+        enumeratedValues:
+          - name: COMP6OUTSEL
+            usage: read-write
+            values:
+              - name: NoSelection
+                value: 0
+              - name: Timer1BreakInput
+                value: 1
+              - name: Timer1BreakInput2
+                value: 2
+              - name: Timer2InputCapture2
+                value: 6
+              - name: Timer2OCRefClearInput
+                value: 8
+              - name: Timer16OCRefClearInput
+                value: 9
+              - name: Timer16InputCapture1
+                value: 10
+      - name: COMP6POL
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP6POL
+            usage: read-write
+            values:
+              - name: NotInverted
+                value: 0
+              - name: Inverted
+                value: 1
+      - name: COMP6_BLANKING
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP6_BLANKING
+            usage: read-write
+            values:
+              - name: NoBlanking
+                value: 0
+              - name: TIM2OC4
+                value: 3
+              - name: TIM15OC2
+                value: 4
+      - name: COMP6OUT
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP6OUT
+            usage: read-write
+            values:
+              - name: Low
+                value: 0
+              - name: High
+                value: 1
+      - name: COMP6LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP6LOCK
+            usage: read-write
+            values:
+              - name: Unlocked
+                value: 0
+              - name: Locked
+                value: 1

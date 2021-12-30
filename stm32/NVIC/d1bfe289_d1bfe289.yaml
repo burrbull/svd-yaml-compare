@@ -1,0 +1,642 @@
+---
+- register:
+    name: ISER0
+    displayName: ISER0
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ISER1
+    displayName: ISER1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ISER2
+    displayName: ISER2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICER0
+    displayName: ICER0
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICER1
+    displayName: ICER1
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICER2
+    displayName: ICER2
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRENA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ISPR0
+    displayName: ISPR0
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ISPR1
+    displayName: ISPR1
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ISPR2
+    displayName: ISPR2
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SETPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICPR0
+    displayName: ICPR0
+    addressOffset: 384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICPR1
+    displayName: ICPR1
+    addressOffset: 388
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICPR2
+    displayName: ICPR2
+    addressOffset: 392
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRPEND
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IABR0
+    displayName: IABR0
+    addressOffset: 512
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ACTIVE
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IABR1
+    displayName: IABR1
+    addressOffset: 516
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ACTIVE
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IABR2
+    displayName: IABR2
+    addressOffset: 520
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ACTIVE
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IPR0
+    displayName: IPR0
+    addressOffset: 768
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR1
+    displayName: IPR1
+    addressOffset: 772
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR2
+    displayName: IPR2
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR3
+    displayName: IPR3
+    addressOffset: 780
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR4
+    displayName: IPR4
+    addressOffset: 784
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR5
+    displayName: IPR5
+    addressOffset: 788
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR6
+    displayName: IPR6
+    addressOffset: 792
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR7
+    displayName: IPR7
+    addressOffset: 796
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR8
+    displayName: IPR8
+    addressOffset: 800
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR9
+    displayName: IPR9
+    addressOffset: 804
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR10
+    displayName: IPR10
+    addressOffset: 808
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR11
+    displayName: IPR11
+    addressOffset: 812
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR12
+    displayName: IPR12
+    addressOffset: 816
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR13
+    displayName: IPR13
+    addressOffset: 820
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR14
+    displayName: IPR14
+    addressOffset: 824
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR15
+    displayName: IPR15
+    addressOffset: 828
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR16
+    displayName: IPR16
+    addressOffset: 832
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR17
+    displayName: IPR17
+    addressOffset: 836
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR18
+    displayName: IPR18
+    addressOffset: 840
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR19
+    displayName: IPR19
+    addressOffset: 844
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR20
+    displayName: IPR20
+    addressOffset: 848
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IPR_N0
+        bitOffset: 0
+        bitWidth: 8
+      - name: IPR_N1
+        bitOffset: 8
+        bitWidth: 8
+      - name: IPR_N2
+        bitOffset: 16
+        bitWidth: 8
+      - name: IPR_N3
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: IPR21
+    displayName: IPR21
+    addressOffset: 852
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR22
+    displayName: IPR22
+    addressOffset: 856
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR23
+    displayName: IPR23
+    addressOffset: 860
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR24
+    displayName: IPR24
+    addressOffset: 864
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR25
+    displayName: IPR25
+    addressOffset: 868
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR26
+    displayName: IPR26
+    addressOffset: 872
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR27
+    displayName: IPR27
+    addressOffset: 876
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: IPR28
+    displayName: IPR28
+    addressOffset: 880
+    size: 32
+    access: read-write
+    resetValue: 0

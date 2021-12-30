@@ -1,0 +1,229 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 8388608
+    fields:
+      - name: RNGEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: RNGEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: IE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: IE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CED
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: CED
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: RNG_CONFIG3
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - name: RNG_CONFIG3
+            usage: read-write
+            values:
+              - name: ConfigB
+                value: 0
+              - name: ConfigA
+                value: 13
+      - name: NISTC
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: NISTC
+            usage: read-write
+            values:
+              - name: Default
+                value: 0
+              - name: Custom
+                value: 1
+      - name: RNG_CONFIG2
+        bitOffset: 13
+        bitWidth: 3
+        enumeratedValues:
+          - name: RNG_CONFIG2
+            usage: read-write
+            values:
+              - name: ConfigA_B
+                value: 0
+      - name: CLKDIV
+        bitOffset: 16
+        bitWidth: 4
+        enumeratedValues:
+          - name: CLKDIV
+            usage: read-write
+            values:
+              - name: NoDiv
+                value: 0
+              - name: Div_2_1
+                value: 1
+              - name: Div_2_2
+                value: 2
+              - name: Div_2_3
+                value: 3
+              - name: Div_2_4
+                value: 4
+              - name: Div_2_5
+                value: 5
+              - name: Div_2_6
+                value: 6
+              - name: Div_2_7
+                value: 7
+              - name: Div_2_8
+                value: 8
+              - name: Div_2_9
+                value: 9
+              - name: Div_2_10
+                value: 10
+              - name: Div_2_11
+                value: 11
+              - name: Div_2_12
+                value: 12
+              - name: Div_2_13
+                value: 13
+              - name: Div_2_14
+                value: 14
+              - name: Div_2_15
+                value: 15
+      - name: RNG_CONFIG1
+        bitOffset: 20
+        bitWidth: 6
+        enumeratedValues:
+          - name: RNG_CONFIG1
+            usage: read-write
+            values:
+              - name: ConfigA
+                value: 15
+              - name: ConfigB
+                value: 24
+      - name: CONDRST
+        bitOffset: 30
+        bitWidth: 1
+      - name: CONFIGLOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: CONFIGLOCK
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: DRDY
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: DRDY
+            usage: read-write
+            values:
+              - name: Invalid
+                value: 0
+              - name: Valid
+                value: 1
+      - name: CECS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: CECS
+            usage: read-write
+            values:
+              - name: Correct
+                value: 0
+              - name: Slow
+                value: 1
+      - name: SECS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: SECS
+            usage: read-write
+            values:
+              - name: NoFault
+                value: 0
+              - name: Fault
+                value: 1
+      - name: CEIS
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - derived_from: CECS
+            values: []
+      - name: SEIS
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: SEIS
+            usage: read-write
+            values:
+              - name: NoFault
+                value: 0
+              - name: Fault
+                value: 1
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RNDATA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HTCR
+    displayName: HTCR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 23118
+    fields:
+      - name: HTCFG
+        bitOffset: 0
+        bitWidth: 32
+        enumeratedValues:
+          - name: HTCFG
+            usage: read-write
+            values:
+              - name: Recommended
+                value: 43636
+              - name: Magic
+                value: 391711420

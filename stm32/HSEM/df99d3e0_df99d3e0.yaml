@@ -1,0 +1,1530 @@
+---
+- register:
+    name: R0
+    displayName: R0
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R1
+    displayName: R1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R2
+    displayName: R2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R3
+    displayName: R3
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R4
+    displayName: R4
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R5
+    displayName: R5
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R6
+    displayName: R6
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R7
+    displayName: R7
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R8
+    displayName: R8
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R9
+    displayName: R9
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R10
+    displayName: R10
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R11
+    displayName: R11
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R12
+    displayName: R12
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R13
+    displayName: R13
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R14
+    displayName: R14
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R15
+    displayName: R15
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R16
+    displayName: R16
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R17
+    displayName: R17
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R18
+    displayName: R18
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R19
+    displayName: R19
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R20
+    displayName: R20
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R21
+    displayName: R21
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R22
+    displayName: R22
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R23
+    displayName: R23
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R24
+    displayName: R24
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R25
+    displayName: R25
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R26
+    displayName: R26
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R27
+    displayName: R27
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R28
+    displayName: R28
+    addressOffset: 112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R29
+    displayName: R29
+    addressOffset: 116
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R30
+    displayName: R30
+    addressOffset: 120
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: R31
+    displayName: R31
+    addressOffset: 124
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR0
+    displayName: RLR0
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR1
+    displayName: RLR1
+    addressOffset: 132
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR2
+    displayName: RLR2
+    addressOffset: 136
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR3
+    displayName: RLR3
+    addressOffset: 140
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR4
+    displayName: RLR4
+    addressOffset: 144
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR5
+    displayName: RLR5
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR6
+    displayName: RLR6
+    addressOffset: 152
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR7
+    displayName: RLR7
+    addressOffset: 156
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR8
+    displayName: RLR8
+    addressOffset: 160
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR9
+    displayName: RLR9
+    addressOffset: 164
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR10
+    displayName: RLR10
+    addressOffset: 168
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR11
+    displayName: RLR11
+    addressOffset: 172
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR12
+    displayName: RLR12
+    addressOffset: 176
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR13
+    displayName: RLR13
+    addressOffset: 180
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR14
+    displayName: RLR14
+    addressOffset: 184
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR15
+    displayName: RLR15
+    addressOffset: 188
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR16
+    displayName: RLR16
+    addressOffset: 192
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR17
+    displayName: RLR17
+    addressOffset: 196
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR18
+    displayName: RLR18
+    addressOffset: 200
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR19
+    displayName: RLR19
+    addressOffset: 204
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR20
+    displayName: RLR20
+    addressOffset: 208
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR21
+    displayName: RLR21
+    addressOffset: 212
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR22
+    displayName: RLR22
+    addressOffset: 216
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR23
+    displayName: RLR23
+    addressOffset: 220
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR24
+    displayName: RLR24
+    addressOffset: 224
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR25
+    displayName: RLR25
+    addressOffset: 228
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR26
+    displayName: RLR26
+    addressOffset: 232
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR27
+    displayName: RLR27
+    addressOffset: 236
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR28
+    displayName: RLR28
+    addressOffset: 240
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR29
+    displayName: RLR29
+    addressOffset: 244
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR30
+    displayName: RLR30
+    addressOffset: 248
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RLR31
+    displayName: RLR31
+    addressOffset: 252
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: IER
+    displayName: IER
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ISEM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: ISEM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: ISEM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: ISEM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISEM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: ISEM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: ISEM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: ISEM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: ISEM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: ISEM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: ISEM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: ISEM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: ISEM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: ISEM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: ISEM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: ISEM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: ISEM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: ISEM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: ISEM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: ISEM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: ISEM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: ISEM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: ISEM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: ISEM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: ISEM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: ISEM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: ISEM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: ISEM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: ISEM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: ISEM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: ISEM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: ISEM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ICR
+    displayName: ICR
+    addressOffset: 260
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ISEM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: ISEM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: ISEM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: ISEM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISEM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: ISEM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: ISEM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: ISEM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: ISEM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: ISEM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: ISEM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: ISEM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: ISEM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: ISEM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: ISEM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: ISEM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: ISEM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: ISEM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: ISEM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: ISEM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: ISEM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: ISEM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: ISEM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: ISEM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: ISEM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: ISEM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: ISEM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: ISEM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: ISEM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: ISEM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: ISEM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: ISEM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ISR
+    displayName: ISR
+    addressOffset: 264
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ISEM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: ISEM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: ISEM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: ISEM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISEM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: ISEM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: ISEM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: ISEM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: ISEM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: ISEM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: ISEM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: ISEM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: ISEM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: ISEM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: ISEM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: ISEM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: ISEM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: ISEM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: ISEM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: ISEM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: ISEM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: ISEM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: ISEM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: ISEM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: ISEM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: ISEM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: ISEM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: ISEM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: ISEM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: ISEM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: ISEM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: ISEM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: MISR
+    displayName: MISR
+    addressOffset: 268
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ISEM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: ISEM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: ISEM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: ISEM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISEM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: ISEM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: ISEM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: ISEM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: ISEM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: ISEM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: ISEM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: ISEM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: ISEM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: ISEM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: ISEM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: ISEM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: ISEM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: ISEM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: ISEM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: ISEM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: ISEM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: ISEM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: ISEM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: ISEM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: ISEM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: ISEM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: ISEM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: ISEM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: ISEM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: ISEM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: ISEM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: ISEM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MASTERID
+        bitOffset: 8
+        bitWidth: 8
+      - name: KEY
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: KEYR
+    displayName: KEYR
+    addressOffset: 324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 16
+        bitWidth: 16

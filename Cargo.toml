@@ -1,0 +1,12 @@
+[package]
+name = "svd-compare"
+version = "0.1.0"
+authors = ["WRR"]
+edition = "2018"
+
+[dependencies]
+svd-parser = "0.12"
+svd-encoder = "0.12"
+svd-rs = { version = "0.12", features = ["serde"] }
+serde_yaml = "0.8.21"
+md5 = "0.7.0"

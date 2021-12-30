@@ -1,0 +1,12 @@
+---
+- register:
+    name: STIR
+    displayName: STIR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INTID
+        bitOffset: 0
+        bitWidth: 9

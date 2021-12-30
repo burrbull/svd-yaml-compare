@@ -1,0 +1,1198 @@
+---
+- register:
+    name: MODER
+    displayName: MODER
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 3959422207
+    fields:
+      - name: MODE0
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: MODE0
+            usage: read-write
+            values:
+              - name: Input
+                value: 0
+              - name: Output
+                value: 1
+              - name: Alternate
+                value: 2
+              - name: Analog
+                value: 3
+      - name: MODE1
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE2
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE3
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE4
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE5
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE6
+        bitOffset: 12
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE7
+        bitOffset: 14
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE8
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE9
+        bitOffset: 18
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE10
+        bitOffset: 20
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE11
+        bitOffset: 22
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE12
+        bitOffset: 24
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE13
+        bitOffset: 26
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE14
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+      - name: MODE15
+        bitOffset: 30
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODE0
+            values: []
+- register:
+    name: OTYPER
+    displayName: OTYPER
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OT0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: OT0
+            usage: read-write
+            values:
+              - name: PushPull
+                value: 0
+              - name: OpenDrain
+                value: 1
+      - name: OT1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+      - name: OT15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OT0
+            values: []
+- register:
+    name: OSPEEDR
+    displayName: OSPEEDR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OSPEED0
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: OSPEED0
+            usage: read-write
+            values:
+              - name: LowSpeed
+                value: 0
+              - name: MediumSpeed
+                value: 1
+              - name: HighSpeed
+                value: 2
+              - name: VeryHighSpeed
+                value: 3
+      - name: OSPEED1
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED2
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED3
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED4
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED5
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED6
+        bitOffset: 12
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED7
+        bitOffset: 14
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED8
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED9
+        bitOffset: 18
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED10
+        bitOffset: 20
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED11
+        bitOffset: 22
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED12
+        bitOffset: 24
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED13
+        bitOffset: 26
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED14
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+      - name: OSPEED15
+        bitOffset: 30
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: OSPEED0
+            values: []
+- register:
+    name: PUPDR
+    displayName: PUPDR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 603979776
+    fields:
+      - name: PUPD0
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: PUPD0
+            usage: read-write
+            values:
+              - name: Floating
+                value: 0
+              - name: PullUp
+                value: 1
+              - name: PullDown
+                value: 2
+      - name: PUPD1
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD2
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD3
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD4
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD5
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD6
+        bitOffset: 12
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD7
+        bitOffset: 14
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD8
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD9
+        bitOffset: 18
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD10
+        bitOffset: 20
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD11
+        bitOffset: 22
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD12
+        bitOffset: 24
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD13
+        bitOffset: 26
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD14
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+      - name: PUPD15
+        bitOffset: 30
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: PUPD0
+            values: []
+- register:
+    name: IDR
+    displayName: IDR
+    addressOffset: 16
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ID0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ID0
+            usage: read-write
+            values:
+              - name: Low
+                value: 0
+              - name: High
+                value: 1
+      - name: ID1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+      - name: ID15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ID0
+            values: []
+- register:
+    name: ODR
+    displayName: ODR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OD0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: OD0
+            usage: read-write
+            values:
+              - name: Low
+                value: 0
+              - name: High
+                value: 1
+      - name: OD1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+      - name: OD15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OD0
+            values: []
+- register:
+    name: BSRR
+    displayName: BSRR
+    addressOffset: 24
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: BS0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: BS0W
+            usage: write
+            values:
+              - name: Set
+                value: 1
+      - name: BS1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BS15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BS0W
+            values: []
+      - name: BR0
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: BR0W
+            usage: write
+            values:
+              - name: Reset
+                value: 1
+      - name: BR1
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR2
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR3
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR4
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR5
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR6
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR7
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR8
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR9
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR10
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR11
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR12
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR13
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR14
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+      - name: BR15
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BR0W
+            values: []
+- register:
+    name: LCKR
+    displayName: LCKR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LCK0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LCK0
+            usage: read-write
+            values:
+              - name: Unlocked
+                value: 0
+              - name: Locked
+                value: 1
+      - name: LCK1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK0
+            values: []
+      - name: LCK10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: LCK10
+            usage: read-write
+            values:
+              - name: Unlocked
+                value: 0
+              - name: Locked
+                value: 1
+      - name: LCK11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK10
+            values: []
+      - name: LCK12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK10
+            values: []
+      - name: LCK13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK10
+            values: []
+      - name: LCK14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK10
+            values: []
+      - name: LCK15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LCK10
+            values: []
+      - name: LCKK
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: LCKK
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+- register:
+    name: AFRL
+    displayName: AFRL
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AFSEL0
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: AFSEL0
+            usage: read-write
+            values:
+              - name: AF0
+                value: 0
+              - name: AF1
+                value: 1
+              - name: AF2
+                value: 2
+              - name: AF3
+                value: 3
+              - name: AF4
+                value: 4
+              - name: AF5
+                value: 5
+              - name: AF6
+                value: 6
+              - name: AF7
+                value: 7
+      - name: AFSEL1
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL2
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL3
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL4
+        bitOffset: 16
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL5
+        bitOffset: 20
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL6
+        bitOffset: 24
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+      - name: AFSEL7
+        bitOffset: 28
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL0
+            values: []
+- register:
+    name: AFRH
+    displayName: AFRH
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AFSEL8
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: AFSEL8
+            usage: read-write
+            values:
+              - name: AF0
+                value: 0
+              - name: AF1
+                value: 1
+              - name: AF2
+                value: 2
+              - name: AF3
+                value: 3
+              - name: AF4
+                value: 4
+              - name: AF5
+                value: 5
+              - name: AF6
+                value: 6
+              - name: AF7
+                value: 7
+      - name: AFSEL9
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL10
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL11
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL12
+        bitOffset: 16
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL13
+        bitOffset: 20
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL14
+        bitOffset: 24
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+      - name: AFSEL15
+        bitOffset: 28
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: AFSEL8
+            values: []
+- register:
+    name: BRR
+    displayName: BRR
+    addressOffset: 40
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: BR0
+        bitOffset: 0
+        bitWidth: 1
+      - name: BR1
+        bitOffset: 1
+        bitWidth: 1
+      - name: BR2
+        bitOffset: 2
+        bitWidth: 1
+      - name: BR3
+        bitOffset: 3
+        bitWidth: 1
+      - name: BR4
+        bitOffset: 4
+        bitWidth: 1
+      - name: BR5
+        bitOffset: 5
+        bitWidth: 1
+      - name: BR6
+        bitOffset: 6
+        bitWidth: 1
+      - name: BR7
+        bitOffset: 7
+        bitWidth: 1
+      - name: BR8
+        bitOffset: 8
+        bitWidth: 1
+      - name: BR9
+        bitOffset: 9
+        bitWidth: 1
+      - name: BR10
+        bitOffset: 10
+        bitWidth: 1
+      - name: BR11
+        bitOffset: 11
+        bitWidth: 1
+      - name: BR12
+        bitOffset: 12
+        bitWidth: 1
+      - name: BR13
+        bitOffset: 13
+        bitWidth: 1
+      - name: BR14
+        bitOffset: 14
+        bitWidth: 1
+      - name: BR15
+        bitOffset: 15
+        bitWidth: 1

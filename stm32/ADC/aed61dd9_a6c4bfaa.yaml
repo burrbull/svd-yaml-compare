@@ -1,0 +1,292 @@
+---
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ADDRDY_MST
+        bitOffset: 0
+        bitWidth: 1
+      - name: EOSMP_MST
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSMP_MST
+            usage: read-write
+            values:
+              - name: NotEnded
+                value: 0
+              - name: Ended
+                value: 1
+      - name: EOC_MST
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOC_MST
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: EOS_MST
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOS_MST
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: OVR_MST
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVR_MST
+            usage: read-write
+            values:
+              - name: NoOverrun
+                value: 0
+              - name: Overrun
+                value: 1
+      - name: JEOC_MST
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOC_MST
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: JEOS_MST
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOS_MST
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: AWD1_MST
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1_MST
+            usage: read-write
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+      - name: AWD2_MST
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1_MST
+            values: []
+      - name: AWD3_MST
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1_MST
+            values: []
+      - name: JQOVF_MST
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: JQOVF_MST
+            usage: read-write
+            values:
+              - name: NoOverflow
+                value: 0
+              - name: Overflow
+                value: 1
+      - name: ADRDY_SLV
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADRDY_SLV
+            usage: read-write
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+      - name: EOSMP_SLV
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EOSMP_MST
+            values: []
+      - name: EOC_SLV
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EOC_MST
+            values: []
+      - name: EOS_SLV
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EOS_MST
+            values: []
+      - name: OVR_SLV
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OVR_MST
+            values: []
+      - name: JEOC_SLV
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JEOC_MST
+            values: []
+      - name: JEOS_SLV
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JEOS_MST
+            values: []
+      - name: AWD1_SLV
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1_MST
+            values: []
+      - name: AWD2_SLV
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1_MST
+            values: []
+      - name: AWD3_SLV
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1_MST
+            values: []
+      - name: JQOVF_SLV
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JQOVF_MST
+            values: []
+- register:
+    name: CCR
+    displayName: CCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DUAL
+        bitOffset: 0
+        bitWidth: 5
+        enumeratedValues:
+          - name: DUAL
+            usage: read-write
+            values:
+              - name: Independent
+                value: 0
+              - name: DualRJ
+                value: 1
+              - name: DualRA
+                value: 2
+              - name: DualIJ
+                value: 3
+              - name: DualJ
+                value: 5
+              - name: DualR
+                value: 6
+              - name: DualI
+                value: 7
+              - name: DualA
+                value: 9
+      - name: DELAY
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+      - name: DMACFG
+        bitOffset: 13
+        bitWidth: 1
+      - name: MDMA
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKMODE
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKMODE
+            usage: read-write
+            values:
+              - name: Asynchronous
+                value: 0
+              - name: SyncDiv1
+                value: 1
+              - name: SyncDiv2
+                value: 2
+              - name: SyncDiv4
+                value: 3
+      - name: PRESC
+        bitOffset: 18
+        bitWidth: 4
+      - name: VREFEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: VREFEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: VSENSESEL
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: VSENSESEL
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: VBATSEL
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - name: VBATSEL
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CDR
+    displayName: CDR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATA_MST
+        bitOffset: 0
+        bitWidth: 16
+      - name: RDATA_SLV
+        bitOffset: 16
+        bitWidth: 16

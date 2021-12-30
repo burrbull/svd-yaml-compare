@@ -1,0 +1,84 @@
+---
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: PU10K
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: PU400K
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: PD10K
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: PD400K
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: CMP1EN
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: SW1
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: CMP1OUT
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+      - name: SPEED
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: CMP2OUT
+        bitOffset: 13
+        bitWidth: 1
+        access: read-only
+      - name: VREFOUTEN
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+      - name: WNDWE
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+      - name: INSEL
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+      - name: OUTSEL
+        bitOffset: 21
+        bitWidth: 3
+        access: read-write
+      - name: FCH3
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      - name: FCH8
+        bitOffset: 27
+        bitWidth: 1
+        access: read-write
+      - name: RCH13
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: CAIE
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: CAIF
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: TSUSP
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write

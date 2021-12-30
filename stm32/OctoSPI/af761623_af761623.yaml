@@ -1,0 +1,473 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: ABORT
+        bitOffset: 1
+        bitWidth: 1
+      - name: DMAEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: TCEN
+        bitOffset: 3
+        bitWidth: 1
+      - name: DQM
+        bitOffset: 6
+        bitWidth: 1
+      - name: FSEL
+        bitOffset: 7
+        bitWidth: 1
+      - name: FTHRES
+        bitOffset: 8
+        bitWidth: 5
+      - name: TEIE
+        bitOffset: 16
+        bitWidth: 1
+      - name: TCIE
+        bitOffset: 17
+        bitWidth: 1
+      - name: FTIE
+        bitOffset: 18
+        bitWidth: 1
+      - name: SMIE
+        bitOffset: 19
+        bitWidth: 1
+      - name: TOIE
+        bitOffset: 20
+        bitWidth: 1
+      - name: APMS
+        bitOffset: 22
+        bitWidth: 1
+      - name: PMM
+        bitOffset: 23
+        bitWidth: 1
+      - name: FMODE
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: DCR1
+    displayName: DCR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CKMODE
+        bitOffset: 0
+        bitWidth: 1
+      - name: FRCK
+        bitOffset: 1
+        bitWidth: 1
+      - name: CSHT
+        bitOffset: 8
+        bitWidth: 3
+      - name: DEVSIZE
+        bitOffset: 16
+        bitWidth: 5
+      - name: MTYP
+        bitOffset: 24
+        bitWidth: 2
+- register:
+    name: DCR2
+    displayName: DCR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRESCALER
+        bitOffset: 0
+        bitWidth: 8
+      - name: WRAPSIZE
+        bitOffset: 16
+        bitWidth: 3
+- register:
+    name: DCR3
+    displayName: DCR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CSBOUND
+        bitOffset: 16
+        bitWidth: 5
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TEF
+        bitOffset: 0
+        bitWidth: 1
+      - name: TCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: FTF
+        bitOffset: 2
+        bitWidth: 1
+      - name: SMF
+        bitOffset: 3
+        bitWidth: 1
+      - name: TOF
+        bitOffset: 4
+        bitWidth: 1
+      - name: BUSY
+        bitOffset: 5
+        bitWidth: 1
+      - name: FLEVEL
+        bitOffset: 8
+        bitWidth: 6
+- register:
+    name: FCR
+    displayName: FCR
+    addressOffset: 36
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CTEF
+        bitOffset: 0
+        bitWidth: 1
+      - name: CTCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: CSMF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CTOF
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: DLR
+    displayName: DLR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DL
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: AR
+    displayName: AR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDRESS
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DATA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: PSMKR
+    displayName: PSMKR
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MASK
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: PSMAR
+    displayName: PSMAR
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MATCH
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: PIR
+    displayName: PIR
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INTERVAL
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CCR
+    displayName: CCR
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IMODE
+        bitOffset: 0
+        bitWidth: 3
+      - name: IDTR
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISIZE
+        bitOffset: 4
+        bitWidth: 2
+      - name: ADMODE
+        bitOffset: 8
+        bitWidth: 3
+      - name: ADDTR
+        bitOffset: 11
+        bitWidth: 1
+      - name: ADSIZE
+        bitOffset: 12
+        bitWidth: 2
+      - name: ABMODE
+        bitOffset: 16
+        bitWidth: 3
+      - name: ABDTR
+        bitOffset: 19
+        bitWidth: 1
+      - name: ABSIZE
+        bitOffset: 20
+        bitWidth: 2
+      - name: DMODE
+        bitOffset: 24
+        bitWidth: 3
+      - name: DDTR
+        bitOffset: 27
+        bitWidth: 1
+      - name: DQSE
+        bitOffset: 29
+        bitWidth: 1
+      - name: SIOO
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: TCR
+    displayName: TCR
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCYC
+        bitOffset: 0
+        bitWidth: 5
+      - name: DHQC
+        bitOffset: 28
+        bitWidth: 1
+      - name: SSHIFT
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: IR
+    displayName: IR
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INSTRUCTION
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ABR
+    displayName: ABR
+    addressOffset: 288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ALTERNATE
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: LPTR
+    displayName: LPTR
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIMEOUT
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: WCCR
+    displayName: WCCR
+    addressOffset: 384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IMODE
+        bitOffset: 0
+        bitWidth: 3
+      - name: IDTR
+        bitOffset: 3
+        bitWidth: 1
+      - name: ISIZE
+        bitOffset: 4
+        bitWidth: 2
+      - name: ADMODE
+        bitOffset: 8
+        bitWidth: 3
+      - name: ADDTR
+        bitOffset: 11
+        bitWidth: 1
+      - name: ADSIZE
+        bitOffset: 12
+        bitWidth: 2
+      - name: ABMODE
+        bitOffset: 16
+        bitWidth: 3
+      - name: ABDTR
+        bitOffset: 19
+        bitWidth: 1
+      - name: ABSIZE
+        bitOffset: 20
+        bitWidth: 2
+      - name: DMODE
+        bitOffset: 24
+        bitWidth: 3
+      - name: DDTR
+        bitOffset: 27
+        bitWidth: 1
+      - name: DQSE
+        bitOffset: 29
+        bitWidth: 1
+      - name: SIOO
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: WTCR
+    displayName: WTCR
+    addressOffset: 392
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DCYC
+        bitOffset: 0
+        bitWidth: 5
+- register:
+    name: WIR
+    displayName: WIR
+    addressOffset: 400
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INSTRUCTION
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: WABR
+    displayName: WABR
+    addressOffset: 416
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ALTERNATE
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HLCR
+    displayName: HLCR
+    addressOffset: 512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LM
+        bitOffset: 0
+        bitWidth: 1
+      - name: WZL
+        bitOffset: 1
+        bitWidth: 1
+      - name: TACC
+        bitOffset: 8
+        bitWidth: 8
+      - name: TRWR
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: HWCFGR
+    displayName: HWCFGR
+    addressOffset: 1008
+    size: 32
+    access: read-only
+    resetValue: 288358528
+    fields:
+      - name: AXI
+        bitOffset: 0
+        bitWidth: 4
+      - name: FIFO
+        bitOffset: 4
+        bitWidth: 8
+      - name: PRES
+        bitOffset: 12
+        bitWidth: 8
+      - name: IDL
+        bitOffset: 20
+        bitWidth: 4
+      - name: MMW
+        bitOffset: 24
+        bitWidth: 4
+      - name: MST
+        bitOffset: 28
+        bitWidth: 4
+- register:
+    name: VER
+    displayName: VER
+    addressOffset: 1012
+    size: 32
+    access: read-only
+    resetValue: 16
+    fields:
+      - name: VER
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: ID
+    displayName: ID
+    addressOffset: 1016
+    size: 32
+    access: read-only
+    resetValue: 1310785
+    fields:
+      - name: ID
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MID
+    displayName: MID
+    addressOffset: 1020
+    size: 32
+    access: read-only
+    resetValue: 2747653377
+    fields:
+      - name: MID
+        bitOffset: 0
+        bitWidth: 32

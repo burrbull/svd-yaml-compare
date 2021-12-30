@@ -1,0 +1,96 @@
+---
+- register:
+    name: PLL1
+    displayName: PLL1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PLL1EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: PLL1SEL
+        bitOffset: 1
+        bitWidth: 3
+- register:
+    name: TUNE
+    displayName: TUNE
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: INCURREN
+        bitOffset: 0
+        bitWidth: 1
+      - name: INCURRINT
+        bitOffset: 1
+        bitWidth: 1
+      - name: LFSCAPEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: HSDRVSLEW
+        bitOffset: 3
+        bitWidth: 1
+      - name: HSDRVDCCUR
+        bitOffset: 4
+        bitWidth: 1
+      - name: HSDRVDCLEV
+        bitOffset: 5
+        bitWidth: 1
+      - name: HSDRVCURINCR
+        bitOffset: 6
+        bitWidth: 1
+      - name: FSDRVRFADJ
+        bitOffset: 7
+        bitWidth: 1
+      - name: HSDRVRFRED
+        bitOffset: 8
+        bitWidth: 1
+      - name: HSDRVCHKITRM
+        bitOffset: 9
+        bitWidth: 4
+      - name: HSDRVCHKZTRM
+        bitOffset: 13
+        bitWidth: 2
+      - name: SQLCHCTL
+        bitOffset: 15
+        bitWidth: 2
+      - name: HDRXGNEQEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: STAGSEL
+        bitOffset: 18
+        bitWidth: 1
+      - name: HSFALLPREEM
+        bitOffset: 19
+        bitWidth: 1
+      - name: HSRXOFF
+        bitOffset: 20
+        bitWidth: 2
+      - name: SHTCCTCTLPROT
+        bitOffset: 22
+        bitWidth: 1
+      - name: SQLBYP
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: LDO
+    displayName: LDO
+    addressOffset: 24
+    size: 32
+    resetValue: 1
+    fields:
+      - name: LDO_USED
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: LDO_STATUS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: LDO_DISABLE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write

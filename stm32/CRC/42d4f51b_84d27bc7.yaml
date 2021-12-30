@@ -1,0 +1,145 @@
+---
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: DR
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: DR8
+    alternateRegister: DR
+    addressOffset: 0
+    size: 8
+    access: read-write
+    resetValue: 255
+    fields:
+      - name: DR8
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 255
+- register:
+    name: DR16
+    alternateRegister: DR
+    addressOffset: 0
+    size: 16
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: DR16
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: IDR
+    displayName: IDR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RESET
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: RESETW
+            usage: write
+            values:
+              - name: Reset
+                value: 1
+      - name: POLYSIZE
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: POLYSIZE
+            usage: read-write
+            values:
+              - name: Polysize32
+                value: 0
+              - name: Polysize16
+                value: 1
+              - name: Polysize8
+                value: 2
+              - name: Polysize7
+                value: 3
+      - name: REV_IN
+        bitOffset: 5
+        bitWidth: 2
+        enumeratedValues:
+          - name: REV_IN
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Byte
+                value: 1
+              - name: HalfWord
+                value: 2
+              - name: Word
+                value: 3
+      - name: REV_OUT
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: REV_OUT
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Reversed
+                value: 1
+- register:
+    name: INIT
+    displayName: INIT
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: INIT
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: POL
+    displayName: POL
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 79764919
+    fields:
+      - name: POL
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295

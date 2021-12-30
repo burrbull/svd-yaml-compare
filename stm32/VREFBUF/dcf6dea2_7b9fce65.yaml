@@ -1,0 +1,60 @@
+---
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 0
+    size: 32
+    resetValue: 2
+    fields:
+      - name: ENVR
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: HIZ
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: VRS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: VRR
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+- register:
+    name: CCR
+    displayName: CCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TRIM
+        bitOffset: 0
+        bitWidth: 6
+        access: read-write

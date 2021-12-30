@@ -1,0 +1,495 @@
+---
+- register:
+    name: ISR
+    displayName: ISR
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CMPM
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPMR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: ARRM
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARRMR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: EXTTRIG
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTTRIGR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: CMPOK
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPOKR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: ARROK
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARROKR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: UP
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: UPR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+      - name: DOWN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: DOWNR
+            usage: read
+            values:
+              - name: Set
+                value: 1
+- register:
+    name: ICR
+    displayName: ICR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CMPMCF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPMCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: ARRMCF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARRMCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EXTTRIGCF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTTRIGCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: CMPOKCF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPOKCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: ARROKCF
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARROKCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: UPCF
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: UPCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: DOWNCF
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: DOWNCFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: IER
+    displayName: IER
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CMPMIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPMIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ARRMIE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARRMIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EXTTRIGIE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTTRIGIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CMPOKIE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: CMPOKIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ARROKIE
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARROKIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: UPIE
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: UPIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DOWNIE
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: DOWNIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CFGR
+    displayName: CFGR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CKSEL
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CKSEL
+            usage: read-write
+            values:
+              - name: Internal
+                value: 0
+              - name: External
+                value: 1
+      - name: CKPOL
+        bitOffset: 1
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKPOL
+            usage: read-write
+            values:
+              - name: RisingEdge
+                value: 0
+              - name: FallingEdge
+                value: 1
+              - name: BothEdges
+                value: 2
+      - name: CKFLT
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKFLT
+            usage: read-write
+            values:
+              - name: Immediate
+                value: 0
+              - name: Clocks2
+                value: 1
+              - name: Clocks4
+                value: 2
+              - name: Clocks8
+                value: 3
+      - name: TRGFLT
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - name: TRGFLT
+            usage: read-write
+            values:
+              - name: Immediate
+                value: 0
+              - name: Clocks2
+                value: 1
+              - name: Clocks4
+                value: 2
+              - name: Clocks8
+                value: 3
+      - name: PRESC
+        bitOffset: 9
+        bitWidth: 3
+        enumeratedValues:
+          - name: PRESC
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 2
+              - name: Div8
+                value: 3
+              - name: Div16
+                value: 4
+              - name: Div32
+                value: 5
+              - name: Div64
+                value: 6
+              - name: Div128
+                value: 7
+      - name: TRIGSEL
+        bitOffset: 13
+        bitWidth: 3
+        enumeratedValues:
+          - name: TRIGSEL
+            usage: read-write
+            values:
+              - name: Trig0
+                value: 0
+              - name: Trig1
+                value: 1
+              - name: Trig2
+                value: 2
+              - name: Trig3
+                value: 3
+              - name: Trig4
+                value: 4
+              - name: Trig5
+                value: 5
+              - name: Trig6
+                value: 6
+              - name: Trig7
+                value: 7
+      - name: TRIGEN
+        bitOffset: 17
+        bitWidth: 2
+        enumeratedValues:
+          - name: TRIGEN
+            usage: read-write
+            values:
+              - name: SW
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: TIMOUT
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: TIMOUT
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WAVE
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAVE
+            usage: read-write
+            values:
+              - name: Inactive
+                value: 0
+              - name: Active
+                value: 1
+      - name: WAVPOL
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAVPOL
+            usage: read-write
+            values:
+              - name: Positive
+                value: 0
+              - name: Negative
+                value: 1
+      - name: PRELOAD
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: PRELOAD
+            usage: read-write
+            values:
+              - name: Immediate
+                value: 0
+              - name: EndOfPeriod
+                value: 1
+      - name: COUNTMODE
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: COUNTMODE
+            usage: read-write
+            values:
+              - name: Internal
+                value: 0
+              - name: External
+                value: 1
+      - name: ENC
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - name: ENC
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ENABLE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ENABLE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SNGSTRT
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: SNGSTRTW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+      - name: CNTSTRT
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: CNTSTRTW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+- register:
+    name: CMP
+    displayName: CMP
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CMP
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: ARR
+    displayName: ARR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: ARR
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: CNT
+    displayName: CNT
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CNT
+        bitOffset: 0
+        bitWidth: 16

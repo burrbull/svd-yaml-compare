@@ -1,0 +1,110 @@
+---
+- register:
+    name: MEMRMP
+    displayName: MEMRMP
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MEM_MODE
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      - name: BOOT_MODE
+        bitOffset: 8
+        bitWidth: 2
+        access: read-only
+- register:
+    name: PMC
+    displayName: PMC
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: USB_PU
+        bitOffset: 0
+        bitWidth: 1
+      - name: LCD_CAPA
+        bitOffset: 1
+        bitWidth: 5
+- register:
+    name: EXTICR1
+    displayName: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR2
+    displayName: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR3
+    displayName: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR4
+    displayName: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 4

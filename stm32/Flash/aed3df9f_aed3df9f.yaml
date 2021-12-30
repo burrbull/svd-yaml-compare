@@ -1,0 +1,632 @@
+---
+- register:
+    name: ACR
+    displayName: ACR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LATENCY
+        bitOffset: 0
+        bitWidth: 4
+      - name: RUN_PD
+        bitOffset: 13
+        bitWidth: 1
+      - name: SLEEP_PD
+        bitOffset: 14
+        bitWidth: 1
+      - name: LVEN
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: PDKEYR
+    displayName: PDKEYR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PDKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: NSKEYR
+    displayName: NSKEYR
+    addressOffset: 8
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: NSKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECKEYR
+    displayName: SECKEYR
+    addressOffset: 12
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: SECKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: OPTKEYR
+    displayName: OPTKEYR
+    addressOffset: 16
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: OPTKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: LVEKEYR
+    displayName: LVEKEYR
+    addressOffset: 20
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: LVEKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: NSSR
+    displayName: NSSR
+    addressOffset: 32
+    size: 32
+    resetValue: 0
+    fields:
+      - name: NSEOP
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: NSOPERR
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: NSPROGERR
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: NSWRPERR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: NSPGAERR
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: NSSIZERR
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: NSPGSERR
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: OPTWERR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: OPTVERR
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: NSBSY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+- register:
+    name: SECSR
+    displayName: SECSR
+    addressOffset: 36
+    size: 32
+    resetValue: 0
+    fields:
+      - name: SECEOP
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: SECOPERR
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: SECPROGERR
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: SECWRPERR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: SECPGAERR
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: SECSIZERR
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: SECPGSERR
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: SECRDERR
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: SECBSY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+- register:
+    name: NSCR
+    displayName: NSCR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 3221225472
+    fields:
+      - name: NSPG
+        bitOffset: 0
+        bitWidth: 1
+      - name: NSPER
+        bitOffset: 1
+        bitWidth: 1
+      - name: NSMER1
+        bitOffset: 2
+        bitWidth: 1
+      - name: NSPNB
+        bitOffset: 3
+        bitWidth: 7
+      - name: NSBKER
+        bitOffset: 11
+        bitWidth: 1
+      - name: NSMER2
+        bitOffset: 15
+        bitWidth: 1
+      - name: NSSTRT
+        bitOffset: 16
+        bitWidth: 1
+      - name: OPTSTRT
+        bitOffset: 17
+        bitWidth: 1
+      - name: NSEOPIE
+        bitOffset: 24
+        bitWidth: 1
+      - name: NSERRIE
+        bitOffset: 25
+        bitWidth: 1
+      - name: OBL_LAUNCH
+        bitOffset: 27
+        bitWidth: 1
+      - name: OPTLOCK
+        bitOffset: 30
+        bitWidth: 1
+      - name: NSLOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: SECCR
+    displayName: SECCR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 2147483648
+    fields:
+      - name: SECPG
+        bitOffset: 0
+        bitWidth: 1
+      - name: SECPER
+        bitOffset: 1
+        bitWidth: 1
+      - name: SECMER1
+        bitOffset: 2
+        bitWidth: 1
+      - name: SECPNB
+        bitOffset: 3
+        bitWidth: 7
+      - name: SECBKER
+        bitOffset: 11
+        bitWidth: 1
+      - name: SECMER2
+        bitOffset: 15
+        bitWidth: 1
+      - name: SECSTRT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SECEOPIE
+        bitOffset: 24
+        bitWidth: 1
+      - name: SECERRIE
+        bitOffset: 25
+        bitWidth: 1
+      - name: SECRDERRIE
+        bitOffset: 26
+        bitWidth: 1
+      - name: SECINV
+        bitOffset: 29
+        bitWidth: 1
+      - name: SECLOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ECCR
+    displayName: ECCR
+    addressOffset: 48
+    size: 32
+    resetValue: 0
+    fields:
+      - name: ADDR_ECC
+        bitOffset: 0
+        bitWidth: 19
+        access: read-only
+      - name: BK_ECC
+        bitOffset: 21
+        bitWidth: 1
+        access: read-only
+      - name: SYSF_ECC
+        bitOffset: 22
+        bitWidth: 1
+        access: read-only
+      - name: ECCIE
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      - name: ECCC2
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: ECCD2
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: ECCC
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: ECCD
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: OPTR
+    displayName: OPTR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RDP
+        bitOffset: 0
+        bitWidth: 8
+      - name: BOR_LEV
+        bitOffset: 8
+        bitWidth: 3
+      - name: nRST_STOP
+        bitOffset: 12
+        bitWidth: 1
+      - name: nRST_STDBY
+        bitOffset: 13
+        bitWidth: 1
+      - name: nRST_SHDW
+        bitOffset: 14
+        bitWidth: 1
+      - name: IWDG_SW
+        bitOffset: 16
+        bitWidth: 1
+      - name: IWDG_STOP
+        bitOffset: 17
+        bitWidth: 1
+      - name: IWDG_STDBY
+        bitOffset: 18
+        bitWidth: 1
+      - name: WWDG_SW
+        bitOffset: 19
+        bitWidth: 1
+      - name: SWAP_BANK
+        bitOffset: 20
+        bitWidth: 1
+      - name: DB256K
+        bitOffset: 21
+        bitWidth: 1
+      - name: DBANK
+        bitOffset: 22
+        bitWidth: 1
+      - name: SRAM2_PE
+        bitOffset: 24
+        bitWidth: 1
+      - name: SRAM2_RST
+        bitOffset: 25
+        bitWidth: 1
+      - name: nSWBOOT0
+        bitOffset: 26
+        bitWidth: 1
+      - name: nBOOT0
+        bitOffset: 27
+        bitWidth: 1
+      - name: PA15_PUPEN
+        bitOffset: 28
+        bitWidth: 1
+      - name: TZEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: NSBOOTADD0R
+    displayName: NSBOOTADD0R
+    addressOffset: 68
+    size: 32
+    access: write-only
+    resetValue: 15
+    fields:
+      - name: NSBOOTADD0
+        bitOffset: 7
+        bitWidth: 25
+- register:
+    name: NSBOOTADD1R
+    displayName: NSBOOTADD1R
+    addressOffset: 72
+    size: 32
+    access: write-only
+    resetValue: 15
+    fields:
+      - name: NSBOOTADD1
+        bitOffset: 7
+        bitWidth: 25
+- register:
+    name: SECBOOTADD0R
+    displayName: SECBOOTADD0R
+    addressOffset: 76
+    size: 32
+    resetValue: 0
+    fields:
+      - name: BOOT_LOCK
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: SECBOOTADD0
+        bitOffset: 7
+        bitWidth: 25
+        access: write-only
+- register:
+    name: SECWM1R1
+    displayName: SECWM1R1
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: SECWM1_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: SECWM1_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: SECWM1R2
+    displayName: SECWM1R2
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 251662080
+    fields:
+      - name: PCROP1_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: PCROP1EN
+        bitOffset: 15
+        bitWidth: 1
+      - name: HDP1_PEND
+        bitOffset: 16
+        bitWidth: 7
+      - name: HDP1EN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: WRP1AR
+    displayName: WRP1AR
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP1A_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: WRP1A_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: WRP1BR
+    displayName: WRP1BR
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP1B_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: WRP1B_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: SECWM2R1
+    displayName: SECWM2R1
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: SECWM2_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: SECWM2_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: SECWM2R2
+    displayName: SECWM2R2
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 251662080
+    fields:
+      - name: PCROP2_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: PCROP2EN
+        bitOffset: 15
+        bitWidth: 1
+      - name: HDP2_PEND
+        bitOffset: 16
+        bitWidth: 7
+      - name: HDP2EN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: WRP2AR
+    displayName: WRP2AR
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP2A_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: WRP2A_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: WRP2BR
+    displayName: WRP2BR
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP2B_PSTRT
+        bitOffset: 0
+        bitWidth: 7
+      - name: WRP2B_PEND
+        bitOffset: 16
+        bitWidth: 7
+- register:
+    name: SECBB1R1
+    displayName: SECBB1R1
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB1R2
+    displayName: SECBB1R2
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB1R3
+    displayName: SECBB1R3
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB1R4
+    displayName: SECBB1R4
+    addressOffset: 140
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB2R1
+    displayName: SECBB2R1
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB2R2
+    displayName: SECBB2R2
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB2R3
+    displayName: SECBB2R3
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECBB2R4
+    displayName: SECBB2R4
+    addressOffset: 172
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SECBB2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SECHDPCR
+    displayName: SECHDPCR
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HDP1_ACCDIS
+        bitOffset: 0
+        bitWidth: 1
+      - name: HDP2_ACCDIS
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: PRIVCFGR
+    displayName: PRIVCFGR
+    addressOffset: 196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRIV
+        bitOffset: 0
+        bitWidth: 1

@@ -1,0 +1,424 @@
+---
+- register:
+    name: PMCR
+    displayName: PMCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: I2C1FMP
+        bitOffset: 0
+        bitWidth: 1
+      - name: I2C2FMP
+        bitOffset: 1
+        bitWidth: 1
+      - name: I2C3FMP
+        bitOffset: 2
+        bitWidth: 1
+      - name: I2C4FMP
+        bitOffset: 3
+        bitWidth: 1
+      - name: PB6FMP
+        bitOffset: 4
+        bitWidth: 1
+      - name: PB7FMP
+        bitOffset: 5
+        bitWidth: 1
+      - name: PB8FMP
+        bitOffset: 6
+        bitWidth: 1
+      - name: PB9FMP
+        bitOffset: 7
+        bitWidth: 1
+      - name: BOOSTE
+        bitOffset: 8
+        bitWidth: 1
+      - name: BOOSTVDDSEL
+        bitOffset: 9
+        bitWidth: 1
+      - name: EPIS
+        bitOffset: 21
+        bitWidth: 3
+      - name: PA0SO
+        bitOffset: 24
+        bitWidth: 1
+      - name: PA1SO
+        bitOffset: 25
+        bitWidth: 1
+      - name: PC2SO
+        bitOffset: 26
+        bitWidth: 1
+      - name: PC3SO
+        bitOffset: 27
+        bitWidth: 1
+- register:
+    name: EXTICR1
+    displayName: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR2
+    displayName: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR3
+    displayName: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR4
+    displayName: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CCCSR
+    displayName: CCCSR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: CS
+        bitOffset: 1
+        bitWidth: 1
+      - name: READY
+        bitOffset: 8
+        bitWidth: 1
+      - name: HSLV
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: CCVR
+    displayName: CCVR
+    addressOffset: 36
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: NCV
+        bitOffset: 0
+        bitWidth: 4
+      - name: PCV
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: CCCR
+    displayName: CCCR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: NCC
+        bitOffset: 0
+        bitWidth: 4
+      - name: PCC
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: PWRCR
+    displayName: PWRCR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ODEN
+        bitOffset: 0
+        bitWidth: 4
+- register:
+    name: PKGR
+    displayName: PKGR
+    addressOffset: 292
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PKG
+        bitOffset: 0
+        bitWidth: 4
+- register:
+    name: UR0
+    displayName: UR0
+    addressOffset: 768
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: BKS
+        bitOffset: 0
+        bitWidth: 1
+      - name: RDP
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: UR2
+    displayName: UR2
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BORH
+        bitOffset: 0
+        bitWidth: 2
+      - name: BOOT_ADD0
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: UR3
+    displayName: UR3
+    addressOffset: 780
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BOOT_ADD1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: UR4
+    displayName: UR4
+    addressOffset: 784
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MEPAD_1
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR5
+    displayName: UR5
+    addressOffset: 788
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MESAD_1
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRPN_1
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: UR6
+    displayName: UR6
+    addressOffset: 792
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PA_BEG_1
+        bitOffset: 0
+        bitWidth: 12
+      - name: PA_END_1
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: UR7
+    displayName: UR7
+    addressOffset: 796
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SA_BEG_1
+        bitOffset: 0
+        bitWidth: 12
+      - name: SA_END_1
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: UR8
+    displayName: UR8
+    addressOffset: 800
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MEPAD_2
+        bitOffset: 0
+        bitWidth: 1
+      - name: MESAD_2
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR9
+    displayName: UR9
+    addressOffset: 804
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WRPN_2
+        bitOffset: 0
+        bitWidth: 8
+      - name: PA_BEG_2
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: UR10
+    displayName: UR10
+    addressOffset: 808
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PA_END_2
+        bitOffset: 0
+        bitWidth: 12
+      - name: SA_BEG_2
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: UR11
+    displayName: UR11
+    addressOffset: 812
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SA_END_2
+        bitOffset: 0
+        bitWidth: 12
+      - name: IWDG1M
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR12
+    displayName: UR12
+    addressOffset: 816
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SECURE
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR13
+    displayName: UR13
+    addressOffset: 820
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SDRS
+        bitOffset: 0
+        bitWidth: 2
+      - name: D1SBRST
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR14
+    displayName: UR14
+    addressOffset: 824
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: D1STPRST
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: UR15
+    displayName: UR15
+    addressOffset: 828
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FZIWDGSTB
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR16
+    displayName: UR16
+    addressOffset: 832
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FZIWDGSTP
+        bitOffset: 0
+        bitWidth: 1
+      - name: PKP
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: UR17
+    displayName: UR17
+    addressOffset: 836
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: IO_HSLV
+        bitOffset: 0
+        bitWidth: 1

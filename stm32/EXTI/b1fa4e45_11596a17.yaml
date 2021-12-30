@@ -1,0 +1,1319 @@
+---
+- register:
+    name: IMR1
+    displayName: IMR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 528482304
+    fields:
+      - name: MR0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MR0
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: MR1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR23
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR24
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR25
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR26
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR27
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR28
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+- register:
+    name: EMR1
+    displayName: EMR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MR0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MR0
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: MR1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR23
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR24
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR25
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR26
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR27
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR28
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+      - name: MR31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR0
+            values: []
+- register:
+    name: RTSR1
+    displayName: RTSR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TR0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TR0
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TR1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+- register:
+    name: FTSR1
+    displayName: FTSR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TR0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TR0
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TR1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+      - name: TR31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR0
+            values: []
+- register:
+    name: SWIER1
+    displayName: SWIER1
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWIER0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWIER0W
+            usage: write
+            values:
+              - name: Pend
+                value: 1
+      - name: SWIER1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+      - name: SWIER31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER0W
+            values: []
+- register:
+    name: PR1
+    displayName: PR1
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PR0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: PR0R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: PR0W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: PR1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+      - name: PR31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR0R
+            values: []
+          - derived_from: PR0W
+            values: []
+- register:
+    name: IMR2
+    displayName: IMR2
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 4294967294
+    fields:
+      - name: MR32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MR32
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: MR33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+      - name: MR34
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+      - name: MR35
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+- register:
+    name: EMR2
+    displayName: EMR2
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MR32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MR32
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: MR33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+      - name: MR34
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+      - name: MR35
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MR32
+            values: []
+- register:
+    name: RTSR2
+    displayName: RTSR2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TR32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TR32
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TR33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR32
+            values: []
+- register:
+    name: FTSR2
+    displayName: FTSR2
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TR32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: TR32
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TR33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TR32
+            values: []
+- register:
+    name: SWIER2
+    displayName: SWIER2
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWIER32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWIER32W
+            usage: write
+            values:
+              - name: Pend
+                value: 1
+      - name: SWIER33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWIER32W
+            values: []
+- register:
+    name: PR2
+    displayName: PR2
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PR32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: PR32R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: PR32W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: PR33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: PR32R
+            values: []
+          - derived_from: PR32W
+            values: []

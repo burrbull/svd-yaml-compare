@@ -1,0 +1,840 @@
+---
+- register:
+    name: EP0R
+    displayName: EP0R
+    addressOffset: 0
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP1R
+    displayName: EP1R
+    addressOffset: 4
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP2R
+    displayName: EP2R
+    addressOffset: 8
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP3R
+    displayName: EP3R
+    addressOffset: 12
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP4R
+    displayName: EP4R
+    addressOffset: 16
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP5R
+    displayName: EP5R
+    addressOffset: 20
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP6R
+    displayName: EP6R
+    addressOffset: 24
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP7R
+    displayName: EP7R
+    addressOffset: 28
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: CNTR
+    displayName: CNTR
+    addressOffset: 64
+    size: 16
+    access: read-write
+    resetValue: 3
+    fields:
+      - name: FRES
+        bitOffset: 0
+        bitWidth: 1
+      - name: PDWN
+        bitOffset: 1
+        bitWidth: 1
+      - name: LPMODE
+        bitOffset: 2
+        bitWidth: 1
+      - name: FSUSP
+        bitOffset: 3
+        bitWidth: 1
+      - name: RESUME
+        bitOffset: 4
+        bitWidth: 1
+      - name: L1RESUME
+        bitOffset: 5
+        bitWidth: 1
+      - name: L1REQM
+        bitOffset: 7
+        bitWidth: 1
+      - name: ESOFM
+        bitOffset: 8
+        bitWidth: 1
+      - name: SOFM
+        bitOffset: 9
+        bitWidth: 1
+      - name: RESETM
+        bitOffset: 10
+        bitWidth: 1
+      - name: SUSPM
+        bitOffset: 11
+        bitWidth: 1
+      - name: WKUPM
+        bitOffset: 12
+        bitWidth: 1
+      - name: ERRM
+        bitOffset: 13
+        bitWidth: 1
+      - name: PMAOVRM
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTRM
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: ISTR
+    displayName: ISTR
+    addressOffset: 68
+    size: 16
+    resetValue: 0
+    fields:
+      - name: EP_ID
+        bitOffset: 0
+        bitWidth: 4
+        access: read-only
+      - name: DIR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+      - name: L1REQ
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: ESOF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: SOF
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: RESET
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: SUSP
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: WKUP
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: ERR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: PMAOVR
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: CTR
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+- register:
+    name: FNR
+    displayName: FNR
+    addressOffset: 72
+    size: 16
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FN
+        bitOffset: 0
+        bitWidth: 11
+      - name: LSOF
+        bitOffset: 11
+        bitWidth: 2
+      - name: LCK
+        bitOffset: 13
+        bitWidth: 1
+      - name: RXDM
+        bitOffset: 14
+        bitWidth: 1
+      - name: RXDP
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: DADDR
+    displayName: DADDR
+    addressOffset: 76
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADD
+        bitOffset: 0
+        bitWidth: 7
+      - name: EF
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: BTABLE
+    displayName: BTABLE
+    addressOffset: 80
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BTABLE
+        bitOffset: 3
+        bitWidth: 13
+- register:
+    name: COUNT0_TX
+    displayName: COUNT0_TX
+    addressOffset: 82
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT0_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: LPMCSR
+    displayName: LPMCSR
+    addressOffset: 84
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LPMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: LPMACK
+        bitOffset: 1
+        bitWidth: 1
+      - name: REMWAKE
+        bitOffset: 3
+        bitWidth: 1
+      - name: BESL
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: COUNT0_RX
+    displayName: COUNT0_RX
+    addressOffset: 86
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT0_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: BCDR
+    displayName: BCDR
+    addressOffset: 88
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BCDEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: DCDEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: PDEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: SDEN
+        bitOffset: 3
+        bitWidth: 1
+      - name: DCDET
+        bitOffset: 4
+        bitWidth: 1
+      - name: PDET
+        bitOffset: 5
+        bitWidth: 1
+      - name: SDET
+        bitOffset: 6
+        bitWidth: 1
+      - name: PS2DET
+        bitOffset: 7
+        bitWidth: 1
+      - name: DPPU
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: COUNT1_TX
+    displayName: COUNT1_TX
+    addressOffset: 90
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT1_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR0_RX
+    displayName: ADDR0_RX
+    addressOffset: 92
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR0_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT1_RX
+    displayName: COUNT1_RX
+    addressOffset: 94
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT1_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT2_TX
+    displayName: COUNT2_TX
+    addressOffset: 98
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT2_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR1_RX
+    displayName: ADDR1_RX
+    addressOffset: 100
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR1_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT2_RX
+    displayName: COUNT2_RX
+    addressOffset: 102
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT2_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT3_TX
+    displayName: COUNT3_TX
+    addressOffset: 106
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT3_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR2_RX
+    displayName: ADDR2_RX
+    addressOffset: 108
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR2_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT3_RX
+    displayName: COUNT3_RX
+    addressOffset: 110
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT3_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT4_TX
+    displayName: COUNT4_TX
+    addressOffset: 114
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT4_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR3_RX
+    displayName: ADDR3_RX
+    addressOffset: 116
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR3_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT4_RX
+    displayName: COUNT4_RX
+    addressOffset: 118
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT4_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT5_TX
+    displayName: COUNT5_TX
+    addressOffset: 122
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT5_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR4_RX
+    displayName: ADDR4_RX
+    addressOffset: 124
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR4_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT5_RX
+    displayName: COUNT5_RX
+    addressOffset: 126
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT5_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT6_TX
+    displayName: COUNT6_TX
+    addressOffset: 130
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT6_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR5_RX
+    displayName: ADDR5_RX
+    addressOffset: 132
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR5_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT6_RX
+    displayName: COUNT6_RX
+    addressOffset: 134
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT6_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: COUNT7_TX
+    displayName: COUNT7_TX
+    addressOffset: 138
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: COUNT7_TX
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: ADDR6_RX
+    displayName: ADDR6_RX
+    addressOffset: 140
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR6_RX
+        bitOffset: 1
+        bitWidth: 15
+- register:
+    name: COUNT7_RX
+    displayName: COUNT7_RX
+    addressOffset: 142
+    size: 16
+    resetValue: 0
+    fields:
+      - name: COUNT7_RX
+        bitOffset: 0
+        bitWidth: 10
+        access: read-only
+      - name: NUM_BLOCK
+        bitOffset: 10
+        bitWidth: 5
+        access: read-write
+      - name: BL_SIZE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: ADDR7_RX
+    displayName: ADDR7_RX
+    addressOffset: 148
+    size: 16
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDR7_RX
+        bitOffset: 1
+        bitWidth: 15

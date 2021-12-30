@@ -1,0 +1,289 @@
+---
+- register:
+    name: MEMRMP
+    displayName: MEMRMP
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MEM_MODE
+        bitOffset: 0
+        bitWidth: 3
+      - name: FB_mode
+        bitOffset: 8
+        bitWidth: 1
+- register:
+    name: CFGR1
+    displayName: CFGR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 2080374785
+    fields:
+      - name: BOOSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: ANASWVDD
+        bitOffset: 9
+        bitWidth: 1
+      - name: I2C_PB6_FMP
+        bitOffset: 16
+        bitWidth: 1
+      - name: I2C_PB7_FMP
+        bitOffset: 17
+        bitWidth: 1
+      - name: I2C_PB8_FMP
+        bitOffset: 18
+        bitWidth: 1
+      - name: I2C_PB9_FMP
+        bitOffset: 19
+        bitWidth: 1
+      - name: I2C1_FMP
+        bitOffset: 20
+        bitWidth: 1
+      - name: I2C2_FMP
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C3_FMP
+        bitOffset: 22
+        bitWidth: 1
+      - name: I2C4_FMP
+        bitOffset: 23
+        bitWidth: 1
+      - name: FPU_IE
+        bitOffset: 26
+        bitWidth: 6
+- register:
+    name: EXTICR1
+    displayName: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR2
+    displayName: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR3
+    displayName: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR4
+    displayName: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: SCSR
+    displayName: SCSR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CCMER
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: CCMBSY
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CFGR2
+    displayName: CFGR2
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLL
+        bitOffset: 0
+        bitWidth: 1
+      - name: SPL
+        bitOffset: 1
+        bitWidth: 1
+      - name: PVDL
+        bitOffset: 2
+        bitWidth: 1
+      - name: ECCL
+        bitOffset: 3
+        bitWidth: 1
+      - name: SPF
+        bitOffset: 8
+        bitWidth: 1
+- register:
+    name: SWPR
+    displayName: SWPR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: Page0_WP
+        bitOffset: 0
+        bitWidth: 1
+      - name: Page1_WP
+        bitOffset: 1
+        bitWidth: 1
+      - name: Page2_WP
+        bitOffset: 2
+        bitWidth: 1
+      - name: Page3_WP
+        bitOffset: 3
+        bitWidth: 1
+      - name: Page4_WP
+        bitOffset: 4
+        bitWidth: 1
+      - name: Page5_WP
+        bitOffset: 5
+        bitWidth: 1
+      - name: Page6_WP
+        bitOffset: 6
+        bitWidth: 1
+      - name: Page7_WP
+        bitOffset: 7
+        bitWidth: 1
+      - name: Page8_WP
+        bitOffset: 8
+        bitWidth: 1
+      - name: Page9_WP
+        bitOffset: 9
+        bitWidth: 1
+      - name: Page10_WP
+        bitOffset: 10
+        bitWidth: 1
+      - name: Page11_WP
+        bitOffset: 11
+        bitWidth: 1
+      - name: Page12_WP
+        bitOffset: 12
+        bitWidth: 1
+      - name: Page13_WP
+        bitOffset: 13
+        bitWidth: 1
+      - name: Page14_WP
+        bitOffset: 14
+        bitWidth: 1
+      - name: Page15_WP
+        bitOffset: 15
+        bitWidth: 1
+      - name: Page16_WP
+        bitOffset: 16
+        bitWidth: 1
+      - name: Page17_WP
+        bitOffset: 17
+        bitWidth: 1
+      - name: Page18_WP
+        bitOffset: 18
+        bitWidth: 1
+      - name: Page19_WP
+        bitOffset: 19
+        bitWidth: 1
+      - name: Page20_WP
+        bitOffset: 20
+        bitWidth: 1
+      - name: Page21_WP
+        bitOffset: 21
+        bitWidth: 1
+      - name: Page22_WP
+        bitOffset: 22
+        bitWidth: 1
+      - name: Page23_WP
+        bitOffset: 23
+        bitWidth: 1
+      - name: Page24_WP
+        bitOffset: 24
+        bitWidth: 1
+      - name: Page25_WP
+        bitOffset: 25
+        bitWidth: 1
+      - name: Page26_WP
+        bitOffset: 26
+        bitWidth: 1
+      - name: Page27_WP
+        bitOffset: 27
+        bitWidth: 1
+      - name: Page28_WP
+        bitOffset: 28
+        bitWidth: 1
+      - name: Page29_WP
+        bitOffset: 29
+        bitWidth: 1
+      - name: Page30_WP
+        bitOffset: 30
+        bitWidth: 1
+      - name: Page31_WP
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: SKR
+    displayName: SKR
+    addressOffset: 36
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 8

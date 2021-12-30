@@ -1,0 +1,596 @@
+---
+- register:
+    name: CR1
+    displayName: CR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: UDIS
+        bitOffset: 1
+        bitWidth: 1
+      - name: URS
+        bitOffset: 2
+        bitWidth: 1
+      - name: OPM
+        bitOffset: 3
+        bitWidth: 1
+      - name: DIR
+        bitOffset: 4
+        bitWidth: 1
+      - name: CMS
+        bitOffset: 5
+        bitWidth: 2
+      - name: ARPE
+        bitOffset: 7
+        bitWidth: 1
+      - name: CKD
+        bitOffset: 8
+        bitWidth: 2
+      - name: UIFREMAP
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: CR2
+    displayName: CR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCDS
+        bitOffset: 3
+        bitWidth: 1
+      - name: MMS
+        bitOffset: 4
+        bitWidth: 3
+      - name: TI1S
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: SMCR
+    displayName: SMCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMS
+        bitOffset: 0
+        bitWidth: 3
+      - name: OCCS
+        bitOffset: 3
+        bitWidth: 1
+      - name: TS
+        bitOffset: 4
+        bitWidth: 3
+      - name: MSM
+        bitOffset: 7
+        bitWidth: 1
+      - name: ETF
+        bitOffset: 8
+        bitWidth: 4
+      - name: ETPS
+        bitOffset: 12
+        bitWidth: 2
+      - name: ECE
+        bitOffset: 14
+        bitWidth: 1
+      - name: ETP
+        bitOffset: 15
+        bitWidth: 1
+      - name: SMS_3
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: DIER
+    displayName: DIER
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: CC1IE
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2IE
+        bitOffset: 2
+        bitWidth: 1
+      - name: CC3IE
+        bitOffset: 3
+        bitWidth: 1
+      - name: CC4IE
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: UDE
+        bitOffset: 8
+        bitWidth: 1
+      - name: CC1DE
+        bitOffset: 9
+        bitWidth: 1
+      - name: CC2DE
+        bitOffset: 10
+        bitWidth: 1
+      - name: CC3DE
+        bitOffset: 11
+        bitWidth: 1
+      - name: CC4DE
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UIF
+        bitOffset: 0
+        bitWidth: 1
+      - name: CC1IF
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2IF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CC3IF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CC4IF
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIF
+        bitOffset: 6
+        bitWidth: 1
+      - name: CC1OF
+        bitOffset: 9
+        bitWidth: 1
+      - name: CC2OF
+        bitOffset: 10
+        bitWidth: 1
+      - name: CC3OF
+        bitOffset: 11
+        bitWidth: 1
+      - name: CC4OF
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: EGR
+    displayName: EGR
+    addressOffset: 20
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: UG
+        bitOffset: 0
+        bitWidth: 1
+      - name: CC1G
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2G
+        bitOffset: 2
+        bitWidth: 1
+      - name: CC3G
+        bitOffset: 3
+        bitWidth: 1
+      - name: CC4G
+        bitOffset: 4
+        bitWidth: 1
+      - name: TG
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: CCMR1_Output
+    displayName: CCMR1_Output
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1S
+        bitOffset: 0
+        bitWidth: 2
+      - name: OC1FE
+        bitOffset: 2
+        bitWidth: 1
+      - name: OC1PE
+        bitOffset: 3
+        bitWidth: 1
+      - name: OC1M
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: OC1M
+            usage: read-write
+            values:
+              - name: Frozen
+                value: 0
+              - name: ActiveOnMatch
+                value: 1
+              - name: InactiveOnMatch
+                value: 2
+              - name: Toggle
+                value: 3
+              - name: ForceInactive
+                value: 4
+              - name: ForceActive
+                value: 5
+              - name: PwmMode1
+                value: 6
+              - name: PwmMode2
+                value: 7
+      - name: OC1CE
+        bitOffset: 7
+        bitWidth: 1
+      - name: CC2S
+        bitOffset: 8
+        bitWidth: 2
+      - name: OC2FE
+        bitOffset: 10
+        bitWidth: 1
+      - name: OC2PE
+        bitOffset: 11
+        bitWidth: 1
+      - name: OC2M
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: OC1M
+            values: []
+      - name: OC2CE
+        bitOffset: 15
+        bitWidth: 1
+      - name: OC1M_3
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: OC1M_3
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Extended
+                value: 1
+      - name: OC2M_3
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OC1M_3
+            values: []
+- register:
+    name: CCMR1_Input
+    displayName: CCMR1_Input
+    alternateRegister: CCMR1_Output
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1S
+        bitOffset: 0
+        bitWidth: 2
+      - name: IC1PSC
+        bitOffset: 2
+        bitWidth: 2
+      - name: IC1F
+        bitOffset: 4
+        bitWidth: 4
+      - name: CC2S
+        bitOffset: 8
+        bitWidth: 2
+      - name: IC2PSC
+        bitOffset: 10
+        bitWidth: 2
+      - name: IC2F
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CCMR2_Output
+    displayName: CCMR2_Output
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC3S
+        bitOffset: 0
+        bitWidth: 2
+      - name: OC3FE
+        bitOffset: 2
+        bitWidth: 1
+      - name: OC3PE
+        bitOffset: 3
+        bitWidth: 1
+      - name: OC3M
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: OC3M
+            usage: read-write
+            values:
+              - name: Frozen
+                value: 0
+              - name: ActiveOnMatch
+                value: 1
+              - name: InactiveOnMatch
+                value: 2
+              - name: Toggle
+                value: 3
+              - name: ForceInactive
+                value: 4
+              - name: ForceActive
+                value: 5
+              - name: PwmMode1
+                value: 6
+              - name: PwmMode2
+                value: 7
+      - name: OC3CE
+        bitOffset: 7
+        bitWidth: 1
+      - name: CC4S
+        bitOffset: 8
+        bitWidth: 2
+      - name: OC4FE
+        bitOffset: 10
+        bitWidth: 1
+      - name: OC4PE
+        bitOffset: 11
+        bitWidth: 1
+      - name: OC4M
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: OC3M
+            values: []
+      - name: OC4CE
+        bitOffset: 15
+        bitWidth: 1
+      - name: OC3M_3
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: OC3M_3
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Extended
+                value: 1
+      - name: OC4M_3
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OC3M_3
+            values: []
+- register:
+    name: CCMR2_Input
+    displayName: CCMR2_Input
+    alternateRegister: CCMR2_Output
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC3S
+        bitOffset: 0
+        bitWidth: 2
+      - name: IC3PSC
+        bitOffset: 2
+        bitWidth: 2
+      - name: IC3F
+        bitOffset: 4
+        bitWidth: 4
+      - name: CC4S
+        bitOffset: 8
+        bitWidth: 2
+      - name: IC4PSC
+        bitOffset: 10
+        bitWidth: 2
+      - name: IC4F
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CCER
+    displayName: CCER
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1E
+        bitOffset: 0
+        bitWidth: 1
+      - name: CC1P
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC1NP
+        bitOffset: 3
+        bitWidth: 1
+      - name: CC2E
+        bitOffset: 4
+        bitWidth: 1
+      - name: CC2P
+        bitOffset: 5
+        bitWidth: 1
+      - name: CC2NP
+        bitOffset: 7
+        bitWidth: 1
+      - name: CC3E
+        bitOffset: 8
+        bitWidth: 1
+      - name: CC3P
+        bitOffset: 9
+        bitWidth: 1
+      - name: CC3NP
+        bitOffset: 11
+        bitWidth: 1
+      - name: CC4E
+        bitOffset: 12
+        bitWidth: 1
+      - name: CC4P
+        bitOffset: 13
+        bitWidth: 1
+      - name: CC4NP
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: CNT
+    displayName: CNT
+    addressOffset: 36
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CNT
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+      - name: UIFCPY
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: PSC
+    displayName: PSC
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PSC
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: ARR
+    displayName: ARR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ARR_L
+        bitOffset: 0
+        bitWidth: 16
+      - name: ARR_H
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CCR1
+    displayName: CCR1
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCR1_L
+        bitOffset: 0
+        bitWidth: 16
+      - name: CCR1_H
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CCR2
+    displayName: CCR2
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCR2_L
+        bitOffset: 0
+        bitWidth: 16
+      - name: CCR2_H
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CCR3
+    displayName: CCR3
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCR3_L
+        bitOffset: 0
+        bitWidth: 16
+      - name: CCR3_H
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CCR4
+    displayName: CCR4
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCR4_L
+        bitOffset: 0
+        bitWidth: 16
+      - name: CCR4_H
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: DCR
+    displayName: DCR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DBA
+        bitOffset: 0
+        bitWidth: 5
+      - name: DBL
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: DMAR
+    displayName: DMAR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAB
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: OR
+    displayName: OR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ITR_RMP
+        bitOffset: 0
+        bitWidth: 1
+      - name: ETR_RMP
+        bitOffset: 1
+        bitWidth: 1
+      - name: TI4_RMP
+        bitOffset: 2
+        bitWidth: 2
+- register:
+    name: AF
+    displayName: AF
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ETRSEL
+        bitOffset: 14
+        bitWidth: 3

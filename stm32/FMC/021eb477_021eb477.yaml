@@ -1,0 +1,796 @@
+---
+- register:
+    name: BCR1
+    displayName: BCR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+      - name: CCLKEN
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: BTR1
+    displayName: BTR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BCR2
+    displayName: BCR2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+      - name: WRAPMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+- register:
+    name: BTR2
+    displayName: BTR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BCR3
+    displayName: BCR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+      - name: WRAPMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+- register:
+    name: BTR3
+    displayName: BTR3
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BCR4
+    displayName: BCR4
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+      - name: WRAPMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+- register:
+    name: BTR4
+    displayName: BTR4
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: PCR2
+    displayName: PCR2
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 24
+    fields:
+      - name: PWAITEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: PBKEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: PTYP
+        bitOffset: 3
+        bitWidth: 1
+      - name: PWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: ECCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: TCLR
+        bitOffset: 9
+        bitWidth: 4
+      - name: TAR
+        bitOffset: 13
+        bitWidth: 4
+      - name: ECCPS
+        bitOffset: 17
+        bitWidth: 3
+- register:
+    name: SR2
+    displayName: SR2
+    addressOffset: 100
+    size: 32
+    resetValue: 64
+    fields:
+      - name: IRS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: ILS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: IFS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: IREN
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ILEN
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: IFEN
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: FEMPT
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+- register:
+    name: PMEM2
+    displayName: PMEM2
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: MEMWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: MEMHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: MEMHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: PATT2
+    displayName: PATT2
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: ATTWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: ATTHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: ATTHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: ECCR2
+    displayName: ECCR2
+    addressOffset: 116
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ECCx
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: PCR3
+    displayName: PCR3
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 24
+    fields:
+      - name: PWAITEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: PBKEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: PTYP
+        bitOffset: 3
+        bitWidth: 1
+      - name: PWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: ECCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: TCLR
+        bitOffset: 9
+        bitWidth: 4
+      - name: TAR
+        bitOffset: 13
+        bitWidth: 4
+      - name: ECCPS
+        bitOffset: 17
+        bitWidth: 3
+- register:
+    name: SR3
+    displayName: SR3
+    addressOffset: 132
+    size: 32
+    resetValue: 64
+    fields:
+      - name: IRS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: ILS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: IFS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: IREN
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ILEN
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: IFEN
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: FEMPT
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+- register:
+    name: PMEM3
+    displayName: PMEM3
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: MEMWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: MEMHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: MEMHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: PATT3
+    displayName: PATT3
+    addressOffset: 140
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: ATTWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: ATTHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: ATTHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: ECCR3
+    displayName: ECCR3
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ECCx
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: PCR4
+    displayName: PCR4
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 24
+    fields:
+      - name: PWAITEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: PBKEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: PTYP
+        bitOffset: 3
+        bitWidth: 1
+      - name: PWID
+        bitOffset: 4
+        bitWidth: 2
+      - name: ECCEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: TCLR
+        bitOffset: 9
+        bitWidth: 4
+      - name: TAR
+        bitOffset: 13
+        bitWidth: 4
+      - name: ECCPS
+        bitOffset: 17
+        bitWidth: 3
+- register:
+    name: SR4
+    displayName: SR4
+    addressOffset: 164
+    size: 32
+    resetValue: 64
+    fields:
+      - name: IRS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: ILS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: IFS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: IREN
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ILEN
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: IFEN
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: FEMPT
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+- register:
+    name: PMEM4
+    displayName: PMEM4
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: MEMWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: MEMHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: MEMHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: PATT4
+    displayName: PATT4
+    addressOffset: 172
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: ATTWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: ATTHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: ATTHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: PIO4
+    displayName: PIO4
+    addressOffset: 176
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: IOSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: IOWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: IOHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: IOHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: BWTR1
+    displayName: BWTR1
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BWTR2
+    displayName: BWTR2
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BWTR3
+    displayName: BWTR3
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: BWTR4
+    displayName: BWTR4
+    addressOffset: 284
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2

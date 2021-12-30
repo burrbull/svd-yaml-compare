@@ -1,0 +1,233 @@
+---
+- register:
+    name: MMCCR
+    displayName: MMCCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CR
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CR
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: CSR
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CSR
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ROR
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: ROR
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MCF
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: MCF
+            usage: read-write
+            values:
+              - name: Unfrozen
+                value: 0
+              - name: Frozen
+                value: 1
+- register:
+    name: MMCRIR
+    displayName: MMCRIR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RFCES
+        bitOffset: 5
+        bitWidth: 1
+      - name: RFAES
+        bitOffset: 6
+        bitWidth: 1
+      - name: RGUFS
+        bitOffset: 17
+        bitWidth: 1
+- register:
+    name: MMCTIR
+    displayName: MMCTIR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TGFSCS
+        bitOffset: 14
+        bitWidth: 1
+      - name: TGFMSCS
+        bitOffset: 15
+        bitWidth: 1
+      - name: TGFS
+        bitOffset: 21
+        bitWidth: 1
+- register:
+    name: MMCRIMR
+    displayName: MMCRIMR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RFCEM
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: RFCEM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+      - name: RFAEM
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: RFAEM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+      - name: RGUFM
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - name: RGUFM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+- register:
+    name: MMCTIMR
+    displayName: MMCTIMR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TGFSCM
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: TGFSCM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+      - name: TGFMSCM
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: TGFMSCM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+      - name: TGFM
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - name: TGFM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+- register:
+    name: MMCTGFSCCR
+    displayName: MMCTGFSCCR
+    addressOffset: 76
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TGFSCC
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MMCTGFMSCCR
+    displayName: MMCTGFMSCCR
+    addressOffset: 80
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TGFMSCC
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MMCTGFCR
+    displayName: MMCTGFCR
+    addressOffset: 104
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TGFC
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MMCRFCECR
+    displayName: MMCRFCECR
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RFCFC
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MMCRFAECR
+    displayName: MMCRFAECR
+    addressOffset: 152
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RFAEC
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: MMCRGUFCR
+    displayName: MMCRGUFCR
+    addressOffset: 196
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RGUFC
+        bitOffset: 0
+        bitWidth: 32

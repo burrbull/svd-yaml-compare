@@ -1,0 +1,2877 @@
+---
+- register:
+    name: HCFG
+    displayName: HCFG
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: FSLSPCS
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      - name: FSLSS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+- register:
+    name: HFIR
+    displayName: HFIR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 60000
+    fields:
+      - name: FRIVL
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: HFNUM
+    displayName: HFNUM
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 16383
+    fields:
+      - name: FRNUM
+        bitOffset: 0
+        bitWidth: 16
+      - name: FTREM
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: HPTXSTS
+    displayName: HPTXSTS
+    addressOffset: 16
+    size: 32
+    resetValue: 524544
+    fields:
+      - name: PTXFSAVL
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+      - name: PTXQSAV
+        bitOffset: 16
+        bitWidth: 8
+        access: read-only
+      - name: PTXQTOP
+        bitOffset: 24
+        bitWidth: 8
+        access: read-only
+- register:
+    name: HAINT
+    displayName: HAINT
+    addressOffset: 20
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: HAINT
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: HAINTMSK
+    displayName: HAINTMSK
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HAINTM
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: HPRT
+    displayName: HPRT
+    addressOffset: 64
+    size: 32
+    resetValue: 0
+    fields:
+      - name: PCSTS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: PCDET
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: PENA
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: PENCHNG
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: POCA
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+      - name: POCCHNG
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: PRES
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: PSUSP
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: PRST
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: PLSTS
+        bitOffset: 10
+        bitWidth: 2
+        access: read-only
+      - name: PPWR
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: PTCTL
+        bitOffset: 13
+        bitWidth: 4
+        access: read-write
+      - name: PSPD
+        bitOffset: 17
+        bitWidth: 2
+        access: read-only
+- register:
+    name: HCCHAR0
+    displayName: HCCHAR0
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT0
+    displayName: HCSPLT0
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT0
+    displayName: HCINT0
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK0
+    displayName: HCINTMSK0
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ0
+    displayName: HCTSIZ0
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA0
+    displayName: HCDMA0
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR1
+    displayName: HCCHAR1
+    addressOffset: 288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT1
+    displayName: HCSPLT1
+    addressOffset: 292
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT1
+    displayName: HCINT1
+    addressOffset: 296
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK1
+    displayName: HCINTMSK1
+    addressOffset: 300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ1
+    displayName: HCTSIZ1
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA1
+    displayName: HCDMA1
+    addressOffset: 308
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR2
+    displayName: HCCHAR2
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT2
+    displayName: HCSPLT2
+    addressOffset: 324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT2
+    displayName: HCINT2
+    addressOffset: 328
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK2
+    displayName: HCINTMSK2
+    addressOffset: 332
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ2
+    displayName: HCTSIZ2
+    addressOffset: 336
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA2
+    displayName: HCDMA2
+    addressOffset: 340
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR3
+    displayName: HCCHAR3
+    addressOffset: 352
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT3
+    displayName: HCSPLT3
+    addressOffset: 356
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT3
+    displayName: HCINT3
+    addressOffset: 360
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK3
+    displayName: HCINTMSK3
+    addressOffset: 364
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ3
+    displayName: HCTSIZ3
+    addressOffset: 368
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA3
+    displayName: HCDMA3
+    addressOffset: 372
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR4
+    displayName: HCCHAR4
+    addressOffset: 384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT4
+    displayName: HCSPLT4
+    addressOffset: 388
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT4
+    displayName: HCINT4
+    addressOffset: 392
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK4
+    displayName: HCINTMSK4
+    addressOffset: 396
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ4
+    displayName: HCTSIZ4
+    addressOffset: 400
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA4
+    displayName: HCDMA4
+    addressOffset: 404
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR5
+    displayName: HCCHAR5
+    addressOffset: 416
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT5
+    displayName: HCSPLT5
+    addressOffset: 420
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT5
+    displayName: HCINT5
+    addressOffset: 424
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK5
+    displayName: HCINTMSK5
+    addressOffset: 428
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ5
+    displayName: HCTSIZ5
+    addressOffset: 432
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA5
+    displayName: HCDMA5
+    addressOffset: 436
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR6
+    displayName: HCCHAR6
+    addressOffset: 448
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT6
+    displayName: HCSPLT6
+    addressOffset: 452
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT6
+    displayName: HCINT6
+    addressOffset: 456
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK6
+    displayName: HCINTMSK6
+    addressOffset: 460
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ6
+    displayName: HCTSIZ6
+    addressOffset: 464
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA6
+    displayName: HCDMA6
+    addressOffset: 468
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR7
+    displayName: HCCHAR7
+    addressOffset: 480
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT7
+    displayName: HCSPLT7
+    addressOffset: 484
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT7
+    displayName: HCINT7
+    addressOffset: 488
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK7
+    displayName: HCINTMSK7
+    addressOffset: 492
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ7
+    displayName: HCTSIZ7
+    addressOffset: 496
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA7
+    displayName: HCDMA7
+    addressOffset: 500
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR8
+    displayName: HCCHAR8
+    addressOffset: 512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT8
+    displayName: HCSPLT8
+    addressOffset: 516
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT8
+    displayName: HCINT8
+    addressOffset: 520
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK8
+    displayName: HCINTMSK8
+    addressOffset: 524
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ8
+    displayName: HCTSIZ8
+    addressOffset: 528
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA8
+    displayName: HCDMA8
+    addressOffset: 532
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR9
+    displayName: HCCHAR9
+    addressOffset: 544
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT9
+    displayName: HCSPLT9
+    addressOffset: 548
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT9
+    displayName: HCINT9
+    addressOffset: 552
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK9
+    displayName: HCINTMSK9
+    addressOffset: 556
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ9
+    displayName: HCTSIZ9
+    addressOffset: 560
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA9
+    displayName: HCDMA9
+    addressOffset: 564
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR10
+    displayName: HCCHAR10
+    addressOffset: 576
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT10
+    displayName: HCSPLT10
+    addressOffset: 580
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT10
+    displayName: HCINT10
+    addressOffset: 584
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK10
+    displayName: HCINTMSK10
+    addressOffset: 588
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ10
+    displayName: HCTSIZ10
+    addressOffset: 592
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA10
+    displayName: HCDMA10
+    addressOffset: 596
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR11
+    displayName: HCCHAR11
+    addressOffset: 608
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT11
+    displayName: HCSPLT11
+    addressOffset: 612
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT11
+    displayName: HCINT11
+    addressOffset: 616
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK11
+    displayName: HCINTMSK11
+    addressOffset: 620
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ11
+    displayName: HCTSIZ11
+    addressOffset: 624
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA11
+    displayName: HCDMA11
+    addressOffset: 628
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR12
+    displayName: HCCHAR12
+    addressOffset: 632
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT12
+    displayName: HCSPLT12
+    addressOffset: 636
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT12
+    displayName: HCINT12
+    addressOffset: 640
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK12
+    displayName: HCINTMSK12
+    addressOffset: 644
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ12
+    displayName: HCTSIZ12
+    addressOffset: 648
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA12
+    displayName: HCDMA12
+    addressOffset: 652
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR13
+    displayName: HCCHAR13
+    addressOffset: 656
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT13
+    displayName: HCSPLT13
+    addressOffset: 660
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT13
+    displayName: HCINT13
+    addressOffset: 664
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK13
+    displayName: HCINTMSK13
+    addressOffset: 668
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ13
+    displayName: HCTSIZ13
+    addressOffset: 672
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA13
+    displayName: HCDMA13
+    addressOffset: 676
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR14
+    displayName: HCCHAR14
+    addressOffset: 680
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT14
+    displayName: HCSPLT14
+    addressOffset: 684
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT14
+    displayName: HCINT14
+    addressOffset: 688
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK14
+    displayName: HCINTMSK14
+    addressOffset: 692
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ14
+    displayName: HCTSIZ14
+    addressOffset: 696
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA14
+    displayName: HCDMA14
+    addressOffset: 700
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HCCHAR15
+    displayName: HCCHAR15
+    addressOffset: 704
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MPSIZ
+        bitOffset: 0
+        bitWidth: 11
+      - name: EPNUM
+        bitOffset: 11
+        bitWidth: 4
+      - name: EPDIR
+        bitOffset: 15
+        bitWidth: 1
+      - name: LSDEV
+        bitOffset: 17
+        bitWidth: 1
+      - name: EPTYP
+        bitOffset: 18
+        bitWidth: 2
+      - name: MC
+        bitOffset: 20
+        bitWidth: 2
+      - name: DAD
+        bitOffset: 22
+        bitWidth: 7
+      - name: ODDFRM
+        bitOffset: 29
+        bitWidth: 1
+      - name: CHDIS
+        bitOffset: 30
+        bitWidth: 1
+      - name: CHENA
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCSPLT15
+    displayName: HCSPLT15
+    addressOffset: 708
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRTADDR
+        bitOffset: 0
+        bitWidth: 7
+      - name: HUBADDR
+        bitOffset: 7
+        bitWidth: 7
+      - name: XACTPOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: COMPLSPLT
+        bitOffset: 16
+        bitWidth: 1
+      - name: SPLITEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: HCINT15
+    displayName: HCINT15
+    addressOffset: 712
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHH
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAK
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACK
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMOR
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERR
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCINTMSK15
+    displayName: HCINTMSK15
+    addressOffset: 716
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: CHHM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: STALL
+        bitOffset: 3
+        bitWidth: 1
+      - name: NAKM
+        bitOffset: 4
+        bitWidth: 1
+      - name: ACKM
+        bitOffset: 5
+        bitWidth: 1
+      - name: NYET
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXERRM
+        bitOffset: 7
+        bitWidth: 1
+      - name: BBERRM
+        bitOffset: 8
+        bitWidth: 1
+      - name: FRMORM
+        bitOffset: 9
+        bitWidth: 1
+      - name: DTERRM
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: HCTSIZ15
+    displayName: HCTSIZ15
+    addressOffset: 720
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XFRSIZ
+        bitOffset: 0
+        bitWidth: 19
+      - name: PKTCNT
+        bitOffset: 19
+        bitWidth: 10
+      - name: DPID
+        bitOffset: 29
+        bitWidth: 2
+- register:
+    name: HCDMA15
+    displayName: HCDMA15
+    addressOffset: 724
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAADDR
+        bitOffset: 0
+        bitWidth: 32

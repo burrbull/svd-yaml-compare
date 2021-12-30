@@ -1,0 +1,35 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: SEN
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: CFGR
+    displayName: CFGR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SEL
+        bitOffset: 0
+        bitWidth: 4
+      - name: UNIT
+        bitOffset: 8
+        bitWidth: 7
+      - name: LNG
+        bitOffset: 16
+        bitWidth: 12
+      - name: LNGF
+        bitOffset: 31
+        bitWidth: 1

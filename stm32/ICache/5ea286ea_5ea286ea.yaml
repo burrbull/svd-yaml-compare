@@ -1,0 +1,201 @@
+---
+- register:
+    name: ICACHE_CR
+    displayName: ICACHE_CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 4
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: CACHEINV
+        bitOffset: 1
+        bitWidth: 1
+      - name: WAYSEL
+        bitOffset: 2
+        bitWidth: 1
+      - name: HITMEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: MISSMEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: HITMRST
+        bitOffset: 18
+        bitWidth: 1
+      - name: MISSMRST
+        bitOffset: 19
+        bitWidth: 1
+- register:
+    name: ICACHE_SR
+    displayName: ICACHE_SR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 1
+    fields:
+      - name: BUSYF
+        bitOffset: 0
+        bitWidth: 1
+      - name: BSYENDF
+        bitOffset: 1
+        bitWidth: 1
+      - name: ERRF
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: ICACHE_IER
+    displayName: ICACHE_IER
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BSYENDIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: ERRIE
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: ICACHE_FCR
+    displayName: ICACHE_FCR
+    addressOffset: 12
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CBSYENDF
+        bitOffset: 1
+        bitWidth: 1
+      - name: CERRF
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: ICACHE_HMONR
+    displayName: ICACHE_HMONR
+    addressOffset: 16
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: HITMON
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ICACHE_MMONR
+    displayName: ICACHE_MMONR
+    addressOffset: 20
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MISSMON
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: ICACHE_CRR0
+    displayName: ICACHE_CRR0
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: BASEADDR
+        bitOffset: 0
+        bitWidth: 8
+      - name: RSIZE
+        bitOffset: 9
+        bitWidth: 3
+      - name: REN
+        bitOffset: 15
+        bitWidth: 1
+      - name: REMAPADDR
+        bitOffset: 16
+        bitWidth: 11
+      - name: MSTSEL
+        bitOffset: 28
+        bitWidth: 1
+      - name: HBURST
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ICACHE_CRR1
+    displayName: ICACHE_CRR1
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: BASEADDR
+        bitOffset: 0
+        bitWidth: 8
+      - name: RSIZE
+        bitOffset: 9
+        bitWidth: 3
+      - name: REN
+        bitOffset: 15
+        bitWidth: 1
+      - name: REMAPADDR
+        bitOffset: 16
+        bitWidth: 11
+      - name: MSTSEL
+        bitOffset: 28
+        bitWidth: 1
+      - name: HBURST
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ICACHE_CRR2
+    displayName: ICACHE_CRR2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: BASEADDR
+        bitOffset: 0
+        bitWidth: 8
+      - name: RSIZE
+        bitOffset: 9
+        bitWidth: 3
+      - name: REN
+        bitOffset: 15
+        bitWidth: 1
+      - name: REMAPADDR
+        bitOffset: 16
+        bitWidth: 11
+      - name: MSTSEL
+        bitOffset: 28
+        bitWidth: 1
+      - name: HBURST
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ICACHE_CRR3
+    displayName: ICACHE_CRR3
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: BASEADDR
+        bitOffset: 0
+        bitWidth: 8
+      - name: RSIZE
+        bitOffset: 9
+        bitWidth: 3
+      - name: REN
+        bitOffset: 15
+        bitWidth: 1
+      - name: REMAPADDR
+        bitOffset: 16
+        bitWidth: 11
+      - name: MSTSEL
+        bitOffset: 28
+        bitWidth: 1
+      - name: HBURST
+        bitOffset: 31
+        bitWidth: 1

@@ -1,0 +1,197 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: WRIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: RDIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: EIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: DPC
+        bitOffset: 7
+        bitWidth: 1
+      - name: PORT_ADDRESS
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: WRFR
+    displayName: WRFR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WRF
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: CWRFR
+    displayName: CWRFR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CWRF
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: RDFR
+    displayName: RDFR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDF
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: CRDFR
+    displayName: CRDFR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CRDF
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 20
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PERF
+        bitOffset: 0
+        bitWidth: 1
+      - name: SERF
+        bitOffset: 1
+        bitWidth: 1
+      - name: TERF
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: CLRFR
+    displayName: CLRFR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CPERF
+        bitOffset: 0
+        bitWidth: 1
+      - name: CSERF
+        bitOffset: 1
+        bitWidth: 1
+      - name: CTERF
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    dim: 32
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+    name: DINR%s
+    displayName: DINR0
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DIN
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    dim: 32
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+    name: DOUTR%s
+    displayName: DOUTR0
+    addressOffset: 156
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DOUT
+        bitOffset: 0
+        bitWidth: 16

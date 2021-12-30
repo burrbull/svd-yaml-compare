@@ -1,0 +1,508 @@
+---
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: AWD
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: EOC
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: JEOC
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: JSTRT
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: STRT
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: OVR
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: ADONS
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+      - name: RCNR
+        bitOffset: 8
+        bitWidth: 1
+        access: read-only
+      - name: JCNR
+        bitOffset: 9
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CR1
+    displayName: CR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWDCH
+        bitOffset: 0
+        bitWidth: 5
+      - name: EOCIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: AWDIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: JEOCIE
+        bitOffset: 7
+        bitWidth: 1
+      - name: SCAN
+        bitOffset: 8
+        bitWidth: 1
+      - name: AWDSGL
+        bitOffset: 9
+        bitWidth: 1
+      - name: JAUTO
+        bitOffset: 10
+        bitWidth: 1
+      - name: DISCEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: JDISCEN
+        bitOffset: 12
+        bitWidth: 1
+      - name: DISCNUM
+        bitOffset: 13
+        bitWidth: 3
+      - name: PDD
+        bitOffset: 16
+        bitWidth: 1
+      - name: PDI
+        bitOffset: 17
+        bitWidth: 1
+      - name: JAWDEN
+        bitOffset: 22
+        bitWidth: 1
+      - name: AWDEN
+        bitOffset: 23
+        bitWidth: 1
+      - name: RES
+        bitOffset: 24
+        bitWidth: 2
+      - name: OVRIE
+        bitOffset: 26
+        bitWidth: 1
+- register:
+    name: CR2
+    displayName: CR2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADON
+        bitOffset: 0
+        bitWidth: 1
+      - name: CONT
+        bitOffset: 1
+        bitWidth: 1
+      - name: ADC_CFG
+        bitOffset: 2
+        bitWidth: 1
+      - name: DELS
+        bitOffset: 4
+        bitWidth: 3
+      - name: DMA
+        bitOffset: 8
+        bitWidth: 1
+      - name: DDS
+        bitOffset: 9
+        bitWidth: 1
+      - name: EOCS
+        bitOffset: 10
+        bitWidth: 1
+      - name: ALIGN
+        bitOffset: 11
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 16
+        bitWidth: 4
+      - name: JEXTEN
+        bitOffset: 20
+        bitWidth: 2
+      - name: JSWSTART
+        bitOffset: 22
+        bitWidth: 1
+      - name: EXTSEL
+        bitOffset: 24
+        bitWidth: 4
+      - name: EXTEN
+        bitOffset: 28
+        bitWidth: 2
+      - name: SWSTART
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: SMPR1
+    displayName: SMPR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP
+        bitOffset: 0
+        bitWidth: 30
+- register:
+    name: SMPR2
+    displayName: SMPR2
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP
+        bitOffset: 0
+        bitWidth: 30
+- register:
+    name: SMPR3
+    displayName: SMPR3
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP
+        bitOffset: 0
+        bitWidth: 30
+- register:
+    name: JOFR1
+    displayName: JOFR1
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET1
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR2
+    displayName: JOFR2
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET2
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR3
+    displayName: JOFR3
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET3
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR4
+    displayName: JOFR4
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET4
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: HTR
+    displayName: HTR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 4095
+    fields:
+      - name: HT
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: LTR
+    displayName: LTR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LT
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: SQR1
+    displayName: SQR1
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ25
+        bitOffset: 0
+        bitWidth: 5
+      - name: SQ26
+        bitOffset: 5
+        bitWidth: 5
+      - name: SQ27
+        bitOffset: 10
+        bitWidth: 5
+      - name: SQ28
+        bitOffset: 15
+        bitWidth: 5
+      - name: L
+        bitOffset: 20
+        bitWidth: 4
+- register:
+    name: SQR2
+    displayName: SQR2
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ19
+        bitOffset: 0
+        bitWidth: 5
+      - name: SQ20
+        bitOffset: 5
+        bitWidth: 5
+      - name: SQ21
+        bitOffset: 10
+        bitWidth: 5
+      - name: SQ22
+        bitOffset: 15
+        bitWidth: 5
+      - name: SQ23
+        bitOffset: 20
+        bitWidth: 5
+      - name: SQ24
+        bitOffset: 25
+        bitWidth: 5
+- register:
+    name: SQR3
+    displayName: SQR3
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ13
+        bitOffset: 0
+        bitWidth: 5
+      - name: SQ14
+        bitOffset: 5
+        bitWidth: 5
+      - name: SQ15
+        bitOffset: 10
+        bitWidth: 5
+      - name: SQ16
+        bitOffset: 15
+        bitWidth: 5
+      - name: SQ17
+        bitOffset: 20
+        bitWidth: 5
+      - name: SQ18
+        bitOffset: 25
+        bitWidth: 5
+- register:
+    name: SQR4
+    displayName: SQR4
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ7
+        bitOffset: 0
+        bitWidth: 5
+      - name: SQ8
+        bitOffset: 5
+        bitWidth: 5
+      - name: SQ9
+        bitOffset: 10
+        bitWidth: 5
+      - name: SQ10
+        bitOffset: 15
+        bitWidth: 5
+      - name: SQ11
+        bitOffset: 20
+        bitWidth: 5
+      - name: SQ12
+        bitOffset: 25
+        bitWidth: 5
+- register:
+    name: SQR5
+    displayName: SQR5
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ1
+        bitOffset: 0
+        bitWidth: 5
+      - name: SQ2
+        bitOffset: 5
+        bitWidth: 5
+      - name: SQ3
+        bitOffset: 10
+        bitWidth: 5
+      - name: SQ4
+        bitOffset: 15
+        bitWidth: 5
+      - name: SQ5
+        bitOffset: 20
+        bitWidth: 5
+      - name: SQ6
+        bitOffset: 25
+        bitWidth: 5
+- register:
+    name: JSQR
+    displayName: JSQR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JSQ1
+        bitOffset: 0
+        bitWidth: 5
+      - name: JSQ2
+        bitOffset: 5
+        bitWidth: 5
+      - name: JSQ3
+        bitOffset: 10
+        bitWidth: 5
+      - name: JSQ4
+        bitOffset: 15
+        bitWidth: 5
+      - name: JL
+        bitOffset: 20
+        bitWidth: 2
+- register:
+    name: JDR1
+    displayName: JDR1
+    addressOffset: 72
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR2
+    displayName: JDR2
+    addressOffset: 76
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR3
+    displayName: JDR3
+    addressOffset: 80
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR4
+    displayName: JDR4
+    addressOffset: 84
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 88
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RegularDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: SMPR0
+    displayName: SMPR0
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP
+        bitOffset: 0
+        bitWidth: 6
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 768
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWD1
+        bitOffset: 0
+        bitWidth: 1
+      - name: EOC1
+        bitOffset: 1
+        bitWidth: 1
+      - name: JEOC1
+        bitOffset: 2
+        bitWidth: 1
+      - name: JSTRT1
+        bitOffset: 3
+        bitWidth: 1
+      - name: STRT1
+        bitOffset: 4
+        bitWidth: 1
+      - name: OVR1
+        bitOffset: 5
+        bitWidth: 1
+      - name: ADONS1
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: CCR
+    displayName: CCR
+    addressOffset: 772
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADCPRE
+        bitOffset: 16
+        bitWidth: 2
+      - name: TSVREFE
+        bitOffset: 23
+        bitWidth: 1

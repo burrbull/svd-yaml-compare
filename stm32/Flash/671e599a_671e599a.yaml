@@ -1,0 +1,361 @@
+---
+- register:
+    name: ACR
+    displayName: ACR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 1536
+    fields:
+      - name: LATENCY
+        bitOffset: 0
+        bitWidth: 3
+      - name: PRFTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: ICEN
+        bitOffset: 9
+        bitWidth: 1
+      - name: DCEN
+        bitOffset: 10
+        bitWidth: 1
+      - name: ICRST
+        bitOffset: 11
+        bitWidth: 1
+      - name: DCRST
+        bitOffset: 12
+        bitWidth: 1
+      - name: RUN_PD
+        bitOffset: 13
+        bitWidth: 1
+      - name: SLEEP_PD
+        bitOffset: 14
+        bitWidth: 1
+- register:
+    name: PDKEYR
+    displayName: PDKEYR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PDKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR
+    displayName: KEYR
+    addressOffset: 8
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: OPTKEYR
+    displayName: OPTKEYR
+    addressOffset: 12
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: OPTKEYR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 16
+    size: 32
+    resetValue: 0
+    fields:
+      - name: EOP
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: OPERR
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: PROGERR
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: WRPERR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: PGAERR
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: SIZERR
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: PGSERR
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: MISERR
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: FASTERR
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: RDERR
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: OPTVERR
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: BSY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 3221225472
+    fields:
+      - name: PG
+        bitOffset: 0
+        bitWidth: 1
+      - name: PER
+        bitOffset: 1
+        bitWidth: 1
+      - name: MER1
+        bitOffset: 2
+        bitWidth: 1
+      - name: PNB
+        bitOffset: 3
+        bitWidth: 8
+      - name: BKER
+        bitOffset: 11
+        bitWidth: 1
+      - name: MER2
+        bitOffset: 15
+        bitWidth: 1
+      - name: START
+        bitOffset: 16
+        bitWidth: 1
+      - name: OPTSTRT
+        bitOffset: 17
+        bitWidth: 1
+      - name: FSTPG
+        bitOffset: 18
+        bitWidth: 1
+      - name: EOPIE
+        bitOffset: 24
+        bitWidth: 1
+      - name: ERRIE
+        bitOffset: 25
+        bitWidth: 1
+      - name: RDERRIE
+        bitOffset: 26
+        bitWidth: 1
+      - name: OBL_LAUNCH
+        bitOffset: 27
+        bitWidth: 1
+      - name: OPTLOCK
+        bitOffset: 30
+        bitWidth: 1
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: ECCR
+    displayName: ECCR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: ADDR_ECC
+        bitOffset: 0
+        bitWidth: 19
+        access: read-only
+      - name: BK_ECC
+        bitOffset: 19
+        bitWidth: 1
+        access: read-only
+      - name: SYSF_ECC
+        bitOffset: 20
+        bitWidth: 1
+        access: read-only
+      - name: ECCIE
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      - name: ECCC
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: ECCD
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: OPTR
+    displayName: OPTR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 4026531840
+    fields:
+      - name: RDP
+        bitOffset: 0
+        bitWidth: 8
+      - name: BOR_LEV
+        bitOffset: 8
+        bitWidth: 3
+      - name: nRST_STOP
+        bitOffset: 12
+        bitWidth: 1
+      - name: nRST_STDBY
+        bitOffset: 13
+        bitWidth: 1
+      - name: IDWG_SW
+        bitOffset: 16
+        bitWidth: 1
+      - name: IWDG_STOP
+        bitOffset: 17
+        bitWidth: 1
+      - name: IWDG_STDBY
+        bitOffset: 18
+        bitWidth: 1
+      - name: WWDG_SW
+        bitOffset: 19
+        bitWidth: 1
+      - name: BFB2
+        bitOffset: 20
+        bitWidth: 1
+      - name: DUALBANK
+        bitOffset: 21
+        bitWidth: 1
+      - name: nBOOT1
+        bitOffset: 23
+        bitWidth: 1
+      - name: SRAM2_PE
+        bitOffset: 24
+        bitWidth: 1
+      - name: SRAM2_RST
+        bitOffset: 25
+        bitWidth: 1
+      - name: nSWBOOT0
+        bitOffset: 26
+        bitWidth: 1
+      - name: nBOOT0
+        bitOffset: 27
+        bitWidth: 1
+- register:
+    name: PCROP1SR
+    displayName: PCROP1SR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 4294901760
+    fields:
+      - name: PCROP1_STRT
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: PCROP1ER
+    displayName: PCROP1ER
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: PCROP1_END
+        bitOffset: 0
+        bitWidth: 16
+      - name: PCROP_RDP
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: WRP1AR
+    displayName: WRP1AR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP1A_STRT
+        bitOffset: 0
+        bitWidth: 8
+      - name: WRP1A_END
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: WRP1BR
+    displayName: WRP1BR
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP1B_STRT
+        bitOffset: 0
+        bitWidth: 8
+      - name: WRP1B_END
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: PCROP2SR
+    displayName: PCROP2SR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 4294901760
+    fields:
+      - name: PCROP2_STRT
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: PCROP2ER
+    displayName: PCROP2ER
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 4294901760
+    fields:
+      - name: PCROP2_END
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: WRP2AR
+    displayName: WRP2AR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP2A_STRT
+        bitOffset: 0
+        bitWidth: 8
+      - name: WRP2A_END
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: WRP2BR
+    displayName: WRP2BR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 4278255360
+    fields:
+      - name: WRP2B_STRT
+        bitOffset: 0
+        bitWidth: 8
+      - name: WRP2B_END
+        bitOffset: 16
+        bitWidth: 8

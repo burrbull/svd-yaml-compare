@@ -1,0 +1,103 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: START
+        bitOffset: 1
+        bitWidth: 1
+      - name: SECLVL
+        bitOffset: 2
+        bitWidth: 1
+      - name: MODE
+        bitOffset: 8
+        bitWidth: 6
+      - name: PROCENDIE
+        bitOffset: 17
+        bitWidth: 1
+      - name: RAMERRIE
+        bitOffset: 19
+        bitWidth: 1
+      - name: ADDRERRIE
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: BUSY
+        bitOffset: 16
+        bitWidth: 1
+      - name: PROCENDF
+        bitOffset: 17
+        bitWidth: 1
+      - name: RAMERRF
+        bitOffset: 19
+        bitWidth: 1
+      - name: ADDRERRF
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: CLRFR
+    displayName: CLRFR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCENDFC
+        bitOffset: 17
+        bitWidth: 1
+      - name: RAMERRFC
+        bitOffset: 19
+        bitWidth: 1
+      - name: ADDRERRFC
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: VERR
+    displayName: VERR
+    addressOffset: 8180
+    size: 32
+    access: read-only
+    resetValue: 16
+    fields:
+      - name: MINREV
+        bitOffset: 0
+        bitWidth: 4
+      - name: MAJREV
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: IPIDR
+    displayName: IPIDR
+    addressOffset: 8184
+    size: 32
+    access: read-only
+    resetValue: 1507425
+    fields:
+      - name: ID
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SIDR
+    displayName: SIDR
+    addressOffset: 8188
+    size: 32
+    access: read-only
+    resetValue: 2747653384
+    fields:
+      - name: SID
+        bitOffset: 0
+        bitWidth: 32

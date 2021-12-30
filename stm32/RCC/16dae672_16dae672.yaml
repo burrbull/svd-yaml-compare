@@ -1,0 +1,756 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 99
+    fields:
+      - name: HSION
+        bitOffset: 8
+        bitWidth: 1
+      - name: HSIKERON
+        bitOffset: 9
+        bitWidth: 1
+      - name: HSIRDY
+        bitOffset: 10
+        bitWidth: 1
+      - name: HSIDIV
+        bitOffset: 11
+        bitWidth: 3
+      - name: HSEON
+        bitOffset: 16
+        bitWidth: 1
+      - name: HSERDY
+        bitOffset: 17
+        bitWidth: 1
+      - name: HSEBYP
+        bitOffset: 18
+        bitWidth: 1
+      - name: CSSON
+        bitOffset: 19
+        bitWidth: 1
+      - name: PLLON
+        bitOffset: 24
+        bitWidth: 1
+      - name: PLLRDY
+        bitOffset: 25
+        bitWidth: 1
+- register:
+    name: ICSCR
+    displayName: ICSCR
+    addressOffset: 4
+    size: 32
+    resetValue: 268435456
+    fields:
+      - name: HSICAL
+        bitOffset: 0
+        bitWidth: 8
+        access: read-only
+      - name: HSITRIM
+        bitOffset: 8
+        bitWidth: 7
+        access: read-write
+- register:
+    name: CFGR
+    displayName: CFGR
+    addressOffset: 8
+    size: 32
+    resetValue: 0
+    fields:
+      - name: SW
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+      - name: SWS
+        bitOffset: 3
+        bitWidth: 3
+        access: read-only
+      - name: HPRE
+        bitOffset: 8
+        bitWidth: 4
+        access: read-write
+      - name: PPRE
+        bitOffset: 12
+        bitWidth: 3
+        access: read-write
+      - name: MCOSEL
+        bitOffset: 24
+        bitWidth: 3
+        access: read-write
+      - name: MCOPRE
+        bitOffset: 28
+        bitWidth: 3
+        access: read-only
+- register:
+    name: PLLSYSCFGR
+    displayName: PLLSYSCFGR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 4096
+    fields:
+      - name: PLLSRC
+        bitOffset: 0
+        bitWidth: 2
+      - name: PLLM
+        bitOffset: 4
+        bitWidth: 3
+      - name: PLLN
+        bitOffset: 8
+        bitWidth: 7
+      - name: PLLPEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: PLLP
+        bitOffset: 17
+        bitWidth: 5
+      - name: PLLQEN
+        bitOffset: 24
+        bitWidth: 1
+      - name: PLLQ
+        bitOffset: 25
+        bitWidth: 3
+      - name: PLLREN
+        bitOffset: 28
+        bitWidth: 1
+      - name: PLLR
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: CIER
+    displayName: CIER
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSIRDYIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSERDYIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: HSIRDYIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: HSERDYIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: PLLSYSRDYIE
+        bitOffset: 5
+        bitWidth: 1
+- register:
+    name: CIFR
+    displayName: CIFR
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: LSIRDYF
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSERDYF
+        bitOffset: 1
+        bitWidth: 1
+      - name: HSIRDYF
+        bitOffset: 3
+        bitWidth: 1
+      - name: HSERDYF
+        bitOffset: 4
+        bitWidth: 1
+      - name: PLLSYSRDYF
+        bitOffset: 5
+        bitWidth: 1
+      - name: CSSF
+        bitOffset: 8
+        bitWidth: 1
+      - name: LSECSSF
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: CICR
+    displayName: CICR
+    addressOffset: 32
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: LSIRDYC
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSERDYC
+        bitOffset: 1
+        bitWidth: 1
+      - name: HSIRDYC
+        bitOffset: 3
+        bitWidth: 1
+      - name: HSERDYC
+        bitOffset: 4
+        bitWidth: 1
+      - name: PLLSYSRDYC
+        bitOffset: 5
+        bitWidth: 1
+      - name: CSSC
+        bitOffset: 8
+        bitWidth: 1
+      - name: LSECSSC
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: IOPRSTR
+    displayName: IOPRSTR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOPARST
+        bitOffset: 0
+        bitWidth: 1
+      - name: IOPBRST
+        bitOffset: 1
+        bitWidth: 1
+      - name: IOPCRST
+        bitOffset: 2
+        bitWidth: 1
+      - name: IOPDRST
+        bitOffset: 3
+        bitWidth: 1
+      - name: IOPFRST
+        bitOffset: 5
+        bitWidth: 1
+- register:
+    name: AHBRSTR
+    displayName: AHBRSTR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMARST
+        bitOffset: 0
+        bitWidth: 1
+      - name: FLASHRST
+        bitOffset: 8
+        bitWidth: 1
+      - name: CRCRST
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: APBRSTR1
+    displayName: APBRSTR1
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2RST
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM3RST
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM6RST
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIM7RST
+        bitOffset: 5
+        bitWidth: 1
+      - name: SPI2RST
+        bitOffset: 14
+        bitWidth: 1
+      - name: USART2RST
+        bitOffset: 17
+        bitWidth: 1
+      - name: USART3RST
+        bitOffset: 18
+        bitWidth: 1
+      - name: USART4RST
+        bitOffset: 19
+        bitWidth: 1
+      - name: LPUART1RST
+        bitOffset: 20
+        bitWidth: 1
+      - name: I2C1RST
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C2RST
+        bitOffset: 22
+        bitWidth: 1
+      - name: CECRST
+        bitOffset: 24
+        bitWidth: 1
+      - name: UCPD1RST
+        bitOffset: 25
+        bitWidth: 1
+      - name: UCPD2RST
+        bitOffset: 26
+        bitWidth: 1
+      - name: DBGRST
+        bitOffset: 27
+        bitWidth: 1
+      - name: PWRRST
+        bitOffset: 28
+        bitWidth: 1
+      - name: DAC1RST
+        bitOffset: 29
+        bitWidth: 1
+      - name: LPTIM2RST
+        bitOffset: 30
+        bitWidth: 1
+      - name: LPTIM1RST
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: APBRSTR2
+    displayName: APBRSTR2
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGRST
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM1RST
+        bitOffset: 11
+        bitWidth: 1
+      - name: SPI1RST
+        bitOffset: 12
+        bitWidth: 1
+      - name: USART1RST
+        bitOffset: 14
+        bitWidth: 1
+      - name: TIM14RST
+        bitOffset: 15
+        bitWidth: 1
+      - name: TIM15RST
+        bitOffset: 16
+        bitWidth: 1
+      - name: TIM16RST
+        bitOffset: 17
+        bitWidth: 1
+      - name: TIM17RST
+        bitOffset: 18
+        bitWidth: 1
+      - name: ADCRST
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: IOPENR
+    displayName: IOPENR
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOPAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: IOPBEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: IOPCEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: IOPDEN
+        bitOffset: 3
+        bitWidth: 1
+      - name: IOPFEN
+        bitOffset: 5
+        bitWidth: 1
+- register:
+    name: AHBENR
+    displayName: AHBENR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: FLASHEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: CRCEN
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: APBENR1
+    displayName: APBENR1
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM3EN
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM6EN
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIM7EN
+        bitOffset: 5
+        bitWidth: 1
+      - name: RTCAPBEN
+        bitOffset: 10
+        bitWidth: 1
+      - name: WWDGEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: SPI2EN
+        bitOffset: 14
+        bitWidth: 1
+      - name: USART2EN
+        bitOffset: 17
+        bitWidth: 1
+      - name: USART3EN
+        bitOffset: 18
+        bitWidth: 1
+      - name: USART4EN
+        bitOffset: 19
+        bitWidth: 1
+      - name: LPUART1EN
+        bitOffset: 20
+        bitWidth: 1
+      - name: I2C1EN
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C2EN
+        bitOffset: 22
+        bitWidth: 1
+      - name: CECEN
+        bitOffset: 24
+        bitWidth: 1
+      - name: UCPD1EN
+        bitOffset: 25
+        bitWidth: 1
+      - name: UCPD2EN
+        bitOffset: 26
+        bitWidth: 1
+      - name: DBGEN
+        bitOffset: 27
+        bitWidth: 1
+      - name: PWREN
+        bitOffset: 28
+        bitWidth: 1
+      - name: DAC1EN
+        bitOffset: 29
+        bitWidth: 1
+      - name: LPTIM2EN
+        bitOffset: 30
+        bitWidth: 1
+      - name: LPTIM1EN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: APBENR2
+    displayName: APBENR2
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM1EN
+        bitOffset: 11
+        bitWidth: 1
+      - name: SPI1EN
+        bitOffset: 12
+        bitWidth: 1
+      - name: USART1EN
+        bitOffset: 14
+        bitWidth: 1
+      - name: TIM14EN
+        bitOffset: 15
+        bitWidth: 1
+      - name: TIM15EN
+        bitOffset: 16
+        bitWidth: 1
+      - name: TIM16EN
+        bitOffset: 17
+        bitWidth: 1
+      - name: TIM17EN
+        bitOffset: 18
+        bitWidth: 1
+      - name: ADCEN
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: IOPSMENR
+    displayName: IOPSMENR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOPASMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: IOPBSMEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: IOPCSMEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: IOPDSMEN
+        bitOffset: 3
+        bitWidth: 1
+      - name: IOPFSMEN
+        bitOffset: 5
+        bitWidth: 1
+- register:
+    name: AHBSMENR
+    displayName: AHBSMENR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMASMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: FLASHSMEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: SRAMSMEN
+        bitOffset: 9
+        bitWidth: 1
+      - name: CRCSMEN
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: APBSMENR1
+    displayName: APBSMENR1
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2SMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM3SMEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM6SMEN
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIM7SMEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: RTCAPBSMEN
+        bitOffset: 10
+        bitWidth: 1
+      - name: WWDGSMEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: SPI2SMEN
+        bitOffset: 14
+        bitWidth: 1
+      - name: USART2SMEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: USART3SMEN
+        bitOffset: 18
+        bitWidth: 1
+      - name: USART4SMEN
+        bitOffset: 19
+        bitWidth: 1
+      - name: LPUART1SMEN
+        bitOffset: 20
+        bitWidth: 1
+      - name: I2C1SMEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C2SMEN
+        bitOffset: 22
+        bitWidth: 1
+      - name: CECSMEN
+        bitOffset: 24
+        bitWidth: 1
+      - name: UCPD1SMEN
+        bitOffset: 25
+        bitWidth: 1
+      - name: UCPD2SMEN
+        bitOffset: 26
+        bitWidth: 1
+      - name: DBGSMEN
+        bitOffset: 27
+        bitWidth: 1
+      - name: PWRSMEN
+        bitOffset: 28
+        bitWidth: 1
+      - name: DAC1SMEN
+        bitOffset: 29
+        bitWidth: 1
+      - name: LPTIM2SMEN
+        bitOffset: 30
+        bitWidth: 1
+      - name: LPTIM1SMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: APBSMENR2
+    displayName: APBSMENR2
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYSCFGSMEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM1SMEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: SPI1SMEN
+        bitOffset: 12
+        bitWidth: 1
+      - name: USART1SMEN
+        bitOffset: 14
+        bitWidth: 1
+      - name: TIM14SMEN
+        bitOffset: 15
+        bitWidth: 1
+      - name: TIM15SMEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: TIM16SMEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: TIM17SMEN
+        bitOffset: 18
+        bitWidth: 1
+      - name: ADCSMEN
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: CCIPR
+    displayName: CCIPR
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: USART1SEL
+        bitOffset: 0
+        bitWidth: 2
+      - name: USART2SEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: CECSEL
+        bitOffset: 6
+        bitWidth: 1
+      - name: LPUART1SEL
+        bitOffset: 10
+        bitWidth: 2
+      - name: I2C1SEL
+        bitOffset: 12
+        bitWidth: 2
+      - name: I2S2SEL
+        bitOffset: 14
+        bitWidth: 2
+      - name: LPTIM1SEL
+        bitOffset: 18
+        bitWidth: 2
+      - name: LPTIM2SEL
+        bitOffset: 20
+        bitWidth: 2
+      - name: TIM1SEL
+        bitOffset: 22
+        bitWidth: 1
+      - name: TIM15SEL
+        bitOffset: 24
+        bitWidth: 1
+      - name: ADCSEL
+        bitOffset: 30
+        bitWidth: 2
+- register:
+    name: BDCR
+    displayName: BDCR
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSEON
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSERDY
+        bitOffset: 1
+        bitWidth: 1
+      - name: LSEBYP
+        bitOffset: 2
+        bitWidth: 1
+      - name: LSEDRV
+        bitOffset: 3
+        bitWidth: 2
+      - name: LSECSSON
+        bitOffset: 5
+        bitWidth: 1
+      - name: LSECSSD
+        bitOffset: 6
+        bitWidth: 1
+      - name: RTCSEL
+        bitOffset: 8
+        bitWidth: 2
+      - name: RTCEN
+        bitOffset: 15
+        bitWidth: 1
+      - name: BDRST
+        bitOffset: 16
+        bitWidth: 1
+      - name: LSCOEN
+        bitOffset: 24
+        bitWidth: 1
+      - name: LSCOSEL
+        bitOffset: 25
+        bitWidth: 1
+- register:
+    name: CSR
+    displayName: CSR
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSION
+        bitOffset: 0
+        bitWidth: 1
+      - name: LSIRDY
+        bitOffset: 1
+        bitWidth: 1
+      - name: RMVF
+        bitOffset: 23
+        bitWidth: 1
+      - name: OBLRSTF
+        bitOffset: 25
+        bitWidth: 1
+      - name: PINRSTF
+        bitOffset: 26
+        bitWidth: 1
+      - name: PWRRSTF
+        bitOffset: 27
+        bitWidth: 1
+      - name: SFTRSTF
+        bitOffset: 28
+        bitWidth: 1
+      - name: IWDGRSTF
+        bitOffset: 29
+        bitWidth: 1
+      - name: WWDGRSTF
+        bitOffset: 30
+        bitWidth: 1
+      - name: LPWRRSTF
+        bitOffset: 31
+        bitWidth: 1

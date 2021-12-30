@@ -1,0 +1,171 @@
+---
+- register:
+    name: CEC_CR
+    displayName: CEC_CR
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CECEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: TXSOM
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: TXEOM
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CEC_CFGR
+    displayName: CEC_CFGR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SFT
+        bitOffset: 0
+        bitWidth: 3
+      - name: RXTOL
+        bitOffset: 3
+        bitWidth: 1
+      - name: BRESTP
+        bitOffset: 4
+        bitWidth: 1
+      - name: BREGEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: LBPEGEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: BRDNOGEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: SFTOP
+        bitOffset: 8
+        bitWidth: 1
+      - name: OAR
+        bitOffset: 16
+        bitWidth: 15
+      - name: LSTN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CEC_TXDR
+    displayName: CEC_TXDR
+    addressOffset: 8
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: TXD
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: CEC_RXDR
+    displayName: CEC_RXDR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RXD
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: CEC_ISR
+    displayName: CEC_ISR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RXBR
+        bitOffset: 0
+        bitWidth: 1
+      - name: RXEND
+        bitOffset: 1
+        bitWidth: 1
+      - name: RXOVR
+        bitOffset: 2
+        bitWidth: 1
+      - name: BRE
+        bitOffset: 3
+        bitWidth: 1
+      - name: SBPE
+        bitOffset: 4
+        bitWidth: 1
+      - name: LBPE
+        bitOffset: 5
+        bitWidth: 1
+      - name: RXACKE
+        bitOffset: 6
+        bitWidth: 1
+      - name: ARBLST
+        bitOffset: 7
+        bitWidth: 1
+      - name: TXBR
+        bitOffset: 8
+        bitWidth: 1
+      - name: TXEND
+        bitOffset: 9
+        bitWidth: 1
+      - name: TXUDR
+        bitOffset: 10
+        bitWidth: 1
+      - name: TXERR
+        bitOffset: 11
+        bitWidth: 1
+      - name: TXACKE
+        bitOffset: 12
+        bitWidth: 1
+- register:
+    name: CEC_IER
+    displayName: CEC_IER
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RXBRIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: RXENDIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: RXOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: BREIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: SBPEIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: LBPEIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: RXACKIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: ARBLSTIE
+        bitOffset: 7
+        bitWidth: 1
+      - name: TXBRIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: TXENDIE
+        bitOffset: 9
+        bitWidth: 1
+      - name: TXUDRIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: TXERRIE
+        bitOffset: 11
+        bitWidth: 1
+      - name: TXACKIE
+        bitOffset: 12
+        bitWidth: 1

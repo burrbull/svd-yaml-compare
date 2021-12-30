@@ -1,0 +1,525 @@
+---
+- register:
+    name: ISR
+    displayName: ISR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDY
+        bitOffset: 0
+        bitWidth: 1
+      - name: EOSMP
+        bitOffset: 1
+        bitWidth: 1
+      - name: EOC
+        bitOffset: 2
+        bitWidth: 1
+      - name: EOS
+        bitOffset: 3
+        bitWidth: 1
+      - name: OVR
+        bitOffset: 4
+        bitWidth: 1
+      - name: AWD1
+        bitOffset: 7
+        bitWidth: 1
+      - name: AWD2
+        bitOffset: 8
+        bitWidth: 1
+      - name: AWD3
+        bitOffset: 9
+        bitWidth: 1
+      - name: EOCAL
+        bitOffset: 11
+        bitWidth: 1
+      - name: CCRDY
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: IER
+    displayName: IER
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDYIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: EOSMPIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: EOCIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: EOSIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: OVRIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: AWD1IE
+        bitOffset: 7
+        bitWidth: 1
+      - name: AWD2IE
+        bitOffset: 8
+        bitWidth: 1
+      - name: AWD3IE
+        bitOffset: 9
+        bitWidth: 1
+      - name: EOCALIE
+        bitOffset: 11
+        bitWidth: 1
+      - name: CCRDYIE
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: ADDIS
+        bitOffset: 1
+        bitWidth: 1
+      - name: ADSTART
+        bitOffset: 2
+        bitWidth: 1
+      - name: ADSTP
+        bitOffset: 4
+        bitWidth: 1
+      - name: ADVREGEN
+        bitOffset: 28
+        bitWidth: 1
+      - name: ADCAL
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CFGR1
+    displayName: CFGR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: DMACFG
+        bitOffset: 1
+        bitWidth: 1
+      - name: SCANDIR
+        bitOffset: 2
+        bitWidth: 1
+      - name: RES
+        bitOffset: 3
+        bitWidth: 2
+      - name: ALIGN
+        bitOffset: 5
+        bitWidth: 1
+      - name: EXTSEL
+        bitOffset: 6
+        bitWidth: 3
+      - name: EXTEN
+        bitOffset: 10
+        bitWidth: 2
+      - name: OVRMOD
+        bitOffset: 12
+        bitWidth: 1
+      - name: CONT
+        bitOffset: 13
+        bitWidth: 1
+      - name: WAIT
+        bitOffset: 14
+        bitWidth: 1
+      - name: AUTOFF
+        bitOffset: 15
+        bitWidth: 1
+      - name: DISCEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: CHSELRMOD
+        bitOffset: 21
+        bitWidth: 1
+      - name: AWD1SGL
+        bitOffset: 22
+        bitWidth: 1
+      - name: AWD1EN
+        bitOffset: 23
+        bitWidth: 1
+      - name: AWDCH1CH
+        bitOffset: 26
+        bitWidth: 5
+- register:
+    name: CFGR2
+    displayName: CFGR2
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OVSE
+        bitOffset: 0
+        bitWidth: 1
+      - name: OVSR
+        bitOffset: 2
+        bitWidth: 3
+      - name: OVSS
+        bitOffset: 5
+        bitWidth: 4
+      - name: TOVS
+        bitOffset: 9
+        bitWidth: 1
+      - name: LFTRIG
+        bitOffset: 29
+        bitWidth: 1
+      - name: CKMODE
+        bitOffset: 30
+        bitWidth: 2
+- register:
+    name: SMPR
+    displayName: SMPR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP1
+        bitOffset: 0
+        bitWidth: 3
+      - name: SMP2
+        bitOffset: 4
+        bitWidth: 3
+      - name: SMPSEL
+        bitOffset: 8
+        bitWidth: 19
+- register:
+    name: AWD1TR
+    displayName: AWD1TR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LT1
+        bitOffset: 0
+        bitWidth: 12
+      - name: HT1
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: AWD2TR
+    displayName: AWD2TR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LT2
+        bitOffset: 0
+        bitWidth: 12
+      - name: HT2
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: CHSELR
+    displayName: CHSELR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: CHSEL
+        bitOffset: 0
+        bitWidth: 19
+- register:
+    name: CHSELR_1
+    displayName: CHSELR_1
+    alternateRegister: CHSELR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ1
+        bitOffset: 0
+        bitWidth: 4
+      - name: SQ2
+        bitOffset: 4
+        bitWidth: 4
+      - name: SQ3
+        bitOffset: 8
+        bitWidth: 4
+      - name: SQ4
+        bitOffset: 12
+        bitWidth: 4
+      - name: SQ5
+        bitOffset: 16
+        bitWidth: 4
+      - name: SQ6
+        bitOffset: 20
+        bitWidth: 4
+      - name: SQ7
+        bitOffset: 24
+        bitWidth: 4
+      - name: SQ8
+        bitOffset: 28
+        bitWidth: 4
+- register:
+    name: AWD3TR
+    displayName: AWD3TR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LT3
+        bitOffset: 0
+        bitWidth: 12
+      - name: HT3
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 64
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: regularDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: AWD2CR
+    displayName: AWD2CR
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD2CH
+        bitOffset: 0
+        bitWidth: 19
+- register:
+    name: AWD3CR
+    displayName: AWD3CR
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD3CH
+        bitOffset: 0
+        bitWidth: 19
+- register:
+    name: CALFACT
+    displayName: CALFACT
+    addressOffset: 180
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CALFACT
+        bitOffset: 0
+        bitWidth: 7
+- register:
+    name: CCR
+    displayName: CCR
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRESC
+        bitOffset: 18
+        bitWidth: 4
+      - name: VREFEN
+        bitOffset: 22
+        bitWidth: 1
+      - name: TSEN
+        bitOffset: 23
+        bitWidth: 1
+      - name: VBATEN
+        bitOffset: 24
+        bitWidth: 1
+- register:
+    name: HWCFGR6
+    displayName: HWCFGR6
+    addressOffset: 984
+    size: 32
+    access: read-write
+    resetValue: 522133279
+    fields:
+      - name: CHMAP20
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP21
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP22
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP23
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR5
+    displayName: HWCFGR5
+    addressOffset: 988
+    size: 32
+    access: read-write
+    resetValue: 520620039
+    fields:
+      - name: CHMAP19
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP18
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP17
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP16
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR4
+    displayName: HWCFGR4
+    addressOffset: 992
+    size: 32
+    access: read-write
+    resetValue: 118163977
+    fields:
+      - name: CHMAP15
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP14
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP13
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP12
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR3
+    displayName: HWCFGR3
+    addressOffset: 996
+    size: 32
+    access: read-write
+    resetValue: 117835269
+    fields:
+      - name: CHMAP11
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP10
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP9
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP8
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR2
+    displayName: HWCFGR2
+    addressOffset: 1000
+    size: 32
+    access: read-write
+    resetValue: 84214788
+    fields:
+      - name: CHMAP7
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP6
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP5
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP4
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR1
+    displayName: HWCFGR1
+    addressOffset: 1004
+    size: 32
+    access: read-write
+    resetValue: 50462976
+    fields:
+      - name: CHMAP3
+        bitOffset: 0
+        bitWidth: 5
+      - name: CHMAP2
+        bitOffset: 8
+        bitWidth: 5
+      - name: CHMAP1
+        bitOffset: 16
+        bitWidth: 5
+      - name: CHMAP0
+        bitOffset: 24
+        bitWidth: 5
+- register:
+    name: HWCFGR0
+    displayName: HWCFGR0
+    addressOffset: 1008
+    size: 32
+    access: read-only
+    resetValue: 272
+    fields:
+      - name: NUM_CHAN_24
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTRA_AWDS
+        bitOffset: 4
+        bitWidth: 4
+      - name: OVS
+        bitOffset: 8
+        bitWidth: 4
+- register:
+    name: VERR
+    displayName: VERR
+    addressOffset: 1012
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MINREV
+        bitOffset: 0
+        bitWidth: 4
+      - name: MAJREV
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: IPIDR
+    displayName: IPIDR
+    addressOffset: 1016
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: IPID
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SIDR
+    displayName: SIDR
+    addressOffset: 1020
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SID
+        bitOffset: 0
+        bitWidth: 32

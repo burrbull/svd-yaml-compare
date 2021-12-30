@@ -1,0 +1,98 @@
+---
+- register:
+    name: TYPER
+    displayName: TYPER
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 2048
+    fields:
+      - name: SEPARATE
+        bitOffset: 0
+        bitWidth: 1
+      - name: DREGION
+        bitOffset: 8
+        bitWidth: 8
+      - name: IREGION
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: CTRL
+    displayName: CTRL
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ENABLE
+        bitOffset: 0
+        bitWidth: 1
+      - name: HFNMIENA
+        bitOffset: 1
+        bitWidth: 1
+      - name: PRIVDEFENA
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: RNR
+    displayName: RNR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: REGION
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: RBAR
+    displayName: RBAR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: REGION
+        bitOffset: 0
+        bitWidth: 4
+      - name: VALID
+        bitOffset: 4
+        bitWidth: 1
+      - name: ADDR
+        bitOffset: 5
+        bitWidth: 27
+- register:
+    name: RASR
+    displayName: RASR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ENABLE
+        bitOffset: 0
+        bitWidth: 1
+      - name: SIZE
+        bitOffset: 1
+        bitWidth: 5
+      - name: SRD
+        bitOffset: 8
+        bitWidth: 8
+      - name: B
+        bitOffset: 16
+        bitWidth: 1
+      - name: C
+        bitOffset: 17
+        bitWidth: 1
+      - name: S
+        bitOffset: 18
+        bitWidth: 1
+      - name: TEX
+        bitOffset: 19
+        bitWidth: 3
+      - name: AP
+        bitOffset: 24
+        bitWidth: 3
+      - name: XN
+        bitOffset: 28
+        bitWidth: 1

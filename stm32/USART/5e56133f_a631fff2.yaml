@@ -1,0 +1,1605 @@
+---
+- register:
+    name: CR1_FIFO_ENABLED
+    displayName: CR1_FIFO_ENABLED
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UE
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: UESM
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IDLEIE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFNEIE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TCIE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFNFIE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PEIE
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PS
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PCE
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: WAKE
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: M0
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: MME
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CMIE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: OVER8
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DEDT
+        bitOffset: 16
+        bitWidth: 5
+        access: read-write
+      - name: DEAT
+        bitOffset: 21
+        bitWidth: 5
+        access: read-write
+      - name: RTOIE
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: EOBIE
+        bitOffset: 27
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: M1
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: FIFOEN
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFEIE
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFFIE
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+- register:
+    name: CR1_FIFO_DISABLED
+    displayName: CR1_FIFO_DISABLED
+    alternateRegister: CR1_FIFO_ENABLED
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UE
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: UESM
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IDLEIE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXNEIE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TCIE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXEIE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PEIE
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PS
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: PCE
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: WAKE
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: M0
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: MME
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CMIE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: OVER8
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DEDT
+        bitOffset: 16
+        bitWidth: 5
+        access: read-write
+      - name: DEAT
+        bitOffset: 21
+        bitWidth: 5
+        access: read-write
+      - name: RTOIE
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: EOBIE
+        bitOffset: 27
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: M1
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: FIFOEN
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+- register:
+    name: CR2
+    displayName: CR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SLVEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DIS_NSS
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ADDM7
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: LBDL
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: LBDIE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: LBCL
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CPHA
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CPOL
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CLKEN
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: STOP
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+      - name: LINEN
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: SWAP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXINV
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXINV
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DATAINV
+        bitOffset: 18
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: MSBFIRST
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ABREN
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ABRMOD
+        bitOffset: 21
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+      - name: RTOEN
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ADD
+        bitOffset: 24
+        bitWidth: 8
+        access: read-write
+- register:
+    name: CR3
+    displayName: CR3
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EIE
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IREN
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IRLP
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: HDSEL
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: NACK
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: SCEN
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DMAR
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DMAT
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RTSE
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTSE
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTSIE
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ONEBIT
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: OVRDIS
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DDRE
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DEM
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: DEP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: SCARCNT
+        bitOffset: 17
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+              - name: B_0x4
+                value: 4
+              - name: B_0x5
+                value: 5
+              - name: B_0x6
+                value: 6
+              - name: B_0x7
+                value: 7
+      - name: WUS
+        bitOffset: 20
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+      - name: WUFIE
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFTIE
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TCBGTIE
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFTCFG
+        bitOffset: 25
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+              - name: B_0x4
+                value: 4
+              - name: B_0x5
+                value: 5
+      - name: RXFTIE
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFTCFG
+        bitOffset: 29
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+              - name: B_0x4
+                value: 4
+              - name: B_0x5
+                value: 5
+- register:
+    name: BRR
+    displayName: BRR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BRR
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+- register:
+    name: GTPR
+    displayName: GTPR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PSC
+        bitOffset: 0
+        bitWidth: 8
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+              - name: B_0x1F
+                value: 31
+      - name: GT
+        bitOffset: 8
+        bitWidth: 8
+        access: read-write
+- register:
+    name: RTOR
+    displayName: RTOR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RTO
+        bitOffset: 0
+        bitWidth: 24
+      - name: BLEN
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: RQR
+    displayName: RQR
+    addressOffset: 24
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: ABRRQ
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
+      - name: SBKRQ
+        bitOffset: 1
+        bitWidth: 1
+        access: write-only
+      - name: MMRQ
+        bitOffset: 2
+        bitWidth: 1
+        access: write-only
+      - name: RXFRQ
+        bitOffset: 3
+        bitWidth: 1
+        access: write-only
+      - name: TXFRQ
+        bitOffset: 4
+        bitWidth: 1
+        access: write-only
+- register:
+    name: ISR_FIFO_ENABLED
+    displayName: ISR_FIFO_ENABLED
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 8388800
+    fields:
+      - name: PE
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: FE
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: NE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ORE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IDLE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFNE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TC
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFNF
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: LBDF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTSIF
+        bitOffset: 9
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTS
+        bitOffset: 10
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RTOF
+        bitOffset: 11
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: EOBF
+        bitOffset: 12
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: UDR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ABRE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-only
+      - name: ABRF
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+      - name: BUSY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CMF
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: SBKF
+        bitOffset: 18
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RWU
+        bitOffset: 19
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: WUF
+        bitOffset: 20
+        bitWidth: 1
+        access: read-only
+      - name: TEACK
+        bitOffset: 21
+        bitWidth: 1
+        access: read-only
+      - name: REACK
+        bitOffset: 22
+        bitWidth: 1
+        access: read-only
+      - name: TXFE
+        bitOffset: 23
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFF
+        bitOffset: 24
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TCBGT
+        bitOffset: 25
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXFT
+        bitOffset: 26
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXFT
+        bitOffset: 27
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+- register:
+    name: ISR_FIFO_DISABLED
+    displayName: ISR_FIFO_DISABLED
+    alternateRegister: ISR_FIFO_ENABLED
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 192
+    fields:
+      - name: PE
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: FE
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: NE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ORE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: IDLE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RXNE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TC
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: TXE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: LBDF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTSIF
+        bitOffset: 9
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CTS
+        bitOffset: 10
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RTOF
+        bitOffset: 11
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: EOBF
+        bitOffset: 12
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: UDR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: ABRE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-only
+      - name: ABRF
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+      - name: BUSY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: CMF
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: SBKF
+        bitOffset: 18
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: RWU
+        bitOffset: 19
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+      - name: WUF
+        bitOffset: 20
+        bitWidth: 1
+        access: read-only
+      - name: TEACK
+        bitOffset: 21
+        bitWidth: 1
+        access: read-only
+      - name: REACK
+        bitOffset: 22
+        bitWidth: 1
+        access: read-only
+      - name: TCBGT
+        bitOffset: 25
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+- register:
+    name: ICR
+    displayName: ICR
+    addressOffset: 32
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PECF
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
+      - name: FECF
+        bitOffset: 1
+        bitWidth: 1
+        access: write-only
+      - name: NECF
+        bitOffset: 2
+        bitWidth: 1
+        access: write-only
+      - name: ORECF
+        bitOffset: 3
+        bitWidth: 1
+        access: write-only
+      - name: IDLECF
+        bitOffset: 4
+        bitWidth: 1
+        access: write-only
+      - name: TXFECF
+        bitOffset: 5
+        bitWidth: 1
+        access: write-only
+      - name: TCCF
+        bitOffset: 6
+        bitWidth: 1
+        access: write-only
+      - name: TCBGTCF
+        bitOffset: 7
+        bitWidth: 1
+        access: write-only
+      - name: LBDCF
+        bitOffset: 8
+        bitWidth: 1
+        access: write-only
+      - name: CTSCF
+        bitOffset: 9
+        bitWidth: 1
+        access: write-only
+      - name: RTOCF
+        bitOffset: 11
+        bitWidth: 1
+        access: write-only
+      - name: EOBCF
+        bitOffset: 12
+        bitWidth: 1
+        access: write-only
+      - name: UDRCF
+        bitOffset: 13
+        bitWidth: 1
+        access: write-only
+      - name: CMCF
+        bitOffset: 17
+        bitWidth: 1
+        access: write-only
+      - name: WUCF
+        bitOffset: 20
+        bitWidth: 1
+        access: write-only
+- register:
+    name: RDR
+    displayName: RDR
+    addressOffset: 36
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDR
+        bitOffset: 0
+        bitWidth: 9
+- register:
+    name: TDR
+    displayName: TDR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDR
+        bitOffset: 0
+        bitWidth: 9
+- register:
+    name: PRESC
+    displayName: PRESC
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRESCALER
+        bitOffset: 0
+        bitWidth: 4
+        access: read-write
+        enumeratedValues:
+          - values:
+              - name: B_0x0
+                value: 0
+              - name: B_0x1
+                value: 1
+              - name: B_0x2
+                value: 2
+              - name: B_0x3
+                value: 3
+              - name: B_0x4
+                value: 4
+              - name: B_0x5
+                value: 5
+              - name: B_0x6
+                value: 6
+              - name: B_0x7
+                value: 7
+              - name: B_0x8
+                value: 8
+              - name: B_0x9
+                value: 9
+              - name: B_0xA
+                value: 10
+              - name: B_0xB
+                value: 11

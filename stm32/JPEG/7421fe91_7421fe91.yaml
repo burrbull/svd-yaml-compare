@@ -1,0 +1,5777 @@
+---
+- register:
+    name: CONFR0
+    displayName: CONFR0
+    addressOffset: 0
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: START
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: CONFR1
+    displayName: CONFR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: NF
+        bitOffset: 0
+        bitWidth: 2
+      - name: DE
+        bitOffset: 3
+        bitWidth: 1
+      - name: COLORSPACE
+        bitOffset: 4
+        bitWidth: 2
+      - name: NS
+        bitOffset: 6
+        bitWidth: 2
+      - name: HDR
+        bitOffset: 8
+        bitWidth: 1
+      - name: YSIZE
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CONFR2
+    displayName: CONFR2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: NMCU
+        bitOffset: 0
+        bitWidth: 26
+- register:
+    name: CONFR3
+    displayName: CONFR3
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: XSIZE
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CONFR4
+    displayName: CONFR4
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HD
+        bitOffset: 0
+        bitWidth: 1
+      - name: HA
+        bitOffset: 1
+        bitWidth: 1
+      - name: QT
+        bitOffset: 2
+        bitWidth: 2
+      - name: NB
+        bitOffset: 4
+        bitWidth: 4
+      - name: VSF
+        bitOffset: 8
+        bitWidth: 4
+      - name: HSF
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CONFR5
+    displayName: CONFR5
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HD
+        bitOffset: 0
+        bitWidth: 1
+      - name: HA
+        bitOffset: 1
+        bitWidth: 1
+      - name: QT
+        bitOffset: 2
+        bitWidth: 2
+      - name: NB
+        bitOffset: 4
+        bitWidth: 4
+      - name: VSF
+        bitOffset: 8
+        bitWidth: 4
+      - name: HSF
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CONFR6
+    displayName: CONFR6
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HD
+        bitOffset: 0
+        bitWidth: 1
+      - name: HA
+        bitOffset: 1
+        bitWidth: 1
+      - name: QT
+        bitOffset: 2
+        bitWidth: 2
+      - name: NB
+        bitOffset: 4
+        bitWidth: 4
+      - name: VSF
+        bitOffset: 8
+        bitWidth: 4
+      - name: HSF
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CONFR7
+    displayName: CONFR7
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HD
+        bitOffset: 0
+        bitWidth: 1
+      - name: HA
+        bitOffset: 1
+        bitWidth: 1
+      - name: QT
+        bitOffset: 2
+        bitWidth: 2
+      - name: NB
+        bitOffset: 4
+        bitWidth: 4
+      - name: VSF
+        bitOffset: 8
+        bitWidth: 4
+      - name: HSF
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 48
+    size: 32
+    resetValue: 0
+    fields:
+      - name: JCEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: IFTIE
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: IFNFIE
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: OFTIE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: OFNEIE
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: EOCIE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: HPDIE
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: IDMAEN
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: ODMAEN
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: IFF
+        bitOffset: 13
+        bitWidth: 1
+        access: read-only
+      - name: "OFF"
+        bitOffset: 14
+        bitWidth: 1
+        access: read-only
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 52
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: IFTF
+        bitOffset: 1
+        bitWidth: 1
+      - name: IFNFF
+        bitOffset: 2
+        bitWidth: 1
+      - name: OFTF
+        bitOffset: 3
+        bitWidth: 1
+      - name: OFNEF
+        bitOffset: 4
+        bitWidth: 1
+      - name: EOCF
+        bitOffset: 5
+        bitWidth: 1
+      - name: HPDF
+        bitOffset: 6
+        bitWidth: 1
+      - name: COF
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: CFR
+    displayName: CFR
+    addressOffset: 56
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CEOCF
+        bitOffset: 5
+        bitWidth: 1
+      - name: CHPDF
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: DIR
+    displayName: DIR
+    addressOffset: 64
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: DATAIN
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DOR
+    displayName: DOR
+    addressOffset: 68
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DATAOUT
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_0
+    displayName: QMEM0_0
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_1
+    displayName: QMEM0_1
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_2
+    displayName: QMEM0_2
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_3
+    displayName: QMEM0_3
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_4
+    displayName: QMEM0_4
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_5
+    displayName: QMEM0_5
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_6
+    displayName: QMEM0_6
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_7
+    displayName: QMEM0_7
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_8
+    displayName: QMEM0_8
+    addressOffset: 112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_9
+    displayName: QMEM0_9
+    addressOffset: 116
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_10
+    displayName: QMEM0_10
+    addressOffset: 120
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_11
+    displayName: QMEM0_11
+    addressOffset: 124
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_12
+    displayName: QMEM0_12
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_13
+    displayName: QMEM0_13
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_14
+    displayName: QMEM0_14
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM0_15
+    displayName: QMEM0_15
+    addressOffset: 140
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_0
+    displayName: QMEM1_0
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_1
+    displayName: QMEM1_1
+    addressOffset: 148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_2
+    displayName: QMEM1_2
+    addressOffset: 152
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_3
+    displayName: QMEM1_3
+    addressOffset: 156
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_4
+    displayName: QMEM1_4
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_5
+    displayName: QMEM1_5
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_6
+    displayName: QMEM1_6
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_7
+    displayName: QMEM1_7
+    addressOffset: 172
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_8
+    displayName: QMEM1_8
+    addressOffset: 176
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_9
+    displayName: QMEM1_9
+    addressOffset: 180
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_10
+    displayName: QMEM1_10
+    addressOffset: 184
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_11
+    displayName: QMEM1_11
+    addressOffset: 188
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_12
+    displayName: QMEM1_12
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_13
+    displayName: QMEM1_13
+    addressOffset: 196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_14
+    displayName: QMEM1_14
+    addressOffset: 200
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM1_15
+    displayName: QMEM1_15
+    addressOffset: 204
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_0
+    displayName: QMEM2_0
+    addressOffset: 208
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_1
+    displayName: QMEM2_1
+    addressOffset: 212
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_2
+    displayName: QMEM2_2
+    addressOffset: 216
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_3
+    displayName: QMEM2_3
+    addressOffset: 220
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_4
+    displayName: QMEM2_4
+    addressOffset: 224
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_5
+    displayName: QMEM2_5
+    addressOffset: 228
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_6
+    displayName: QMEM2_6
+    addressOffset: 232
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_7
+    displayName: QMEM2_7
+    addressOffset: 236
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_8
+    displayName: QMEM2_8
+    addressOffset: 240
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_9
+    displayName: QMEM2_9
+    addressOffset: 244
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_10
+    displayName: QMEM2_10
+    addressOffset: 248
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_11
+    displayName: QMEM2_11
+    addressOffset: 252
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_12
+    displayName: QMEM2_12
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_13
+    displayName: QMEM2_13
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_14
+    displayName: QMEM2_14
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM2_15
+    displayName: QMEM2_15
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_0
+    displayName: QMEM3_0
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_1
+    displayName: QMEM3_1
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_2
+    displayName: QMEM3_2
+    addressOffset: 280
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_3
+    displayName: QMEM3_3
+    addressOffset: 284
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_4
+    displayName: QMEM3_4
+    addressOffset: 288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_5
+    displayName: QMEM3_5
+    addressOffset: 292
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_6
+    displayName: QMEM3_6
+    addressOffset: 296
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_7
+    displayName: QMEM3_7
+    addressOffset: 300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_8
+    displayName: QMEM3_8
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_9
+    displayName: QMEM3_9
+    addressOffset: 308
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_10
+    displayName: QMEM3_10
+    addressOffset: 312
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_11
+    displayName: QMEM3_11
+    addressOffset: 316
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_12
+    displayName: QMEM3_12
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_13
+    displayName: QMEM3_13
+    addressOffset: 324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_14
+    displayName: QMEM3_14
+    addressOffset: 328
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: QMEM3_15
+    displayName: QMEM3_15
+    addressOffset: 332
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: QMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_0
+    displayName: HUFFMIN_0
+    addressOffset: 336
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_1
+    displayName: HUFFMIN_1
+    addressOffset: 340
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_2
+    displayName: HUFFMIN_2
+    addressOffset: 344
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_3
+    displayName: HUFFMIN_3
+    addressOffset: 348
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_4
+    displayName: HUFFMIN_4
+    addressOffset: 352
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_5
+    displayName: HUFFMIN_5
+    addressOffset: 356
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_6
+    displayName: HUFFMIN_6
+    addressOffset: 360
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_7
+    displayName: HUFFMIN_7
+    addressOffset: 364
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_8
+    displayName: HUFFMIN_8
+    addressOffset: 368
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_9
+    displayName: HUFFMIN_9
+    addressOffset: 372
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_10
+    displayName: HUFFMIN_10
+    addressOffset: 376
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_11
+    displayName: HUFFMIN_11
+    addressOffset: 380
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_12
+    displayName: HUFFMIN_12
+    addressOffset: 384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_13
+    displayName: HUFFMIN_13
+    addressOffset: 388
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_14
+    displayName: HUFFMIN_14
+    addressOffset: 392
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFMIN_15
+    displayName: HUFFMIN_15
+    addressOffset: 396
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffMin_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFBASE0
+    displayName: HUFFBASE0
+    addressOffset: 400
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE1
+    displayName: HUFFBASE1
+    addressOffset: 404
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE2
+    displayName: HUFFBASE2
+    addressOffset: 408
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE3
+    displayName: HUFFBASE3
+    addressOffset: 412
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE4
+    displayName: HUFFBASE4
+    addressOffset: 416
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE5
+    displayName: HUFFBASE5
+    addressOffset: 420
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE6
+    displayName: HUFFBASE6
+    addressOffset: 424
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE7
+    displayName: HUFFBASE7
+    addressOffset: 428
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE8
+    displayName: HUFFBASE8
+    addressOffset: 432
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE9
+    displayName: HUFFBASE9
+    addressOffset: 436
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE10
+    displayName: HUFFBASE10
+    addressOffset: 440
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE11
+    displayName: HUFFBASE11
+    addressOffset: 444
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE12
+    displayName: HUFFBASE12
+    addressOffset: 448
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE13
+    displayName: HUFFBASE13
+    addressOffset: 452
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE14
+    displayName: HUFFBASE14
+    addressOffset: 456
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE15
+    displayName: HUFFBASE15
+    addressOffset: 460
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE16
+    displayName: HUFFBASE16
+    addressOffset: 464
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE17
+    displayName: HUFFBASE17
+    addressOffset: 468
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE18
+    displayName: HUFFBASE18
+    addressOffset: 472
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE19
+    displayName: HUFFBASE19
+    addressOffset: 476
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE20
+    displayName: HUFFBASE20
+    addressOffset: 480
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE21
+    displayName: HUFFBASE21
+    addressOffset: 484
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE22
+    displayName: HUFFBASE22
+    addressOffset: 488
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE23
+    displayName: HUFFBASE23
+    addressOffset: 492
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE24
+    displayName: HUFFBASE24
+    addressOffset: 496
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE25
+    displayName: HUFFBASE25
+    addressOffset: 500
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE26
+    displayName: HUFFBASE26
+    addressOffset: 504
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE27
+    displayName: HUFFBASE27
+    addressOffset: 508
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE28
+    displayName: HUFFBASE28
+    addressOffset: 512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE29
+    displayName: HUFFBASE29
+    addressOffset: 516
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE30
+    displayName: HUFFBASE30
+    addressOffset: 520
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFBASE31
+    displayName: HUFFBASE31
+    addressOffset: 524
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffBase_RAM_0
+        bitOffset: 0
+        bitWidth: 9
+      - name: HuffBase_RAM_1
+        bitOffset: 16
+        bitWidth: 9
+- register:
+    name: HUFFSYMB0
+    displayName: HUFFSYMB0
+    addressOffset: 528
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB1
+    displayName: HUFFSYMB1
+    addressOffset: 532
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB2
+    displayName: HUFFSYMB2
+    addressOffset: 536
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB3
+    displayName: HUFFSYMB3
+    addressOffset: 540
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB4
+    displayName: HUFFSYMB4
+    addressOffset: 544
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB5
+    displayName: HUFFSYMB5
+    addressOffset: 548
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB6
+    displayName: HUFFSYMB6
+    addressOffset: 552
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB7
+    displayName: HUFFSYMB7
+    addressOffset: 556
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB8
+    displayName: HUFFSYMB8
+    addressOffset: 560
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB9
+    displayName: HUFFSYMB9
+    addressOffset: 564
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB10
+    displayName: HUFFSYMB10
+    addressOffset: 568
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB11
+    displayName: HUFFSYMB11
+    addressOffset: 572
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB12
+    displayName: HUFFSYMB12
+    addressOffset: 576
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB13
+    displayName: HUFFSYMB13
+    addressOffset: 580
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB14
+    displayName: HUFFSYMB14
+    addressOffset: 584
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB15
+    displayName: HUFFSYMB15
+    addressOffset: 588
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB16
+    displayName: HUFFSYMB16
+    addressOffset: 592
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB17
+    displayName: HUFFSYMB17
+    addressOffset: 596
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB18
+    displayName: HUFFSYMB18
+    addressOffset: 600
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB19
+    displayName: HUFFSYMB19
+    addressOffset: 604
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB20
+    displayName: HUFFSYMB20
+    addressOffset: 608
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB21
+    displayName: HUFFSYMB21
+    addressOffset: 612
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB22
+    displayName: HUFFSYMB22
+    addressOffset: 616
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB23
+    displayName: HUFFSYMB23
+    addressOffset: 620
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB24
+    displayName: HUFFSYMB24
+    addressOffset: 624
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB25
+    displayName: HUFFSYMB25
+    addressOffset: 628
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB26
+    displayName: HUFFSYMB26
+    addressOffset: 632
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB27
+    displayName: HUFFSYMB27
+    addressOffset: 636
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB28
+    displayName: HUFFSYMB28
+    addressOffset: 640
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB29
+    displayName: HUFFSYMB29
+    addressOffset: 644
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB30
+    displayName: HUFFSYMB30
+    addressOffset: 648
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB31
+    displayName: HUFFSYMB31
+    addressOffset: 652
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB32
+    displayName: HUFFSYMB32
+    addressOffset: 656
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB33
+    displayName: HUFFSYMB33
+    addressOffset: 660
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB34
+    displayName: HUFFSYMB34
+    addressOffset: 664
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB35
+    displayName: HUFFSYMB35
+    addressOffset: 668
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB36
+    displayName: HUFFSYMB36
+    addressOffset: 672
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB37
+    displayName: HUFFSYMB37
+    addressOffset: 676
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB38
+    displayName: HUFFSYMB38
+    addressOffset: 680
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB39
+    displayName: HUFFSYMB39
+    addressOffset: 684
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB40
+    displayName: HUFFSYMB40
+    addressOffset: 688
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB41
+    displayName: HUFFSYMB41
+    addressOffset: 692
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB42
+    displayName: HUFFSYMB42
+    addressOffset: 696
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB43
+    displayName: HUFFSYMB43
+    addressOffset: 700
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB44
+    displayName: HUFFSYMB44
+    addressOffset: 704
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB45
+    displayName: HUFFSYMB45
+    addressOffset: 708
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB46
+    displayName: HUFFSYMB46
+    addressOffset: 712
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB47
+    displayName: HUFFSYMB47
+    addressOffset: 716
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB48
+    displayName: HUFFSYMB48
+    addressOffset: 720
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB49
+    displayName: HUFFSYMB49
+    addressOffset: 724
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB50
+    displayName: HUFFSYMB50
+    addressOffset: 728
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB51
+    displayName: HUFFSYMB51
+    addressOffset: 732
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB52
+    displayName: HUFFSYMB52
+    addressOffset: 736
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB53
+    displayName: HUFFSYMB53
+    addressOffset: 740
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB54
+    displayName: HUFFSYMB54
+    addressOffset: 744
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB55
+    displayName: HUFFSYMB55
+    addressOffset: 748
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB56
+    displayName: HUFFSYMB56
+    addressOffset: 752
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB57
+    displayName: HUFFSYMB57
+    addressOffset: 756
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB58
+    displayName: HUFFSYMB58
+    addressOffset: 760
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB59
+    displayName: HUFFSYMB59
+    addressOffset: 764
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB60
+    displayName: HUFFSYMB60
+    addressOffset: 768
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB61
+    displayName: HUFFSYMB61
+    addressOffset: 772
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB62
+    displayName: HUFFSYMB62
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB63
+    displayName: HUFFSYMB63
+    addressOffset: 780
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB64
+    displayName: HUFFSYMB64
+    addressOffset: 784
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB65
+    displayName: HUFFSYMB65
+    addressOffset: 788
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB66
+    displayName: HUFFSYMB66
+    addressOffset: 792
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB67
+    displayName: HUFFSYMB67
+    addressOffset: 796
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB68
+    displayName: HUFFSYMB68
+    addressOffset: 800
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB69
+    displayName: HUFFSYMB69
+    addressOffset: 804
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB70
+    displayName: HUFFSYMB70
+    addressOffset: 808
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB71
+    displayName: HUFFSYMB71
+    addressOffset: 812
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB72
+    displayName: HUFFSYMB72
+    addressOffset: 816
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB73
+    displayName: HUFFSYMB73
+    addressOffset: 820
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB74
+    displayName: HUFFSYMB74
+    addressOffset: 824
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB75
+    displayName: HUFFSYMB75
+    addressOffset: 828
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB76
+    displayName: HUFFSYMB76
+    addressOffset: 832
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB77
+    displayName: HUFFSYMB77
+    addressOffset: 836
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB78
+    displayName: HUFFSYMB78
+    addressOffset: 840
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB79
+    displayName: HUFFSYMB79
+    addressOffset: 844
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB80
+    displayName: HUFFSYMB80
+    addressOffset: 848
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB81
+    displayName: HUFFSYMB81
+    addressOffset: 852
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB82
+    displayName: HUFFSYMB82
+    addressOffset: 856
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFSYMB83
+    displayName: HUFFSYMB83
+    addressOffset: 860
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HuffSymb_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM0
+    displayName: DHTMEM0
+    addressOffset: 864
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM2
+    displayName: DHTMEM2
+    addressOffset: 868
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM3
+    displayName: DHTMEM3
+    addressOffset: 872
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM4
+    displayName: DHTMEM4
+    addressOffset: 876
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM5
+    displayName: DHTMEM5
+    addressOffset: 880
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM6
+    displayName: DHTMEM6
+    addressOffset: 884
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM7
+    displayName: DHTMEM7
+    addressOffset: 888
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM8
+    displayName: DHTMEM8
+    addressOffset: 892
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM9
+    displayName: DHTMEM9
+    addressOffset: 896
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM10
+    displayName: DHTMEM10
+    addressOffset: 900
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM11
+    displayName: DHTMEM11
+    addressOffset: 904
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM12
+    displayName: DHTMEM12
+    addressOffset: 908
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM13
+    displayName: DHTMEM13
+    addressOffset: 912
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM14
+    displayName: DHTMEM14
+    addressOffset: 916
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM15
+    displayName: DHTMEM15
+    addressOffset: 920
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM16
+    displayName: DHTMEM16
+    addressOffset: 924
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM17
+    displayName: DHTMEM17
+    addressOffset: 928
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM18
+    displayName: DHTMEM18
+    addressOffset: 932
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM19
+    displayName: DHTMEM19
+    addressOffset: 936
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM20
+    displayName: DHTMEM20
+    addressOffset: 940
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM21
+    displayName: DHTMEM21
+    addressOffset: 944
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM22
+    displayName: DHTMEM22
+    addressOffset: 948
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM23
+    displayName: DHTMEM23
+    addressOffset: 952
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM24
+    displayName: DHTMEM24
+    addressOffset: 956
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM25
+    displayName: DHTMEM25
+    addressOffset: 960
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM26
+    displayName: DHTMEM26
+    addressOffset: 964
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM27
+    displayName: DHTMEM27
+    addressOffset: 968
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM28
+    displayName: DHTMEM28
+    addressOffset: 972
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM29
+    displayName: DHTMEM29
+    addressOffset: 976
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM30
+    displayName: DHTMEM30
+    addressOffset: 980
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM31
+    displayName: DHTMEM31
+    addressOffset: 984
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM32
+    displayName: DHTMEM32
+    addressOffset: 988
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM33
+    displayName: DHTMEM33
+    addressOffset: 992
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM34
+    displayName: DHTMEM34
+    addressOffset: 996
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM35
+    displayName: DHTMEM35
+    addressOffset: 1000
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM36
+    displayName: DHTMEM36
+    addressOffset: 1004
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM37
+    displayName: DHTMEM37
+    addressOffset: 1008
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM38
+    displayName: DHTMEM38
+    addressOffset: 1012
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM39
+    displayName: DHTMEM39
+    addressOffset: 1016
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM40
+    displayName: DHTMEM40
+    addressOffset: 1020
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM41
+    displayName: DHTMEM41
+    addressOffset: 1024
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM42
+    displayName: DHTMEM42
+    addressOffset: 1028
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM43
+    displayName: DHTMEM43
+    addressOffset: 1032
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM44
+    displayName: DHTMEM44
+    addressOffset: 1036
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM45
+    displayName: DHTMEM45
+    addressOffset: 1040
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM46
+    displayName: DHTMEM46
+    addressOffset: 1044
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM47
+    displayName: DHTMEM47
+    addressOffset: 1048
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM48
+    displayName: DHTMEM48
+    addressOffset: 1052
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM49
+    displayName: DHTMEM49
+    addressOffset: 1056
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM50
+    displayName: DHTMEM50
+    addressOffset: 1060
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM51
+    displayName: DHTMEM51
+    addressOffset: 1064
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM52
+    displayName: DHTMEM52
+    addressOffset: 1068
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM53
+    displayName: DHTMEM53
+    addressOffset: 1072
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM54
+    displayName: DHTMEM54
+    addressOffset: 1076
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM55
+    displayName: DHTMEM55
+    addressOffset: 1080
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM56
+    displayName: DHTMEM56
+    addressOffset: 1084
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM57
+    displayName: DHTMEM57
+    addressOffset: 1088
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM58
+    displayName: DHTMEM58
+    addressOffset: 1092
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM59
+    displayName: DHTMEM59
+    addressOffset: 1096
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM60
+    displayName: DHTMEM60
+    addressOffset: 1100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM61
+    displayName: DHTMEM61
+    addressOffset: 1104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM62
+    displayName: DHTMEM62
+    addressOffset: 1108
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM63
+    displayName: DHTMEM63
+    addressOffset: 1112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM64
+    displayName: DHTMEM64
+    addressOffset: 1116
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM65
+    displayName: DHTMEM65
+    addressOffset: 1120
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM66
+    displayName: DHTMEM66
+    addressOffset: 1124
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM67
+    displayName: DHTMEM67
+    addressOffset: 1128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM68
+    displayName: DHTMEM68
+    addressOffset: 1132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM69
+    displayName: DHTMEM69
+    addressOffset: 1136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM70
+    displayName: DHTMEM70
+    addressOffset: 1140
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM71
+    displayName: DHTMEM71
+    addressOffset: 1144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM72
+    displayName: DHTMEM72
+    addressOffset: 1148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM73
+    displayName: DHTMEM73
+    addressOffset: 1152
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM74
+    displayName: DHTMEM74
+    addressOffset: 1156
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM75
+    displayName: DHTMEM75
+    addressOffset: 1160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM76
+    displayName: DHTMEM76
+    addressOffset: 1164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM77
+    displayName: DHTMEM77
+    addressOffset: 1168
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM78
+    displayName: DHTMEM78
+    addressOffset: 1172
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM79
+    displayName: DHTMEM79
+    addressOffset: 1176
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM80
+    displayName: DHTMEM80
+    addressOffset: 1180
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM81
+    displayName: DHTMEM81
+    addressOffset: 1184
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM82
+    displayName: DHTMEM82
+    addressOffset: 1188
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM83
+    displayName: DHTMEM83
+    addressOffset: 1192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM84
+    displayName: DHTMEM84
+    addressOffset: 1196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM85
+    displayName: DHTMEM85
+    addressOffset: 1200
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM86
+    displayName: DHTMEM86
+    addressOffset: 1204
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM87
+    displayName: DHTMEM87
+    addressOffset: 1208
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM88
+    displayName: DHTMEM88
+    addressOffset: 1212
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM89
+    displayName: DHTMEM89
+    addressOffset: 1216
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM90
+    displayName: DHTMEM90
+    addressOffset: 1220
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM91
+    displayName: DHTMEM91
+    addressOffset: 1224
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM92
+    displayName: DHTMEM92
+    addressOffset: 1228
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM93
+    displayName: DHTMEM93
+    addressOffset: 1232
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM94
+    displayName: DHTMEM94
+    addressOffset: 1236
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM95
+    displayName: DHTMEM95
+    addressOffset: 1240
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM96
+    displayName: DHTMEM96
+    addressOffset: 1244
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM97
+    displayName: DHTMEM97
+    addressOffset: 1248
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM98
+    displayName: DHTMEM98
+    addressOffset: 1252
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM99
+    displayName: DHTMEM99
+    addressOffset: 1256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM100
+    displayName: DHTMEM100
+    addressOffset: 1260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM101
+    displayName: DHTMEM101
+    addressOffset: 1264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM102
+    displayName: DHTMEM102
+    addressOffset: 1268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DHTMEM103
+    displayName: DHTMEM103
+    addressOffset: 1272
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_0
+    displayName: HUFFENC_AC0_0
+    addressOffset: 1280
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_1
+    displayName: HUFFENC_AC0_1
+    addressOffset: 1284
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_2
+    displayName: HUFFENC_AC0_2
+    addressOffset: 1288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_3
+    displayName: HUFFENC_AC0_3
+    addressOffset: 1292
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_4
+    displayName: HUFFENC_AC0_4
+    addressOffset: 1296
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_5
+    displayName: HUFFENC_AC0_5
+    addressOffset: 1300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_6
+    displayName: HUFFENC_AC0_6
+    addressOffset: 1304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_7
+    displayName: HUFFENC_AC0_7
+    addressOffset: 1308
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_8
+    displayName: HUFFENC_AC0_8
+    addressOffset: 1312
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_9
+    displayName: HUFFENC_AC0_9
+    addressOffset: 1316
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_10
+    displayName: HUFFENC_AC0_10
+    addressOffset: 1320
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_11
+    displayName: HUFFENC_AC0_11
+    addressOffset: 1324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_12
+    displayName: HUFFENC_AC0_12
+    addressOffset: 1328
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_13
+    displayName: HUFFENC_AC0_13
+    addressOffset: 1332
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_14
+    displayName: HUFFENC_AC0_14
+    addressOffset: 1336
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_15
+    displayName: HUFFENC_AC0_15
+    addressOffset: 1340
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_16
+    displayName: HUFFENC_AC0_16
+    addressOffset: 1344
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_17
+    displayName: HUFFENC_AC0_17
+    addressOffset: 1348
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_18
+    displayName: HUFFENC_AC0_18
+    addressOffset: 1352
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_19
+    displayName: HUFFENC_AC0_19
+    addressOffset: 1356
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_20
+    displayName: HUFFENC_AC0_20
+    addressOffset: 1360
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_21
+    displayName: HUFFENC_AC0_21
+    addressOffset: 1364
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_22
+    displayName: HUFFENC_AC0_22
+    addressOffset: 1368
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_23
+    displayName: HUFFENC_AC0_23
+    addressOffset: 1372
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_24
+    displayName: HUFFENC_AC0_24
+    addressOffset: 1376
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_25
+    displayName: HUFFENC_AC0_25
+    addressOffset: 1380
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_26
+    displayName: HUFFENC_AC0_26
+    addressOffset: 1384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_27
+    displayName: HUFFENC_AC0_27
+    addressOffset: 1388
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_28
+    displayName: HUFFENC_AC0_28
+    addressOffset: 1392
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_29
+    displayName: HUFFENC_AC0_29
+    addressOffset: 1396
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_30
+    displayName: HUFFENC_AC0_30
+    addressOffset: 1400
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_31
+    displayName: HUFFENC_AC0_31
+    addressOffset: 1404
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_32
+    displayName: HUFFENC_AC0_32
+    addressOffset: 1408
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_33
+    displayName: HUFFENC_AC0_33
+    addressOffset: 1412
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_34
+    displayName: HUFFENC_AC0_34
+    addressOffset: 1416
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_35
+    displayName: HUFFENC_AC0_35
+    addressOffset: 1420
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_36
+    displayName: HUFFENC_AC0_36
+    addressOffset: 1424
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_37
+    displayName: HUFFENC_AC0_37
+    addressOffset: 1428
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_38
+    displayName: HUFFENC_AC0_38
+    addressOffset: 1432
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_39
+    displayName: HUFFENC_AC0_39
+    addressOffset: 1436
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_40
+    displayName: HUFFENC_AC0_40
+    addressOffset: 1440
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_41
+    displayName: HUFFENC_AC0_41
+    addressOffset: 1444
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_42
+    displayName: HUFFENC_AC0_42
+    addressOffset: 1448
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_43
+    displayName: HUFFENC_AC0_43
+    addressOffset: 1452
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_44
+    displayName: HUFFENC_AC0_44
+    addressOffset: 1456
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_45
+    displayName: HUFFENC_AC0_45
+    addressOffset: 1460
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_46
+    displayName: HUFFENC_AC0_46
+    addressOffset: 1464
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_47
+    displayName: HUFFENC_AC0_47
+    addressOffset: 1468
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_48
+    displayName: HUFFENC_AC0_48
+    addressOffset: 1472
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_49
+    displayName: HUFFENC_AC0_49
+    addressOffset: 1476
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_50
+    displayName: HUFFENC_AC0_50
+    addressOffset: 1480
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_51
+    displayName: HUFFENC_AC0_51
+    addressOffset: 1484
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_52
+    displayName: HUFFENC_AC0_52
+    addressOffset: 1488
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_53
+    displayName: HUFFENC_AC0_53
+    addressOffset: 1492
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_54
+    displayName: HUFFENC_AC0_54
+    addressOffset: 1496
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_55
+    displayName: HUFFENC_AC0_55
+    addressOffset: 1500
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_56
+    displayName: HUFFENC_AC0_56
+    addressOffset: 1504
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_57
+    displayName: HUFFENC_AC0_57
+    addressOffset: 1508
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_58
+    displayName: HUFFENC_AC0_58
+    addressOffset: 1512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_59
+    displayName: HUFFENC_AC0_59
+    addressOffset: 1516
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_60
+    displayName: HUFFENC_AC0_60
+    addressOffset: 1520
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_61
+    displayName: HUFFENC_AC0_61
+    addressOffset: 1524
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_62
+    displayName: HUFFENC_AC0_62
+    addressOffset: 1528
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_63
+    displayName: HUFFENC_AC0_63
+    addressOffset: 1532
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_64
+    displayName: HUFFENC_AC0_64
+    addressOffset: 1536
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_65
+    displayName: HUFFENC_AC0_65
+    addressOffset: 1540
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_66
+    displayName: HUFFENC_AC0_66
+    addressOffset: 1544
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_67
+    displayName: HUFFENC_AC0_67
+    addressOffset: 1548
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_68
+    displayName: HUFFENC_AC0_68
+    addressOffset: 1552
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_69
+    displayName: HUFFENC_AC0_69
+    addressOffset: 1556
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_70
+    displayName: HUFFENC_AC0_70
+    addressOffset: 1560
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_71
+    displayName: HUFFENC_AC0_71
+    addressOffset: 1564
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_72
+    displayName: HUFFENC_AC0_72
+    addressOffset: 1568
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_73
+    displayName: HUFFENC_AC0_73
+    addressOffset: 1572
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_74
+    displayName: HUFFENC_AC0_74
+    addressOffset: 1576
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_75
+    displayName: HUFFENC_AC0_75
+    addressOffset: 1580
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_76
+    displayName: HUFFENC_AC0_76
+    addressOffset: 1584
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_77
+    displayName: HUFFENC_AC0_77
+    addressOffset: 1588
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_78
+    displayName: HUFFENC_AC0_78
+    addressOffset: 1592
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_79
+    displayName: HUFFENC_AC0_79
+    addressOffset: 1596
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_80
+    displayName: HUFFENC_AC0_80
+    addressOffset: 1600
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_81
+    displayName: HUFFENC_AC0_81
+    addressOffset: 1604
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_82
+    displayName: HUFFENC_AC0_82
+    addressOffset: 1608
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_83
+    displayName: HUFFENC_AC0_83
+    addressOffset: 1612
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_84
+    displayName: HUFFENC_AC0_84
+    addressOffset: 1616
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_85
+    displayName: HUFFENC_AC0_85
+    addressOffset: 1620
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_86
+    displayName: HUFFENC_AC0_86
+    addressOffset: 1624
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC0_87
+    displayName: HUFFENC_AC0_87
+    addressOffset: 1628
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_0
+    displayName: HUFFENC_AC1_0
+    addressOffset: 1632
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_1
+    displayName: HUFFENC_AC1_1
+    addressOffset: 1636
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_2
+    displayName: HUFFENC_AC1_2
+    addressOffset: 1640
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_3
+    displayName: HUFFENC_AC1_3
+    addressOffset: 1644
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_4
+    displayName: HUFFENC_AC1_4
+    addressOffset: 1648
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_5
+    displayName: HUFFENC_AC1_5
+    addressOffset: 1652
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_6
+    displayName: HUFFENC_AC1_6
+    addressOffset: 1656
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_7
+    displayName: HUFFENC_AC1_7
+    addressOffset: 1660
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_8
+    displayName: HUFFENC_AC1_8
+    addressOffset: 1664
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_9
+    displayName: HUFFENC_AC1_9
+    addressOffset: 1668
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_10
+    displayName: HUFFENC_AC1_10
+    addressOffset: 1672
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_11
+    displayName: HUFFENC_AC1_11
+    addressOffset: 1676
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_12
+    displayName: HUFFENC_AC1_12
+    addressOffset: 1680
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_13
+    displayName: HUFFENC_AC1_13
+    addressOffset: 1684
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_14
+    displayName: HUFFENC_AC1_14
+    addressOffset: 1688
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_15
+    displayName: HUFFENC_AC1_15
+    addressOffset: 1692
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_16
+    displayName: HUFFENC_AC1_16
+    addressOffset: 1696
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_17
+    displayName: HUFFENC_AC1_17
+    addressOffset: 1700
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_18
+    displayName: HUFFENC_AC1_18
+    addressOffset: 1704
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_19
+    displayName: HUFFENC_AC1_19
+    addressOffset: 1708
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_20
+    displayName: HUFFENC_AC1_20
+    addressOffset: 1712
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_21
+    displayName: HUFFENC_AC1_21
+    addressOffset: 1716
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_22
+    displayName: HUFFENC_AC1_22
+    addressOffset: 1720
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_23
+    displayName: HUFFENC_AC1_23
+    addressOffset: 1724
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_24
+    displayName: HUFFENC_AC1_24
+    addressOffset: 1728
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_25
+    displayName: HUFFENC_AC1_25
+    addressOffset: 1732
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_26
+    displayName: HUFFENC_AC1_26
+    addressOffset: 1736
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_27
+    displayName: HUFFENC_AC1_27
+    addressOffset: 1740
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_28
+    displayName: HUFFENC_AC1_28
+    addressOffset: 1744
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_29
+    displayName: HUFFENC_AC1_29
+    addressOffset: 1748
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_30
+    displayName: HUFFENC_AC1_30
+    addressOffset: 1752
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_31
+    displayName: HUFFENC_AC1_31
+    addressOffset: 1756
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_32
+    displayName: HUFFENC_AC1_32
+    addressOffset: 1760
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_33
+    displayName: HUFFENC_AC1_33
+    addressOffset: 1764
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_34
+    displayName: HUFFENC_AC1_34
+    addressOffset: 1768
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_35
+    displayName: HUFFENC_AC1_35
+    addressOffset: 1772
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_36
+    displayName: HUFFENC_AC1_36
+    addressOffset: 1776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_37
+    displayName: HUFFENC_AC1_37
+    addressOffset: 1780
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_38
+    displayName: HUFFENC_AC1_38
+    addressOffset: 1784
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_39
+    displayName: HUFFENC_AC1_39
+    addressOffset: 1788
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_40
+    displayName: HUFFENC_AC1_40
+    addressOffset: 1792
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_41
+    displayName: HUFFENC_AC1_41
+    addressOffset: 1796
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_42
+    displayName: HUFFENC_AC1_42
+    addressOffset: 1800
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_43
+    displayName: HUFFENC_AC1_43
+    addressOffset: 1804
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_44
+    displayName: HUFFENC_AC1_44
+    addressOffset: 1808
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_45
+    displayName: HUFFENC_AC1_45
+    addressOffset: 1812
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_46
+    displayName: HUFFENC_AC1_46
+    addressOffset: 1816
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_47
+    displayName: HUFFENC_AC1_47
+    addressOffset: 1820
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_48
+    displayName: HUFFENC_AC1_48
+    addressOffset: 1824
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_49
+    displayName: HUFFENC_AC1_49
+    addressOffset: 1828
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_50
+    displayName: HUFFENC_AC1_50
+    addressOffset: 1832
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_51
+    displayName: HUFFENC_AC1_51
+    addressOffset: 1836
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_52
+    displayName: HUFFENC_AC1_52
+    addressOffset: 1840
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_53
+    displayName: HUFFENC_AC1_53
+    addressOffset: 1844
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_54
+    displayName: HUFFENC_AC1_54
+    addressOffset: 1848
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_55
+    displayName: HUFFENC_AC1_55
+    addressOffset: 1852
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_56
+    displayName: HUFFENC_AC1_56
+    addressOffset: 1856
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_57
+    displayName: HUFFENC_AC1_57
+    addressOffset: 1860
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_58
+    displayName: HUFFENC_AC1_58
+    addressOffset: 1864
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_59
+    displayName: HUFFENC_AC1_59
+    addressOffset: 1868
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_60
+    displayName: HUFFENC_AC1_60
+    addressOffset: 1872
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_61
+    displayName: HUFFENC_AC1_61
+    addressOffset: 1876
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_62
+    displayName: HUFFENC_AC1_62
+    addressOffset: 1880
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_63
+    displayName: HUFFENC_AC1_63
+    addressOffset: 1884
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_64
+    displayName: HUFFENC_AC1_64
+    addressOffset: 1888
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_65
+    displayName: HUFFENC_AC1_65
+    addressOffset: 1892
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_66
+    displayName: HUFFENC_AC1_66
+    addressOffset: 1896
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_67
+    displayName: HUFFENC_AC1_67
+    addressOffset: 1900
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_68
+    displayName: HUFFENC_AC1_68
+    addressOffset: 1904
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_69
+    displayName: HUFFENC_AC1_69
+    addressOffset: 1908
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_70
+    displayName: HUFFENC_AC1_70
+    addressOffset: 1912
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_71
+    displayName: HUFFENC_AC1_71
+    addressOffset: 1916
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_72
+    displayName: HUFFENC_AC1_72
+    addressOffset: 1920
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_73
+    displayName: HUFFENC_AC1_73
+    addressOffset: 1924
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_74
+    displayName: HUFFENC_AC1_74
+    addressOffset: 1928
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_75
+    displayName: HUFFENC_AC1_75
+    addressOffset: 1932
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_76
+    displayName: HUFFENC_AC1_76
+    addressOffset: 1936
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_77
+    displayName: HUFFENC_AC1_77
+    addressOffset: 1940
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_78
+    displayName: HUFFENC_AC1_78
+    addressOffset: 1944
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_79
+    displayName: HUFFENC_AC1_79
+    addressOffset: 1948
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_80
+    displayName: HUFFENC_AC1_80
+    addressOffset: 1952
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_81
+    displayName: HUFFENC_AC1_81
+    addressOffset: 1956
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_82
+    displayName: HUFFENC_AC1_82
+    addressOffset: 1960
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_83
+    displayName: HUFFENC_AC1_83
+    addressOffset: 1964
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_84
+    displayName: HUFFENC_AC1_84
+    addressOffset: 1968
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_85
+    displayName: HUFFENC_AC1_85
+    addressOffset: 1972
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_86
+    displayName: HUFFENC_AC1_86
+    addressOffset: 1976
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_AC1_87
+    displayName: HUFFENC_AC1_87
+    addressOffset: 1980
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_0
+    displayName: HUFFENC_DC0_0
+    addressOffset: 1984
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_1
+    displayName: HUFFENC_DC0_1
+    addressOffset: 1988
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_2
+    displayName: HUFFENC_DC0_2
+    addressOffset: 1992
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_3
+    displayName: HUFFENC_DC0_3
+    addressOffset: 1996
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_4
+    displayName: HUFFENC_DC0_4
+    addressOffset: 2000
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_5
+    displayName: HUFFENC_DC0_5
+    addressOffset: 2004
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_6
+    displayName: HUFFENC_DC0_6
+    addressOffset: 2008
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC0_7
+    displayName: HUFFENC_DC0_7
+    addressOffset: 2012
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_0
+    displayName: HUFFENC_DC1_0
+    addressOffset: 2016
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_1
+    displayName: HUFFENC_DC1_1
+    addressOffset: 2020
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_2
+    displayName: HUFFENC_DC1_2
+    addressOffset: 2024
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_3
+    displayName: HUFFENC_DC1_3
+    addressOffset: 2028
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_4
+    displayName: HUFFENC_DC1_4
+    addressOffset: 2032
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_5
+    displayName: HUFFENC_DC1_5
+    addressOffset: 2036
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_6
+    displayName: HUFFENC_DC1_6
+    addressOffset: 2040
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HUFFENC_DC1_7
+    displayName: HUFFENC_DC1_7
+    addressOffset: 2044
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DHTMem_RAM
+        bitOffset: 0
+        bitWidth: 32

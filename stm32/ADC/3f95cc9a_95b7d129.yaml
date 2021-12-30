@@ -1,0 +1,1960 @@
+---
+- register:
+    name: ISR
+    displayName: ISR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDY
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADRDYR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+          - name: ADRDYW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOSMP
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSMPR
+            usage: read
+            values:
+              - name: NotEnded
+                value: 0
+              - name: Ended
+                value: 1
+          - name: EOSMPW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOC
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOCW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOS
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOSW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: OVR
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRR
+            usage: read
+            values:
+              - name: NoOverrun
+                value: 0
+              - name: Overrun
+                value: 1
+          - name: OVRW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: JEOC
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOCR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: JEOCW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: JEOS
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOSR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: JEOSW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: AWD1
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1R
+            usage: read
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+          - name: AWD1W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: AWD2
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1R
+            values: []
+          - derived_from: AWD1W
+            values: []
+      - name: AWD3
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1R
+            values: []
+          - derived_from: AWD1W
+            values: []
+      - name: JQOVF
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: JQOVFR
+            usage: read
+            values:
+              - name: NoOverflow
+                value: 0
+              - name: Overflow
+                value: 1
+          - name: JQOVFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: IER
+    displayName: IER
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDYIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADRDYIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOSMPIE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSMPIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOCIE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOSIE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OVRIE
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JEOCIE
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOCIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JEOSIE
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOSIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD1IE
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1IE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD2IE
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1IE
+            values: []
+      - name: AWD3IE
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1IE
+            values: []
+      - name: JQOVFIE
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: JQOVFIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 536870912
+    fields:
+      - name: ADEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADENW
+            usage: write
+            values:
+              - name: Enable
+                value: 1
+      - name: ADDIS
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADDISW
+            usage: write
+            values:
+              - name: Disable
+                value: 0
+      - name: ADSTART
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADSTART
+            usage: read-write
+            values:
+              - name: Start
+                value: 1
+      - name: JADSTART
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ADSTART
+            values: []
+      - name: ADSTP
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADSTP
+            usage: read-write
+            values:
+              - name: Stop
+                value: 1
+      - name: JADSTP
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ADSTP
+            values: []
+      - name: BOOST
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: BOOST
+            usage: read-write
+            values:
+              - name: LT6_25
+                value: 0
+              - name: LT12_5
+                value: 1
+              - name: LT25
+                value: 2
+              - name: LT50
+                value: 3
+      - name: ADCALLIN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADCALLIN
+            usage: read-write
+            values:
+              - name: NoLinearity
+                value: 0
+              - name: Linearity
+                value: 1
+      - name: LINCALRDYW1
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: LINCALRDYW1
+            usage: read-write
+            values:
+              - name: Reset
+                value: 0
+              - name: Set
+                value: 1
+      - name: LINCALRDYW2
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LINCALRDYW1
+            values: []
+      - name: LINCALRDYW3
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LINCALRDYW1
+            values: []
+      - name: LINCALRDYW4
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LINCALRDYW1
+            values: []
+      - name: LINCALRDYW5
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LINCALRDYW1
+            values: []
+      - name: LINCALRDYW6
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: LINCALRDYW1
+            values: []
+      - name: ADVREGEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADVREGEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DEEPPWD
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - name: DEEPPWD
+            usage: read-write
+            values:
+              - name: PowerUp
+                value: 0
+              - name: PowerDown
+                value: 1
+      - name: ADCALDIF
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADCALDIF
+            usage: read-write
+            values:
+              - name: SingleEnded
+                value: 0
+              - name: Differential
+                value: 1
+      - name: ADCAL
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADCAL
+            usage: read-write
+            values:
+              - name: Complete
+                value: 0
+              - name: Calibration
+                value: 1
+- register:
+    name: CFGR
+    displayName: CFGR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 2147483648
+    fields:
+      - name: DMNGT
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: DMNGT
+            usage: read-write
+            values:
+              - name: DR
+                value: 0
+              - name: DMA_OneShot
+                value: 1
+              - name: DFSDM
+                value: 2
+              - name: DMA_Circular
+                value: 3
+      - name: RES
+        bitOffset: 2
+        bitWidth: 3
+        enumeratedValues:
+          - name: RES
+            usage: read-write
+            values:
+              - name: SixteenBit
+                value: 0
+              - name: FourteenBit
+                value: 1
+              - name: TwelveBit
+                value: 2
+              - name: TenBit
+                value: 3
+              - name: FourteenBitV
+                value: 5
+              - name: TwelveBitV
+                value: 6
+              - name: EightBit
+                value: 7
+      - name: EXTSEL
+        bitOffset: 5
+        bitWidth: 5
+        enumeratedValues:
+          - name: EXTSEL
+            usage: read-write
+            values:
+              - name: TIM1_CC1
+                value: 0
+              - name: TIM1_CC2
+                value: 1
+              - name: TIM1_CC3
+                value: 2
+              - name: TIM2_CC2
+                value: 3
+              - name: TIM3_TRGO
+                value: 4
+              - name: TIM4_CC4
+                value: 5
+              - name: EXTI11
+                value: 6
+              - name: TIM8_TRGO
+                value: 7
+              - name: TIM8_TRGO2
+                value: 8
+              - name: TIM1_TRGO
+                value: 9
+              - name: TIM1_TRGO2
+                value: 10
+              - name: TIM2_TRGO
+                value: 11
+              - name: TIM4_TRGO
+                value: 12
+              - name: TIM6_TRGO
+                value: 13
+              - name: TIM15_TRGO
+                value: 14
+              - name: TIM3_CC4
+                value: 15
+              - name: HRTIM1_ADCTRG1
+                value: 16
+              - name: HRTIM1_ADCTRG3
+                value: 17
+              - name: LPTIM1_OUT
+                value: 18
+              - name: LPTIM2_OUT
+                value: 19
+              - name: LPTIM3_OUT
+                value: 20
+      - name: EXTEN
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - name: EXTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: OVRMOD
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRMOD
+            usage: read-write
+            values:
+              - name: Preserve
+                value: 0
+              - name: Overwrite
+                value: 1
+      - name: CONT
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: CONT
+            usage: read-write
+            values:
+              - name: Single
+                value: 0
+              - name: Continuous
+                value: 1
+      - name: AUTDLY
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: AUTDLY
+            usage: read-write
+            values:
+              - name: "Off"
+                value: 0
+              - name: "On"
+                value: 1
+      - name: DISCEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: DISCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DISCNUM
+        bitOffset: 17
+        bitWidth: 3
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 7
+      - name: JDISCEN
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: JDISCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JQM
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - name: JQM
+            usage: read-write
+            values:
+              - name: Mode0
+                value: 0
+              - name: Mode1
+                value: 1
+      - name: AWD1SGL
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1SGL
+            usage: read-write
+            values:
+              - name: All
+                value: 0
+              - name: Single
+                value: 1
+      - name: AWD1EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JAWD1EN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - name: JAWD1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JAUTO
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - name: JAUTO
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD1CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: JQDIS
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: JQDIS
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+- register:
+    name: CFGR2
+    displayName: CFGR2
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ROVSE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ROVSE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JOVSE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: JOVSE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OVSS
+        bitOffset: 5
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 11
+      - name: TROVS
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: TROVS
+            usage: read-write
+            values:
+              - name: Automatic
+                value: 0
+              - name: Triggered
+                value: 1
+      - name: ROVSM
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: ROVSM
+            usage: read-write
+            values:
+              - name: Continued
+                value: 0
+              - name: Resumed
+                value: 1
+      - name: RSHIFT1
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: RSHIFT1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RSHIFT2
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RSHIFT1
+            values: []
+      - name: RSHIFT3
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RSHIFT1
+            values: []
+      - name: RSHIFT4
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RSHIFT1
+            values: []
+      - name: OSVR
+        bitOffset: 16
+        bitWidth: 10
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 1023
+      - name: LSHIFT
+        bitOffset: 28
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: SMPR1
+    displayName: SMPR1
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP0
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SMP0
+            usage: read-write
+            values:
+              - name: Cycles1_5
+                value: 0
+              - name: Cycles2_5
+                value: 1
+              - name: Cycles8_5
+                value: 2
+              - name: Cycles16_5
+                value: 3
+              - name: Cycles32_5
+                value: 4
+              - name: Cycles64_5
+                value: 5
+              - name: Cycles387_5
+                value: 6
+              - name: Cycles810_5
+                value: 7
+      - name: SMP1
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP2
+        bitOffset: 6
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP3
+        bitOffset: 9
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP4
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP5
+        bitOffset: 15
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP6
+        bitOffset: 18
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP7
+        bitOffset: 21
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP8
+        bitOffset: 24
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+      - name: SMP9
+        bitOffset: 27
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+            values: []
+- register:
+    name: SMPR2
+    displayName: SMPR2
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP10
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SMP10
+            usage: read-write
+            values:
+              - name: Cycles1_5
+                value: 0
+              - name: Cycles2_5
+                value: 1
+              - name: Cycles8_5
+                value: 2
+              - name: Cycles16_5
+                value: 3
+              - name: Cycles32_5
+                value: 4
+              - name: Cycles64_5
+                value: 5
+              - name: Cycles387_5
+                value: 6
+              - name: Cycles810_5
+                value: 7
+      - name: SMP11
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP12
+        bitOffset: 6
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP13
+        bitOffset: 9
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP14
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP15
+        bitOffset: 15
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP16
+        bitOffset: 18
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP17
+        bitOffset: 21
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP18
+        bitOffset: 24
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+      - name: SMP19
+        bitOffset: 27
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+            values: []
+- register:
+    name: PCSEL
+    displayName: PCSEL
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PCSEL
+        bitOffset: 0
+        bitWidth: 20
+        enumeratedValues:
+          - name: PCSEL
+            usage: read-write
+            values:
+              - name: NotPreselected
+                value: 0
+              - name: Preselected
+                value: 1
+- register:
+    name: LTR1
+    displayName: LTR1
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTR1
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: HTR1
+    displayName: LHTR1
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 67108863
+    fields:
+      - name: HTR1
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: SQR1
+    displayName: SQR1
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: L
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+      - name: SQ1
+        bitOffset: 6
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ2
+        bitOffset: 12
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ3
+        bitOffset: 18
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ4
+        bitOffset: 24
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+- register:
+    name: SQR2
+    displayName: SQR2
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ5
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ6
+        bitOffset: 6
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ7
+        bitOffset: 12
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ8
+        bitOffset: 18
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ9
+        bitOffset: 24
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+- register:
+    name: SQR3
+    displayName: SQR3
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ10
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ11
+        bitOffset: 6
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ12
+        bitOffset: 12
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ13
+        bitOffset: 18
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ14
+        bitOffset: 24
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+- register:
+    name: SQR4
+    displayName: SQR4
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ15
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: SQ16
+        bitOffset: 6
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+- register:
+    name: DR
+    displayName: DR
+    addressOffset: 64
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATA
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: JSQR
+    displayName: JSQR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JL
+        bitOffset: 0
+        bitWidth: 2
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 3
+      - name: JEXTSEL
+        bitOffset: 2
+        bitWidth: 5
+        enumeratedValues:
+          - name: JEXTSEL
+            usage: read-write
+            values:
+              - name: TIM1_TRGO
+                value: 0
+              - name: TIM1_CC4
+                value: 1
+              - name: TIM2_TRGO
+                value: 2
+              - name: TIM2_CC1
+                value: 3
+              - name: TIM3_CC4
+                value: 4
+              - name: TIM4_TRGO
+                value: 5
+              - name: EXTI15
+                value: 6
+              - name: TIM8_CC4
+                value: 7
+              - name: TIM1_TRGO2
+                value: 8
+              - name: TIM8_TRGO
+                value: 9
+              - name: TIM8_TRGO2
+                value: 10
+              - name: TIM3_CC3
+                value: 11
+              - name: TIM3_TRGO
+                value: 12
+              - name: TIM3_CC1
+                value: 13
+              - name: TIM6_TRGO
+                value: 14
+              - name: TIM15_TRGO
+                value: 15
+              - name: HRTIM1_ADCTRG2
+                value: 16
+              - name: HRTIM1_ADCTRG4
+                value: 17
+              - name: LPTIM1_OUT
+                value: 18
+              - name: LPTIM2_OUT
+                value: 19
+              - name: LPTIM3_OUT
+                value: 20
+      - name: JEXTEN
+        bitOffset: 7
+        bitWidth: 2
+        enumeratedValues:
+          - name: JEXTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: JSQ1
+        bitOffset: 9
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: JSQ2
+        bitOffset: 15
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: JSQ3
+        bitOffset: 21
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+      - name: JSQ4
+        bitOffset: 27
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 19
+- register:
+    name: OFR1
+    displayName: OFR1
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET1
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+      - name: OFFSET1_CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+      - name: SSATE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: OFR2
+    displayName: OFR2
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET2
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+      - name: OFFSET2_CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+      - name: SSATE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: OFR3
+    displayName: OFR3
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET3
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+      - name: OFFSET3_CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+      - name: SSATE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: OFR4
+    displayName: OFR4
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET4
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+      - name: OFFSET4_CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+      - name: SSATE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: JDR1
+    displayName: JDR1
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: JDR2
+    displayName: JDR2
+    addressOffset: 132
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: JDR3
+    displayName: JDR3
+    addressOffset: 136
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA3
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: JDR4
+    displayName: JDR4
+    addressOffset: 140
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA4
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: AWD2CR
+    displayName: AWD2CR
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD2CH0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD2CH0
+            usage: read-write
+            values:
+              - name: NotMonitored
+                value: 0
+              - name: Monitored
+                value: 1
+      - name: AWD2CH1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+      - name: AWD2CH19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD2CH0
+            values: []
+- register:
+    name: AWD3CR
+    displayName: AWD3CR
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD3CH0
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD3CH0
+            usage: read-write
+            values:
+              - name: NotMonitored
+                value: 0
+              - name: Monitored
+                value: 1
+      - name: AWD3CH1
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH2
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH3
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH4
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH5
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH6
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH7
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH8
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH9
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH10
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH11
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH12
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH13
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH14
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH15
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH16
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH17
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH18
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+      - name: AWD3CH19
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD3CH0
+            values: []
+- register:
+    name: LTR2
+    displayName: LTR2
+    addressOffset: 176
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTR2
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: HTR2
+    displayName: HTR2
+    addressOffset: 180
+    size: 32
+    access: read-write
+    resetValue: 67108863
+    fields:
+      - name: HTR2
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: LTR3
+    displayName: LTR3
+    addressOffset: 184
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LTR3
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: HTR3
+    displayName: HTR3
+    addressOffset: 188
+    size: 32
+    access: read-write
+    resetValue: 67108863
+    fields:
+      - name: HTR3
+        bitOffset: 0
+        bitWidth: 26
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 67108863
+- register:
+    name: DIFSEL
+    displayName: DIFSEL
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DIFSEL0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DIFSEL0
+            usage: read-write
+            values:
+              - name: SingleEnded
+                value: 0
+              - name: Differential
+                value: 1
+      - name: DIFSEL1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+      - name: DIFSEL19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DIFSEL0
+            values: []
+- register:
+    name: CALFACT
+    displayName: CALFACT
+    addressOffset: 196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CALFACT_S
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 2047
+      - name: CALFACT_D
+        bitOffset: 16
+        bitWidth: 11
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 2047
+- register:
+    name: CALFACT2
+    displayName: CALFACT2
+    addressOffset: 200
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LINCALFACT
+        bitOffset: 0
+        bitWidth: 30
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 1073741823

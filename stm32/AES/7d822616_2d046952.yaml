@@ -1,0 +1,553 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DATATYPE
+        bitOffset: 1
+        bitWidth: 2
+        enumeratedValues:
+          - name: DATATYPE
+            usage: read-write
+            values:
+              - name: None
+                value: 0
+              - name: HalfWord
+                value: 1
+              - name: Byte
+                value: 2
+              - name: Bit
+                value: 3
+      - name: MODE
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: MODE
+            usage: read-write
+            values:
+              - name: Mode1
+                value: 0
+              - name: Mode2
+                value: 1
+              - name: Mode3
+                value: 2
+              - name: Mode4
+                value: 3
+      - name: CHMOD
+        bitOffset: 5
+        bitWidth: 2
+        enumeratedValues:
+          - name: CHMOD
+            usage: read-write
+            values:
+              - name: ECB
+                value: 0
+              - name: CBC
+                value: 1
+              - name: CTR
+                value: 2
+              - name: GCM
+                value: 3
+      - name: CCFC
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: CCFCW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: ERRC
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: ERRCW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: CCFIE
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: CCFIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ERRIE
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: ERRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMAINEN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAINEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMAOUTEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAOUTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GCMPH
+        bitOffset: 13
+        bitWidth: 2
+        enumeratedValues:
+          - name: GCMPH
+            usage: read-write
+            values:
+              - name: Init
+                value: 0
+              - name: Header
+                value: 1
+              - name: Payload
+                value: 2
+              - name: Final
+                value: 3
+      - name: CHMOD2
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: CHMOD2
+            usage: read-write
+            values:
+              - name: CHMOD
+                value: 0
+              - name: CCM
+                value: 1
+      - name: KEYSIZE
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - name: KEYSIZE
+            usage: read-write
+            values:
+              - name: Bits128
+                value: 0
+              - name: Bits256
+                value: 1
+      - name: NPBLB
+        bitOffset: 20
+        bitWidth: 4
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CCF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CCF
+            usage: read-write
+            values:
+              - name: Complete
+                value: 0
+              - name: NotComplete
+                value: 1
+      - name: RDERR
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: RDERR
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+      - name: WRERR
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: WRERR
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+      - name: BUSY
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: BUSY
+            usage: read-write
+            values:
+              - name: Idle
+                value: 0
+              - name: Busy
+                value: 1
+- register:
+    name: DINR
+    displayName: DINR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DIN
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: DOUTR
+    displayName: DOUTR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DOUT
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR0
+    displayName: KEYR0
+    addressOffset: 16
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR1
+    displayName: KEYR1
+    addressOffset: 20
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR2
+    displayName: KEYR2
+    addressOffset: 24
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR3
+    displayName: KEYR3
+    addressOffset: 28
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: IVR0
+    displayName: IVR0
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IVI
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: IVR1
+    displayName: IVR1
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IVI
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: IVR2
+    displayName: IVR2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IVI
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: IVR3
+    displayName: IVR3
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IVI
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR4
+    displayName: KEYR4
+    addressOffset: 48
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR5
+    displayName: KEYR5
+    addressOffset: 52
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR6
+    displayName: KEYR6
+    addressOffset: 56
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: KEYR7
+    displayName: KEYR7
+    addressOffset: 60
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP0R
+    displayName: SUSP0R
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP1R
+    displayName: SUSP1R
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP2R
+    displayName: SUSP2R
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP3R
+    displayName: SUSP3R
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP4R
+    displayName: SUSP4R
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP5R
+    displayName: SUSP5R
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP6R
+    displayName: SUSP6R
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: SUSP7R
+    displayName: SUSP7R
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SUSP
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295

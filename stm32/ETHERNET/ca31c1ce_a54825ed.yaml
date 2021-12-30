@@ -1,0 +1,874 @@
+---
+- register:
+    name: MACCR
+    displayName: MACCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 32768
+    fields:
+      - name: RE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: RE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: TE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DC
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: DC
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BL
+        bitOffset: 5
+        bitWidth: 2
+        enumeratedValues:
+          - name: BL
+            usage: read-write
+            values:
+              - name: BL10
+                value: 0
+              - name: BL8
+                value: 1
+              - name: BL4
+                value: 2
+              - name: BL1
+                value: 3
+      - name: APCS
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: APCS
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Strip
+                value: 1
+      - name: RD
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: RD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: IPCO
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: IPCO
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Offload
+                value: 1
+      - name: DM
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: DM
+            usage: read-write
+            values:
+              - name: HalfDuplex
+                value: 0
+              - name: FullDuplex
+                value: 1
+      - name: LM
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: LM
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Loopback
+                value: 1
+      - name: ROD
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: ROD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: FES
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: FES
+            usage: read-write
+            values:
+              - name: FES10
+                value: 0
+              - name: FES100
+                value: 1
+      - name: CSD
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: CSD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: IFG
+        bitOffset: 17
+        bitWidth: 3
+        enumeratedValues:
+          - name: IFG
+            usage: read-write
+            values:
+              - name: IFG96
+                value: 0
+              - name: IFG88
+                value: 1
+              - name: IFG80
+                value: 2
+              - name: IFG72
+                value: 3
+              - name: IFG64
+                value: 4
+              - name: IFG56
+                value: 5
+              - name: IFG48
+                value: 6
+              - name: IFG40
+                value: 7
+      - name: JD
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: JD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: WD
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: WD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+- register:
+    name: MACFFR
+    displayName: MACFFR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PM
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: PM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: HU
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: HU
+            usage: read-write
+            values:
+              - name: Perfect
+                value: 0
+              - name: Hash
+                value: 1
+      - name: HM
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: HM
+            usage: read-write
+            values:
+              - name: Perfect
+                value: 0
+              - name: Hash
+                value: 1
+      - name: DAIF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: DAIF
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Invert
+                value: 1
+      - name: PAM
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: PAM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BFD
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: BFD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: PCF
+        bitOffset: 6
+        bitWidth: 2
+        enumeratedValues:
+          - name: PCF
+            usage: read-write
+            values:
+              - name: PreventAll
+                value: 0
+              - name: ForwardAllExceptPause
+                value: 1
+              - name: ForwardAll
+                value: 2
+              - name: ForwardAllFiltered
+                value: 3
+      - name: SAIF
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: SAIF
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Invert
+                value: 1
+      - name: SAF
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: SAF
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: HPF
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: HPF
+            usage: read-write
+            values:
+              - name: HashOnly
+                value: 0
+              - name: HashOrPerfect
+                value: 1
+      - name: RA
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: RA
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: MACHTHR
+    displayName: MACHTHR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HTH
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: MACHTLR
+    displayName: MACHTLR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: HTL
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: MACMIIAR
+    displayName: MACMIIAR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MB
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MB
+            usage: read-write
+            values:
+              - name: Busy
+                value: 1
+      - name: MW
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: MW
+            usage: read-write
+            values:
+              - name: Read
+                value: 0
+              - name: Write
+                value: 1
+      - name: CR
+        bitOffset: 2
+        bitWidth: 3
+        enumeratedValues:
+          - name: CR
+            usage: read-write
+            values:
+              - name: CR_60_100
+                value: 0
+              - name: CR_100_150
+                value: 1
+              - name: CR_20_35
+                value: 2
+              - name: CR_35_60
+                value: 3
+              - name: CR_150_168
+                value: 4
+      - name: MR
+        bitOffset: 6
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+      - name: PA
+        bitOffset: 11
+        bitWidth: 5
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 31
+- register:
+    name: MACMIIDR
+    displayName: MACMIIDR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MD
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: MACFCR
+    displayName: MACFCR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FCB
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: FCB
+            usage: read-write
+            values:
+              - name: DisableBackPressure
+                value: 0
+              - name: PauseOrBackPressure
+                value: 1
+      - name: TFCE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: TFCE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RFCE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: RFCE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: UPFD
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: UPFD
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PLT
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: PLT
+            usage: read-write
+            values:
+              - name: PLT4
+                value: 0
+              - name: PLT28
+                value: 1
+              - name: PLT144
+                value: 2
+              - name: PLT256
+                value: 3
+      - name: ZQPD
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: ZQPD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: PT
+        bitOffset: 16
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: MACVLANTR
+    displayName: MACVLANTR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: VLANTI
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+      - name: VLANTC
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: VLANTC
+            usage: read-write
+            values:
+              - name: VLANTC16
+                value: 0
+              - name: VLANTC12
+                value: 1
+- register:
+    name: MACRWUFFR
+    displayName: MACRWUFFR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+- register:
+    name: MACPMTCSR
+    displayName: MACPMTCSR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PD
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: PD
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 1
+      - name: MPE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: MPE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WFE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: WFE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MPR
+        bitOffset: 5
+        bitWidth: 1
+      - name: WFR
+        bitOffset: 6
+        bitWidth: 1
+      - name: GU
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: GU
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WFFRPR
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: WFFRPR
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+- register:
+    name: MACSR
+    displayName: MACSR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PMTS
+        bitOffset: 3
+        bitWidth: 1
+      - name: MMCS
+        bitOffset: 4
+        bitWidth: 1
+      - name: MMCRS
+        bitOffset: 5
+        bitWidth: 1
+      - name: MMCTS
+        bitOffset: 6
+        bitWidth: 1
+      - name: TSTS
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: MACIMR
+    displayName: MACIMR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PMTIM
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: PMTIM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+      - name: TSTIM
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSTIM
+            usage: read-write
+            values:
+              - name: Unmasked
+                value: 0
+              - name: Masked
+                value: 1
+- register:
+    name: MACA0HR
+    displayName: MACA0HR
+    addressOffset: 64
+    size: 32
+    resetValue: 1114111
+    fields:
+      - name: MACA0H
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+      - name: MO
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: MACA0LR
+    displayName: MACA0LR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA0L
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: MACA1HR
+    displayName: MACA1HR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: MACA1H
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: SA
+            usage: read-write
+            values:
+              - name: Destination
+                value: 0
+              - name: Source
+                value: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: AE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: MACA1LR
+    displayName: MACA1LR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA1L
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: MACA2HR
+    displayName: MACA2HR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 80
+    fields:
+      - name: MACA2H
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: SA
+            usage: read-write
+            values:
+              - name: Destination
+                value: 0
+              - name: Source
+                value: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: AE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: MACA2LR
+    displayName: MACA2LR
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA2L
+        bitOffset: 0
+        bitWidth: 31
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: MACA3HR
+    displayName: MACA3HR
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: MACA3H
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 65535
+      - name: MBC
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 63
+      - name: SA
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: SA
+            usage: read-write
+            values:
+              - name: Destination
+                value: 0
+              - name: Source
+                value: 1
+      - name: AE
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: AE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: MACA3LR
+    displayName: MACA3LR
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: MACA3L
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 4294967295

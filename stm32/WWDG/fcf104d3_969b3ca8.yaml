@@ -1,0 +1,92 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    resetValue: 127
+    fields:
+      - name: T
+        bitOffset: 0
+        bitWidth: 7
+        access: read-write
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: WDGA
+        bitOffset: 7
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: WDGA
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CFR
+    displayName: CFR
+    addressOffset: 4
+    size: 32
+    resetValue: 127
+    fields:
+      - name: W
+        bitOffset: 0
+        bitWidth: 7
+        access: read-write
+        writeConstraint:
+          Range:
+            minimum: 0
+            maximum: 127
+      - name: WDGTB
+        bitOffset: 7
+        bitWidth: 2
+        enumeratedValues:
+          - name: WDGTB
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 2
+              - name: Div8
+                value: 3
+      - name: EWI
+        bitOffset: 9
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: EWIW
+            usage: write
+            values:
+              - name: Enable
+                value: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EWIF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EWIFR
+            usage: read
+            values:
+              - name: Finished
+                value: 0
+              - name: Pending
+                value: 1
+          - name: EWIFW
+            usage: write
+            values:
+              - name: Finished
+                value: 0

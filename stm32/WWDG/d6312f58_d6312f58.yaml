@@ -1,0 +1,43 @@
+---
+- register:
+    name: CR
+    displayName: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 127
+    fields:
+      - name: T
+        bitOffset: 0
+        bitWidth: 7
+      - name: WDGA
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: CFR
+    displayName: CFR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 127
+    fields:
+      - name: W
+        bitOffset: 0
+        bitWidth: 7
+      - name: WDGTB
+        bitOffset: 7
+        bitWidth: 2
+      - name: EWI
+        bitOffset: 9
+        bitWidth: 1
+- register:
+    name: SR
+    displayName: SR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EWIF
+        bitOffset: 0
+        bitWidth: 1

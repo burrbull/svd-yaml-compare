@@ -1,0 +1,5 @@
+4edc4dcf_e8aaacec BKP STM32F100
+4edc4dcf_e8aaacec BKP STM32F101
+4edc4dcf_e8aaacec BKP STM32F102
+4edc4dcf_e8aaacec BKP STM32F103
+4edc4dcf_e8aaacec BKP STM32F107
