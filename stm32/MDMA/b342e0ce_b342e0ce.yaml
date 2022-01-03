@@ -1,0 +1,348 @@
+---
+- register:
+    name: GISR0
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: GIF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: GIF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: GIF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: GIF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: GIF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: GIF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: GIF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: GIF7
+        bitOffset: 7
+        bitWidth: 1
+      - name: GIF8
+        bitOffset: 8
+        bitWidth: 1
+      - name: GIF9
+        bitOffset: 9
+        bitWidth: 1
+      - name: GIF10
+        bitOffset: 10
+        bitWidth: 1
+      - name: GIF11
+        bitOffset: 11
+        bitWidth: 1
+      - name: GIF12
+        bitOffset: 12
+        bitWidth: 1
+      - name: GIF13
+        bitOffset: 13
+        bitWidth: 1
+      - name: GIF14
+        bitOffset: 14
+        bitWidth: 1
+      - name: GIF15
+        bitOffset: 15
+        bitWidth: 1
+- cluster:
+    dim: 16
+    dimIncrement: 64
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+    name: CH%s
+    addressOffset: 64
+    children:
+      - register:
+          name: ISR
+          addressOffset: 0
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: TEIF
+              bitOffset: 0
+              bitWidth: 1
+            - name: CTCIF
+              bitOffset: 1
+              bitWidth: 1
+            - name: BRTIF
+              bitOffset: 2
+              bitWidth: 1
+            - name: BTIF
+              bitOffset: 3
+              bitWidth: 1
+            - name: TCIF
+              bitOffset: 4
+              bitWidth: 1
+            - name: CRQA
+              bitOffset: 16
+              bitWidth: 1
+      - register:
+          name: IFCR
+          addressOffset: 4
+          size: 32
+          access: write-only
+          resetValue: 0
+          fields:
+            - name: CTEIF
+              bitOffset: 0
+              bitWidth: 1
+            - name: CCTCIF
+              bitOffset: 1
+              bitWidth: 1
+            - name: CBRTIF
+              bitOffset: 2
+              bitWidth: 1
+            - name: CBTIF
+              bitOffset: 3
+              bitWidth: 1
+            - name: CLTCIF
+              bitOffset: 4
+              bitWidth: 1
+      - register:
+          name: ESR
+          addressOffset: 8
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: TEA
+              bitOffset: 0
+              bitWidth: 7
+            - name: TED
+              bitOffset: 7
+              bitWidth: 1
+            - name: TELD
+              bitOffset: 8
+              bitWidth: 1
+            - name: TEMD
+              bitOffset: 9
+              bitWidth: 1
+            - name: ASE
+              bitOffset: 10
+              bitWidth: 1
+            - name: BSE
+              bitOffset: 11
+              bitWidth: 1
+      - register:
+          name: CR
+          addressOffset: 12
+          size: 32
+          resetValue: 0
+          fields:
+            - name: EN
+              bitOffset: 0
+              bitWidth: 1
+              access: read-write
+            - name: TEIE
+              bitOffset: 1
+              bitWidth: 1
+              access: read-write
+            - name: CTCIE
+              bitOffset: 2
+              bitWidth: 1
+              access: read-write
+            - name: BRTIE
+              bitOffset: 3
+              bitWidth: 1
+              access: read-write
+            - name: BTIE
+              bitOffset: 4
+              bitWidth: 1
+              access: read-write
+            - name: TCIE
+              bitOffset: 5
+              bitWidth: 1
+              access: read-write
+            - name: PL
+              bitOffset: 6
+              bitWidth: 2
+              access: read-write
+            - name: BEX
+              bitOffset: 12
+              bitWidth: 1
+              access: read-write
+            - name: HEX
+              bitOffset: 13
+              bitWidth: 1
+              access: read-write
+            - name: WEX
+              bitOffset: 14
+              bitWidth: 1
+              access: read-write
+            - name: SWRQ
+              bitOffset: 16
+              bitWidth: 1
+              access: write-only
+      - register:
+          name: TCR
+          addressOffset: 16
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: SINC
+              bitOffset: 0
+              bitWidth: 2
+            - name: DINC
+              bitOffset: 2
+              bitWidth: 2
+            - name: SSIZE
+              bitOffset: 4
+              bitWidth: 2
+            - name: DSIZE
+              bitOffset: 6
+              bitWidth: 2
+            - name: SINCOS
+              bitOffset: 8
+              bitWidth: 2
+            - name: DINCOS
+              bitOffset: 10
+              bitWidth: 2
+            - name: SBURST
+              bitOffset: 12
+              bitWidth: 3
+            - name: DBURST
+              bitOffset: 15
+              bitWidth: 3
+            - name: TLEN
+              bitOffset: 18
+              bitWidth: 7
+            - name: PKE
+              bitOffset: 25
+              bitWidth: 1
+            - name: PAM
+              bitOffset: 26
+              bitWidth: 2
+            - name: TRGM
+              bitOffset: 28
+              bitWidth: 2
+            - name: SWRM
+              bitOffset: 30
+              bitWidth: 1
+            - name: BWM
+              bitOffset: 31
+              bitWidth: 1
+      - register:
+          name: BNDTR
+          addressOffset: 20
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: BNDT
+              bitOffset: 0
+              bitWidth: 17
+            - name: BRSUM
+              bitOffset: 18
+              bitWidth: 1
+            - name: BRDUM
+              bitOffset: 19
+              bitWidth: 1
+            - name: BRC
+              bitOffset: 20
+              bitWidth: 12
+      - register:
+          name: SAR
+          addressOffset: 24
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: SAR
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: DAR
+          addressOffset: 28
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DAR
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: BRUR
+          addressOffset: 32
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: SUV
+              bitOffset: 0
+              bitWidth: 16
+            - name: DUV
+              bitOffset: 16
+              bitWidth: 16
+      - register:
+          name: LAR
+          addressOffset: 36
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: LAR
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: TBR
+          addressOffset: 40
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: TSEL
+              bitOffset: 0
+              bitWidth: 6
+            - name: SBUS
+              bitOffset: 16
+              bitWidth: 1
+            - name: DBUS
+              bitOffset: 17
+              bitWidth: 1
+      - register:
+          name: MAR
+          addressOffset: 48
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: MAR
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: MDR
+          addressOffset: 52
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: MDR
+              bitOffset: 0
+              bitWidth: 32

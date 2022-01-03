@@ -1,0 +1,270 @@
+---
+- register:
+    name: MODER
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 1023
+    fields:
+      - name: MODER0
+        bitOffset: 0
+        bitWidth: 2
+      - name: MODER1
+        bitOffset: 2
+        bitWidth: 2
+      - name: MODER2
+        bitOffset: 4
+        bitWidth: 2
+      - name: MODER3
+        bitOffset: 6
+        bitWidth: 2
+      - name: MODER4
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: OTYPER
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OT0
+        bitOffset: 0
+        bitWidth: 1
+      - name: OT1
+        bitOffset: 1
+        bitWidth: 1
+      - name: OT2
+        bitOffset: 2
+        bitWidth: 1
+      - name: OT3
+        bitOffset: 3
+        bitWidth: 1
+      - name: OT4
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: OSPEEDR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 192
+    fields:
+      - name: OSPEEDR0
+        bitOffset: 0
+        bitWidth: 2
+      - name: OSPEEDR1
+        bitOffset: 2
+        bitWidth: 2
+      - name: OSPEEDR2
+        bitOffset: 4
+        bitWidth: 2
+      - name: OSPEEDR3
+        bitOffset: 6
+        bitWidth: 2
+      - name: OSPEEDR4
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: PUPDR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PUPDR0
+        bitOffset: 0
+        bitWidth: 2
+      - name: PUPDR1
+        bitOffset: 2
+        bitWidth: 2
+      - name: PUPDR2
+        bitOffset: 4
+        bitWidth: 2
+      - name: PUPDR3
+        bitOffset: 6
+        bitWidth: 2
+      - name: PUPDR4
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: IDR
+    addressOffset: 16
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: IDR0
+        bitOffset: 0
+        bitWidth: 1
+      - name: IDR1
+        bitOffset: 1
+        bitWidth: 1
+      - name: IDR2
+        bitOffset: 2
+        bitWidth: 1
+      - name: IDR3
+        bitOffset: 3
+        bitWidth: 1
+      - name: IDR4
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: ODR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ODR0
+        bitOffset: 0
+        bitWidth: 1
+      - name: ODR1
+        bitOffset: 1
+        bitWidth: 1
+      - name: ODR2
+        bitOffset: 2
+        bitWidth: 1
+      - name: ODR3
+        bitOffset: 3
+        bitWidth: 1
+      - name: ODR4
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: BSRR
+    addressOffset: 24
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: BS0
+        bitOffset: 0
+        bitWidth: 1
+      - name: BS1
+        bitOffset: 1
+        bitWidth: 1
+      - name: BS2
+        bitOffset: 2
+        bitWidth: 1
+      - name: BS3
+        bitOffset: 3
+        bitWidth: 1
+      - name: BS4
+        bitOffset: 4
+        bitWidth: 1
+      - name: BR0
+        bitOffset: 16
+        bitWidth: 1
+      - name: BR1
+        bitOffset: 17
+        bitWidth: 1
+      - name: BR2
+        bitOffset: 18
+        bitWidth: 1
+      - name: BR3
+        bitOffset: 19
+        bitWidth: 1
+      - name: BR4
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: LCKR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LCK0
+        bitOffset: 0
+        bitWidth: 1
+      - name: LCK1
+        bitOffset: 1
+        bitWidth: 1
+      - name: LCK2
+        bitOffset: 2
+        bitWidth: 1
+      - name: LCK3
+        bitOffset: 3
+        bitWidth: 1
+      - name: LCK4
+        bitOffset: 4
+        bitWidth: 1
+      - name: LCKK
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: AFRL
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AFSEL0
+        bitOffset: 0
+        bitWidth: 4
+      - name: AFSEL1
+        bitOffset: 4
+        bitWidth: 4
+      - name: AFSEL2
+        bitOffset: 8
+        bitWidth: 4
+      - name: AFSEL3
+        bitOffset: 12
+        bitWidth: 4
+      - name: AFSEL4
+        bitOffset: 16
+        bitWidth: 4
+- register:
+    name: AFRH
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AFSEL8
+        bitOffset: 0
+        bitWidth: 4
+      - name: AFSEL9
+        bitOffset: 4
+        bitWidth: 4
+      - name: AFSEL10
+        bitOffset: 8
+        bitWidth: 4
+      - name: AFSEL11
+        bitOffset: 12
+        bitWidth: 4
+      - name: AFSEL12
+        bitOffset: 16
+        bitWidth: 4
+      - name: AFSEL13
+        bitOffset: 20
+        bitWidth: 4
+      - name: AFSEL14
+        bitOffset: 24
+        bitWidth: 4
+      - name: AFSEL15
+        bitOffset: 28
+        bitWidth: 4
+- register:
+    name: BRR
+    addressOffset: 40
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: BR0
+        bitOffset: 0
+        bitWidth: 1
+      - name: BR1
+        bitOffset: 1
+        bitWidth: 1
+      - name: BR2
+        bitOffset: 2
+        bitWidth: 1
+      - name: BR3
+        bitOffset: 3
+        bitWidth: 1
+      - name: BR4
+        bitOffset: 4
+        bitWidth: 1

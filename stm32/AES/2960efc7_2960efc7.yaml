@@ -1,0 +1,289 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: DATATYPE
+        bitOffset: 1
+        bitWidth: 2
+      - name: MODE
+        bitOffset: 3
+        bitWidth: 2
+      - name: CHMOD10
+        bitOffset: 5
+        bitWidth: 2
+      - name: CCFC
+        bitOffset: 7
+        bitWidth: 1
+      - name: ERRC
+        bitOffset: 8
+        bitWidth: 1
+      - name: CCFIE
+        bitOffset: 9
+        bitWidth: 1
+      - name: ERRIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: DMAINEN
+        bitOffset: 11
+        bitWidth: 1
+      - name: DMAOUTEN
+        bitOffset: 12
+        bitWidth: 1
+      - name: GCMPH
+        bitOffset: 13
+        bitWidth: 2
+      - name: CHMOD2
+        bitOffset: 16
+        bitWidth: 1
+      - name: KEYSIZE
+        bitOffset: 18
+        bitWidth: 1
+      - name: NPBLB
+        bitOffset: 20
+        bitWidth: 4
+- register:
+    name: SR
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CCF
+        bitOffset: 0
+        bitWidth: 1
+      - name: RDERR
+        bitOffset: 1
+        bitWidth: 1
+      - name: WRERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: BUSY
+        bitOffset: 3
+        bitWidth: 1
+- register:
+    name: DINR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_DINR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DOUTR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AES_DOUTR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR0
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR0
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR1
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR2
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR3
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR3
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IVR0
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_IVR0
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IVR1
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_IVR1
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IVR2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_IVR2
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: IVR3
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_IVR3
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR4
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR4
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR5
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR5
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR6
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR6
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: KEYR7
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_KEYR7
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP0R
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP0R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP1R
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP1R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP2R
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP2R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP3R
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP3R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP4R
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP4R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP5R
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP5R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP6R
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP6R
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SUSP7R
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AES_SUSP7R
+        bitOffset: 0
+        bitWidth: 32

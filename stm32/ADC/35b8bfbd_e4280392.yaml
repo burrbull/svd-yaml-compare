@@ -1,0 +1,845 @@
+---
+- register:
+    name: SR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWDR
+            usage: read
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+          - name: AWDW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+      - name: EOC
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOCW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+      - name: JEOC
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOCR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: JEOCW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+      - name: JSTRT
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: JSTRTR
+            usage: read
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+          - name: JSTRTW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+      - name: STRT
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: STRTR
+            usage: read
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+          - name: STRTW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+- register:
+    name: CR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWDCH
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: EOCIE
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWDIE
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWDIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JEOCIE
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOCIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SCAN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: SCAN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWDSGL
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWDSGL
+            usage: read-write
+            values:
+              - name: All
+                value: 0
+              - name: Single
+                value: 1
+      - name: JAUTO
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: JAUTO
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DISCEN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: DISCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JDISCEN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: JDISCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DISCNUM
+        bitOffset: 13
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: JAWDEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: JAWDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWDEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CR2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADON
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADON
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CONT
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CONT
+            usage: read-write
+            values:
+              - name: Single
+                value: 0
+              - name: Continuous
+                value: 1
+      - name: CAL
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: CALR
+            usage: read
+            values:
+              - name: Complete
+                value: 0
+              - name: NotComplete
+                value: 1
+          - name: CALW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+      - name: RSTCAL
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: RSTCALR
+            usage: read
+            values:
+              - name: Initialized
+                value: 0
+              - name: NotInitialized
+                value: 1
+          - name: RSTCALW
+            usage: write
+            values:
+              - name: Initialize
+                value: 1
+      - name: DMA
+        bitOffset: 8
+        bitWidth: 1
+      - name: ALIGN
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALIGN
+            usage: read-write
+            values:
+              - name: Right
+                value: 0
+              - name: Left
+                value: 1
+      - name: JEXTSEL
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - name: JEXTSEL
+            usage: read-write
+            values:
+              - name: Tim1Trgo
+                value: 0
+              - name: Tim1Cc4
+                value: 1
+              - name: Tim2Trgo
+                value: 2
+              - name: Tim2Cc1
+                value: 3
+              - name: Tim3Cc4
+                value: 4
+              - name: Tim4Trgo
+                value: 5
+              - name: Exti15
+                value: 6
+              - name: Jswstart
+                value: 7
+      - name: JEXTTRIG
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEXTTRIG
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EXTSEL
+        bitOffset: 17
+        bitWidth: 3
+        enumeratedValues:
+          - name: EXTSEL
+            usage: read-write
+            values:
+              - name: Tim1Cc1
+                value: 0
+              - name: Tim1Cc2
+                value: 1
+              - name: Tim1Cc3
+                value: 2
+              - name: Tim2Cc2
+                value: 3
+              - name: Tim3Trgo
+                value: 4
+              - name: Tim4Cc4
+                value: 5
+              - name: Exti11
+                value: 6
+              - name: Swstart
+                value: 7
+      - name: EXTTRIG
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTTRIG
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: JSWSTART
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - name: JSWSTARTR
+            usage: read
+            values:
+              - name: Started
+                value: 0
+              - name: NotStarted
+                value: 1
+          - name: JSWSTARTW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+      - name: SWSTART
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWSTARTR
+            usage: read
+            values:
+              - name: Started
+                value: 0
+              - name: NotStarted
+                value: 1
+          - name: SWSTARTW
+            usage: write
+            values:
+              - name: Start
+                value: 1
+      - name: TSVREFE
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSVREFE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: SMPR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP10
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SMP10
+            usage: read-write
+            values:
+              - name: Cycles1_5
+                value: 0
+              - name: Cycles7_5
+                value: 1
+              - name: Cycles13_5
+                value: 2
+              - name: Cycles28_5
+                value: 3
+              - name: Cycles41_5
+                value: 4
+              - name: Cycles55_5
+                value: 5
+              - name: Cycles71_5
+                value: 6
+              - name: Cycles239_5
+                value: 7
+      - name: SMP11
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP12
+        bitOffset: 6
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP13
+        bitOffset: 9
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP14
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP15
+        bitOffset: 15
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP16
+        bitOffset: 18
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+      - name: SMP17
+        bitOffset: 21
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP10
+- register:
+    name: SMPR2
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP0
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SMP0
+            usage: read-write
+            values:
+              - name: Cycles1_5
+                value: 0
+              - name: Cycles7_5
+                value: 1
+              - name: Cycles13_5
+                value: 2
+              - name: Cycles28_5
+                value: 3
+              - name: Cycles41_5
+                value: 4
+              - name: Cycles55_5
+                value: 5
+              - name: Cycles71_5
+                value: 6
+              - name: Cycles239_5
+                value: 7
+      - name: SMP1
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP2
+        bitOffset: 6
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP3
+        bitOffset: 9
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP4
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP5
+        bitOffset: 15
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP6
+        bitOffset: 18
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP7
+        bitOffset: 21
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP8
+        bitOffset: 24
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+      - name: SMP9
+        bitOffset: 27
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP0
+- register:
+    name: JOFR1
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET1
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR2
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET2
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR3
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET3
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: JOFR4
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JOFFSET4
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: HTR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 4095
+    fields:
+      - name: HT
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: LTR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LT
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: SQR1
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ13
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ14
+        bitOffset: 5
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ15
+        bitOffset: 10
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ16
+        bitOffset: 15
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: L
+        bitOffset: 20
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: SQR2
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ7
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ8
+        bitOffset: 5
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ9
+        bitOffset: 10
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ10
+        bitOffset: 15
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ11
+        bitOffset: 20
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ12
+        bitOffset: 25
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+- register:
+    name: SQR3
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ1
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ2
+        bitOffset: 5
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ3
+        bitOffset: 10
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ4
+        bitOffset: 15
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ5
+        bitOffset: 20
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: SQ6
+        bitOffset: 25
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+- register:
+    name: JSQR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JSQ1
+        bitOffset: 0
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: JSQ2
+        bitOffset: 5
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: JSQ3
+        bitOffset: 10
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: JSQ4
+        bitOffset: 15
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+      - name: JL
+        bitOffset: 20
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+- register:
+    name: JDR1
+    addressOffset: 60
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR2
+    addressOffset: 64
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR3
+    addressOffset: 68
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDR4
+    addressOffset: 72
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: DR
+    addressOffset: 76
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DATA
+        bitOffset: 0
+        bitWidth: 16

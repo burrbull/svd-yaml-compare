@@ -1,0 +1,616 @@
+---
+- register:
+    dim: 8
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+    name: EP%sR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: STAT_TX
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Stall
+                value: 1
+              - name: Nak
+                value: 2
+              - name: Valid
+                value: 3
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+        enumeratedValues:
+          - name: EP_TYPE
+            usage: read-write
+            values:
+              - name: Bulk
+                value: 0
+              - name: Control
+                value: 1
+              - name: Iso
+                value: 2
+              - name: Interrupt
+                value: 3
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+        enumeratedValues:
+          - name: STAT_RX
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Stall
+                value: 1
+              - name: Nak
+                value: 2
+              - name: Valid
+                value: 3
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: CNTR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 3
+    fields:
+      - name: FRES
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: FRES
+            usage: read-write
+            values:
+              - name: NoReset
+                value: 0
+              - name: Reset
+                value: 1
+      - name: PDWN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: PDWN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPMODE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: LPMODE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: FSUSP
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: FSUSP
+            usage: read-write
+            values:
+              - name: NoEffect
+                value: 0
+              - name: Suspend
+                value: 1
+      - name: RESUME
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: RESUME
+            usage: read-write
+            values:
+              - name: Requested
+                value: 1
+      - name: L1RESUME
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: L1RESUME
+            usage: read-write
+            values:
+              - name: Requested
+                value: 1
+      - name: L1REQM
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: L1REQM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ESOFM
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: ESOFM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SOFM
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: SOFM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RESETM
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: RESETM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SUSPM
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: SUSPM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WKUPM
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: WKUPM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ERRM
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: ERRM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PMAOVRM
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: PMAOVRM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CTRM
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: CTRM
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: ISTR
+    addressOffset: 68
+    size: 32
+    resetValue: 0
+    fields:
+      - name: EP_ID
+        bitOffset: 0
+        bitWidth: 4
+        access: read-only
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: DIR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: DIR
+            usage: read-write
+            values:
+              - name: To
+                value: 0
+              - name: From
+                value: 1
+      - name: L1REQ
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: L1REQ
+            usage: read-write
+            values:
+              - name: Received
+                value: 1
+      - name: ESOF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ESOF
+            usage: read-write
+            values:
+              - name: ExpectedStartOfFrame
+                value: 1
+      - name: SOF
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: SOF
+            usage: read-write
+            values:
+              - name: StartOfFrame
+                value: 1
+      - name: RESET
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: RESET
+            usage: read-write
+            values:
+              - name: Reset
+                value: 1
+      - name: SUSP
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: SUSP
+            usage: read-write
+            values:
+              - name: Suspend
+                value: 1
+      - name: WKUP
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: WKUP
+            usage: read-write
+            values:
+              - name: Wakeup
+                value: 1
+      - name: ERR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ERR
+            usage: read-write
+            values:
+              - name: Error
+                value: 1
+      - name: PMAOVR
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: PMAOVR
+            usage: read-write
+            values:
+              - name: Overrun
+                value: 1
+      - name: CTR
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: CTR
+            usage: read-write
+            values:
+              - name: Completed
+                value: 1
+- register:
+    name: FNR
+    addressOffset: 72
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FN
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+      - name: LSOF
+        bitOffset: 11
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: LCK
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: LCK
+            usage: read-write
+            values:
+              - name: Locked
+                value: 1
+      - name: RXDM
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: RXDM
+            usage: read-write
+            values:
+              - name: Received
+                value: 1
+      - name: RXDP
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: RXDP
+            usage: read-write
+            values:
+              - name: Received
+                value: 1
+- register:
+    name: DADDR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADD
+        bitOffset: 0
+        bitWidth: 7
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 127
+      - name: EF
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: EF
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: BTABLE
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BTABLE
+        bitOffset: 3
+        bitWidth: 13
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 8191
+- register:
+    name: LPMCSR
+    addressOffset: 84
+    size: 32
+    resetValue: 0
+    fields:
+      - name: LPMEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: LPMEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: LPMACK
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: LPMACK
+            usage: read-write
+            values:
+              - name: Nyet
+                value: 0
+              - name: Ack
+                value: 1
+      - name: REMWAKE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+      - name: BESL
+        bitOffset: 4
+        bitWidth: 4
+        access: read-only
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: BCDR
+    addressOffset: 88
+    size: 32
+    resetValue: 0
+    fields:
+      - name: BCDEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: BCDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DCDEN
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: DCDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PDEN
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: PDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SDEN
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: SDEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DCDET
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: DCDET
+            usage: read-write
+            values:
+              - name: NotDetected
+                value: 0
+              - name: Detected
+                value: 1
+      - name: PDET
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: PDET
+            usage: read-write
+            values:
+              - name: NoBCD
+                value: 0
+              - name: BCD
+                value: 1
+      - name: SDET
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: SDET
+            usage: read-write
+            values:
+              - name: CDP
+                value: 0
+              - name: DCP
+                value: 1
+      - name: PS2DET
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: PS2DET
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: PS2
+                value: 1
+      - name: DPPU
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: DPPU
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1

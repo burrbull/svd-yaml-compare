@@ -100,7 +100,7 @@ where
 
 fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
-    for r in p.reg_iter_mut() {
+    for r in p.all_registers_mut() {
         if r.name.starts_with(&pname) {
             println!("  r: {}", r.name);
         }
@@ -114,7 +114,6 @@ fn clear_fields(p: &mut svd::Peripheral) {
 }
 
 fn clean_device(d: &mut svd::Device) {
-    d.description = None;
     for p in &mut d.peripherals {
         clean_peripheral(p);
     }
@@ -122,6 +121,7 @@ fn clean_device(d: &mut svd::Device) {
 
 fn clean_peripheral(p: &mut svd::Peripheral) {
     p.description = None;
+    p.display_name = None;
     for i in &mut p.interrupt {
         i.description = None;
     }
@@ -152,6 +152,7 @@ fn clean_cluster(c: &mut svd::Cluster) {
 }
 fn clean_register(r: &mut svd::Register) {
     r.description = None;
+    r.display_name = None;
 
     if let Some(fields) = r.fields.as_mut() {
         fields.sort_by_key(|f| f.bit_range.offset);

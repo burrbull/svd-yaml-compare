@@ -1,0 +1,1264 @@
+---
+- register:
+    name: RTSR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RT0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: RT0
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RT1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+      - name: RT20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RT0
+- register:
+    name: FTSR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FT0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: FT0
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: FT1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+      - name: FT20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FT0
+- register:
+    name: SWIER1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWI0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWI0W
+            usage: write
+            values:
+              - name: Pend
+                value: 1
+      - name: SWI1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+      - name: SWI20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWI0W
+- register:
+    name: RPR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RPIF0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: RPIF0R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: RPIF0W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: RPIF1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+      - name: RPIF20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: RPIF0R
+          - derived_from: RPIF0W
+- register:
+    name: FPR1
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FPIF0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: FPIF0R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: FPIF0W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: FPIF1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+      - name: FPIF20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: FPIF0R
+          - derived_from: FPIF0W
+- register:
+    name: RTSR2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RT2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: RT2
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: FTSR2
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FT2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: FT2
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: SWIER2
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWI2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWI2W
+            usage: write
+            values:
+              - name: Pend
+                value: 1
+- register:
+    name: RPR2
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RPIF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: RPIF2R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: RPIF2W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: FPR2
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FPIF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: FPIF2R
+            usage: read
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+          - name: FPIF2W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: EXTICR1
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0_7
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: EXTI0_7
+            usage: read-write
+            values:
+              - name: PA
+                value: 0
+              - name: PB
+                value: 1
+              - name: PC
+                value: 2
+              - name: PD
+                value: 3
+              - name: PF
+                value: 5
+      - name: EXTI8_15
+        bitOffset: 8
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI16_23
+        bitOffset: 16
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI24_31
+        bitOffset: 24
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+- register:
+    name: EXTICR2
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0_7
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: EXTI0_7
+            usage: read-write
+            values:
+              - name: PA
+                value: 0
+              - name: PB
+                value: 1
+              - name: PC
+                value: 2
+              - name: PD
+                value: 3
+              - name: PF
+                value: 5
+      - name: EXTI8_15
+        bitOffset: 8
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI16_23
+        bitOffset: 16
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI24_31
+        bitOffset: 24
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+- register:
+    name: EXTICR3
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0_7
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: EXTI0_7
+            usage: read-write
+            values:
+              - name: PA
+                value: 0
+              - name: PB
+                value: 1
+              - name: PC
+                value: 2
+              - name: PD
+                value: 3
+              - name: PF
+                value: 5
+      - name: EXTI8_15
+        bitOffset: 8
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI16_23
+        bitOffset: 16
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI24_31
+        bitOffset: 24
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+- register:
+    name: EXTICR4
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0_7
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: EXTI0_7
+            usage: read-write
+            values:
+              - name: PA
+                value: 0
+              - name: PB
+                value: 1
+              - name: PC
+                value: 2
+              - name: PD
+                value: 3
+              - name: PF
+                value: 5
+      - name: EXTI8_15
+        bitOffset: 8
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI16_23
+        bitOffset: 16
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+      - name: EXTI24_31
+        bitOffset: 24
+        bitWidth: 8
+        enumeratedValues:
+          - derived_from: EXTI0_7
+- register:
+    name: IMR1
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 4294443008
+    fields:
+      - name: IM0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: IM0
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: IM1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM20
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM22
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM23
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM24
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM25
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM26
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM27
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM28
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+      - name: IM31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM0
+- register:
+    name: EMR1
+    alternateRegister: IMR1
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EM0
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: EM1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM16
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM17
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM18
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM19
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM21
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM23
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM25
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM26
+        bitOffset: 26
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM27
+        bitOffset: 27
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM28
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM29
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM30
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+      - name: EM31
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM0
+- register:
+    name: IMR2
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: IM32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: IM32
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: IM33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM32
+      - name: IM34
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM32
+      - name: IM35
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: IM32
+- register:
+    name: EMR2
+    addressOffset: 148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM32
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EM32
+            usage: read-write
+            values:
+              - name: Masked
+                value: 0
+              - name: Unmasked
+                value: 1
+      - name: EM33
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM32
+      - name: EM34
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM32
+      - name: EM35
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EM32

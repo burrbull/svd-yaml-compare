@@ -1,0 +1,1704 @@
+---
+- register:
+    name: R0
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R2
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R3
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R4
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R5
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R6
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R7
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R8
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R9
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R10
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R11
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R12
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R13
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R14
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: R15
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR0
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR1
+    addressOffset: 132
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR2
+    addressOffset: 136
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR3
+    addressOffset: 140
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR4
+    addressOffset: 144
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR5
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR6
+    addressOffset: 152
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR7
+    addressOffset: 156
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR8
+    addressOffset: 160
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR9
+    addressOffset: 164
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR10
+    addressOffset: 168
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR11
+    addressOffset: 172
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR12
+    addressOffset: 176
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR13
+    addressOffset: 180
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR14
+    addressOffset: 184
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: RLR15
+    addressOffset: 188
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PROCID
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: LOCK
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: LOCKR
+            usage: read
+            values:
+              - name: Free
+                value: 0
+              - name: Locked
+                value: 1
+          - name: LOCKW
+            usage: write
+            values:
+              - name: Free
+                value: 0
+              - name: TryLock
+                value: 1
+- register:
+    name: C1IER
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ISE0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISE0
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ISE1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE0
+      - name: ISE10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISE10
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ISE11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE10
+      - name: ISE12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE10
+      - name: ISE13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE10
+      - name: ISE14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE10
+      - name: ISE15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISE10
+- register:
+    name: C1ICR
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ISC0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISC0R
+            usage: read
+            values:
+              - name: NoEffect
+                value: 0
+          - name: ISC0W
+            usage: write
+            values:
+              - name: NoEffect
+                value: 0
+              - name: Clear
+                value: 1
+      - name: ISC1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC0R
+          - derived_from: ISC0W
+      - name: ISC10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISC10R
+            usage: read
+            values:
+              - name: NoEffect
+                value: 0
+          - name: ISC10W
+            usage: write
+            values:
+              - name: NoEffect
+                value: 0
+              - name: Clear
+                value: 1
+      - name: ISC11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC10R
+          - derived_from: ISC10W
+      - name: ISC12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC10R
+          - derived_from: ISC10W
+      - name: ISC13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC10R
+          - derived_from: ISC10W
+      - name: ISC14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC10R
+          - derived_from: ISC10W
+      - name: ISC15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISC10R
+          - derived_from: ISC10W
+- register:
+    name: C1ISR
+    addressOffset: 264
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ISF0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISF0
+            usage: read-write
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+      - name: ISF1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF0
+      - name: ISF10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: ISF10
+            usage: read-write
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+      - name: ISF11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF10
+      - name: ISF12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF10
+      - name: ISF13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF10
+      - name: ISF14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF10
+      - name: ISF15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: ISF10
+- register:
+    name: C1MISR
+    addressOffset: 268
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MISF0
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MISF0
+            usage: read-write
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+      - name: MISF1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF2
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF3
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF4
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF5
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF6
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF7
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF8
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF9
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF0
+      - name: MISF10
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: MISF10
+            usage: read-write
+            values:
+              - name: NotPending
+                value: 0
+              - name: Pending
+                value: 1
+      - name: MISF11
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF10
+      - name: MISF12
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF10
+      - name: MISF13
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF10
+      - name: MISF14
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF10
+      - name: MISF15
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MISF10
+- register:
+    name: CR
+    addressOffset: 320
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: COREID
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: KEY
+        bitOffset: 16
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: KEYR
+    addressOffset: 324
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 16
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535

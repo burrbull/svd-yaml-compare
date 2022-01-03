@@ -1,0 +1,720 @@
+---
+- register:
+    name: MCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INRQ
+        bitOffset: 0
+        bitWidth: 1
+      - name: SLEEP
+        bitOffset: 1
+        bitWidth: 1
+      - name: TXFP
+        bitOffset: 2
+        bitWidth: 1
+      - name: RFLM
+        bitOffset: 3
+        bitWidth: 1
+      - name: NART
+        bitOffset: 4
+        bitWidth: 1
+      - name: AWUM
+        bitOffset: 5
+        bitWidth: 1
+      - name: ABOM
+        bitOffset: 6
+        bitWidth: 1
+      - name: TTCM
+        bitOffset: 7
+        bitWidth: 1
+      - name: RESET
+        bitOffset: 15
+        bitWidth: 1
+      - name: DBF
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: MSR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: INAK
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: SLAK
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: ERRI
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: WKUI
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: SLAKI
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: TXM
+        bitOffset: 8
+        bitWidth: 1
+        access: read-only
+      - name: RXM
+        bitOffset: 9
+        bitWidth: 1
+        access: read-only
+      - name: SAMP
+        bitOffset: 10
+        bitWidth: 1
+        access: read-only
+      - name: RX
+        bitOffset: 11
+        bitWidth: 1
+        access: read-only
+- register:
+    name: TSR
+    addressOffset: 8
+    size: 32
+    resetValue: 0
+    fields:
+      - name: RQCP0
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: TXOK0
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: ALST0
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: TERR0
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: ABRQ0
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: RQCP1
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: TXOK1
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: ALST1
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: TERR1
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: ABRQ1
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: RQCP2
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+      - name: TXOK2
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+      - name: ALST2
+        bitOffset: 18
+        bitWidth: 1
+        access: read-write
+      - name: TERR2
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+      - name: ABRQ2
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      - name: CODE
+        bitOffset: 24
+        bitWidth: 2
+        access: read-only
+      - name: TME0
+        bitOffset: 26
+        bitWidth: 1
+        access: read-only
+      - name: TME1
+        bitOffset: 27
+        bitWidth: 1
+        access: read-only
+      - name: TME2
+        bitOffset: 28
+        bitWidth: 1
+        access: read-only
+      - name: LOW0
+        bitOffset: 29
+        bitWidth: 1
+        access: read-only
+      - name: LOW1
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: LOW2
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    dim: 2
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+    name: RF%sR
+    addressOffset: 12
+    size: 32
+    resetValue: 0
+    fields:
+      - name: FMP
+        bitOffset: 0
+        bitWidth: 2
+        access: read-only
+      - name: FULL
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: FOVR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: RFOM
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+- register:
+    name: IER
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TMEIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: FMPIE0
+        bitOffset: 1
+        bitWidth: 1
+      - name: FFIE0
+        bitOffset: 2
+        bitWidth: 1
+      - name: FOVIE0
+        bitOffset: 3
+        bitWidth: 1
+      - name: FMPIE1
+        bitOffset: 4
+        bitWidth: 1
+      - name: FFIE1
+        bitOffset: 5
+        bitWidth: 1
+      - name: FOVIE1
+        bitOffset: 6
+        bitWidth: 1
+      - name: EWGIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: EPVIE
+        bitOffset: 9
+        bitWidth: 1
+      - name: BOFIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: LECIE
+        bitOffset: 11
+        bitWidth: 1
+      - name: ERRIE
+        bitOffset: 15
+        bitWidth: 1
+      - name: WKUIE
+        bitOffset: 16
+        bitWidth: 1
+      - name: SLKIE
+        bitOffset: 17
+        bitWidth: 1
+- register:
+    name: ESR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: EWGF
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: EPVF
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: BOFF
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+      - name: LEC
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: TEC
+        bitOffset: 16
+        bitWidth: 8
+        access: read-only
+      - name: REC
+        bitOffset: 24
+        bitWidth: 8
+        access: read-only
+- register:
+    name: BTR
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BRP
+        bitOffset: 0
+        bitWidth: 10
+      - name: TS1
+        bitOffset: 16
+        bitWidth: 4
+      - name: TS2
+        bitOffset: 20
+        bitWidth: 3
+      - name: SJW
+        bitOffset: 24
+        bitWidth: 2
+      - name: LBKM
+        bitOffset: 30
+        bitWidth: 1
+      - name: SILM
+        bitOffset: 31
+        bitWidth: 1
+- cluster:
+    dim: 3
+    dimIncrement: 16
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+    name: TX%s
+    addressOffset: 384
+    children:
+      - register:
+          name: TIR
+          addressOffset: 0
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: TXRQ
+              bitOffset: 0
+              bitWidth: 1
+            - name: RTR
+              bitOffset: 1
+              bitWidth: 1
+            - name: IDE
+              bitOffset: 2
+              bitWidth: 1
+            - name: EXID
+              bitOffset: 3
+              bitWidth: 18
+            - name: STID
+              bitOffset: 21
+              bitWidth: 11
+      - register:
+          name: TDTR
+          addressOffset: 4
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DLC
+              bitOffset: 0
+              bitWidth: 4
+            - name: TGT
+              bitOffset: 8
+              bitWidth: 1
+            - name: TIME
+              bitOffset: 16
+              bitWidth: 16
+      - register:
+          name: TDLR
+          addressOffset: 8
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DATA0
+              bitOffset: 0
+              bitWidth: 8
+            - name: DATA1
+              bitOffset: 8
+              bitWidth: 8
+            - name: DATA2
+              bitOffset: 16
+              bitWidth: 8
+            - name: DATA3
+              bitOffset: 24
+              bitWidth: 8
+      - register:
+          name: TDHR
+          addressOffset: 12
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DATA4
+              bitOffset: 0
+              bitWidth: 8
+            - name: DATA5
+              bitOffset: 8
+              bitWidth: 8
+            - name: DATA6
+              bitOffset: 16
+              bitWidth: 8
+            - name: DATA7
+              bitOffset: 24
+              bitWidth: 8
+- cluster:
+    dim: 2
+    dimIncrement: 16
+    dimIndex:
+      - "0"
+      - "1"
+    name: RX%s
+    addressOffset: 432
+    children:
+      - register:
+          name: RIR
+          addressOffset: 0
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: RTR
+              bitOffset: 1
+              bitWidth: 1
+            - name: IDE
+              bitOffset: 2
+              bitWidth: 1
+            - name: EXID
+              bitOffset: 3
+              bitWidth: 18
+            - name: STID
+              bitOffset: 21
+              bitWidth: 11
+      - register:
+          name: RDTR
+          addressOffset: 4
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: DLC
+              bitOffset: 0
+              bitWidth: 4
+            - name: FMI
+              bitOffset: 8
+              bitWidth: 8
+            - name: TIME
+              bitOffset: 16
+              bitWidth: 16
+      - register:
+          name: RDLR
+          addressOffset: 8
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: DATA0
+              bitOffset: 0
+              bitWidth: 8
+            - name: DATA1
+              bitOffset: 8
+              bitWidth: 8
+            - name: DATA2
+              bitOffset: 16
+              bitWidth: 8
+            - name: DATA3
+              bitOffset: 24
+              bitWidth: 8
+      - register:
+          name: RDHR
+          addressOffset: 12
+          size: 32
+          access: read-only
+          resetValue: 0
+          fields:
+            - name: DATA4
+              bitOffset: 0
+              bitWidth: 8
+            - name: DATA5
+              bitOffset: 8
+              bitWidth: 8
+            - name: DATA6
+              bitOffset: 16
+              bitWidth: 8
+            - name: DATA7
+              bitOffset: 24
+              bitWidth: 8
+- register:
+    name: FMR
+    addressOffset: 512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FINIT
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: FM1R
+    addressOffset: 516
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FBM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: FBM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: FBM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: FBM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: FBM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: FBM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: FBM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: FBM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: FBM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: FBM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: FBM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: FBM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: FBM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: FBM13
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: FS1R
+    addressOffset: 524
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FSC0
+        bitOffset: 0
+        bitWidth: 1
+      - name: FSC1
+        bitOffset: 1
+        bitWidth: 1
+      - name: FSC2
+        bitOffset: 2
+        bitWidth: 1
+      - name: FSC3
+        bitOffset: 3
+        bitWidth: 1
+      - name: FSC4
+        bitOffset: 4
+        bitWidth: 1
+      - name: FSC5
+        bitOffset: 5
+        bitWidth: 1
+      - name: FSC6
+        bitOffset: 6
+        bitWidth: 1
+      - name: FSC7
+        bitOffset: 7
+        bitWidth: 1
+      - name: FSC8
+        bitOffset: 8
+        bitWidth: 1
+      - name: FSC9
+        bitOffset: 9
+        bitWidth: 1
+      - name: FSC10
+        bitOffset: 10
+        bitWidth: 1
+      - name: FSC11
+        bitOffset: 11
+        bitWidth: 1
+      - name: FSC12
+        bitOffset: 12
+        bitWidth: 1
+      - name: FSC13
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: FFA1R
+    addressOffset: 532
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FFA0
+        bitOffset: 0
+        bitWidth: 1
+      - name: FFA1
+        bitOffset: 1
+        bitWidth: 1
+      - name: FFA2
+        bitOffset: 2
+        bitWidth: 1
+      - name: FFA3
+        bitOffset: 3
+        bitWidth: 1
+      - name: FFA4
+        bitOffset: 4
+        bitWidth: 1
+      - name: FFA5
+        bitOffset: 5
+        bitWidth: 1
+      - name: FFA6
+        bitOffset: 6
+        bitWidth: 1
+      - name: FFA7
+        bitOffset: 7
+        bitWidth: 1
+      - name: FFA8
+        bitOffset: 8
+        bitWidth: 1
+      - name: FFA9
+        bitOffset: 9
+        bitWidth: 1
+      - name: FFA10
+        bitOffset: 10
+        bitWidth: 1
+      - name: FFA11
+        bitOffset: 11
+        bitWidth: 1
+      - name: FFA12
+        bitOffset: 12
+        bitWidth: 1
+      - name: FFA13
+        bitOffset: 13
+        bitWidth: 1
+- register:
+    name: FA1R
+    addressOffset: 540
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FACT0
+        bitOffset: 0
+        bitWidth: 1
+      - name: FACT1
+        bitOffset: 1
+        bitWidth: 1
+      - name: FACT2
+        bitOffset: 2
+        bitWidth: 1
+      - name: FACT3
+        bitOffset: 3
+        bitWidth: 1
+      - name: FACT4
+        bitOffset: 4
+        bitWidth: 1
+      - name: FACT5
+        bitOffset: 5
+        bitWidth: 1
+      - name: FACT6
+        bitOffset: 6
+        bitWidth: 1
+      - name: FACT7
+        bitOffset: 7
+        bitWidth: 1
+      - name: FACT8
+        bitOffset: 8
+        bitWidth: 1
+      - name: FACT9
+        bitOffset: 9
+        bitWidth: 1
+      - name: FACT10
+        bitOffset: 10
+        bitWidth: 1
+      - name: FACT11
+        bitOffset: 11
+        bitWidth: 1
+      - name: FACT12
+        bitOffset: 12
+        bitWidth: 1
+      - name: FACT13
+        bitOffset: 13
+        bitWidth: 1
+- cluster:
+    dim: 14
+    dimIncrement: 8
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+    name: FB%s
+    addressOffset: 576
+    children:
+      - register:
+          name: FR1
+          addressOffset: 0
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FB
+              bitOffset: 0
+              bitWidth: 32
+      - register:
+          name: FR2
+          addressOffset: 4
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FB
+              bitOffset: 0
+              bitWidth: 32

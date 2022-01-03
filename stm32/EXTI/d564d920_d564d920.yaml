@@ -1,0 +1,834 @@
+---
+- register:
+    name: RTSR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RT0
+        bitOffset: 0
+        bitWidth: 1
+      - name: RT1
+        bitOffset: 1
+        bitWidth: 1
+      - name: RT2
+        bitOffset: 2
+        bitWidth: 1
+      - name: RT3
+        bitOffset: 3
+        bitWidth: 1
+      - name: RT4
+        bitOffset: 4
+        bitWidth: 1
+      - name: RT5
+        bitOffset: 5
+        bitWidth: 1
+      - name: RT6
+        bitOffset: 6
+        bitWidth: 1
+      - name: RT7
+        bitOffset: 7
+        bitWidth: 1
+      - name: RT8
+        bitOffset: 8
+        bitWidth: 1
+      - name: RT9
+        bitOffset: 9
+        bitWidth: 1
+      - name: RT10
+        bitOffset: 10
+        bitWidth: 1
+      - name: RT11
+        bitOffset: 11
+        bitWidth: 1
+      - name: RT12
+        bitOffset: 12
+        bitWidth: 1
+      - name: RT13
+        bitOffset: 13
+        bitWidth: 1
+      - name: RT14
+        bitOffset: 14
+        bitWidth: 1
+      - name: RT15
+        bitOffset: 15
+        bitWidth: 1
+      - name: RT16
+        bitOffset: 16
+        bitWidth: 1
+      - name: RT17
+        bitOffset: 17
+        bitWidth: 1
+      - name: RT18
+        bitOffset: 18
+        bitWidth: 1
+      - name: RT19
+        bitOffset: 19
+        bitWidth: 1
+      - name: RT20
+        bitOffset: 20
+        bitWidth: 1
+      - name: RT21
+        bitOffset: 21
+        bitWidth: 1
+      - name: RT31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: FTSR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FT0
+        bitOffset: 0
+        bitWidth: 1
+      - name: FT1
+        bitOffset: 1
+        bitWidth: 1
+      - name: FT2
+        bitOffset: 2
+        bitWidth: 1
+      - name: FT3
+        bitOffset: 3
+        bitWidth: 1
+      - name: FT4
+        bitOffset: 4
+        bitWidth: 1
+      - name: FT5
+        bitOffset: 5
+        bitWidth: 1
+      - name: FT6
+        bitOffset: 6
+        bitWidth: 1
+      - name: FT7
+        bitOffset: 7
+        bitWidth: 1
+      - name: FT8
+        bitOffset: 8
+        bitWidth: 1
+      - name: FT9
+        bitOffset: 9
+        bitWidth: 1
+      - name: FT10
+        bitOffset: 10
+        bitWidth: 1
+      - name: FT11
+        bitOffset: 11
+        bitWidth: 1
+      - name: FT12
+        bitOffset: 12
+        bitWidth: 1
+      - name: FT13
+        bitOffset: 13
+        bitWidth: 1
+      - name: FT14
+        bitOffset: 14
+        bitWidth: 1
+      - name: FT15
+        bitOffset: 15
+        bitWidth: 1
+      - name: FT16
+        bitOffset: 16
+        bitWidth: 1
+      - name: FT17
+        bitOffset: 17
+        bitWidth: 1
+      - name: FT18
+        bitOffset: 18
+        bitWidth: 1
+      - name: FT19
+        bitOffset: 19
+        bitWidth: 1
+      - name: FT20
+        bitOffset: 20
+        bitWidth: 1
+      - name: FT21
+        bitOffset: 21
+        bitWidth: 1
+      - name: FT31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: SWIER1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWI0
+        bitOffset: 0
+        bitWidth: 1
+      - name: SWI1
+        bitOffset: 1
+        bitWidth: 1
+      - name: SWI2
+        bitOffset: 2
+        bitWidth: 1
+      - name: SWI3
+        bitOffset: 3
+        bitWidth: 1
+      - name: SWI4
+        bitOffset: 4
+        bitWidth: 1
+      - name: SWI5
+        bitOffset: 5
+        bitWidth: 1
+      - name: SWI6
+        bitOffset: 6
+        bitWidth: 1
+      - name: SWI7
+        bitOffset: 7
+        bitWidth: 1
+      - name: SWI8
+        bitOffset: 8
+        bitWidth: 1
+      - name: SWI9
+        bitOffset: 9
+        bitWidth: 1
+      - name: SWI10
+        bitOffset: 10
+        bitWidth: 1
+      - name: SWI11
+        bitOffset: 11
+        bitWidth: 1
+      - name: SWI12
+        bitOffset: 12
+        bitWidth: 1
+      - name: SWI13
+        bitOffset: 13
+        bitWidth: 1
+      - name: SWI14
+        bitOffset: 14
+        bitWidth: 1
+      - name: SWI15
+        bitOffset: 15
+        bitWidth: 1
+      - name: SWI16
+        bitOffset: 16
+        bitWidth: 1
+      - name: SWI17
+        bitOffset: 17
+        bitWidth: 1
+      - name: SWI18
+        bitOffset: 18
+        bitWidth: 1
+      - name: SWI19
+        bitOffset: 19
+        bitWidth: 1
+      - name: SWI20
+        bitOffset: 20
+        bitWidth: 1
+      - name: SWI21
+        bitOffset: 21
+        bitWidth: 1
+      - name: SWI31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: PR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PIF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: PIF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: PIF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: PIF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: PIF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: PIF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: PIF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: PIF7
+        bitOffset: 7
+        bitWidth: 1
+      - name: PIF8
+        bitOffset: 8
+        bitWidth: 1
+      - name: PIF9
+        bitOffset: 9
+        bitWidth: 1
+      - name: PIF10
+        bitOffset: 10
+        bitWidth: 1
+      - name: PIF11
+        bitOffset: 11
+        bitWidth: 1
+      - name: PIF12
+        bitOffset: 12
+        bitWidth: 1
+      - name: PIF13
+        bitOffset: 13
+        bitWidth: 1
+      - name: PIF14
+        bitOffset: 14
+        bitWidth: 1
+      - name: PIF15
+        bitOffset: 15
+        bitWidth: 1
+      - name: PIF16
+        bitOffset: 16
+        bitWidth: 1
+      - name: PIF17
+        bitOffset: 17
+        bitWidth: 1
+      - name: PIF18
+        bitOffset: 18
+        bitWidth: 1
+      - name: PIF19
+        bitOffset: 19
+        bitWidth: 1
+      - name: PIF20
+        bitOffset: 20
+        bitWidth: 1
+      - name: PIF21
+        bitOffset: 21
+        bitWidth: 1
+      - name: PIF31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: RTSR2
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RT33
+        bitOffset: 1
+        bitWidth: 1
+      - name: RT40_41
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: FTSR2
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FT33
+        bitOffset: 1
+        bitWidth: 1
+      - name: FT40_41
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: SWIER2
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SWI33
+        bitOffset: 1
+        bitWidth: 1
+      - name: SWI40_41
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: PR2
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PIF33
+        bitOffset: 1
+        bitWidth: 1
+      - name: PIF40_41
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: IMR1
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 2143289344
+    fields:
+      - name: IM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: IM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: IM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: IM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: IM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: IM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: IM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: IM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: IM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: IM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: IM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: IM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: IM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: IM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: IM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: IM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: IM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: IM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: IM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: IM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: IM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: IM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: IM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: IM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: IM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: IM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: IM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: IM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: IM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: IM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: IM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: IM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: EMR1
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM0_15
+        bitOffset: 0
+        bitWidth: 16
+      - name: EM17_21
+        bitOffset: 17
+        bitWidth: 5
+- register:
+    name: IMR2
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 130301
+    fields:
+      - name: IM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: IM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: IM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: IM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: IM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: IM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: IM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: IM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: IM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: IM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: IM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: IM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: IM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: IM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: IM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: IM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: IM16
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: EMR2
+    addressOffset: 148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: C2IMR1
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 2143289344
+    fields:
+      - name: IM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: IM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: IM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: IM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: IM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: IM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: IM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: IM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: IM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: IM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: IM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: IM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: IM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: IM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: IM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: IM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: IM16
+        bitOffset: 16
+        bitWidth: 1
+      - name: IM17
+        bitOffset: 17
+        bitWidth: 1
+      - name: IM18
+        bitOffset: 18
+        bitWidth: 1
+      - name: IM19
+        bitOffset: 19
+        bitWidth: 1
+      - name: IM20
+        bitOffset: 20
+        bitWidth: 1
+      - name: IM21
+        bitOffset: 21
+        bitWidth: 1
+      - name: IM22
+        bitOffset: 22
+        bitWidth: 1
+      - name: IM23
+        bitOffset: 23
+        bitWidth: 1
+      - name: IM24
+        bitOffset: 24
+        bitWidth: 1
+      - name: IM25
+        bitOffset: 25
+        bitWidth: 1
+      - name: IM26
+        bitOffset: 26
+        bitWidth: 1
+      - name: IM27
+        bitOffset: 27
+        bitWidth: 1
+      - name: IM28
+        bitOffset: 28
+        bitWidth: 1
+      - name: IM29
+        bitOffset: 29
+        bitWidth: 1
+      - name: IM30
+        bitOffset: 30
+        bitWidth: 1
+      - name: IM31
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: C2EMR1
+    addressOffset: 196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM0_15
+        bitOffset: 0
+        bitWidth: 16
+      - name: EM17_21
+        bitOffset: 17
+        bitWidth: 5
+- register:
+    name: C2IMR2
+    addressOffset: 208
+    size: 32
+    access: read-write
+    resetValue: 130301
+    fields:
+      - name: IM0
+        bitOffset: 0
+        bitWidth: 1
+      - name: IM1
+        bitOffset: 1
+        bitWidth: 1
+      - name: IM2
+        bitOffset: 2
+        bitWidth: 1
+      - name: IM3
+        bitOffset: 3
+        bitWidth: 1
+      - name: IM4
+        bitOffset: 4
+        bitWidth: 1
+      - name: IM5
+        bitOffset: 5
+        bitWidth: 1
+      - name: IM6
+        bitOffset: 6
+        bitWidth: 1
+      - name: IM7
+        bitOffset: 7
+        bitWidth: 1
+      - name: IM8
+        bitOffset: 8
+        bitWidth: 1
+      - name: IM9
+        bitOffset: 9
+        bitWidth: 1
+      - name: IM10
+        bitOffset: 10
+        bitWidth: 1
+      - name: IM11
+        bitOffset: 11
+        bitWidth: 1
+      - name: IM12
+        bitOffset: 12
+        bitWidth: 1
+      - name: IM13
+        bitOffset: 13
+        bitWidth: 1
+      - name: IM14
+        bitOffset: 14
+        bitWidth: 1
+      - name: IM15
+        bitOffset: 15
+        bitWidth: 1
+      - name: IM16
+        bitOffset: 16
+        bitWidth: 1
+- register:
+    name: C2EMR2
+    addressOffset: 212
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EM
+        bitOffset: 8
+        bitWidth: 2
+- register:
+    name: HWCFGR7
+    addressOffset: 984
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CPUEVENT
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR6
+    addressOffset: 988
+    size: 32
+    access: read-only
+    resetValue: 768
+    fields:
+      - name: CPUEVENT
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR5
+    addressOffset: 992
+    size: 32
+    access: read-only
+    resetValue: 4128767
+    fields:
+      - name: CPUEVENT
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR4
+    addressOffset: 996
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EVENT_TRG
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR3
+    addressOffset: 1000
+    size: 32
+    access: read-only
+    resetValue: 770
+    fields:
+      - name: EVENT_TRG
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR2
+    addressOffset: 1004
+    size: 32
+    access: read-only
+    resetValue: 2151677951
+    fields:
+      - name: EVENT_TRG
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HWCFGR1
+    addressOffset: 1008
+    size: 32
+    access: read-only
+    resetValue: 12592
+    fields:
+      - name: NBEVENTS
+        bitOffset: 0
+        bitWidth: 8
+      - name: NBCPUS
+        bitOffset: 8
+        bitWidth: 4
+      - name: CPUEVTEN
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: VERR
+    addressOffset: 1012
+    size: 32
+    access: read-only
+    resetValue: 32
+    fields:
+      - name: MINREV
+        bitOffset: 0
+        bitWidth: 4
+      - name: MAJREV
+        bitOffset: 4
+        bitWidth: 4
+- register:
+    name: IPIDR
+    addressOffset: 1016
+    size: 32
+    access: read-only
+    resetValue: 917505
+    fields:
+      - name: IPID
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: SIDR
+    addressOffset: 1020
+    size: 32
+    access: read-only
+    resetValue: 2747653377
+    fields:
+      - name: SID
+        bitOffset: 0
+        bitWidth: 32

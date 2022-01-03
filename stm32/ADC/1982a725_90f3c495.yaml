@@ -1,0 +1,257 @@
+---
+- register:
+    name: CSR
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWD1
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1
+            usage: read-write
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+      - name: EOC1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOC1
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: JEOC1
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOC1
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: JSTRT1
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: JSTRT1
+            usage: read-write
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+      - name: STRT1
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: STRT1
+            usage: read-write
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+      - name: OVR1
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVR1
+            usage: read-write
+            values:
+              - name: NoOverrun
+                value: 0
+              - name: Overrun
+                value: 1
+      - name: AWD2
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1
+      - name: EOC2
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EOC1
+      - name: JEOC2
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JEOC1
+      - name: JSTRT2
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JSTRT1
+      - name: STRT2
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: STRT1
+      - name: OVR2
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OVR1
+      - name: AWD3
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1
+      - name: EOC3
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EOC1
+      - name: JEOC3
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JEOC1
+      - name: JSTRT3
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: JSTRT1
+      - name: STRT3
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: STRT1
+      - name: OVR3
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OVR1
+- register:
+    name: CCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MULTI
+        bitOffset: 0
+        bitWidth: 5
+        enumeratedValues:
+          - name: MULTI
+            usage: read-write
+            values:
+              - name: Independent
+                value: 0
+              - name: DualRJ
+                value: 1
+              - name: DualRA
+                value: 2
+              - name: DualJ
+                value: 5
+              - name: DualR
+                value: 6
+              - name: DualI
+                value: 7
+              - name: DualA
+                value: 9
+              - name: TripleRJ
+                value: 17
+              - name: TripleRA
+                value: 18
+              - name: TripleJ
+                value: 21
+              - name: TripleR
+                value: 22
+              - name: TripleI
+                value: 23
+              - name: TripleA
+                value: 24
+      - name: DELAY
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: DDS
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: DDS
+            usage: read-write
+            values:
+              - name: Single
+                value: 0
+              - name: Continuous
+                value: 1
+      - name: DMA
+        bitOffset: 14
+        bitWidth: 2
+        enumeratedValues:
+          - name: DMA
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Mode1
+                value: 1
+              - name: Mode2
+                value: 2
+              - name: Mode3
+                value: 3
+      - name: ADCPRE
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - name: ADCPRE
+            usage: read-write
+            values:
+              - name: Div2
+                value: 0
+              - name: Div4
+                value: 1
+              - name: Div6
+                value: 2
+              - name: Div8
+                value: 3
+      - name: VBATE
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: VBATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSVREFE
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSVREFE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CDR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DATA1
+        bitOffset: 0
+        bitWidth: 16
+      - name: DATA2
+        bitOffset: 16
+        bitWidth: 16

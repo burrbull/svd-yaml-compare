@@ -1,0 +1,69 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LPDS
+        bitOffset: 0
+        bitWidth: 1
+      - name: PDDS
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: PDDS
+            usage: read-write
+            values:
+              - name: STOP_MODE
+                value: 0
+              - name: STANDBY_MODE
+                value: 1
+      - name: CWUF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CSBF
+        bitOffset: 3
+        bitWidth: 1
+      - name: DBP
+        bitOffset: 8
+        bitWidth: 1
+- register:
+    name: CSR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: WUF
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: SBF
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: EWUP1
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: EWUP2
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: EWUP4
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: EWUP5
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: EWUP6
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: EWUP7
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write

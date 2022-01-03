@@ -1,0 +1,130 @@
+---
+- register:
+    name: OPAMP1_CSR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OPAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: OPALPM
+        bitOffset: 1
+        bitWidth: 1
+      - name: OPAMODE
+        bitOffset: 2
+        bitWidth: 2
+      - name: PGA_GAIN
+        bitOffset: 4
+        bitWidth: 2
+      - name: VM_SEL
+        bitOffset: 8
+        bitWidth: 2
+      - name: VP_SEL
+        bitOffset: 10
+        bitWidth: 1
+      - name: CALON
+        bitOffset: 12
+        bitWidth: 1
+      - name: CALSEL
+        bitOffset: 13
+        bitWidth: 1
+      - name: USERTRIM
+        bitOffset: 14
+        bitWidth: 1
+      - name: CALOUT
+        bitOffset: 15
+        bitWidth: 1
+      - name: OPA_RANGE
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: OPAMP1_OTR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TRIMOFFSETN
+        bitOffset: 0
+        bitWidth: 5
+      - name: TRIMOFFSETP
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: OPAMP1_LPOTR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TRIMLPOFFSETN
+        bitOffset: 0
+        bitWidth: 5
+      - name: TRIMLPOFFSETP
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: OPAMP2_CRS
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OPAEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: OPALPM
+        bitOffset: 1
+        bitWidth: 1
+      - name: OPAMODE
+        bitOffset: 2
+        bitWidth: 2
+      - name: PGA_GAIN
+        bitOffset: 4
+        bitWidth: 2
+      - name: VM_SEL
+        bitOffset: 8
+        bitWidth: 2
+      - name: VP_SEL
+        bitOffset: 10
+        bitWidth: 1
+      - name: CALON
+        bitOffset: 12
+        bitWidth: 1
+      - name: CALSEL
+        bitOffset: 13
+        bitWidth: 1
+      - name: USERTRIM
+        bitOffset: 14
+        bitWidth: 1
+      - name: CALOUT
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: OPAMP2_OTR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TRIMOFFSETN
+        bitOffset: 0
+        bitWidth: 5
+      - name: TRIMOFFSETP
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: OPAMP2_LPOTR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TRIMLPOFFSETN
+        bitOffset: 0
+        bitWidth: 5
+      - name: TRIMLPOFFSETP
+        bitOffset: 8
+        bitWidth: 5

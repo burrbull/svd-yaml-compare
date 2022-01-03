@@ -1,0 +1,757 @@
+---
+- register:
+    name: FDCAN_CREL
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 840176152
+    fields:
+      - name: DAY
+        bitOffset: 0
+        bitWidth: 8
+      - name: MON
+        bitOffset: 8
+        bitWidth: 8
+      - name: YEAR
+        bitOffset: 16
+        bitWidth: 4
+      - name: SUBSTEP
+        bitOffset: 20
+        bitWidth: 4
+      - name: STEP
+        bitOffset: 24
+        bitWidth: 4
+      - name: REL
+        bitOffset: 28
+        bitWidth: 4
+- register:
+    name: FDCAN_ENDN
+    addressOffset: 4
+    size: 32
+    access: read-only
+    resetValue: 2271560481
+    fields:
+      - name: ETV
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: FDCAN_DBTP
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 2611
+    fields:
+      - name: DSJW
+        bitOffset: 0
+        bitWidth: 4
+      - name: DTSEG2
+        bitOffset: 4
+        bitWidth: 4
+      - name: DTSEG1
+        bitOffset: 8
+        bitWidth: 5
+      - name: DBRP
+        bitOffset: 16
+        bitWidth: 5
+      - name: TDC
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: FDCAN_TEST
+    addressOffset: 16
+    size: 32
+    resetValue: 16
+    fields:
+      - name: LBCK
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: TX
+        bitOffset: 5
+        bitWidth: 2
+        access: read-write
+      - name: RX
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+- register:
+    name: FDCAN_RWD
+    addressOffset: 20
+    size: 32
+    resetValue: 0
+    fields:
+      - name: WDC
+        bitOffset: 0
+        bitWidth: 8
+        access: read-write
+      - name: WDV
+        bitOffset: 8
+        bitWidth: 8
+        access: read-only
+- register:
+    name: FDCAN_CCCR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: INIT
+        bitOffset: 0
+        bitWidth: 1
+      - name: CCE
+        bitOffset: 1
+        bitWidth: 1
+      - name: ASM
+        bitOffset: 2
+        bitWidth: 1
+      - name: CSA
+        bitOffset: 3
+        bitWidth: 1
+      - name: CSR
+        bitOffset: 4
+        bitWidth: 1
+      - name: MON
+        bitOffset: 5
+        bitWidth: 1
+      - name: DAR
+        bitOffset: 6
+        bitWidth: 1
+      - name: TEST
+        bitOffset: 7
+        bitWidth: 1
+      - name: FDOE
+        bitOffset: 8
+        bitWidth: 1
+      - name: BSE
+        bitOffset: 9
+        bitWidth: 1
+      - name: PXHD
+        bitOffset: 12
+        bitWidth: 1
+      - name: EFBI
+        bitOffset: 13
+        bitWidth: 1
+      - name: TXP
+        bitOffset: 14
+        bitWidth: 1
+      - name: NISO
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: FDCAN_NBTP
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 100665859
+    fields:
+      - name: TSEG2
+        bitOffset: 0
+        bitWidth: 7
+      - name: NTSEG1
+        bitOffset: 8
+        bitWidth: 8
+      - name: NBRP
+        bitOffset: 16
+        bitWidth: 9
+      - name: NSJW
+        bitOffset: 25
+        bitWidth: 7
+- register:
+    name: FDCAN_TSCC
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TSS
+        bitOffset: 0
+        bitWidth: 2
+      - name: TCP
+        bitOffset: 16
+        bitWidth: 4
+- register:
+    name: FDCAN_TSCV
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TSC
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: FDCAN_TOCC
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 4294901760
+    fields:
+      - name: ETOC
+        bitOffset: 0
+        bitWidth: 1
+      - name: TOS
+        bitOffset: 1
+        bitWidth: 2
+      - name: TOP
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: FDCAN_TOCV
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: TOC
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: FDCAN_ECR
+    addressOffset: 64
+    size: 32
+    resetValue: 0
+    fields:
+      - name: TEC
+        bitOffset: 0
+        bitWidth: 8
+        access: read-only
+      - name: REC
+        bitOffset: 8
+        bitWidth: 7
+        access: read-only
+      - name: RP
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: CEL
+        bitOffset: 16
+        bitWidth: 8
+        access: read-write
+- register:
+    name: FDCAN_PSR
+    addressOffset: 68
+    size: 32
+    resetValue: 1799
+    fields:
+      - name: LEC
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+      - name: ACT
+        bitOffset: 3
+        bitWidth: 2
+        access: read-only
+      - name: EP
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+      - name: EW
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+      - name: BO
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+      - name: DLEC
+        bitOffset: 8
+        bitWidth: 3
+        access: read-write
+      - name: RESI
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: RBRS
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: REDL
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: PXE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: TDCV
+        bitOffset: 16
+        bitWidth: 7
+        access: read-only
+- register:
+    name: FDCAN_TDCR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDCF
+        bitOffset: 0
+        bitWidth: 7
+      - name: TDCO
+        bitOffset: 8
+        bitWidth: 7
+- register:
+    name: FDCAN_IR
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RF0N
+        bitOffset: 0
+        bitWidth: 1
+      - name: RF0F
+        bitOffset: 1
+        bitWidth: 1
+      - name: RF0L
+        bitOffset: 2
+        bitWidth: 1
+      - name: RF1N
+        bitOffset: 3
+        bitWidth: 1
+      - name: RF1F
+        bitOffset: 4
+        bitWidth: 1
+      - name: RF1L
+        bitOffset: 5
+        bitWidth: 1
+      - name: HPM
+        bitOffset: 6
+        bitWidth: 1
+      - name: TC
+        bitOffset: 7
+        bitWidth: 1
+      - name: TCF
+        bitOffset: 8
+        bitWidth: 1
+      - name: TFE
+        bitOffset: 9
+        bitWidth: 1
+      - name: TEFN
+        bitOffset: 10
+        bitWidth: 1
+      - name: TEFF
+        bitOffset: 11
+        bitWidth: 1
+      - name: TEFL
+        bitOffset: 12
+        bitWidth: 1
+      - name: TSW
+        bitOffset: 13
+        bitWidth: 1
+      - name: MRAF
+        bitOffset: 14
+        bitWidth: 1
+      - name: TOO
+        bitOffset: 15
+        bitWidth: 1
+      - name: ELO
+        bitOffset: 16
+        bitWidth: 1
+      - name: EP
+        bitOffset: 17
+        bitWidth: 1
+      - name: EW
+        bitOffset: 18
+        bitWidth: 1
+      - name: BO
+        bitOffset: 19
+        bitWidth: 1
+      - name: WDI
+        bitOffset: 20
+        bitWidth: 1
+      - name: PEA
+        bitOffset: 21
+        bitWidth: 1
+      - name: PED
+        bitOffset: 22
+        bitWidth: 1
+      - name: ARA
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: FDCAN_IE
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RF0NE
+        bitOffset: 0
+        bitWidth: 1
+      - name: RF0FE
+        bitOffset: 1
+        bitWidth: 1
+      - name: RF0LE
+        bitOffset: 2
+        bitWidth: 1
+      - name: RF1NE
+        bitOffset: 3
+        bitWidth: 1
+      - name: RF1FE
+        bitOffset: 4
+        bitWidth: 1
+      - name: RF1LE
+        bitOffset: 5
+        bitWidth: 1
+      - name: HPME
+        bitOffset: 6
+        bitWidth: 1
+      - name: TCE
+        bitOffset: 7
+        bitWidth: 1
+      - name: TCFE
+        bitOffset: 8
+        bitWidth: 1
+      - name: TEFE
+        bitOffset: 9
+        bitWidth: 1
+      - name: TEFNE
+        bitOffset: 10
+        bitWidth: 1
+      - name: TEFFE
+        bitOffset: 11
+        bitWidth: 1
+      - name: TEFLE
+        bitOffset: 12
+        bitWidth: 1
+      - name: MRAFE
+        bitOffset: 13
+        bitWidth: 1
+      - name: TOOE
+        bitOffset: 14
+        bitWidth: 1
+      - name: ELOE
+        bitOffset: 15
+        bitWidth: 1
+      - name: EPE
+        bitOffset: 16
+        bitWidth: 1
+      - name: EWE
+        bitOffset: 17
+        bitWidth: 1
+      - name: BOE
+        bitOffset: 18
+        bitWidth: 1
+      - name: WDIE
+        bitOffset: 19
+        bitWidth: 1
+      - name: PEAE
+        bitOffset: 20
+        bitWidth: 1
+      - name: PEDE
+        bitOffset: 21
+        bitWidth: 1
+      - name: ARAE
+        bitOffset: 22
+        bitWidth: 1
+- register:
+    name: FDCAN_ILS
+    addressOffset: 88
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RxFIFO0
+        bitOffset: 0
+        bitWidth: 1
+      - name: RxFIFO1
+        bitOffset: 1
+        bitWidth: 1
+      - name: SMSG
+        bitOffset: 2
+        bitWidth: 1
+      - name: TFERR
+        bitOffset: 3
+        bitWidth: 1
+      - name: MISC
+        bitOffset: 4
+        bitWidth: 1
+      - name: BERR
+        bitOffset: 5
+        bitWidth: 1
+      - name: PERR
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: FDCAN_ILE
+    addressOffset: 92
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EINT0
+        bitOffset: 0
+        bitWidth: 1
+      - name: EINT1
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: FDCAN_RXGFC
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RRFE
+        bitOffset: 0
+        bitWidth: 1
+      - name: RRFS
+        bitOffset: 1
+        bitWidth: 1
+      - name: ANFE
+        bitOffset: 2
+        bitWidth: 2
+      - name: ANFS
+        bitOffset: 4
+        bitWidth: 2
+      - name: F1OM
+        bitOffset: 8
+        bitWidth: 1
+      - name: F0OM
+        bitOffset: 9
+        bitWidth: 1
+      - name: LSS
+        bitOffset: 16
+        bitWidth: 5
+      - name: LSE
+        bitOffset: 24
+        bitWidth: 4
+- register:
+    name: FDCAN_XIDAM
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 536870911
+    fields:
+      - name: EIDM
+        bitOffset: 0
+        bitWidth: 29
+- register:
+    name: FDCAN_HPMS
+    addressOffset: 136
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: BIDX
+        bitOffset: 0
+        bitWidth: 3
+      - name: MSI
+        bitOffset: 6
+        bitWidth: 2
+      - name: FIDX
+        bitOffset: 8
+        bitWidth: 5
+      - name: FLST
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: FDCAN_RXF0S
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: F0FL
+        bitOffset: 0
+        bitWidth: 4
+      - name: F0GI
+        bitOffset: 8
+        bitWidth: 2
+      - name: F0PI
+        bitOffset: 16
+        bitWidth: 2
+      - name: F0F
+        bitOffset: 24
+        bitWidth: 1
+      - name: RF0L
+        bitOffset: 25
+        bitWidth: 1
+- register:
+    name: FDCAN_RXF0A
+    addressOffset: 148
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: F0AI
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_RXF1S
+    addressOffset: 152
+    size: 32
+    resetValue: 0
+    fields:
+      - name: F1FL
+        bitOffset: 0
+        bitWidth: 4
+        access: read-write
+      - name: F1GI
+        bitOffset: 8
+        bitWidth: 2
+        access: read-only
+      - name: F1PI
+        bitOffset: 16
+        bitWidth: 2
+        access: read-only
+      - name: F1F
+        bitOffset: 24
+        bitWidth: 1
+        access: read-only
+      - name: RF1L
+        bitOffset: 25
+        bitWidth: 1
+        access: read-only
+- register:
+    name: FDCAN_RXF1A
+    addressOffset: 156
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: F1AI
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBC
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TFQM
+        bitOffset: 24
+        bitWidth: 1
+- register:
+    name: FDCAN_TXFQS
+    addressOffset: 196
+    size: 32
+    access: read-only
+    resetValue: 3
+    fields:
+      - name: TFFL
+        bitOffset: 0
+        bitWidth: 3
+      - name: TFGI
+        bitOffset: 8
+        bitWidth: 2
+      - name: TFQPI
+        bitOffset: 16
+        bitWidth: 2
+      - name: TFQF
+        bitOffset: 21
+        bitWidth: 1
+- register:
+    name: FDCAN_TXBRP
+    addressOffset: 200
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TRP
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBAR
+    addressOffset: 204
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AR
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBCR
+    addressOffset: 208
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CR
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBTO
+    addressOffset: 212
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TO
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBCF
+    addressOffset: 216
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CF
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBTIE
+    addressOffset: 220
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIE
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXBCIE
+    addressOffset: 224
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CF
+        bitOffset: 0
+        bitWidth: 3
+- register:
+    name: FDCAN_TXEFS
+    addressOffset: 228
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EFFL
+        bitOffset: 0
+        bitWidth: 3
+      - name: EFGI
+        bitOffset: 8
+        bitWidth: 2
+      - name: EFPI
+        bitOffset: 16
+        bitWidth: 2
+      - name: EFF
+        bitOffset: 24
+        bitWidth: 1
+      - name: TEFL
+        bitOffset: 25
+        bitWidth: 1
+- register:
+    name: FDCAN_TXEFA
+    addressOffset: 232
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EFAI
+        bitOffset: 0
+        bitWidth: 2
+- register:
+    name: FDCAN_CKDIV
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PDIV
+        bitOffset: 0
+        bitWidth: 4

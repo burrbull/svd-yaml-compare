@@ -1,0 +1,148 @@
+---
+- register:
+    name: IDC
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 268461184
+    fields:
+      - name: DEV_ID
+        bitOffset: 0
+        bitWidth: 12
+      - name: REV_ID
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DBGSLEEP_CD
+        bitOffset: 0
+        bitWidth: 1
+      - name: DBGSTOP_CD
+        bitOffset: 1
+        bitWidth: 1
+      - name: DBGSTBY_CD
+        bitOffset: 2
+        bitWidth: 1
+      - name: DBGSTOP_SRD
+        bitOffset: 7
+        bitWidth: 1
+      - name: DBGSTBY_SRD
+        bitOffset: 8
+        bitWidth: 1
+      - name: TRACECLKEN
+        bitOffset: 20
+        bitWidth: 1
+      - name: CDDBGCKEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: SRDDBGCKEN
+        bitOffset: 22
+        bitWidth: 1
+      - name: TRGOEN
+        bitOffset: 28
+        bitWidth: 1
+- register:
+    name: APB3FZ1
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: WWDG
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: APB1LFZ1
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM2
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM3
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM4
+        bitOffset: 2
+        bitWidth: 1
+      - name: TIM5
+        bitOffset: 3
+        bitWidth: 1
+      - name: TIM6
+        bitOffset: 4
+        bitWidth: 1
+      - name: TIM7
+        bitOffset: 5
+        bitWidth: 1
+      - name: TIM12
+        bitOffset: 6
+        bitWidth: 1
+      - name: TIM13
+        bitOffset: 7
+        bitWidth: 1
+      - name: TIM14
+        bitOffset: 8
+        bitWidth: 1
+      - name: LPTIM1
+        bitOffset: 9
+        bitWidth: 1
+      - name: I2C1
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C2
+        bitOffset: 22
+        bitWidth: 1
+      - name: I2C3
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: APB2FZ1
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIM1
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM8
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM15
+        bitOffset: 16
+        bitWidth: 1
+      - name: TIM16
+        bitOffset: 17
+        bitWidth: 1
+      - name: TIM17
+        bitOffset: 18
+        bitWidth: 1
+- register:
+    name: APB4FZ1
+    addressOffset: 84
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: I2C4
+        bitOffset: 7
+        bitWidth: 1
+      - name: LPTIM2
+        bitOffset: 9
+        bitWidth: 1
+      - name: LPTIM3
+        bitOffset: 10
+        bitWidth: 1
+      - name: RTC
+        bitOffset: 16
+        bitWidth: 1
+      - name: WDGLSCD
+        bitOffset: 18
+        bitWidth: 1

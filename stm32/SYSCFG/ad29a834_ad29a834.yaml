@@ -1,0 +1,324 @@
+---
+- register:
+    name: ITLINE0
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WWDG
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE1
+    addressOffset: 132
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: PVDOUT
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE2
+    addressOffset: 136
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TAMP
+        bitOffset: 0
+        bitWidth: 1
+      - name: RTC
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: ITLINE3
+    addressOffset: 140
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FLASH_ITF
+        bitOffset: 0
+        bitWidth: 1
+      - name: FLASH_ECC
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: ITLINE4
+    addressOffset: 144
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RCC
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE5
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 1
+      - name: EXTI1
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: ITLINE6
+    addressOffset: 152
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXTI2
+        bitOffset: 0
+        bitWidth: 1
+      - name: EXTI3
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: ITLINE7
+    addressOffset: 156
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 1
+      - name: EXTI5
+        bitOffset: 1
+        bitWidth: 1
+      - name: EXTI6
+        bitOffset: 2
+        bitWidth: 1
+      - name: EXTI7
+        bitOffset: 3
+        bitWidth: 1
+      - name: EXTI8
+        bitOffset: 4
+        bitWidth: 1
+      - name: EXTI9
+        bitOffset: 5
+        bitWidth: 1
+      - name: EXTI10
+        bitOffset: 6
+        bitWidth: 1
+      - name: EXTI11
+        bitOffset: 7
+        bitWidth: 1
+      - name: EXTI12
+        bitOffset: 8
+        bitWidth: 1
+      - name: EXTI13
+        bitOffset: 9
+        bitWidth: 1
+      - name: EXTI14
+        bitOffset: 10
+        bitWidth: 1
+      - name: EXTI15
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: ITLINE9
+    addressOffset: 164
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DMA1_CH1
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE10
+    addressOffset: 168
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DMA1_CH2
+        bitOffset: 0
+        bitWidth: 1
+      - name: DMA1_CH3
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: ITLINE11
+    addressOffset: 172
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DMAMUX
+        bitOffset: 0
+        bitWidth: 1
+      - name: DMA1_CH4
+        bitOffset: 1
+        bitWidth: 1
+      - name: DMA1_CH5
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: ITLINE12
+    addressOffset: 176
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ADC
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE13
+    addressOffset: 180
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM1_CCU
+        bitOffset: 0
+        bitWidth: 1
+      - name: TIM1_TRG
+        bitOffset: 1
+        bitWidth: 1
+      - name: TIM1_UPD
+        bitOffset: 2
+        bitWidth: 1
+      - name: TIM1_BRK
+        bitOffset: 3
+        bitWidth: 1
+- register:
+    name: ITLINE14
+    addressOffset: 184
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM1_CC
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE15
+    addressOffset: 188
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM2
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE16
+    addressOffset: 192
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM3
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE19
+    addressOffset: 204
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM14
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE21
+    addressOffset: 212
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM16
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE22
+    addressOffset: 216
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: TIM17
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE23
+    addressOffset: 220
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: I2C1
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE24
+    addressOffset: 224
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: I2C2
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE25
+    addressOffset: 228
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SPI1
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE26
+    addressOffset: 232
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SPI2
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE27
+    addressOffset: 236
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: USART1
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE28
+    addressOffset: 240
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: USART2
+        bitOffset: 0
+        bitWidth: 1
+- register:
+    name: ITLINE29
+    addressOffset: 244
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: USART5
+        bitOffset: 2
+        bitWidth: 1

@@ -1,0 +1,329 @@
+---
+- register:
+    name: CR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EOCALIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: JEOCIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: REOCIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: ROVRIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: REFV
+        bitOffset: 8
+        bitWidth: 2
+      - name: SLOWCK
+        bitOffset: 10
+        bitWidth: 1
+      - name: SBI
+        bitOffset: 11
+        bitWidth: 1
+      - name: PDI
+        bitOffset: 12
+        bitWidth: 1
+      - name: JSYNC
+        bitOffset: 14
+        bitWidth: 1
+      - name: RSYNC
+        bitOffset: 15
+        bitWidth: 1
+      - name: JDMAEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: RDMAEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: INIT
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADON
+        bitOffset: 0
+        bitWidth: 1
+      - name: CALIBCNT
+        bitOffset: 1
+        bitWidth: 2
+      - name: STARTCALIB
+        bitOffset: 4
+        bitWidth: 1
+      - name: JCONT
+        bitOffset: 5
+        bitWidth: 1
+      - name: JDS
+        bitOffset: 6
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 8
+        bitWidth: 4
+      - name: JEXTEN
+        bitOffset: 13
+        bitWidth: 2
+      - name: JSWSTART
+        bitOffset: 15
+        bitWidth: 1
+      - name: RCH
+        bitOffset: 16
+        bitWidth: 4
+      - name: RCONT
+        bitOffset: 22
+        bitWidth: 1
+      - name: RSWSTART
+        bitOffset: 23
+        bitWidth: 1
+      - name: FAST
+        bitOffset: 24
+        bitWidth: 1
+- register:
+    name: ISR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EOCALF
+        bitOffset: 0
+        bitWidth: 1
+      - name: JEOCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: REOCF
+        bitOffset: 3
+        bitWidth: 1
+      - name: ROVRF
+        bitOffset: 4
+        bitWidth: 1
+      - name: CALIBIP
+        bitOffset: 12
+        bitWidth: 1
+      - name: JCIP
+        bitOffset: 13
+        bitWidth: 1
+      - name: RCIP
+        bitOffset: 14
+        bitWidth: 1
+      - name: STABIP
+        bitOffset: 15
+        bitWidth: 1
+      - name: INITRDY
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CLRISR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLREOCALF
+        bitOffset: 0
+        bitWidth: 1
+      - name: CLRJOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CLRROVRF
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: JCHGR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: JCHG
+        bitOffset: 0
+        bitWidth: 9
+- register:
+    name: CONF0R
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET0
+        bitOffset: 0
+        bitWidth: 12
+      - name: GAIN0
+        bitOffset: 20
+        bitWidth: 3
+      - name: SE0
+        bitOffset: 26
+        bitWidth: 2
+      - name: COMMON0
+        bitOffset: 30
+        bitWidth: 2
+- register:
+    name: CONF1R
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET1
+        bitOffset: 0
+        bitWidth: 12
+      - name: GAIN1
+        bitOffset: 20
+        bitWidth: 3
+      - name: SE1
+        bitOffset: 26
+        bitWidth: 2
+      - name: COMMON1
+        bitOffset: 30
+        bitWidth: 2
+- register:
+    name: CONF2R
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OFFSET2
+        bitOffset: 0
+        bitWidth: 12
+      - name: GAIN2
+        bitOffset: 20
+        bitWidth: 3
+      - name: SE2
+        bitOffset: 26
+        bitWidth: 2
+      - name: COMMON2
+        bitOffset: 30
+        bitWidth: 2
+- register:
+    name: CONFCHR1
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CONFCH0
+        bitOffset: 0
+        bitWidth: 2
+      - name: CONFCH1
+        bitOffset: 4
+        bitWidth: 2
+      - name: CONFCH2
+        bitOffset: 8
+        bitWidth: 2
+      - name: CONFCH3
+        bitOffset: 12
+        bitWidth: 2
+      - name: CONFCH4
+        bitOffset: 16
+        bitWidth: 2
+      - name: CONFCH5
+        bitOffset: 20
+        bitWidth: 2
+      - name: CONFCH6
+        bitOffset: 24
+        bitWidth: 2
+      - name: CONFCH7
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: CONFCHR2
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CONFCH8
+        bitOffset: 0
+        bitWidth: 2
+- register:
+    name: JDATAR
+    addressOffset: 96
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA
+        bitOffset: 0
+        bitWidth: 16
+      - name: JDATACH
+        bitOffset: 25
+        bitWidth: 4
+- register:
+    name: RDATAR
+    addressOffset: 100
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: JDATA12R
+    addressOffset: 112
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA1
+        bitOffset: 0
+        bitWidth: 16
+      - name: JDATA2
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: RDATA12R
+    addressOffset: 116
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATA1
+        bitOffset: 0
+        bitWidth: 16
+      - name: RDATA2
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: JDATA13R
+    addressOffset: 120
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATA1
+        bitOffset: 0
+        bitWidth: 16
+      - name: JDATA3
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: RDATA13R
+    addressOffset: 124
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATA1
+        bitOffset: 0
+        bitWidth: 16
+      - name: RDATA3
+        bitOffset: 16
+        bitWidth: 16

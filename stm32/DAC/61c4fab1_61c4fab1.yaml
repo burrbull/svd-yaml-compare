@@ -1,0 +1,290 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN1
+        bitOffset: 0
+        bitWidth: 1
+      - name: TEN1
+        bitOffset: 2
+        bitWidth: 1
+      - name: TSEL1
+        bitOffset: 3
+        bitWidth: 3
+      - name: WAVE1
+        bitOffset: 6
+        bitWidth: 2
+      - name: MAMP1
+        bitOffset: 8
+        bitWidth: 4
+      - name: DMAEN1
+        bitOffset: 12
+        bitWidth: 1
+      - name: DMAUDRIE1
+        bitOffset: 13
+        bitWidth: 1
+      - name: CEN1
+        bitOffset: 14
+        bitWidth: 1
+      - name: EN2
+        bitOffset: 16
+        bitWidth: 1
+      - name: TEN2
+        bitOffset: 18
+        bitWidth: 1
+      - name: TSEL2
+        bitOffset: 19
+        bitWidth: 3
+      - name: WAVE2
+        bitOffset: 22
+        bitWidth: 2
+      - name: MAMP2
+        bitOffset: 24
+        bitWidth: 4
+      - name: DMAEN2
+        bitOffset: 28
+        bitWidth: 1
+      - name: DMAUDRIE2
+        bitOffset: 29
+        bitWidth: 1
+      - name: CEN2
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: SWTRIGR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: SWTRIG1
+        bitOffset: 0
+        bitWidth: 1
+      - name: SWTRIG2
+        bitOffset: 1
+        bitWidth: 1
+- register:
+    name: DHR12R1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: DHR12L1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 4
+        bitWidth: 12
+- register:
+    name: DHR8R1
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DHR12R2
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: DHR12L2
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 4
+        bitWidth: 12
+- register:
+    name: DHR8R2
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DHR12RD
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 12
+      - name: DACC2DHR
+        bitOffset: 16
+        bitWidth: 12
+- register:
+    name: DHR12LD
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 4
+        bitWidth: 12
+      - name: DACC2DHR
+        bitOffset: 20
+        bitWidth: 12
+- register:
+    name: DHR8RD
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 8
+      - name: DACC2DHR
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DOR1
+    addressOffset: 44
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DACC1DOR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: DOR2
+    addressOffset: 48
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DACC2DOR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: SR
+    addressOffset: 52
+    size: 32
+    resetValue: 0
+    fields:
+      - name: DMAUDR1
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: CAL_FLAG1
+        bitOffset: 14
+        bitWidth: 1
+        access: read-only
+      - name: BWST1
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+      - name: DMAUDR2
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: CAL_FLAG2
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: BWST2
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CCR
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OTRIM1
+        bitOffset: 0
+        bitWidth: 5
+      - name: OTRIM2
+        bitOffset: 16
+        bitWidth: 5
+- register:
+    name: MCR
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MODE1
+        bitOffset: 0
+        bitWidth: 3
+      - name: MODE2
+        bitOffset: 16
+        bitWidth: 3
+- register:
+    name: SHSR1
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TSAMPLE1
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: SHSR2
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TSAMPLE2
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: SHHR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 65537
+    fields:
+      - name: THOLD1
+        bitOffset: 0
+        bitWidth: 10
+      - name: THOLD2
+        bitOffset: 16
+        bitWidth: 10
+- register:
+    name: SHRR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: TREFRESH1
+        bitOffset: 0
+        bitWidth: 8
+      - name: TREFRESH2
+        bitOffset: 16
+        bitWidth: 8

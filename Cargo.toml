@@ -5,8 +5,8 @@ authors = ["WRR"]
 edition = "2018"
 
 [dependencies]
-svd-parser = "0.12"
-svd-encoder = "0.12"
-svd-rs = { version = "0.12", features = ["serde"] }
+svd-parser = "0.13"
+svd-encoder = "0.13"
+svd-rs = { version = "0.13", features = ["serde"] }
 serde_yaml = "0.8.21"
 md5 = "0.7.0"

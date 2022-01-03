@@ -1,0 +1,11 @@
+---
+- register:
+    name: DSCSR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CDS
+        bitOffset: 16
+        bitWidth: 1

@@ -1,0 +1,94 @@
+---
+- register:
+    name: FPCCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LSPACT
+        bitOffset: 0
+        bitWidth: 1
+      - name: USER
+        bitOffset: 1
+        bitWidth: 1
+      - name: THREAD
+        bitOffset: 3
+        bitWidth: 1
+      - name: HFRDY
+        bitOffset: 4
+        bitWidth: 1
+      - name: MMRDY
+        bitOffset: 5
+        bitWidth: 1
+      - name: BFRDY
+        bitOffset: 6
+        bitWidth: 1
+      - name: MONRDY
+        bitOffset: 8
+        bitWidth: 1
+      - name: LSPEN
+        bitOffset: 30
+        bitWidth: 1
+      - name: ASPEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: FPCAR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDRESS
+        bitOffset: 3
+        bitWidth: 29
+- register:
+    name: FPSCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOC
+        bitOffset: 0
+        bitWidth: 1
+      - name: DZC
+        bitOffset: 1
+        bitWidth: 1
+      - name: OFC
+        bitOffset: 2
+        bitWidth: 1
+      - name: UFC
+        bitOffset: 3
+        bitWidth: 1
+      - name: IXC
+        bitOffset: 4
+        bitWidth: 1
+      - name: IDC
+        bitOffset: 7
+        bitWidth: 1
+      - name: RMode
+        bitOffset: 22
+        bitWidth: 2
+      - name: FZ
+        bitOffset: 24
+        bitWidth: 1
+      - name: DN
+        bitOffset: 25
+        bitWidth: 1
+      - name: AHP
+        bitOffset: 26
+        bitWidth: 1
+      - name: V
+        bitOffset: 28
+        bitWidth: 1
+      - name: C
+        bitOffset: 29
+        bitWidth: 1
+      - name: Z
+        bitOffset: 30
+        bitWidth: 1
+      - name: N
+        bitOffset: 31
+        bitWidth: 1

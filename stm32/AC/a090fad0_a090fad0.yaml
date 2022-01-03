@@ -1,0 +1,109 @@
+---
+- register:
+    name: ITCMCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: RMW
+        bitOffset: 1
+        bitWidth: 1
+      - name: RETEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: SZ
+        bitOffset: 3
+        bitWidth: 4
+- register:
+    name: DTCMCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: RMW
+        bitOffset: 1
+        bitWidth: 1
+      - name: RETEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: SZ
+        bitOffset: 3
+        bitWidth: 4
+- register:
+    name: AHBPCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN
+        bitOffset: 0
+        bitWidth: 1
+      - name: SZ
+        bitOffset: 1
+        bitWidth: 3
+- register:
+    name: CACR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIWT
+        bitOffset: 0
+        bitWidth: 1
+      - name: ECCEN
+        bitOffset: 1
+        bitWidth: 1
+      - name: FORCEWT
+        bitOffset: 2
+        bitWidth: 1
+- register:
+    name: AHBSCR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CTL
+        bitOffset: 0
+        bitWidth: 2
+      - name: TPRI
+        bitOffset: 2
+        bitWidth: 9
+      - name: INITCOUNT
+        bitOffset: 11
+        bitWidth: 5
+- register:
+    name: ABFSR
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ITCM
+        bitOffset: 0
+        bitWidth: 1
+      - name: DTCM
+        bitOffset: 1
+        bitWidth: 1
+      - name: AHBP
+        bitOffset: 2
+        bitWidth: 1
+      - name: AXIM
+        bitOffset: 3
+        bitWidth: 1
+      - name: EPPB
+        bitOffset: 4
+        bitWidth: 1
+      - name: AXIMTYPE
+        bitOffset: 8
+        bitWidth: 2

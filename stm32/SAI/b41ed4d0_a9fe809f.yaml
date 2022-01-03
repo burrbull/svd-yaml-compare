@@ -1,0 +1,590 @@
+---
+- register:
+    name: GCR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SYNCIN
+        bitOffset: 0
+        bitWidth: 2
+      - name: SYNCOUT
+        bitOffset: 4
+        bitWidth: 2
+- cluster:
+    dim: 2
+    dimIncrement: 32
+    dimIndex:
+      - A
+      - B
+    name: CH%s
+    addressOffset: 4
+    children:
+      - register:
+          name: CR1
+          addressOffset: 0
+          size: 32
+          access: read-write
+          resetValue: 64
+          fields:
+            - name: MODE
+              bitOffset: 0
+              bitWidth: 2
+              enumeratedValues:
+                - name: MODE
+                  usage: read-write
+                  values:
+                    - name: MasterTx
+                      value: 0
+                    - name: MasterRx
+                      value: 1
+                    - name: SlaveTx
+                      value: 2
+                    - name: SlaveRx
+                      value: 3
+            - name: PRTCFG
+              bitOffset: 2
+              bitWidth: 2
+              enumeratedValues:
+                - name: PRTCFG
+                  usage: read-write
+                  values:
+                    - name: Free
+                      value: 0
+                    - name: Spdif
+                      value: 1
+                    - name: Ac97
+                      value: 2
+            - name: DS
+              bitOffset: 5
+              bitWidth: 3
+              enumeratedValues:
+                - name: DS
+                  usage: read-write
+                  values:
+                    - name: Bit8
+                      value: 2
+                    - name: Bit10
+                      value: 3
+                    - name: Bit16
+                      value: 4
+                    - name: Bit20
+                      value: 5
+                    - name: Bit24
+                      value: 6
+                    - name: Bit32
+                      value: 7
+            - name: LSBFIRST
+              bitOffset: 8
+              bitWidth: 1
+              enumeratedValues:
+                - name: LSBFIRST
+                  usage: read-write
+                  values:
+                    - name: MsbFirst
+                      value: 0
+                    - name: LsbFirst
+                      value: 1
+            - name: CKSTR
+              bitOffset: 9
+              bitWidth: 1
+              enumeratedValues:
+                - name: CKSTR
+                  usage: read-write
+                  values:
+                    - name: FallingEdge
+                      value: 0
+                    - name: RisingEdge
+                      value: 1
+            - name: SYNCEN
+              bitOffset: 10
+              bitWidth: 2
+              enumeratedValues:
+                - name: SYNCEN
+                  usage: read-write
+                  values:
+                    - name: Asynchronous
+                      value: 0
+                    - name: Internal
+                      value: 1
+                    - name: External
+                      value: 2
+            - name: MONO
+              bitOffset: 12
+              bitWidth: 1
+              enumeratedValues:
+                - name: MONO
+                  usage: read-write
+                  values:
+                    - name: Stereo
+                      value: 0
+                    - name: Mono
+                      value: 1
+            - name: OUTDRIV
+              bitOffset: 13
+              bitWidth: 1
+              enumeratedValues:
+                - name: OUTDRIV
+                  usage: read-write
+                  values:
+                    - name: OnStart
+                      value: 0
+                    - name: Immediately
+                      value: 1
+            - name: SAIEN
+              bitOffset: 16
+              bitWidth: 1
+              enumeratedValues:
+                - name: SAIEN
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: DMAEN
+              bitOffset: 17
+              bitWidth: 1
+              enumeratedValues:
+                - name: DMAEN
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: NODIV
+              bitOffset: 19
+              bitWidth: 1
+              enumeratedValues:
+                - name: NODIV
+                  usage: read-write
+                  values:
+                    - name: MasterClock
+                      value: 0
+                    - name: NoDiv
+                      value: 1
+            - name: MCKDIV
+              bitOffset: 20
+              bitWidth: 4
+      - register:
+          name: CR2
+          addressOffset: 4
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FTH
+              bitOffset: 0
+              bitWidth: 3
+              enumeratedValues:
+                - name: FTH
+                  usage: read-write
+                  values:
+                    - name: Empty
+                      value: 0
+                    - name: Quarter1
+                      value: 1
+                    - name: Quarter2
+                      value: 2
+                    - name: Quarter3
+                      value: 3
+                    - name: Full
+                      value: 4
+            - name: FFLUSH
+              bitOffset: 3
+              bitWidth: 1
+              enumeratedValues:
+                - name: FFLUSH
+                  usage: read-write
+                  values:
+                    - name: NoFlush
+                      value: 0
+                    - name: Flush
+                      value: 1
+            - name: TRIS
+              bitOffset: 4
+              bitWidth: 1
+            - name: MUTE
+              bitOffset: 5
+              bitWidth: 1
+              enumeratedValues:
+                - name: MUTE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: MUTEVAL
+              bitOffset: 6
+              bitWidth: 1
+              enumeratedValues:
+                - name: MUTEVAL
+                  usage: read-write
+                  values:
+                    - name: SendZero
+                      value: 0
+                    - name: SendLast
+                      value: 1
+            - name: MUTECN
+              bitOffset: 7
+              bitWidth: 6
+            - name: CPL
+              bitOffset: 13
+              bitWidth: 1
+              enumeratedValues:
+                - name: CPL
+                  usage: read-write
+                  values:
+                    - name: OnesComplement
+                      value: 0
+                    - name: TwosComplement
+                      value: 1
+            - name: COMP
+              bitOffset: 14
+              bitWidth: 2
+              enumeratedValues:
+                - name: COMP
+                  usage: read-write
+                  values:
+                    - name: NoCompanding
+                      value: 0
+                    - name: MuLaw
+                      value: 2
+                    - name: ALaw
+                      value: 3
+      - register:
+          name: FRCR
+          addressOffset: 8
+          size: 32
+          access: read-write
+          resetValue: 7
+          fields:
+            - name: FRL
+              bitOffset: 0
+              bitWidth: 8
+            - name: FSALL
+              bitOffset: 8
+              bitWidth: 7
+            - name: FSDEF
+              bitOffset: 16
+              bitWidth: 1
+            - name: FSPOL
+              bitOffset: 17
+              bitWidth: 1
+              enumeratedValues:
+                - name: FSPOL
+                  usage: read-write
+                  values:
+                    - name: FallingEdge
+                      value: 0
+                    - name: RisingEdge
+                      value: 1
+            - name: FSOFF
+              bitOffset: 18
+              bitWidth: 1
+              enumeratedValues:
+                - name: FSOFF
+                  usage: read-write
+                  values:
+                    - name: OnFirst
+                      value: 0
+                    - name: BeforeFirst
+                      value: 1
+      - register:
+          name: SLOTR
+          addressOffset: 12
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: FBOFF
+              bitOffset: 0
+              bitWidth: 5
+            - name: SLOTSZ
+              bitOffset: 6
+              bitWidth: 2
+              enumeratedValues:
+                - name: SLOTSZ
+                  usage: read-write
+                  values:
+                    - name: DataSize
+                      value: 0
+                    - name: Bit16
+                      value: 1
+                    - name: Bit32
+                      value: 2
+            - name: NBSLOT
+              bitOffset: 8
+              bitWidth: 4
+            - name: SLOTEN
+              bitOffset: 16
+              bitWidth: 16
+              enumeratedValues:
+                - name: SLOTEN
+                  usage: read-write
+                  values:
+                    - name: Inactive
+                      value: 0
+                    - name: Active
+                      value: 1
+      - register:
+          name: IM
+          addressOffset: 16
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: OVRUDRIE
+              bitOffset: 0
+              bitWidth: 1
+              enumeratedValues:
+                - name: OVRUDRIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: MUTEDETIE
+              bitOffset: 1
+              bitWidth: 1
+              enumeratedValues:
+                - name: MUTEDETIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: WCKCFGIE
+              bitOffset: 2
+              bitWidth: 1
+              enumeratedValues:
+                - name: WCKCFGIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: FREQIE
+              bitOffset: 3
+              bitWidth: 1
+              enumeratedValues:
+                - name: FREQIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: CNRDYIE
+              bitOffset: 4
+              bitWidth: 1
+              enumeratedValues:
+                - name: CNRDYIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: AFSDETIE
+              bitOffset: 5
+              bitWidth: 1
+              enumeratedValues:
+                - name: AFSDETIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: LFSDETIE
+              bitOffset: 6
+              bitWidth: 1
+              enumeratedValues:
+                - name: LFSDETIE
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+      - register:
+          name: SR
+          addressOffset: 20
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: OVRUDR
+              bitOffset: 0
+              bitWidth: 1
+              enumeratedValues:
+                - name: OVRUDRR
+                  usage: read
+                  values:
+                    - name: NoError
+                      value: 0
+                    - name: Overrun
+                      value: 1
+            - name: MUTEDET
+              bitOffset: 1
+              bitWidth: 1
+              enumeratedValues:
+                - name: MUTEDETR
+                  usage: read
+                  values:
+                    - name: NoMute
+                      value: 0
+                    - name: Mute
+                      value: 1
+            - name: WCKCFG
+              bitOffset: 2
+              bitWidth: 1
+              enumeratedValues:
+                - name: WCKCFGR
+                  usage: read
+                  values:
+                    - name: Correct
+                      value: 0
+                    - name: Wrong
+                      value: 1
+            - name: FREQ
+              bitOffset: 3
+              bitWidth: 1
+              enumeratedValues:
+                - name: FREQR
+                  usage: read
+                  values:
+                    - name: NoRequest
+                      value: 0
+                    - name: Request
+                      value: 1
+            - name: CNRDY
+              bitOffset: 4
+              bitWidth: 1
+              enumeratedValues:
+                - name: CNRDYR
+                  usage: read
+                  values:
+                    - name: Ready
+                      value: 0
+                    - name: NotReady
+                      value: 1
+            - name: AFSDET
+              bitOffset: 5
+              bitWidth: 1
+              enumeratedValues:
+                - name: AFSDETR
+                  usage: read
+                  values:
+                    - name: NoError
+                      value: 0
+                    - name: EarlySync
+                      value: 1
+            - name: LFSDET
+              bitOffset: 6
+              bitWidth: 1
+              enumeratedValues:
+                - name: LFSDETR
+                  usage: read
+                  values:
+                    - name: NoError
+                      value: 0
+                    - name: NoSync
+                      value: 1
+            - name: FLVL
+              bitOffset: 16
+              bitWidth: 3
+              enumeratedValues:
+                - name: FLVLR
+                  usage: read
+                  values:
+                    - name: Empty
+                      value: 0
+                    - name: Quarter1
+                      value: 1
+                    - name: Quarter2
+                      value: 2
+                    - name: Quarter3
+                      value: 3
+                    - name: Quarter4
+                      value: 4
+                    - name: Full
+                      value: 5
+      - register:
+          name: CLRFR
+          addressOffset: 24
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: COVRUDR
+              bitOffset: 0
+              bitWidth: 1
+              enumeratedValues:
+                - name: COVRUDRW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+            - name: CMUTEDET
+              bitOffset: 1
+              bitWidth: 1
+              enumeratedValues:
+                - name: CMUTEDETW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+            - name: CWCKCFG
+              bitOffset: 2
+              bitWidth: 1
+              enumeratedValues:
+                - name: CWCKCFGW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+            - name: CCNRDY
+              bitOffset: 4
+              bitWidth: 1
+              enumeratedValues:
+                - name: CCNRDYW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+            - name: CAFSDET
+              bitOffset: 5
+              bitWidth: 1
+              enumeratedValues:
+                - name: CAFSDETW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+            - name: CLFSDET
+              bitOffset: 6
+              bitWidth: 1
+              enumeratedValues:
+                - name: CLFSDETW
+                  usage: write
+                  values:
+                    - name: Clear
+                      value: 1
+      - register:
+          name: DR
+          addressOffset: 28
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DATA
+              bitOffset: 0
+              bitWidth: 32

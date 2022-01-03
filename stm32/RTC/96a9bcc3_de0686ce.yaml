@@ -1,0 +1,1301 @@
+---
+- register:
+    name: TR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SU
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ST
+        bitOffset: 4
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: MNU
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: MNT
+        bitOffset: 12
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: HU
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: HT
+        bitOffset: 20
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: PM
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: PM
+            usage: read-write
+            values:
+              - name: AM
+                value: 0
+              - name: PM
+                value: 1
+- register:
+    name: DR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 8449
+    fields:
+      - name: DU
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: DT
+        bitOffset: 4
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: MU
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: MT
+        bitOffset: 12
+        bitWidth: 1
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 1
+      - name: WDU
+        bitOffset: 13
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 7
+      - name: YU
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: YT
+        bitOffset: 20
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: SSR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: ICSR
+    addressOffset: 12
+    size: 32
+    resetValue: 7
+    fields:
+      - name: WUTWF
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: WUTWFR
+            usage: read
+            values:
+              - name: UpdateNotAllowed
+                value: 0
+              - name: UpdateAllowed
+                value: 1
+      - name: SHPF
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: SHPFR
+            usage: read
+            values:
+              - name: NoShiftPending
+                value: 0
+              - name: ShiftPending
+                value: 1
+      - name: INITS
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: INITSR
+            usage: read
+            values:
+              - name: NotInitalized
+                value: 0
+              - name: Initalized
+                value: 1
+      - name: RSF
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: RSFR
+            usage: read
+            values:
+              - name: NotSynced
+                value: 0
+              - name: Synced
+                value: 1
+          - name: RSFW
+            usage: write
+            values:
+              - name: Clear
+                value: 0
+      - name: INITF
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: INITFR
+            usage: read
+            values:
+              - name: NotAllowed
+                value: 0
+              - name: Allowed
+                value: 1
+      - name: INIT
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: INIT
+            usage: read-write
+            values:
+              - name: FreeRunningMode
+                value: 0
+              - name: InitMode
+                value: 1
+      - name: BIN
+        bitOffset: 8
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - name: BIN
+            usage: read-write
+            values:
+              - name: BCD
+                value: 0
+              - name: Binary
+                value: 1
+              - name: BinBCD
+                value: 2
+              - name: BinBCD2
+                value: 3
+      - name: BCDU
+        bitOffset: 10
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: BCDU
+            usage: read-write
+            values:
+              - name: Bit7
+                value: 0
+              - name: Bit8
+                value: 1
+              - name: Bit9
+                value: 2
+              - name: Bit10
+                value: 3
+              - name: Bit11
+                value: 4
+              - name: Bit12
+                value: 5
+              - name: Bit13
+                value: 6
+              - name: Bit14
+                value: 7
+      - name: RECALPF
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: RECALPFR
+            usage: read
+            values:
+              - name: Pending
+                value: 1
+- register:
+    name: PRER
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 8323327
+    fields:
+      - name: PREDIV_S
+        bitOffset: 0
+        bitWidth: 15
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 32767
+      - name: PREDIV_A
+        bitOffset: 16
+        bitWidth: 7
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: WUTR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 65535
+    fields:
+      - name: WUT
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+      - name: WUTOCLR
+        bitOffset: 16
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: CR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: WUCKSEL
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: WUCKSEL
+            usage: read-write
+            values:
+              - name: Div16
+                value: 0
+              - name: Div8
+                value: 1
+              - name: Div4
+                value: 2
+              - name: Div2
+                value: 3
+              - name: ClockSpare
+                value: 4
+              - name: ClockSpareWithOffset
+                value: 6
+      - name: TSEDGE
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TSEDGE
+            usage: read-write
+            values:
+              - name: RisingEdge
+                value: 0
+              - name: FallingEdge
+                value: 1
+      - name: REFCKON
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: REFCKON
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BYPSHAD
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: BYPSHAD
+            usage: read-write
+            values:
+              - name: ShadowReg
+                value: 0
+              - name: BypassShadowReg
+                value: 1
+      - name: FMT
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: FMT
+            usage: read-write
+            values:
+              - name: TwentyFourHour
+                value: 0
+              - name: AmPm
+                value: 1
+      - name: SSRUIE
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: SSRUIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ALRAE
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ALRAE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ALRBE
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ALRBE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WUTE
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: WUTE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSE
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TSE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ALRAIE
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ALRAIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ALRBIE
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ALRBIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WUTIE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: WUTIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSIE
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TSIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ADD1H
+        bitOffset: 16
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: ADD1HW
+            usage: write
+            values:
+              - name: Add1
+                value: 1
+      - name: SUB1H
+        bitOffset: 17
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: SUB1HW
+            usage: write
+            values:
+              - name: Sub1
+                value: 1
+      - name: BKP
+        bitOffset: 18
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: BKP
+            usage: read-write
+            values:
+              - name: DSTNotChanged
+                value: 0
+              - name: DSTChanged
+                value: 1
+      - name: COSEL
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COSEL
+            usage: read-write
+            values:
+              - name: CalFreq_512Hz
+                value: 0
+              - name: CalFreq_1Hz
+                value: 1
+      - name: POL
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: POL
+            usage: read-write
+            values:
+              - name: High
+                value: 0
+              - name: Low
+                value: 1
+      - name: OSEL
+        bitOffset: 21
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - name: OSEL
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: AlarmA
+                value: 1
+              - name: AlarmB
+                value: 2
+              - name: Wakeup
+                value: 3
+      - name: COE
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ITSE
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ITSE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TAMPTS
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TAMPTS
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TAMPOE
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TAMPOE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TAMPALRM_PU
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TAMPALRM_PU
+            usage: read-write
+            values:
+              - name: NoPullUp
+                value: 0
+              - name: PullUp
+                value: 1
+      - name: TAMPALRM_TYPE
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: TAMPALRM_TYPE
+            usage: read-write
+            values:
+              - name: PushPull
+                value: 0
+              - name: OpenDrain
+                value: 1
+      - name: OUT2EN
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: OUT2EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: WPR
+    addressOffset: 36
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: KEY
+            usage: read-write
+            values:
+              - name: Activate
+                value: 0
+              - name: Deactivate2
+                value: 83
+              - name: Deactivate1
+                value: 202
+- register:
+    name: CALR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CALM
+        bitOffset: 0
+        bitWidth: 9
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 511
+      - name: LPCAL
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: LPCAL
+            usage: read-write
+            values:
+              - name: RTCCLK
+                value: 0
+              - name: CkApre
+                value: 1
+      - name: CALW16
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: CALW16
+            usage: read-write
+            values:
+              - name: SixteenSeconds
+                value: 1
+      - name: CALW8
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: CALW8
+            usage: read-write
+            values:
+              - name: EightSeconds
+                value: 1
+      - name: CALP
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: CALP
+            usage: read-write
+            values:
+              - name: NoChange
+                value: 0
+              - name: IncreaseFreq
+                value: 1
+- register:
+    name: SHIFTR
+    addressOffset: 44
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: SUBFS
+        bitOffset: 0
+        bitWidth: 15
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 32767
+      - name: ADD1S
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADD1SW
+            usage: write
+            values:
+              - name: Add1
+                value: 1
+- register:
+    name: TSTR
+    addressOffset: 48
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SU
+        bitOffset: 0
+        bitWidth: 4
+      - name: ST
+        bitOffset: 4
+        bitWidth: 3
+      - name: MNU
+        bitOffset: 8
+        bitWidth: 4
+      - name: MNT
+        bitOffset: 12
+        bitWidth: 3
+      - name: HU
+        bitOffset: 16
+        bitWidth: 4
+      - name: HT
+        bitOffset: 20
+        bitWidth: 2
+      - name: PM
+        bitOffset: 22
+        bitWidth: 1
+- register:
+    name: TSDR
+    addressOffset: 52
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DU
+        bitOffset: 0
+        bitWidth: 4
+      - name: DT
+        bitOffset: 4
+        bitWidth: 2
+      - name: MU
+        bitOffset: 8
+        bitWidth: 4
+      - name: MT
+        bitOffset: 12
+        bitWidth: 1
+      - name: WDU
+        bitOffset: 13
+        bitWidth: 3
+- register:
+    name: TSSSR
+    addressOffset: 56
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: ALRMAR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SU
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ST
+        bitOffset: 4
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: MSK1
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: MSK1
+            usage: read-write
+            values:
+              - name: Mask
+                value: 0
+              - name: NotMask
+                value: 1
+      - name: MNU
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: MNT
+        bitOffset: 12
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: MSK2
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+      - name: HU
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: HT
+        bitOffset: 20
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: PM
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: PM
+            usage: read-write
+            values:
+              - name: AM
+                value: 0
+              - name: PM
+                value: 1
+      - name: MSK3
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+      - name: DU
+        bitOffset: 24
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: DT
+        bitOffset: 28
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: WDSEL
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: WDSEL
+            usage: read-write
+            values:
+              - name: DateUnits
+                value: 0
+              - name: WeekDay
+                value: 1
+      - name: MSK4
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+- register:
+    name: ALRMASSR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 15
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 32767
+      - name: MASKSS
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 63
+      - name: SSCLR
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSCLR
+            usage: read-write
+            values:
+              - name: FreeRunning
+                value: 0
+              - name: ALRMBINR
+                value: 1
+- register:
+    name: ALRMBR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SU
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ST
+        bitOffset: 4
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: MSK1
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: MSK1
+            usage: read-write
+            values:
+              - name: Mask
+                value: 0
+              - name: NotMask
+                value: 1
+      - name: MNU
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: MNT
+        bitOffset: 12
+        bitWidth: 3
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 7
+      - name: MSK2
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+      - name: HU
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: HT
+        bitOffset: 20
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: PM
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: PM
+            usage: read-write
+            values:
+              - name: AM
+                value: 0
+              - name: PM
+                value: 1
+      - name: MSK3
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+      - name: DU
+        bitOffset: 24
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: DT
+        bitOffset: 28
+        bitWidth: 2
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 3
+      - name: WDSEL
+        bitOffset: 30
+        bitWidth: 1
+        enumeratedValues:
+          - name: WDSEL
+            usage: read-write
+            values:
+              - name: DateUnits
+                value: 0
+              - name: WeekDay
+                value: 1
+      - name: MSK4
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: MSK1
+- register:
+    name: ALRMBSSR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 15
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 32767
+      - name: MASKSS
+        bitOffset: 24
+        bitWidth: 6
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 63
+      - name: SSCLR
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSCLR
+            usage: read-write
+            values:
+              - name: FreeRunning
+                value: 0
+              - name: ALRMBINR
+                value: 1
+- register:
+    name: SR
+    addressOffset: 80
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ALRAF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALRAF
+            usage: read-write
+            values:
+              - name: Match
+                value: 1
+      - name: ALRBF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALRBF
+            usage: read-write
+            values:
+              - name: Match
+                value: 1
+      - name: WUTF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: WUTF
+            usage: read-write
+            values:
+              - name: Zero
+                value: 1
+      - name: TSF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSF
+            usage: read-write
+            values:
+              - name: TimestampEvent
+                value: 1
+      - name: TSOVF
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSOVF
+            usage: read-write
+            values:
+              - name: Overflow
+                value: 1
+      - name: ITSF
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: ITSF
+            usage: read-write
+            values:
+              - name: TimestampEvent
+                value: 1
+      - name: SSRUF
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSRUF
+            usage: read-write
+            values:
+              - name: Underflow
+                value: 1
+- register:
+    name: MISR
+    addressOffset: 84
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ALRAMF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALRAMF
+            usage: read-write
+            values:
+              - name: Match
+                value: 1
+      - name: ALRBMF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALRBMF
+            usage: read-write
+            values:
+              - name: Match
+                value: 1
+      - name: WUTMF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: WUTMF
+            usage: read-write
+            values:
+              - name: Zero
+                value: 1
+      - name: TSMF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSMF
+            usage: read-write
+            values:
+              - name: TimestampEvent
+                value: 1
+      - name: TSOVMF
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSOVMF
+            usage: read-write
+            values:
+              - name: Overflow
+                value: 1
+      - name: ITSMF
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: ITSMF
+            usage: read-write
+            values:
+              - name: TimestampEvent
+                value: 1
+      - name: SSRUMF
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: SSRUMF
+            usage: read-write
+            values:
+              - name: Underflow
+                value: 1
+- register:
+    name: SCR
+    addressOffset: 92
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CALRAF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CALRAF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: CALRBF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+      - name: CWUTF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+      - name: CTSF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+      - name: CTSOVF
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+      - name: CITSF
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+      - name: CSSRUF
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: CALRAF
+- register:
+    name: ALRABINR
+    addressOffset: 112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: ALRBBINR
+    addressOffset: 116
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SS
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4294967295

@@ -1,0 +1,99 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 49152
+    fields:
+      - name: LPDS
+        bitOffset: 0
+        bitWidth: 1
+      - name: PDDS
+        bitOffset: 1
+        bitWidth: 1
+      - name: CWUF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CSBF
+        bitOffset: 3
+        bitWidth: 1
+      - name: PVDE
+        bitOffset: 4
+        bitWidth: 1
+      - name: PLS
+        bitOffset: 5
+        bitWidth: 3
+      - name: DBP
+        bitOffset: 8
+        bitWidth: 1
+      - name: FPDS
+        bitOffset: 9
+        bitWidth: 1
+      - name: LPLVDS
+        bitOffset: 10
+        bitWidth: 1
+      - name: MRLVDS
+        bitOffset: 11
+        bitWidth: 1
+      - name: ADCDC1
+        bitOffset: 13
+        bitWidth: 1
+      - name: VOS
+        bitOffset: 14
+        bitWidth: 2
+      - name: ODEN
+        bitOffset: 16
+        bitWidth: 1
+      - name: ODSWEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: UDEN
+        bitOffset: 18
+        bitWidth: 2
+- register:
+    name: CSR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: WUF
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: SBF
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+      - name: PVDO
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+      - name: BRR
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+      - name: EWUP
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: BRE
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: VOSRDY
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: ODRDY
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: ODSWRDY
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: UDRDY
+        bitOffset: 18
+        bitWidth: 2
+        access: read-write

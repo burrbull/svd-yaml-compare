@@ -1,0 +1,352 @@
+---
+- register:
+    name: CR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UE
+        bitOffset: 0
+        bitWidth: 1
+      - name: UESM
+        bitOffset: 1
+        bitWidth: 1
+      - name: RE
+        bitOffset: 2
+        bitWidth: 1
+      - name: TE
+        bitOffset: 3
+        bitWidth: 1
+      - name: IDLEIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: RXNEIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: TCIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXEIE
+        bitOffset: 7
+        bitWidth: 1
+      - name: PEIE
+        bitOffset: 8
+        bitWidth: 1
+      - name: PS
+        bitOffset: 9
+        bitWidth: 1
+      - name: PCE
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAKE
+        bitOffset: 11
+        bitWidth: 1
+      - name: M0
+        bitOffset: 12
+        bitWidth: 1
+      - name: MME
+        bitOffset: 13
+        bitWidth: 1
+      - name: CMIE
+        bitOffset: 14
+        bitWidth: 1
+      - name: DEDT
+        bitOffset: 16
+        bitWidth: 5
+      - name: DEAT
+        bitOffset: 21
+        bitWidth: 5
+      - name: M1
+        bitOffset: 28
+        bitWidth: 1
+      - name: FIFOEN
+        bitOffset: 29
+        bitWidth: 1
+      - name: TXFEIE
+        bitOffset: 30
+        bitWidth: 1
+      - name: RXFFIE
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADDM7
+        bitOffset: 4
+        bitWidth: 1
+      - name: STOP
+        bitOffset: 12
+        bitWidth: 2
+      - name: SWAP
+        bitOffset: 15
+        bitWidth: 1
+      - name: RXINV
+        bitOffset: 16
+        bitWidth: 1
+      - name: TXINV
+        bitOffset: 17
+        bitWidth: 1
+      - name: DATAINV
+        bitOffset: 18
+        bitWidth: 1
+      - name: MSBFIRST
+        bitOffset: 19
+        bitWidth: 1
+      - name: ADD
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: CR3
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: HDSEL
+        bitOffset: 3
+        bitWidth: 1
+      - name: DMAR
+        bitOffset: 6
+        bitWidth: 1
+      - name: DMAT
+        bitOffset: 7
+        bitWidth: 1
+      - name: RTSE
+        bitOffset: 8
+        bitWidth: 1
+      - name: CTSE
+        bitOffset: 9
+        bitWidth: 1
+      - name: CTSIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: OVRDIS
+        bitOffset: 12
+        bitWidth: 1
+      - name: DDRE
+        bitOffset: 13
+        bitWidth: 1
+      - name: DEM
+        bitOffset: 14
+        bitWidth: 1
+      - name: DEP
+        bitOffset: 15
+        bitWidth: 1
+      - name: WUS
+        bitOffset: 20
+        bitWidth: 2
+      - name: WUFIE
+        bitOffset: 22
+        bitWidth: 1
+      - name: TXFTIE
+        bitOffset: 23
+        bitWidth: 1
+      - name: RXFTCFG
+        bitOffset: 25
+        bitWidth: 3
+      - name: RXFTIE
+        bitOffset: 28
+        bitWidth: 1
+      - name: TXFTCFG
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: BRR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BRR
+        bitOffset: 0
+        bitWidth: 20
+- register:
+    name: GTPR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PSC
+        bitOffset: 0
+        bitWidth: 8
+      - name: GT
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: RTOR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RTO
+        bitOffset: 0
+        bitWidth: 24
+      - name: BLEN
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: RQR
+    addressOffset: 24
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: ABRRQ
+        bitOffset: 0
+        bitWidth: 1
+      - name: SBKRQ
+        bitOffset: 1
+        bitWidth: 1
+      - name: MMRQ
+        bitOffset: 2
+        bitWidth: 1
+      - name: RXFRQ
+        bitOffset: 3
+        bitWidth: 1
+      - name: TXFRQ
+        bitOffset: 4
+        bitWidth: 1
+- register:
+    name: ISR
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 192
+    fields:
+      - name: PE
+        bitOffset: 0
+        bitWidth: 1
+      - name: FE
+        bitOffset: 1
+        bitWidth: 1
+      - name: NE
+        bitOffset: 2
+        bitWidth: 1
+      - name: ORE
+        bitOffset: 3
+        bitWidth: 1
+      - name: IDLE
+        bitOffset: 4
+        bitWidth: 1
+      - name: RXNE
+        bitOffset: 5
+        bitWidth: 1
+      - name: TC
+        bitOffset: 6
+        bitWidth: 1
+      - name: TXE
+        bitOffset: 7
+        bitWidth: 1
+      - name: CTSIF
+        bitOffset: 9
+        bitWidth: 1
+      - name: CTS
+        bitOffset: 10
+        bitWidth: 1
+      - name: BUSY
+        bitOffset: 16
+        bitWidth: 1
+      - name: CMF
+        bitOffset: 17
+        bitWidth: 1
+      - name: SBKF
+        bitOffset: 18
+        bitWidth: 1
+      - name: RWU
+        bitOffset: 19
+        bitWidth: 1
+      - name: WUF
+        bitOffset: 20
+        bitWidth: 1
+      - name: TEACK
+        bitOffset: 21
+        bitWidth: 1
+      - name: REACK
+        bitOffset: 22
+        bitWidth: 1
+      - name: TXFE
+        bitOffset: 23
+        bitWidth: 1
+      - name: RXFF
+        bitOffset: 24
+        bitWidth: 1
+      - name: RXFT
+        bitOffset: 26
+        bitWidth: 1
+      - name: TXFT
+        bitOffset: 27
+        bitWidth: 1
+- register:
+    name: ICR
+    addressOffset: 32
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PECF
+        bitOffset: 0
+        bitWidth: 1
+      - name: FECF
+        bitOffset: 1
+        bitWidth: 1
+      - name: NCF
+        bitOffset: 2
+        bitWidth: 1
+      - name: ORECF
+        bitOffset: 3
+        bitWidth: 1
+      - name: IDLECF
+        bitOffset: 4
+        bitWidth: 1
+      - name: TCCF
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTSCF
+        bitOffset: 9
+        bitWidth: 1
+      - name: CMCF
+        bitOffset: 17
+        bitWidth: 1
+      - name: WUCF
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    name: RDR
+    addressOffset: 36
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDR
+        bitOffset: 0
+        bitWidth: 9
+- register:
+    name: TDR
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDR
+        bitOffset: 0
+        bitWidth: 9
+- register:
+    name: PRESC
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRESCALER
+        bitOffset: 0
+        bitWidth: 4

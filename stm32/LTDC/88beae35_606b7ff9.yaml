@@ -1,0 +1,766 @@
+---
+- register:
+    name: SSCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: VSH
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+      - name: HSW
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: BPCR
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AVBP
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+      - name: AHBP
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: AWCR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AAH
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+      - name: AAW
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: TWCR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TOTALH
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+      - name: TOTALW
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: GCR
+    addressOffset: 24
+    size: 32
+    resetValue: 8736
+    fields:
+      - name: LTDCEN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: LTDCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DBW
+        bitOffset: 4
+        bitWidth: 3
+        access: read-only
+      - name: DGW
+        bitOffset: 8
+        bitWidth: 3
+        access: read-only
+      - name: DRW
+        bitOffset: 12
+        bitWidth: 3
+        access: read-only
+      - name: DEN
+        bitOffset: 16
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: DEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PCPOL
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: PCPOL
+            usage: read-write
+            values:
+              - name: RisingEdge
+                value: 0
+              - name: FallingEdge
+                value: 1
+      - name: DEPOL
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: DEPOL
+            usage: read-write
+            values:
+              - name: ActiveLow
+                value: 0
+              - name: ActiveHigh
+                value: 1
+      - name: VSPOL
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: VSPOL
+            usage: read-write
+            values:
+              - name: ActiveLow
+                value: 0
+              - name: ActiveHigh
+                value: 1
+      - name: HSPOL
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: HSPOL
+            usage: read-write
+            values:
+              - name: ActiveLow
+                value: 0
+              - name: ActiveHigh
+                value: 1
+- register:
+    name: SRCR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IMR
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: IMR
+            usage: read-write
+            values:
+              - name: NoEffect
+                value: 0
+              - name: Reload
+                value: 1
+      - name: VBR
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: VBR
+            usage: read-write
+            values:
+              - name: NoEffect
+                value: 0
+              - name: Reload
+                value: 1
+- register:
+    name: BCCR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BCBLUE
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: BCGREEN
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: BCRED
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+- register:
+    name: IER
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: FUIE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: FUIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TERRIE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: TERRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RRIE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: RRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: ISR
+    addressOffset: 56
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: LIF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LIF
+            usage: read-write
+            values:
+              - name: NotReached
+                value: 0
+              - name: Reached
+                value: 1
+      - name: FUIF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: FUIF
+            usage: read-write
+            values:
+              - name: NoUnderrun
+                value: 0
+              - name: Underrun
+                value: 1
+      - name: TERRIF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: TERRIF
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+      - name: RRIF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: RRIF
+            usage: read-write
+            values:
+              - name: NoReload
+                value: 0
+              - name: Reload
+                value: 1
+- register:
+    name: ICR
+    addressOffset: 60
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CLIF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CLIF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: CFUIF
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: CFUIF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: CTERRIF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: CTERRIF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: CRRIF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: CRRIF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: LIPCR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LIPOS
+        bitOffset: 0
+        bitWidth: 11
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 2047
+- register:
+    name: CPSR
+    addressOffset: 68
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CYPOS
+        bitOffset: 0
+        bitWidth: 16
+      - name: CXPOS
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CDSR
+    addressOffset: 72
+    size: 32
+    access: read-only
+    resetValue: 15
+    fields:
+      - name: VDES
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: VDES
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+      - name: HDES
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: HDES
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+      - name: VSYNCS
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: VSYNCS
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+      - name: HSYNCS
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: HSYNCS
+            usage: read-write
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+- cluster:
+    dim: 2
+    dimIncrement: 128
+    dimIndex:
+      - "1"
+      - "2"
+    name: LAYER%s
+    addressOffset: 132
+    children:
+      - register:
+          name: CR
+          addressOffset: 0
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: LEN
+              bitOffset: 0
+              bitWidth: 1
+              enumeratedValues:
+                - name: LEN
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: COLKEN
+              bitOffset: 1
+              bitWidth: 1
+              enumeratedValues:
+                - name: COLKEN
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+            - name: CLUTEN
+              bitOffset: 4
+              bitWidth: 1
+              enumeratedValues:
+                - name: CLUTEN
+                  usage: read-write
+                  values:
+                    - name: Disabled
+                      value: 0
+                    - name: Enabled
+                      value: 1
+      - register:
+          name: WHPCR
+          addressOffset: 4
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: WHSTPOS
+              bitOffset: 0
+              bitWidth: 12
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 4095
+            - name: WHSPPOS
+              bitOffset: 16
+              bitWidth: 12
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 4095
+      - register:
+          name: WVPCR
+          addressOffset: 8
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: WVSTPOS
+              bitOffset: 0
+              bitWidth: 11
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 2047
+            - name: WVSPPOS
+              bitOffset: 16
+              bitWidth: 11
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 2047
+      - register:
+          name: CKCR
+          addressOffset: 12
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: CKBLUE
+              bitOffset: 0
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: CKGREEN
+              bitOffset: 8
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: CKRED
+              bitOffset: 16
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+      - register:
+          name: PFCR
+          addressOffset: 16
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: PF
+              bitOffset: 0
+              bitWidth: 3
+              enumeratedValues:
+                - name: PF
+                  usage: read-write
+                  values:
+                    - name: ARGB8888
+                      value: 0
+                    - name: RGB888
+                      value: 1
+                    - name: RGB565
+                      value: 2
+                    - name: ARGB1555
+                      value: 3
+                    - name: ARGB4444
+                      value: 4
+                    - name: L8
+                      value: 5
+                    - name: AL44
+                      value: 6
+                    - name: AL88
+                      value: 7
+      - register:
+          name: CACR
+          addressOffset: 20
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: CONSTA
+              bitOffset: 0
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+      - register:
+          name: DCCR
+          addressOffset: 24
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: DCBLUE
+              bitOffset: 0
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: DCGREEN
+              bitOffset: 8
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: DCRED
+              bitOffset: 16
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: DCALPHA
+              bitOffset: 24
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+      - register:
+          name: BFCR
+          addressOffset: 28
+          size: 32
+          access: read-write
+          resetValue: 1543
+          fields:
+            - name: BF2
+              bitOffset: 0
+              bitWidth: 3
+              enumeratedValues:
+                - name: BF2
+                  usage: read-write
+                  values:
+                    - name: Constant
+                      value: 5
+                    - name: Pixel
+                      value: 7
+            - name: BF1
+              bitOffset: 8
+              bitWidth: 3
+              enumeratedValues:
+                - name: BF1
+                  usage: read-write
+                  values:
+                    - name: Constant
+                      value: 4
+                    - name: Pixel
+                      value: 6
+      - register:
+          name: CFBAR
+          addressOffset: 40
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: CFBADD
+              bitOffset: 0
+              bitWidth: 32
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 4294967295
+      - register:
+          name: CFBLR
+          addressOffset: 44
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: CFBLL
+              bitOffset: 0
+              bitWidth: 13
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 8191
+            - name: CFBP
+              bitOffset: 16
+              bitWidth: 13
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 8191
+      - register:
+          name: CFBLNR
+          addressOffset: 48
+          size: 32
+          access: read-write
+          resetValue: 0
+          fields:
+            - name: CFBLNBR
+              bitOffset: 0
+              bitWidth: 11
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 2047
+      - register:
+          name: CLUTWR
+          addressOffset: 64
+          size: 32
+          access: write-only
+          resetValue: 0
+          fields:
+            - name: BLUE
+              bitOffset: 0
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: GREEN
+              bitOffset: 8
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: RED
+              bitOffset: 16
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255
+            - name: CLUTADD
+              bitOffset: 24
+              bitWidth: 8
+              writeConstraint:
+                range:
+                  minimum: 0
+                  maximum: 255

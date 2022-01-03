@@ -1,0 +1,283 @@
+---
+- register:
+    name: MEMRMP
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MEM_MODE
+        bitOffset: 0
+        bitWidth: 3
+      - name: QFS
+        bitOffset: 3
+        bitWidth: 1
+      - name: FB_MODE
+        bitOffset: 8
+        bitWidth: 1
+- register:
+    name: CFGR1
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 2080374785
+    fields:
+      - name: FWDIS
+        bitOffset: 0
+        bitWidth: 1
+      - name: BOOSTEN
+        bitOffset: 8
+        bitWidth: 1
+      - name: I2C_PB6_FMP
+        bitOffset: 16
+        bitWidth: 1
+      - name: I2C_PB7_FMP
+        bitOffset: 17
+        bitWidth: 1
+      - name: I2C_PB8_FMP
+        bitOffset: 18
+        bitWidth: 1
+      - name: I2C_PB9_FMP
+        bitOffset: 19
+        bitWidth: 1
+      - name: I2C1_FMP
+        bitOffset: 20
+        bitWidth: 1
+      - name: I2C2_FMP
+        bitOffset: 21
+        bitWidth: 1
+      - name: I2C3_FMP
+        bitOffset: 22
+        bitWidth: 1
+      - name: FPU_IE
+        bitOffset: 26
+        bitWidth: 6
+- register:
+    name: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 3
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 3
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 3
+- register:
+    name: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 3
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 3
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 3
+- register:
+    name: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 3
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 3
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 3
+- register:
+    name: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 3
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 3
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 3
+- register:
+    name: SCSR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: SRAM2ER
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: SRAM2BSY
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+- register:
+    name: CFGR2
+    addressOffset: 28
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CLL
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
+      - name: SPL
+        bitOffset: 1
+        bitWidth: 1
+        access: write-only
+      - name: PVDL
+        bitOffset: 2
+        bitWidth: 1
+        access: write-only
+      - name: ECCL
+        bitOffset: 3
+        bitWidth: 1
+        access: write-only
+      - name: SPF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+- register:
+    name: SWPR
+    addressOffset: 32
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: P0WP
+        bitOffset: 0
+        bitWidth: 1
+      - name: P1WP
+        bitOffset: 1
+        bitWidth: 1
+      - name: P2WP
+        bitOffset: 2
+        bitWidth: 1
+      - name: P3WP
+        bitOffset: 3
+        bitWidth: 1
+      - name: P4WP
+        bitOffset: 4
+        bitWidth: 1
+      - name: P5WP
+        bitOffset: 5
+        bitWidth: 1
+      - name: P6WP
+        bitOffset: 6
+        bitWidth: 1
+      - name: P7WP
+        bitOffset: 7
+        bitWidth: 1
+      - name: P8WP
+        bitOffset: 8
+        bitWidth: 1
+      - name: P9WP
+        bitOffset: 9
+        bitWidth: 1
+      - name: P10WP
+        bitOffset: 10
+        bitWidth: 1
+      - name: P11WP
+        bitOffset: 11
+        bitWidth: 1
+      - name: P12WP
+        bitOffset: 12
+        bitWidth: 1
+      - name: P13WP
+        bitOffset: 13
+        bitWidth: 1
+      - name: P14WP
+        bitOffset: 14
+        bitWidth: 1
+      - name: P15WP
+        bitOffset: 15
+        bitWidth: 1
+      - name: P16WP
+        bitOffset: 16
+        bitWidth: 1
+      - name: P17WP
+        bitOffset: 17
+        bitWidth: 1
+      - name: P18WP
+        bitOffset: 18
+        bitWidth: 1
+      - name: P19WP
+        bitOffset: 19
+        bitWidth: 1
+      - name: P20WP
+        bitOffset: 20
+        bitWidth: 1
+      - name: P21WP
+        bitOffset: 21
+        bitWidth: 1
+      - name: P22WP
+        bitOffset: 22
+        bitWidth: 1
+      - name: P23WP
+        bitOffset: 23
+        bitWidth: 1
+      - name: P24WP
+        bitOffset: 24
+        bitWidth: 1
+      - name: P25WP
+        bitOffset: 25
+        bitWidth: 1
+      - name: P26WP
+        bitOffset: 26
+        bitWidth: 1
+      - name: P27WP
+        bitOffset: 27
+        bitWidth: 1
+      - name: P28WP
+        bitOffset: 28
+        bitWidth: 1
+      - name: P29WP
+        bitOffset: 29
+        bitWidth: 1
+      - name: P30WP
+        bitOffset: 30
+        bitWidth: 1
+      - name: P31WP
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: SKR
+    addressOffset: 36
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: KEY
+        bitOffset: 0
+        bitWidth: 8

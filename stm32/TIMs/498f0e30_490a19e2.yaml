@@ -1,0 +1,626 @@
+---
+- register:
+    name: CR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: CEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: UDIS
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: UDIS
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: URS
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: URS
+            usage: read-write
+            values:
+              - name: AnyEvent
+                value: 0
+              - name: CounterOnly
+                value: 1
+      - name: OPM
+        bitOffset: 3
+        bitWidth: 1
+      - name: ARPE
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: ARPE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CKD
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKD
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 2
+      - name: UIFREMAP
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: CR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCPC
+        bitOffset: 0
+        bitWidth: 1
+      - name: CCUS
+        bitOffset: 2
+        bitWidth: 1
+      - name: CCDS
+        bitOffset: 3
+        bitWidth: 1
+      - name: MMS
+        bitOffset: 4
+        bitWidth: 3
+      - name: TI1S
+        bitOffset: 7
+        bitWidth: 1
+      - name: OIS1
+        bitOffset: 8
+        bitWidth: 1
+      - name: OIS1N
+        bitOffset: 9
+        bitWidth: 1
+      - name: OIS2
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: SMCR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMS
+        bitOffset: 0
+        bitWidth: 3
+      - name: TS_2_0
+        bitOffset: 4
+        bitWidth: 3
+      - name: MSM
+        bitOffset: 7
+        bitWidth: 1
+      - name: SMS_3
+        bitOffset: 16
+        bitWidth: 1
+      - name: TS_4_3
+        bitOffset: 20
+        bitWidth: 2
+- register:
+    name: DIER
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: UIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CC1IE
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2IE
+        bitOffset: 2
+        bitWidth: 1
+      - name: COMIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: TIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: BIE
+        bitOffset: 7
+        bitWidth: 1
+      - name: UDE
+        bitOffset: 8
+        bitWidth: 1
+      - name: CC1DE
+        bitOffset: 9
+        bitWidth: 1
+      - name: CC2DE
+        bitOffset: 10
+        bitWidth: 1
+      - name: COMDE
+        bitOffset: 13
+        bitWidth: 1
+      - name: TDE
+        bitOffset: 14
+        bitWidth: 1
+- register:
+    name: SR
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: UIF
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: UIF
+            usage: read-write
+            values:
+              - name: Clear
+                value: 0
+              - name: UpdatePending
+                value: 1
+      - name: CC1IF
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2IF
+        bitOffset: 2
+        bitWidth: 1
+      - name: COMIF
+        bitOffset: 5
+        bitWidth: 1
+      - name: TIF
+        bitOffset: 6
+        bitWidth: 1
+      - name: BIF
+        bitOffset: 7
+        bitWidth: 1
+      - name: CC1OF
+        bitOffset: 9
+        bitWidth: 1
+      - name: CC2OF
+        bitOffset: 10
+        bitWidth: 1
+- register:
+    name: EGR
+    addressOffset: 20
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: UG
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: UG
+            usage: read-write
+            values:
+              - name: Update
+                value: 1
+      - name: CC1G
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC2G
+        bitOffset: 2
+        bitWidth: 1
+      - name: COMG
+        bitOffset: 5
+        bitWidth: 1
+      - name: TG
+        bitOffset: 6
+        bitWidth: 1
+      - name: BG
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: CCMR1_Output
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1S
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: CC1S
+            usage: read-write
+            values:
+              - name: Output
+                value: 0
+      - name: OC1FE
+        bitOffset: 2
+        bitWidth: 1
+      - name: OC1PE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: OC1PE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OC1M
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - name: OC1M
+            usage: read-write
+            values:
+              - name: Frozen
+                value: 0
+              - name: ActiveOnMatch
+                value: 1
+              - name: InactiveOnMatch
+                value: 2
+              - name: Toggle
+                value: 3
+              - name: ForceInactive
+                value: 4
+              - name: ForceActive
+                value: 5
+              - name: PwmMode1
+                value: 6
+              - name: PwmMode2
+                value: 7
+      - name: CC2S
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: CC2S
+            usage: read-write
+            values:
+              - name: Output
+                value: 0
+      - name: OC2FE
+        bitOffset: 10
+        bitWidth: 1
+      - name: OC2PE
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: OC2PE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OC2M
+        bitOffset: 12
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: OC1M
+      - name: OC1M_3
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: OC1M_3
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: Extended
+                value: 1
+      - name: OC2M_3
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: OC1M_3
+- register:
+    name: CCMR1_Input
+    alternateRegister: CCMR1_Output
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1S
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: CC1S
+            usage: read-write
+            values:
+              - name: TI1
+                value: 1
+              - name: TI2
+                value: 2
+              - name: TRC
+                value: 3
+      - name: IC1PSC
+        bitOffset: 2
+        bitWidth: 2
+      - name: IC1F
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - name: IC1F
+            usage: read-write
+            values:
+              - name: NoFilter
+                value: 0
+              - name: FCK_INT_N2
+                value: 1
+              - name: FCK_INT_N4
+                value: 2
+              - name: FCK_INT_N8
+                value: 3
+              - name: FDTS_Div2_N6
+                value: 4
+              - name: FDTS_Div2_N8
+                value: 5
+              - name: FDTS_Div4_N6
+                value: 6
+              - name: FDTS_Div4_N8
+                value: 7
+              - name: FDTS_Div8_N6
+                value: 8
+              - name: FDTS_Div8_N8
+                value: 9
+              - name: FDTS_Div16_N5
+                value: 10
+              - name: FDTS_Div16_N6
+                value: 11
+              - name: FDTS_Div16_N8
+                value: 12
+              - name: FDTS_Div32_N5
+                value: 13
+              - name: FDTS_Div32_N6
+                value: 14
+              - name: FDTS_Div32_N8
+                value: 15
+      - name: CC2S
+        bitOffset: 8
+        bitWidth: 2
+        enumeratedValues:
+          - name: CC2S
+            usage: read-write
+            values:
+              - name: TI2
+                value: 1
+              - name: TI1
+                value: 2
+              - name: TRC
+                value: 3
+      - name: IC2PSC
+        bitOffset: 10
+        bitWidth: 2
+      - name: IC2F
+        bitOffset: 12
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: CCER
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CC1E
+        bitOffset: 0
+        bitWidth: 1
+      - name: CC1P
+        bitOffset: 1
+        bitWidth: 1
+      - name: CC1NE
+        bitOffset: 2
+        bitWidth: 1
+      - name: CC1NP
+        bitOffset: 3
+        bitWidth: 1
+      - name: CC2E
+        bitOffset: 4
+        bitWidth: 1
+      - name: CC2P
+        bitOffset: 5
+        bitWidth: 1
+      - name: CC2NP
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: CNT
+    addressOffset: 36
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CNT
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+      - name: UIFCPY
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: PSC
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PSC
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: ARR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ARR
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: RCR
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: REP
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    dim: 2
+    dimIncrement: 4
+    dimIndex:
+      - "1"
+      - "2"
+    name: CCR%s
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CCR
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: BDTR
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTG
+        bitOffset: 0
+        bitWidth: 8
+      - name: LOCK
+        bitOffset: 8
+        bitWidth: 2
+      - name: OSSI
+        bitOffset: 10
+        bitWidth: 1
+      - name: OSSR
+        bitOffset: 11
+        bitWidth: 1
+      - name: BKE
+        bitOffset: 12
+        bitWidth: 1
+      - name: BKP
+        bitOffset: 13
+        bitWidth: 1
+      - name: AOE
+        bitOffset: 14
+        bitWidth: 1
+      - name: MOE
+        bitOffset: 15
+        bitWidth: 1
+      - name: BKF
+        bitOffset: 16
+        bitWidth: 4
+- register:
+    name: DCR
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DBA
+        bitOffset: 0
+        bitWidth: 5
+      - name: DBL
+        bitOffset: 8
+        bitWidth: 5
+- register:
+    name: DMAR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAB
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: AF1
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKINE
+        bitOffset: 0
+        bitWidth: 1
+      - name: BKCMP1E
+        bitOffset: 1
+        bitWidth: 1
+      - name: BKCMP2E
+        bitOffset: 2
+        bitWidth: 1
+      - name: BKDF1BK0E
+        bitOffset: 8
+        bitWidth: 1
+      - name: BKINP
+        bitOffset: 9
+        bitWidth: 1
+      - name: BKCMP1P
+        bitOffset: 10
+        bitWidth: 1
+      - name: BKCMP2P
+        bitOffset: 11
+        bitWidth: 1
+- register:
+    name: TISEL
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TI1SEL
+        bitOffset: 0
+        bitWidth: 4
+      - name: TI2SEL
+        bitOffset: 8
+        bitWidth: 4

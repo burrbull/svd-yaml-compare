@@ -1,0 +1,1062 @@
+---
+- register:
+    name: ISR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDY
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADRDYR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+          - name: ADRDYW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOSMP
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSMPR
+            usage: read
+            values:
+              - name: NotAtEnd
+                value: 0
+              - name: AtEnd
+                value: 1
+          - name: EOSMPW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOC
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOCW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: EOS
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOSW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: OVR
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRR
+            usage: read
+            values:
+              - name: NoOverrun
+                value: 0
+              - name: Overrun
+                value: 1
+          - name: OVRW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: AWD1
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1R
+            usage: read
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+          - name: AWD1W
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: AWD2
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1R
+          - derived_from: AWD1W
+      - name: AWD3
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1R
+          - derived_from: AWD1W
+      - name: EOCAL
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCALR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: EOCALW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: CCRDY
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: CCRDYR
+            usage: read
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+          - name: CCRDYW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+- register:
+    name: IER
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADRDYIE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADRDYIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOSMPIE
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSMPIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOCIE
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EOSIE
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOSIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OVRIE
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD1IE
+        bitOffset: 7
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1IE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD2IE
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1IE
+      - name: AWD3IE
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: AWD1IE
+      - name: EOCALIE
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOCALIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CCRDYIE
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: CCRDYIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: CR
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADENR
+            usage: read
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+          - name: ADENW
+            usage: write
+            values:
+              - name: Enabled
+                value: 1
+      - name: ADDIS
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADDISR
+            usage: read
+            values:
+              - name: NotDisabling
+                value: 0
+              - name: Disabling
+                value: 1
+          - name: ADDISW
+            usage: write
+            values:
+              - name: Disable
+                value: 1
+      - name: ADSTART
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADSTARTR
+            usage: read
+            values:
+              - name: NotActive
+                value: 0
+              - name: Active
+                value: 1
+          - name: ADSTARTW
+            usage: write
+            values:
+              - name: StartConversion
+                value: 1
+      - name: ADSTP
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADSTPR
+            usage: read
+            values:
+              - name: NotStopping
+                value: 0
+              - name: Stopping
+                value: 1
+          - name: ADSTPW
+            usage: write
+            values:
+              - name: StopConversion
+                value: 1
+      - name: ADVREGEN
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADVREGEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ADCAL
+        bitOffset: 31
+        bitWidth: 1
+        enumeratedValues:
+          - name: ADCALR
+            usage: read
+            values:
+              - name: NotCalibrating
+                value: 0
+              - name: Calibrating
+                value: 1
+          - name: ADCALW
+            usage: write
+            values:
+              - name: StartCalibration
+                value: 1
+- register:
+    name: CFGR1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMACFG
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMACFG
+            usage: read-write
+            values:
+              - name: OneShot
+                value: 0
+              - name: Circular
+                value: 1
+      - name: SCANDIR
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: SCANDIR
+            usage: read-write
+            values:
+              - name: Upward
+                value: 0
+              - name: Backward
+                value: 1
+      - name: RES
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - name: RES
+            usage: read-write
+            values:
+              - name: Bits12
+                value: 0
+              - name: Bits10
+                value: 1
+              - name: Bits8
+                value: 2
+              - name: Bits6
+                value: 3
+      - name: ALIGN
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: ALIGN
+            usage: read-write
+            values:
+              - name: Right
+                value: 0
+              - name: Left
+                value: 1
+      - name: EXTSEL
+        bitOffset: 6
+        bitWidth: 3
+        enumeratedValues:
+          - name: EXTSEL
+            usage: read-write
+            values:
+              - name: TIM1_TRGO
+                value: 0
+              - name: TIM1_CC4
+                value: 1
+              - name: TIM2_TRGO
+                value: 2
+              - name: TIM2_CH4
+                value: 3
+              - name: TIM2_CH3
+                value: 5
+              - name: EXTI_LINE11
+                value: 7
+      - name: EXTEN
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - name: EXTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: OVRMOD
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVRMOD
+            usage: read-write
+            values:
+              - name: Preserve
+                value: 0
+              - name: Overwrite
+                value: 1
+      - name: CONT
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: CONT
+            usage: read-write
+            values:
+              - name: Single
+                value: 0
+              - name: Continuous
+                value: 1
+      - name: WAIT
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAIT
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AUTOFF
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: AUTOFF
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DISCEN
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: DISCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CHSELRMOD
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - name: CHSELRMOD
+            usage: read-write
+            values:
+              - name: BitPerInput
+                value: 0
+              - name: Sequence
+                value: 1
+      - name: AWD1SGL
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1SGL
+            usage: read-write
+            values:
+              - name: AllChannels
+                value: 0
+              - name: SingleChannel
+                value: 1
+      - name: AWD1EN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: AWD1CH
+        bitOffset: 26
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 17
+- register:
+    name: CFGR2
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: OVSE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVSE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: OVSR
+        bitOffset: 2
+        bitWidth: 3
+        enumeratedValues:
+          - name: OVSR
+            usage: read-write
+            values:
+              - name: Mul2
+                value: 0
+              - name: Mul4
+                value: 1
+              - name: Mul8
+                value: 2
+              - name: Mul16
+                value: 3
+              - name: Mul32
+                value: 4
+              - name: Mul64
+                value: 5
+              - name: Mul128
+                value: 6
+              - name: Mul256
+                value: 7
+      - name: OVSS
+        bitOffset: 5
+        bitWidth: 4
+        enumeratedValues:
+          - name: OVSS
+            usage: read-write
+            values:
+              - name: NoShift
+                value: 0
+              - name: Shift1
+                value: 1
+              - name: Shift2
+                value: 2
+              - name: Shift3
+                value: 3
+              - name: Shift4
+                value: 4
+              - name: Shift5
+                value: 5
+              - name: Shift6
+                value: 6
+              - name: Shift7
+                value: 7
+              - name: Shift8
+                value: 8
+      - name: TOVS
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: TOVS
+            usage: read-write
+            values:
+              - name: TriggerAll
+                value: 0
+              - name: TriggerEach
+                value: 1
+      - name: LFTRIG
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - name: LFTRIG
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CKMODE
+        bitOffset: 30
+        bitWidth: 2
+        enumeratedValues:
+          - name: CKMODE
+            usage: read-write
+            values:
+              - name: ADCLK
+                value: 0
+              - name: PCLK_Div2
+                value: 1
+              - name: PCLK_Div4
+                value: 2
+              - name: PCLK
+                value: 3
+- register:
+    name: SMPR
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SMP1
+        bitOffset: 0
+        bitWidth: 3
+        enumeratedValues:
+          - name: SMP1
+            usage: read-write
+            values:
+              - name: Cycles1_5
+                value: 0
+              - name: Cycles3_5
+                value: 1
+              - name: Cycles7_5
+                value: 2
+              - name: Cycles12_5
+                value: 3
+              - name: Cycles19_5
+                value: 4
+              - name: Cycles39_5
+                value: 5
+              - name: Cycles79_5
+                value: 6
+              - name: Cycles160_5
+                value: 7
+      - name: SMP2
+        bitOffset: 4
+        bitWidth: 3
+        enumeratedValues:
+          - derived_from: SMP1
+      - name: SMPSEL0
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: SMPSEL0
+            usage: read-write
+            values:
+              - name: Smp1
+                value: 0
+              - name: Smp2
+                value: 1
+      - name: SMPSEL1
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL2
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL3
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL4
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL5
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL6
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL7
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL8
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL9
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL10
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL11
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL12
+        bitOffset: 20
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL13
+        bitOffset: 21
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL14
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL15
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL16
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+      - name: SMPSEL17
+        bitOffset: 25
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SMPSEL0
+- register:
+    name: AWD1TR
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LT1
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+      - name: HT1
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: AWD2TR
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: LT2
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+      - name: HT2
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: CHSELR0
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CHSEL
+        bitOffset: 0
+        bitWidth: 18
+        enumeratedValues:
+          - name: CHSEL
+            usage: read-write
+            values:
+              - name: NotSelected
+                value: 0
+              - name: Selected
+                value: 1
+- register:
+    name: CHSELR1
+    alternateRegister: CHSELR0
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SQ1
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: SQ1
+            usage: read-write
+            values:
+              - name: Ch0
+                value: 0
+              - name: Ch1
+                value: 1
+              - name: Ch2
+                value: 2
+              - name: Ch3
+                value: 3
+              - name: Ch4
+                value: 4
+              - name: Ch5
+                value: 5
+              - name: Ch6
+                value: 6
+              - name: Ch7
+                value: 7
+              - name: Ch8
+                value: 8
+              - name: Ch9
+                value: 9
+              - name: Ch10
+                value: 10
+              - name: Ch11
+                value: 11
+              - name: Ch12
+                value: 12
+              - name: Ch13
+                value: 13
+              - name: Ch14
+                value: 14
+              - name: EOS
+                value: 15
+      - name: SQ2
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ3
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ4
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ5
+        bitOffset: 16
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ6
+        bitOffset: 20
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ7
+        bitOffset: 24
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+      - name: SQ8
+        bitOffset: 28
+        bitWidth: 4
+        enumeratedValues:
+          - derived_from: SQ1
+- register:
+    name: AWD3TR
+    addressOffset: 44
+    size: 32
+    access: read-write
+    resetValue: 268369920
+    fields:
+      - name: LT3
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+      - name: HT3
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DR
+    addressOffset: 64
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DATA
+        bitOffset: 0
+        bitWidth: 16
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 65535
+- register:
+    name: AWD2CR
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD2CH
+        bitOffset: 0
+        bitWidth: 18
+- register:
+    name: AWD3CR
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: AWD3CH
+        bitOffset: 0
+        bitWidth: 18
+- register:
+    name: CALFACT
+    addressOffset: 180
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CALFACT
+        bitOffset: 0
+        bitWidth: 7
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 127
+- register:
+    name: CCR
+    addressOffset: 776
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PRESC
+        bitOffset: 18
+        bitWidth: 4
+        enumeratedValues:
+          - name: PRESC
+            usage: read-write
+            values:
+              - name: Div1
+                value: 0
+              - name: Div2
+                value: 1
+              - name: Div4
+                value: 2
+              - name: Div6
+                value: 3
+              - name: Div8
+                value: 4
+              - name: Div10
+                value: 5
+              - name: Div12
+                value: 6
+              - name: Div16
+                value: 7
+              - name: Div32
+                value: 8
+              - name: Div64
+                value: 9
+              - name: Div128
+                value: 10
+              - name: Div256
+                value: 11
+      - name: VREFEN
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: VREFEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSEN
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: VBATEN
+        bitOffset: 24
+        bitWidth: 1
+        enumeratedValues:
+          - name: VBATEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1

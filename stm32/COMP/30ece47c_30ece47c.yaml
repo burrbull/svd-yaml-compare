@@ -1,0 +1,113 @@
+---
+- register:
+    name: COMP1_CSR
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP1_EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: COMP1_PWRMODE
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+      - name: COMP1_INMSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: COMP1_INPSEL
+        bitOffset: 7
+        bitWidth: 2
+        access: read-write
+      - name: COMP1_POLARITY
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: COMP1_HYST
+        bitOffset: 16
+        bitWidth: 2
+        access: read-write
+      - name: COMP1_BLANKING
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+      - name: COMP1_BRGEN
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      - name: COMP1_SCALEN
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      - name: COMP1_INMESEL
+        bitOffset: 25
+        bitWidth: 2
+        access: read-write
+      - name: COMP1_VALUE
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: COMP1_LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: write-only
+- register:
+    name: COMP2_CSR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP2_EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: COMP2_PWRMODE
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+      - name: COMP2_INMSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      - name: COMP2_INPSEL
+        bitOffset: 7
+        bitWidth: 2
+        access: read-write
+      - name: COMP2_WINMODE
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: COMP2_POLARITY
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: COMP2_HYST
+        bitOffset: 16
+        bitWidth: 2
+        access: read-write
+      - name: COMP2_BLANKING
+        bitOffset: 18
+        bitWidth: 3
+        access: read-write
+      - name: COMP2_BRGEN
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      - name: COMP2_SCALEN
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      - name: COMP2_INMESEL
+        bitOffset: 25
+        bitWidth: 2
+        access: read-write
+      - name: COMP2_VALUE
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: COMP2_LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: write-only

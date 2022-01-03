@@ -1,0 +1,1880 @@
+---
+- register:
+    name: CHCFG0R1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG0R2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD0R
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT0R
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN0R
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG1R1
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG1R2
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD1R
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT1R
+    addressOffset: 44
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN1R
+    addressOffset: 48
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG2R1
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG2R2
+    addressOffset: 68
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD2R
+    addressOffset: 72
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT2R
+    addressOffset: 76
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN2R
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG3R1
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG3R2
+    addressOffset: 100
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD3R
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT3R
+    addressOffset: 108
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN3R
+    addressOffset: 112
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG4R1
+    addressOffset: 128
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG4R2
+    addressOffset: 132
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD4R
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT4R
+    addressOffset: 140
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN4R
+    addressOffset: 144
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG5R1
+    addressOffset: 160
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG5R2
+    addressOffset: 164
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD5R
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT5R
+    addressOffset: 172
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN5R
+    addressOffset: 176
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG6R1
+    addressOffset: 192
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG6R2
+    addressOffset: 196
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD6R
+    addressOffset: 200
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT6R
+    addressOffset: 204
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN6R
+    addressOffset: 208
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: CHCFG7R1
+    addressOffset: 224
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SITP
+        bitOffset: 0
+        bitWidth: 2
+      - name: SPICKSEL
+        bitOffset: 2
+        bitWidth: 2
+      - name: SCDEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABEN
+        bitOffset: 6
+        bitWidth: 1
+      - name: CHEN
+        bitOffset: 7
+        bitWidth: 1
+      - name: CHINSEL
+        bitOffset: 8
+        bitWidth: 1
+      - name: DATMPX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DATPACK
+        bitOffset: 14
+        bitWidth: 2
+      - name: CKOUTDIV
+        bitOffset: 16
+        bitWidth: 8
+      - name: CKOUTSRC
+        bitOffset: 30
+        bitWidth: 1
+      - name: DFSDMEN
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: CHCFG7R2
+    addressOffset: 228
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DTRBS
+        bitOffset: 3
+        bitWidth: 5
+      - name: OFFSET
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: AWSCD7R
+    addressOffset: 232
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SCDT
+        bitOffset: 0
+        bitWidth: 8
+      - name: BKSCD
+        bitOffset: 12
+        bitWidth: 4
+      - name: AWFOSR
+        bitOffset: 16
+        bitWidth: 5
+      - name: AWFORD
+        bitOffset: 22
+        bitWidth: 2
+- register:
+    name: CHWDAT7R
+    addressOffset: 236
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: WDATA
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: CHDATIN7R
+    addressOffset: 240
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: INDAT0
+        bitOffset: 0
+        bitWidth: 16
+      - name: INDAT1
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: DFSDM0_CR1
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DFEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: JSWSTART
+        bitOffset: 1
+        bitWidth: 1
+      - name: JSYNC
+        bitOffset: 3
+        bitWidth: 1
+      - name: JSCAN
+        bitOffset: 4
+        bitWidth: 1
+      - name: JDMAEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 8
+        bitWidth: 5
+      - name: JEXTEN
+        bitOffset: 13
+        bitWidth: 2
+      - name: RSWSTART
+        bitOffset: 17
+        bitWidth: 1
+      - name: RCONT
+        bitOffset: 18
+        bitWidth: 1
+      - name: RSYNC
+        bitOffset: 19
+        bitWidth: 1
+      - name: RDMAEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: RCH
+        bitOffset: 24
+        bitWidth: 3
+      - name: FAST
+        bitOffset: 29
+        bitWidth: 1
+      - name: AWFSEL
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: DFSDM0_CR2
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JEOCIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: SCDIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: EXCH
+        bitOffset: 8
+        bitWidth: 8
+      - name: AWDCH
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: DFSDM0_ISR
+    addressOffset: 264
+    size: 32
+    access: read-only
+    resetValue: 16711680
+    fields:
+      - name: JEOCF
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDF
+        bitOffset: 4
+        bitWidth: 1
+      - name: JCIP
+        bitOffset: 13
+        bitWidth: 1
+      - name: RCIP
+        bitOffset: 14
+        bitWidth: 1
+      - name: CKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: SCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM0_ICR
+    addressOffset: 268
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRJOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CLRROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CLRCKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: CLRSCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM0_JCHGR
+    addressOffset: 272
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: JCHG
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DFSDM0_FCR
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOSR
+        bitOffset: 0
+        bitWidth: 8
+      - name: FOSR
+        bitOffset: 16
+        bitWidth: 10
+      - name: FORD
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: DFSDM0_JDATAR
+    addressOffset: 280
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: JDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_RDATAR
+    addressOffset: 284
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: RPEND
+        bitOffset: 4
+        bitWidth: 1
+      - name: RDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_AWHTR
+    addressOffset: 288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWH
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWHT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_AWLTR
+    addressOffset: 292
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWL
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWLT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_AWSR
+    addressOffset: 296
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: AWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM0_AWCFR
+    addressOffset: 300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRAWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: CLRAWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM0_EXMAX
+    addressOffset: 304
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXMAXCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMAX
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_EXMIN
+    addressOffset: 308
+    size: 32
+    access: read-only
+    resetValue: 2147483392
+    fields:
+      - name: EXMINCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMIN
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM0_CNVTIMR
+    addressOffset: 312
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CNVCNT
+        bitOffset: 4
+        bitWidth: 28
+- register:
+    name: DFSDM1_CR1
+    addressOffset: 384
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DFEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: JSWSTART
+        bitOffset: 1
+        bitWidth: 1
+      - name: JSYNC
+        bitOffset: 3
+        bitWidth: 1
+      - name: JSCAN
+        bitOffset: 4
+        bitWidth: 1
+      - name: JDMAEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 8
+        bitWidth: 5
+      - name: JEXTEN
+        bitOffset: 13
+        bitWidth: 2
+      - name: RSWSTART
+        bitOffset: 17
+        bitWidth: 1
+      - name: RCONT
+        bitOffset: 18
+        bitWidth: 1
+      - name: RSYNC
+        bitOffset: 19
+        bitWidth: 1
+      - name: RDMAEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: RCH
+        bitOffset: 24
+        bitWidth: 3
+      - name: FAST
+        bitOffset: 29
+        bitWidth: 1
+      - name: AWFSEL
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: DFSDM1_CR2
+    addressOffset: 388
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JEOCIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: SCDIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: EXCH
+        bitOffset: 8
+        bitWidth: 8
+      - name: AWDCH
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: DFSDM1_ISR
+    addressOffset: 392
+    size: 32
+    access: read-only
+    resetValue: 16711680
+    fields:
+      - name: JEOCF
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDF
+        bitOffset: 4
+        bitWidth: 1
+      - name: JCIP
+        bitOffset: 13
+        bitWidth: 1
+      - name: RCIP
+        bitOffset: 14
+        bitWidth: 1
+      - name: CKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: SCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM1_ICR
+    addressOffset: 396
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRJOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CLRROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CLRCKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: CLRSCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM1_JCHGR
+    addressOffset: 400
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: JCHG
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DFSDM1_FCR
+    addressOffset: 404
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOSR
+        bitOffset: 0
+        bitWidth: 8
+      - name: FOSR
+        bitOffset: 16
+        bitWidth: 10
+      - name: FORD
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: DFSDM1_JDATAR
+    addressOffset: 408
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: JDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_RDATAR
+    alternateRegister: DFSDM1_JDATAR
+    addressOffset: 408
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: RPEND
+        bitOffset: 4
+        bitWidth: 1
+      - name: RDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_AWHTR
+    addressOffset: 416
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWH
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWHT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_AWLTR
+    addressOffset: 420
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWL
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWLT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_AWSR
+    addressOffset: 424
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: AWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM1_AWCFR
+    addressOffset: 428
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRAWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: CLRAWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM1_EXMAX
+    addressOffset: 432
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXMAXCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMAX
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_EXMIN
+    addressOffset: 436
+    size: 32
+    access: read-only
+    resetValue: 2147483392
+    fields:
+      - name: EXMINCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMIN
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM1_CNVTIMR
+    addressOffset: 440
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CNVCNT
+        bitOffset: 4
+        bitWidth: 28
+- register:
+    name: DFSDM2_CR1
+    addressOffset: 512
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DFEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: JSWSTART
+        bitOffset: 1
+        bitWidth: 1
+      - name: JSYNC
+        bitOffset: 3
+        bitWidth: 1
+      - name: JSCAN
+        bitOffset: 4
+        bitWidth: 1
+      - name: JDMAEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 8
+        bitWidth: 5
+      - name: JEXTEN
+        bitOffset: 13
+        bitWidth: 2
+      - name: RSWSTART
+        bitOffset: 17
+        bitWidth: 1
+      - name: RCONT
+        bitOffset: 18
+        bitWidth: 1
+      - name: RSYNC
+        bitOffset: 19
+        bitWidth: 1
+      - name: RDMAEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: RCH
+        bitOffset: 24
+        bitWidth: 3
+      - name: FAST
+        bitOffset: 29
+        bitWidth: 1
+      - name: AWFSEL
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: DFSDM2_CR2
+    addressOffset: 516
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JEOCIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: SCDIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: EXCH
+        bitOffset: 8
+        bitWidth: 8
+      - name: AWDCH
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: DFSDM2_ISR
+    addressOffset: 520
+    size: 32
+    access: read-only
+    resetValue: 16711680
+    fields:
+      - name: JEOCF
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDF
+        bitOffset: 4
+        bitWidth: 1
+      - name: JCIP
+        bitOffset: 13
+        bitWidth: 1
+      - name: RCIP
+        bitOffset: 14
+        bitWidth: 1
+      - name: CKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: SCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM2_ICR
+    addressOffset: 524
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRJOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CLRROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CLRCKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: CLRSCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM2_JCHGR
+    addressOffset: 528
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: JCHG
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DFSDM2_FCR
+    addressOffset: 532
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOSR
+        bitOffset: 0
+        bitWidth: 8
+      - name: FOSR
+        bitOffset: 16
+        bitWidth: 10
+      - name: FORD
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: DFSDM2_JDATAR
+    addressOffset: 536
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: JDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_RDATAR
+    alternateRegister: DFSDM2_JDATAR
+    addressOffset: 536
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: RPEND
+        bitOffset: 4
+        bitWidth: 1
+      - name: RDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_AWHTR
+    addressOffset: 544
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWH
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWHT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_AWLTR
+    addressOffset: 548
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWL
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWLT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_AWSR
+    addressOffset: 552
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: AWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM2_AWCFR
+    addressOffset: 556
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRAWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: CLRAWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM2_EXMAX
+    addressOffset: 560
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXMAXCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMAX
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_EXMIN
+    addressOffset: 564
+    size: 32
+    access: read-only
+    resetValue: 2147483392
+    fields:
+      - name: EXMINCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMIN
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM2_CNVTIMR
+    addressOffset: 568
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CNVCNT
+        bitOffset: 4
+        bitWidth: 28
+- register:
+    name: DFSDM3_AWHTR
+    addressOffset: 672
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWH
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWHT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_AWLTR
+    addressOffset: 676
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BKAWL
+        bitOffset: 0
+        bitWidth: 4
+      - name: AWLT
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_AWSR
+    addressOffset: 680
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: AWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM3_AWCFR
+    addressOffset: 684
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRAWLTF
+        bitOffset: 0
+        bitWidth: 8
+      - name: CLRAWHTF
+        bitOffset: 8
+        bitWidth: 8
+- register:
+    name: DFSDM3_EXMAX
+    addressOffset: 688
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EXMAXCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMAX
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_EXMIN
+    addressOffset: 692
+    size: 32
+    access: read-only
+    resetValue: 2147483392
+    fields:
+      - name: EXMINCH
+        bitOffset: 0
+        bitWidth: 3
+      - name: EXMIN
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_CNVTIMR
+    addressOffset: 696
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CNVCNT
+        bitOffset: 4
+        bitWidth: 28
+- register:
+    name: DFSDM3_JCHGR
+    addressOffset: 784
+    size: 32
+    access: read-write
+    resetValue: 1
+    fields:
+      - name: JCHG
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DFSDM3_FCR
+    addressOffset: 788
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: IOSR
+        bitOffset: 0
+        bitWidth: 8
+      - name: FOSR
+        bitOffset: 16
+        bitWidth: 10
+      - name: FORD
+        bitOffset: 29
+        bitWidth: 3
+- register:
+    name: DFSDM3_JDATAR
+    addressOffset: 792
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: JDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: JDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_RDATAR
+    alternateRegister: DFSDM3_JDATAR
+    addressOffset: 792
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RDATACH
+        bitOffset: 0
+        bitWidth: 3
+      - name: RPEND
+        bitOffset: 4
+        bitWidth: 1
+      - name: RDATA
+        bitOffset: 8
+        bitWidth: 24
+- register:
+    name: DFSDM3_CR1
+    addressOffset: 896
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DFEN
+        bitOffset: 0
+        bitWidth: 1
+      - name: JSWSTART
+        bitOffset: 1
+        bitWidth: 1
+      - name: JSYNC
+        bitOffset: 3
+        bitWidth: 1
+      - name: JSCAN
+        bitOffset: 4
+        bitWidth: 1
+      - name: JDMAEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: JEXTSEL
+        bitOffset: 8
+        bitWidth: 5
+      - name: JEXTEN
+        bitOffset: 13
+        bitWidth: 2
+      - name: RSWSTART
+        bitOffset: 17
+        bitWidth: 1
+      - name: RCONT
+        bitOffset: 18
+        bitWidth: 1
+      - name: RSYNC
+        bitOffset: 19
+        bitWidth: 1
+      - name: RDMAEN
+        bitOffset: 21
+        bitWidth: 1
+      - name: RCH
+        bitOffset: 24
+        bitWidth: 3
+      - name: FAST
+        bitOffset: 29
+        bitWidth: 1
+      - name: AWFSEL
+        bitOffset: 30
+        bitWidth: 1
+- register:
+    name: DFSDM3_CR2
+    addressOffset: 900
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: JEOCIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: SCDIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: CKABIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: EXCH
+        bitOffset: 8
+        bitWidth: 8
+      - name: AWDCH
+        bitOffset: 16
+        bitWidth: 8
+- register:
+    name: DFSDM3_ISR
+    addressOffset: 904
+    size: 32
+    access: read-only
+    resetValue: 16711680
+    fields:
+      - name: JEOCF
+        bitOffset: 0
+        bitWidth: 1
+      - name: REOCF
+        bitOffset: 1
+        bitWidth: 1
+      - name: JOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: ROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: AWDF
+        bitOffset: 4
+        bitWidth: 1
+      - name: JCIP
+        bitOffset: 13
+        bitWidth: 1
+      - name: RCIP
+        bitOffset: 14
+        bitWidth: 1
+      - name: CKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: SCDF
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    name: DFSDM3_ICR
+    addressOffset: 908
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: CLRJOVRF
+        bitOffset: 2
+        bitWidth: 1
+      - name: CLRROVRF
+        bitOffset: 3
+        bitWidth: 1
+      - name: CLRCKABF
+        bitOffset: 16
+        bitWidth: 8
+      - name: CLRSCDF
+        bitOffset: 24
+        bitWidth: 8

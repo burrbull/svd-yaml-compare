@@ -1,0 +1,1275 @@
+---
+- register:
+    name: BCR1
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MBKEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: MUXEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - name: MTYP
+            usage: read-write
+            values:
+              - name: SRAM
+                value: 0
+              - name: PSRAM
+                value: 1
+              - name: Flash
+                value: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: MWID
+            usage: read-write
+            values:
+              - name: Bits8
+                value: 0
+              - name: Bits16
+                value: 1
+              - name: Bits32
+                value: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: FACCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: BURSTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITPOL
+            usage: read-write
+            values:
+              - name: ActiveLow
+                value: 0
+              - name: ActiveHigh
+                value: 1
+      - name: WRAPMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITCFG
+            usage: read-write
+            values:
+              - name: BeforeWaitState
+                value: 0
+              - name: DuringWaitState
+                value: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: WREN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTMOD
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: ASYNCWAIT
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CPSIZE
+        bitOffset: 16
+        bitWidth: 3
+        enumeratedValues:
+          - name: CPSIZE
+            usage: read-write
+            values:
+              - name: NoBurstSplit
+                value: 0
+              - name: Bytes128
+                value: 1
+              - name: Bytes256
+                value: 2
+              - name: Bytes512
+                value: 3
+              - name: Bytes1024
+                value: 4
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: CBURSTRW
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CCLKEN
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    dim: 4
+    dimIncrement: 8
+    dimIndex:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    name: BTR%s
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 4294967295
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 15
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 255
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 15
+      - name: DATLAT
+        bitOffset: 24
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - name: ACCMOD
+            usage: read-write
+            values:
+              - name: A
+                value: 0
+              - name: B
+                value: 1
+              - name: C
+                value: 2
+              - name: D
+                value: 3
+- register:
+    dim: 3
+    dimIncrement: 8
+    dimIndex:
+      - "2"
+      - "3"
+      - "4"
+    name: BCR%s
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 12496
+    fields:
+      - name: MBKEN
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: MBKEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MUXEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: MUXEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: MTYP
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - name: MTYP
+            usage: read-write
+            values:
+              - name: SRAM
+                value: 0
+              - name: PSRAM
+                value: 1
+              - name: Flash
+                value: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: MWID
+            usage: read-write
+            values:
+              - name: Bits8
+                value: 0
+              - name: Bits16
+                value: 1
+              - name: Bits32
+                value: 2
+      - name: FACCEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: FACCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BURSTEN
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: BURSTEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WAITPOL
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITPOL
+            usage: read-write
+            values:
+              - name: ActiveLow
+                value: 0
+              - name: ActiveHigh
+                value: 1
+      - name: WRAPMOD
+        bitOffset: 10
+        bitWidth: 1
+      - name: WAITCFG
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITCFG
+            usage: read-write
+            values:
+              - name: BeforeWaitState
+                value: 0
+              - name: DuringWaitState
+                value: 1
+      - name: WREN
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: WREN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: WAITEN
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: WAITEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EXTMOD
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: EXTMOD
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ASYNCWAIT
+        bitOffset: 15
+        bitWidth: 1
+        enumeratedValues:
+          - name: ASYNCWAIT
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CPSIZE
+        bitOffset: 16
+        bitWidth: 3
+        enumeratedValues:
+          - name: CPSIZE
+            usage: read-write
+            values:
+              - name: NoBurstSplit
+                value: 0
+              - name: Bytes128
+                value: 1
+              - name: Bytes256
+                value: 2
+              - name: Bytes512
+                value: 3
+              - name: Bytes1024
+                value: 4
+      - name: CBURSTRW
+        bitOffset: 19
+        bitWidth: 1
+        enumeratedValues:
+          - name: CBURSTRW
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: CCLKEN
+        bitOffset: 20
+        bitWidth: 1
+- register:
+    dim: 3
+    dimIncrement: 32
+    dimIndex:
+      - "2"
+      - "3"
+      - "4"
+    name: PCR%s
+    addressOffset: 96
+    size: 32
+    access: read-write
+    resetValue: 24
+    fields:
+      - name: PWAITEN
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: PWAITEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PBKEN
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: PBKEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PTYP
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: PTYP
+            usage: read-write
+            values:
+              - name: NANDFlash
+                value: 1
+      - name: PWID
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: PWID
+            usage: read-write
+            values:
+              - name: Bits8
+                value: 0
+              - name: Bits16
+                value: 1
+      - name: ECCEN
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: ECCEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TCLR
+        bitOffset: 9
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TAR
+        bitOffset: 13
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ECCPS
+        bitOffset: 17
+        bitWidth: 3
+        enumeratedValues:
+          - name: ECCPS
+            usage: read-write
+            values:
+              - name: Bytes256
+                value: 0
+              - name: Bytes512
+                value: 1
+              - name: Bytes1024
+                value: 2
+              - name: Bytes2048
+                value: 3
+              - name: Bytes4096
+                value: 4
+              - name: Bytes8192
+                value: 5
+- register:
+    dim: 3
+    dimIncrement: 32
+    dimIndex:
+      - "2"
+      - "3"
+      - "4"
+    name: SR%s
+    addressOffset: 100
+    size: 32
+    resetValue: 64
+    fields:
+      - name: IRS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: IRS
+            usage: read-write
+            values:
+              - name: DidNotOccur
+                value: 0
+              - name: Occurred
+                value: 1
+      - name: ILS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ILS
+            usage: read-write
+            values:
+              - name: DidNotOccur
+                value: 0
+              - name: Occurred
+                value: 1
+      - name: IFS
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: IFS
+            usage: read-write
+            values:
+              - name: DidNotOccur
+                value: 0
+              - name: Occurred
+                value: 1
+      - name: IREN
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: IREN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ILEN
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ILEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: IFEN
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: IFEN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: FEMPT
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: FEMPT
+            usage: read-write
+            values:
+              - name: NotEmpty
+                value: 0
+              - name: Empty
+                value: 1
+- register:
+    name: PMEM2
+    addressOffset: 104
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: MEMWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: PATT2
+    addressOffset: 108
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: ATTWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: ECCR2
+    addressOffset: 116
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ECC
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: PMEM3
+    addressOffset: 136
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: MEMWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: PATT3
+    addressOffset: 140
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: ATTWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: ECCR3
+    addressOffset: 148
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: ECC
+        bitOffset: 0
+        bitWidth: 32
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4294967295
+- register:
+    name: PMEM4
+    addressOffset: 168
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: MEMSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: MEMWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: MEMHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: PATT4
+    addressOffset: 172
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: ATTSET
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+      - name: ATTWAIT
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHOLD
+        bitOffset: 16
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 254
+      - name: ATTHIZ
+        bitOffset: 24
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 254
+- register:
+    name: PIO4
+    addressOffset: 176
+    size: 32
+    access: read-write
+    resetValue: 4244438268
+    fields:
+      - name: IOSETx
+        bitOffset: 0
+        bitWidth: 8
+      - name: IOWAITx
+        bitOffset: 8
+        bitWidth: 8
+      - name: IOHOLDx
+        bitOffset: 16
+        bitWidth: 8
+      - name: IOHIZx
+        bitOffset: 24
+        bitWidth: 8
+- register:
+    dim: 4
+    dimIncrement: 8
+    dimIndex:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    name: BWTR%s
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: ADDSET
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: ADDHLD
+        bitOffset: 4
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 15
+      - name: DATAST
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 1
+            maximum: 255
+      - name: BUSTURN
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: CLKDIV
+        bitOffset: 20
+        bitWidth: 4
+      - name: ACCMOD
+        bitOffset: 28
+        bitWidth: 2
+        enumeratedValues:
+          - name: ACCMOD
+            usage: read-write
+            values:
+              - name: A
+                value: 0
+              - name: B
+                value: 1
+              - name: C
+                value: 2
+              - name: D
+                value: 3
+- register:
+    dim: 2
+    dimIncrement: 4
+    dimIndex:
+      - "1"
+      - "2"
+    name: SDCR%s
+    addressOffset: 320
+    size: 32
+    access: read-write
+    resetValue: 720
+    fields:
+      - name: NC
+        bitOffset: 0
+        bitWidth: 2
+        enumeratedValues:
+          - name: NC
+            usage: read-write
+            values:
+              - name: Bits8
+                value: 0
+              - name: Bits9
+                value: 1
+              - name: Bits10
+                value: 2
+              - name: Bits11
+                value: 3
+      - name: NR
+        bitOffset: 2
+        bitWidth: 2
+        enumeratedValues:
+          - name: NR
+            usage: read-write
+            values:
+              - name: Bits11
+                value: 0
+              - name: Bits12
+                value: 1
+              - name: Bits13
+                value: 2
+      - name: MWID
+        bitOffset: 4
+        bitWidth: 2
+        enumeratedValues:
+          - name: MWID
+            usage: read-write
+            values:
+              - name: Bits8
+                value: 0
+              - name: Bits16
+                value: 1
+              - name: Bits32
+                value: 2
+      - name: NB
+        bitOffset: 6
+        bitWidth: 1
+        enumeratedValues:
+          - name: NB
+            usage: read-write
+            values:
+              - name: NB2
+                value: 0
+              - name: NB4
+                value: 1
+      - name: CAS
+        bitOffset: 7
+        bitWidth: 2
+        enumeratedValues:
+          - name: CAS
+            usage: read-write
+            values:
+              - name: Clocks1
+                value: 1
+              - name: Clocks2
+                value: 2
+              - name: Clocks3
+                value: 3
+      - name: WP
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: WP
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SDCLK
+        bitOffset: 10
+        bitWidth: 2
+        enumeratedValues:
+          - name: SDCLK
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Div2
+                value: 2
+              - name: Div3
+                value: 3
+      - name: RBURST
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: RBURST
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: RPIPE
+        bitOffset: 13
+        bitWidth: 2
+        enumeratedValues:
+          - name: RPIPE
+            usage: read-write
+            values:
+              - name: NoDelay
+                value: 0
+              - name: Clocks1
+                value: 1
+              - name: Clocks2
+                value: 2
+- register:
+    dim: 2
+    dimIncrement: 4
+    dimIndex:
+      - "1"
+      - "2"
+    name: SDTR%s
+    addressOffset: 328
+    size: 32
+    access: read-write
+    resetValue: 268435455
+    fields:
+      - name: TMRD
+        bitOffset: 0
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TXSR
+        bitOffset: 4
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TRAS
+        bitOffset: 8
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TRC
+        bitOffset: 12
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TWR
+        bitOffset: 16
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TRP
+        bitOffset: 20
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: TRCD
+        bitOffset: 24
+        bitWidth: 4
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+- register:
+    name: SDCMR
+    addressOffset: 336
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MODE
+        bitOffset: 0
+        bitWidth: 3
+        access: write-only
+        enumeratedValues:
+          - name: MODE
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: ClockConfigurationEnable
+                value: 1
+              - name: PALL
+                value: 2
+              - name: AutoRefreshCommand
+                value: 3
+              - name: LoadModeRegister
+                value: 4
+              - name: SelfRefreshCommand
+                value: 5
+              - name: PowerDownCommand
+                value: 6
+      - name: CTB2
+        bitOffset: 3
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: CTB2
+            usage: read-write
+            values:
+              - name: NotIssued
+                value: 0
+              - name: Issued
+                value: 1
+      - name: CTB1
+        bitOffset: 4
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - derived_from: CTB2
+      - name: NRFS
+        bitOffset: 5
+        bitWidth: 4
+        access: read-write
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 15
+      - name: MRD
+        bitOffset: 9
+        bitWidth: 13
+        access: read-write
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 8191
+- register:
+    name: SDRTR
+    addressOffset: 340
+    size: 32
+    resetValue: 0
+    fields:
+      - name: CRE
+        bitOffset: 0
+        bitWidth: 1
+        access: write-only
+        enumeratedValues:
+          - name: CRE
+            usage: read-write
+            values:
+              - name: Clear
+                value: 1
+      - name: COUNT
+        bitOffset: 1
+        bitWidth: 13
+        access: read-write
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 8191
+      - name: REIE
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: REIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+- register:
+    name: SDSR
+    addressOffset: 344
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RE
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: RE
+            usage: read-write
+            values:
+              - name: NoError
+                value: 0
+              - name: Error
+                value: 1
+      - name: MODES1
+        bitOffset: 1
+        bitWidth: 2
+        enumeratedValues:
+          - name: MODES1
+            usage: read-write
+            values:
+              - name: Normal
+                value: 0
+              - name: SelfRefresh
+                value: 1
+              - name: PowerDown
+                value: 2
+      - name: MODES2
+        bitOffset: 3
+        bitWidth: 2
+        enumeratedValues:
+          - derived_from: MODES1
+      - name: BUSY
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: BUSY
+            usage: read-write
+            values:
+              - name: NotBusy
+                value: 0
+              - name: Busy
+                value: 1

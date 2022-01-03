@@ -1,0 +1,444 @@
+---
+- register:
+    name: EP0R
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP1R
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP2R
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP3R
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP4R
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP5R
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP6R
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: EP7R
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EA
+        bitOffset: 0
+        bitWidth: 4
+      - name: STAT_TX
+        bitOffset: 4
+        bitWidth: 2
+      - name: DTOG_TX
+        bitOffset: 6
+        bitWidth: 1
+      - name: CTR_TX
+        bitOffset: 7
+        bitWidth: 1
+      - name: EP_KIND
+        bitOffset: 8
+        bitWidth: 1
+      - name: EP_TYPE
+        bitOffset: 9
+        bitWidth: 2
+      - name: SETUP
+        bitOffset: 11
+        bitWidth: 1
+      - name: STAT_RX
+        bitOffset: 12
+        bitWidth: 2
+      - name: DTOG_RX
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTR_RX
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: CNTR
+    addressOffset: 64
+    size: 32
+    access: read-write
+    resetValue: 3
+    fields:
+      - name: FRES
+        bitOffset: 0
+        bitWidth: 1
+      - name: PDWN
+        bitOffset: 1
+        bitWidth: 1
+      - name: LPMODE
+        bitOffset: 2
+        bitWidth: 1
+      - name: FSUSP
+        bitOffset: 3
+        bitWidth: 1
+      - name: RESUME
+        bitOffset: 4
+        bitWidth: 1
+      - name: L1RESUME
+        bitOffset: 5
+        bitWidth: 1
+      - name: L1REQM
+        bitOffset: 7
+        bitWidth: 1
+      - name: ESOFM
+        bitOffset: 8
+        bitWidth: 1
+      - name: SOFM
+        bitOffset: 9
+        bitWidth: 1
+      - name: RESETM
+        bitOffset: 10
+        bitWidth: 1
+      - name: SUSPM
+        bitOffset: 11
+        bitWidth: 1
+      - name: WKUPM
+        bitOffset: 12
+        bitWidth: 1
+      - name: ERRM
+        bitOffset: 13
+        bitWidth: 1
+      - name: PMAOVRM
+        bitOffset: 14
+        bitWidth: 1
+      - name: CTRM
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: ISTR
+    addressOffset: 68
+    size: 32
+    resetValue: 0
+    fields:
+      - name: EP_ID
+        bitOffset: 0
+        bitWidth: 4
+        access: read-only
+      - name: DIR
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+      - name: L1REQ
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: ESOF
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: SOF
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: RESET
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: SUSP
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: WKUP
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: ERR
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: PMAOVR
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: CTR
+        bitOffset: 15
+        bitWidth: 1
+        access: read-only
+- register:
+    name: FNR
+    addressOffset: 72
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: FN
+        bitOffset: 0
+        bitWidth: 11
+      - name: LSOF
+        bitOffset: 11
+        bitWidth: 2
+      - name: LCK
+        bitOffset: 13
+        bitWidth: 1
+      - name: RXDM
+        bitOffset: 14
+        bitWidth: 1
+      - name: RXDP
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: DADDR
+    addressOffset: 76
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADD
+        bitOffset: 0
+        bitWidth: 7
+      - name: EF
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: BTABLE
+    addressOffset: 80
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: BTABLE
+        bitOffset: 3
+        bitWidth: 13

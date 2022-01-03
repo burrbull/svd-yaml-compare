@@ -1,0 +1,191 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SPDIFRXEN
+        bitOffset: 0
+        bitWidth: 2
+      - name: RXDMAEN
+        bitOffset: 2
+        bitWidth: 1
+      - name: RXSTEO
+        bitOffset: 3
+        bitWidth: 1
+      - name: DRFMT
+        bitOffset: 4
+        bitWidth: 2
+      - name: PMSK
+        bitOffset: 6
+        bitWidth: 1
+      - name: VMSK
+        bitOffset: 7
+        bitWidth: 1
+      - name: CUMSK
+        bitOffset: 8
+        bitWidth: 1
+      - name: PTMSK
+        bitOffset: 9
+        bitWidth: 1
+      - name: CBDMAEN
+        bitOffset: 10
+        bitWidth: 1
+      - name: CHSEL
+        bitOffset: 11
+        bitWidth: 1
+      - name: NBTR
+        bitOffset: 12
+        bitWidth: 2
+      - name: WFA
+        bitOffset: 14
+        bitWidth: 1
+      - name: INSEL
+        bitOffset: 16
+        bitWidth: 3
+      - name: CKSEN
+        bitOffset: 20
+        bitWidth: 1
+      - name: CKSBKPEN
+        bitOffset: 21
+        bitWidth: 1
+- register:
+    name: IMR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RXNEIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: CSRNEIE
+        bitOffset: 1
+        bitWidth: 1
+      - name: PERRIE
+        bitOffset: 2
+        bitWidth: 1
+      - name: OVRIE
+        bitOffset: 3
+        bitWidth: 1
+      - name: SBLKIE
+        bitOffset: 4
+        bitWidth: 1
+      - name: SYNCDIE
+        bitOffset: 5
+        bitWidth: 1
+      - name: IFEIE
+        bitOffset: 6
+        bitWidth: 1
+- register:
+    name: SR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: RXNE
+        bitOffset: 0
+        bitWidth: 1
+      - name: CSRNE
+        bitOffset: 1
+        bitWidth: 1
+      - name: PERR
+        bitOffset: 2
+        bitWidth: 1
+      - name: OVR
+        bitOffset: 3
+        bitWidth: 1
+      - name: SBD
+        bitOffset: 4
+        bitWidth: 1
+      - name: SYNCD
+        bitOffset: 5
+        bitWidth: 1
+      - name: FERR
+        bitOffset: 6
+        bitWidth: 1
+      - name: SERR
+        bitOffset: 7
+        bitWidth: 1
+      - name: TERR
+        bitOffset: 8
+        bitWidth: 1
+      - name: WIDTH5
+        bitOffset: 16
+        bitWidth: 15
+- register:
+    name: IFCR
+    addressOffset: 12
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: PERRCF
+        bitOffset: 2
+        bitWidth: 1
+      - name: OVRCF
+        bitOffset: 3
+        bitWidth: 1
+      - name: SBDCF
+        bitOffset: 4
+        bitWidth: 1
+      - name: SYNCDCF
+        bitOffset: 5
+        bitWidth: 1
+- register:
+    name: FMT0_DR
+    addressOffset: 16
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DR
+        bitOffset: 0
+        bitWidth: 24
+      - name: PE
+        bitOffset: 24
+        bitWidth: 1
+      - name: V
+        bitOffset: 25
+        bitWidth: 1
+      - name: U
+        bitOffset: 26
+        bitWidth: 1
+      - name: C
+        bitOffset: 27
+        bitWidth: 1
+      - name: PT
+        bitOffset: 28
+        bitWidth: 2
+- register:
+    name: CSR
+    addressOffset: 20
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: USR
+        bitOffset: 0
+        bitWidth: 16
+      - name: CS
+        bitOffset: 16
+        bitWidth: 8
+      - name: SOB
+        bitOffset: 24
+        bitWidth: 1
+- register:
+    name: DIR
+    addressOffset: 24
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: THI
+        bitOffset: 0
+        bitWidth: 13
+      - name: TLO
+        bitOffset: 16
+        bitWidth: 13

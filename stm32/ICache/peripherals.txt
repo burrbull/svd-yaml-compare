@@ -1,2 +1,2 @@
-5ea286ea_5ea286ea ICache STM32L552
-5ea286ea_5ea286ea ICache STM32L562
+4d68fe7d_4d68fe7d ICache STM32L552
+4d68fe7d_4d68fe7d ICache STM32L562

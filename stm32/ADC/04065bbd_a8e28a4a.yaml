@@ -1,0 +1,118 @@
+---
+- register:
+    name: CSR
+    addressOffset: 0
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AWD1
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: AWD1
+            usage: read-write
+            values:
+              - name: NoEvent
+                value: 0
+              - name: Event
+                value: 1
+      - name: EOC1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: EOC1
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: JEOC1
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: JEOC1
+            usage: read-write
+            values:
+              - name: NotComplete
+                value: 0
+              - name: Complete
+                value: 1
+      - name: JSTRT1
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: JSTRT1
+            usage: read-write
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+      - name: STRT1
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: STRT1
+            usage: read-write
+            values:
+              - name: NotStarted
+                value: 0
+              - name: Started
+                value: 1
+      - name: OVR1
+        bitOffset: 5
+        bitWidth: 1
+        enumeratedValues:
+          - name: OVR1
+            usage: read-write
+            values:
+              - name: NoOverrun
+                value: 0
+              - name: Overrun
+                value: 1
+- register:
+    name: CCR
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADCPRE
+        bitOffset: 16
+        bitWidth: 2
+        enumeratedValues:
+          - name: ADCPRE
+            usage: read-write
+            values:
+              - name: Div2
+                value: 0
+              - name: Div4
+                value: 1
+              - name: Div6
+                value: 2
+              - name: Div8
+                value: 3
+      - name: VBATE
+        bitOffset: 22
+        bitWidth: 1
+        enumeratedValues:
+          - name: VBATE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSVREFE
+        bitOffset: 23
+        bitWidth: 1
+        enumeratedValues:
+          - name: TSVREFE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1

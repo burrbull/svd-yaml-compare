@@ -1,0 +1,337 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EN1
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EN1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: BOFF1
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: BOFF1
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: TEN1
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: TEN1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: TSEL1
+        bitOffset: 3
+        bitWidth: 3
+        enumeratedValues:
+          - name: TSEL1
+            usage: read-write
+            values:
+              - name: TIM6_TRGO
+                value: 0
+              - name: TIM3_TRGO
+                value: 1
+              - name: TIM7_TRGO
+                value: 2
+              - name: TIM15_TRGO
+                value: 3
+              - name: TIM2_TRGO
+                value: 4
+              - name: EXTI9
+                value: 6
+              - name: SOFTWARE
+                value: 7
+      - name: WAVE1
+        bitOffset: 6
+        bitWidth: 2
+      - name: MAMP1
+        bitOffset: 8
+        bitWidth: 4
+      - name: DMAEN1
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAEN1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: DMAUDRIE1
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAUDRIE1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EN2
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: EN1
+      - name: BOFF2
+        bitOffset: 17
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: BOFF1
+      - name: TEN2
+        bitOffset: 18
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: TEN1
+      - name: TSEL2
+        bitOffset: 19
+        bitWidth: 3
+      - name: WAVE2
+        bitOffset: 22
+        bitWidth: 2
+      - name: MAMP2
+        bitOffset: 24
+        bitWidth: 4
+      - name: DMAEN2
+        bitOffset: 28
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMAEN1
+      - name: DMAUDRIE2
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMAUDRIE1
+- register:
+    name: SWTRIGR
+    addressOffset: 4
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: SWTRIG1
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: SWTRIG1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SWTRIG2
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: SWTRIG1
+- register:
+    name: DHR12R1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR12L1
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 4
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR8R1
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+- register:
+    name: DHR12R2
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR12L2
+    addressOffset: 24
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 4
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR8R2
+    addressOffset: 28
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC2DHR
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+- register:
+    name: DHR12RD
+    addressOffset: 32
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+      - name: DACC2DHR
+        bitOffset: 16
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR12LD
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 4
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+      - name: DACC2DHR
+        bitOffset: 20
+        bitWidth: 12
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 4095
+- register:
+    name: DHR8RD
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DACC1DHR
+        bitOffset: 0
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+      - name: DACC2DHR
+        bitOffset: 8
+        bitWidth: 8
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 255
+- register:
+    name: DOR1
+    addressOffset: 44
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DACC1DOR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: DOR2
+    addressOffset: 48
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DACC2DOR
+        bitOffset: 0
+        bitWidth: 12
+- register:
+    name: SR
+    addressOffset: 52
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAUDR1
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: DMAUDR1
+            usage: read-write
+            values:
+              - name: NoUnderrun
+                value: 0
+              - name: Underrun
+                value: 1
+      - name: DMAUDR2
+        bitOffset: 29
+        bitWidth: 1
+        enumeratedValues:
+          - derived_from: DMAUDR1

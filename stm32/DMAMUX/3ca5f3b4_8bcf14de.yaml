@@ -1,0 +1,599 @@
+---
+- register:
+    dim: 16
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+    name: CCR%s
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: DMAREQ_ID
+        bitOffset: 0
+        bitWidth: 8
+        enumeratedValues:
+          - name: DMAREQ_ID
+            usage: read-write
+            values:
+              - name: none
+                value: 0
+              - name: dmamux1_req_gen0
+                value: 1
+              - name: dmamux1_req_gen1
+                value: 2
+              - name: dmamux1_req_gen2
+                value: 3
+              - name: dmamux1_req_gen3
+                value: 4
+              - name: dmamux1_req_gen4
+                value: 5
+              - name: dmamux1_req_gen5
+                value: 6
+              - name: dmamux1_req_gen6
+                value: 7
+              - name: dmamux1_req_gen7
+                value: 8
+              - name: adc1_dma
+                value: 9
+              - name: adc2_dma
+                value: 10
+              - name: tim1_ch1
+                value: 11
+              - name: tim1_ch2
+                value: 12
+              - name: tim1_ch3
+                value: 13
+              - name: tim1_ch4
+                value: 14
+              - name: tim1_up
+                value: 15
+              - name: tim1_trig
+                value: 16
+              - name: tim1_com
+                value: 17
+              - name: tim2_ch1
+                value: 18
+              - name: tim2_ch2
+                value: 19
+              - name: tim2_ch3
+                value: 20
+              - name: tim2_ch4
+                value: 21
+              - name: tim2_up
+                value: 22
+              - name: tim3_ch1
+                value: 23
+              - name: tim3_ch2
+                value: 24
+              - name: tim3_ch3
+                value: 25
+              - name: tim3_ch4
+                value: 26
+              - name: tim3_up
+                value: 27
+              - name: tim3_trig
+                value: 28
+              - name: tim4_ch1
+                value: 29
+              - name: tim4_ch2
+                value: 30
+              - name: tim4_ch3
+                value: 31
+              - name: tim4_up
+                value: 32
+              - name: i2c1_rx_dma
+                value: 33
+              - name: i2c1_tx_dma
+                value: 34
+              - name: i2c2_rx_dma
+                value: 35
+              - name: i2c2_tx_dma
+                value: 36
+              - name: spi1_rx_dma
+                value: 37
+              - name: spi1_tx_dma
+                value: 38
+              - name: spi2_rx_dma
+                value: 39
+              - name: spi2_tx_dma
+                value: 40
+              - name: usart1_rx_dma
+                value: 41
+              - name: usart1_tx_dma
+                value: 42
+              - name: usart2_rx_dma
+                value: 43
+              - name: usart2_tx_dma
+                value: 44
+              - name: usart3_rx_dma
+                value: 45
+              - name: usart3_tx_dma
+                value: 46
+              - name: tim8_ch1
+                value: 47
+              - name: tim8_ch2
+                value: 48
+              - name: tim8_ch3
+                value: 49
+              - name: tim8_ch4
+                value: 50
+              - name: tim8_up
+                value: 51
+              - name: tim8_trig
+                value: 52
+              - name: tim8_com
+                value: 53
+              - name: tim5_ch1
+                value: 55
+              - name: tim5_ch2
+                value: 56
+              - name: tim5_ch3
+                value: 57
+              - name: tim5_ch4
+                value: 58
+              - name: tim5_up
+                value: 59
+              - name: tim5_trig
+                value: 60
+              - name: spi3_rx_dma
+                value: 61
+              - name: spi3_tx_dma
+                value: 62
+              - name: uart4_rx_dma
+                value: 63
+              - name: uart4_tx_dma
+                value: 64
+              - name: uart5_rx_dma
+                value: 65
+              - name: uart5_tx_dma
+                value: 66
+              - name: dac_ch1_dma
+                value: 67
+              - name: dac_ch2_dma
+                value: 68
+              - name: tim6_up
+                value: 69
+              - name: tim7_up
+                value: 70
+              - name: usart6_rx_dma
+                value: 71
+              - name: usart6_tx_dma
+                value: 72
+              - name: i2c3_rx_dma
+                value: 73
+              - name: i2c3_tx_dma
+                value: 74
+              - name: dcmi_dma
+                value: 75
+              - name: cryp_in_dma
+                value: 76
+              - name: cryp_out_dma
+                value: 77
+              - name: hash_in_dma
+                value: 78
+              - name: uart7_rx_dma
+                value: 79
+              - name: uart7_tx_dma
+                value: 80
+              - name: uart8_rx_dma
+                value: 81
+              - name: uart8_tx_dma
+                value: 82
+              - name: spi4_rx_dma
+                value: 83
+              - name: spi4_tx_dma
+                value: 84
+              - name: spi5_rx_dma
+                value: 85
+              - name: spi5_tx_dma
+                value: 86
+              - name: sai1a_dma
+                value: 87
+              - name: sai1b_dma
+                value: 88
+              - name: sai2a_dma
+                value: 89
+              - name: sai2b_dma
+                value: 90
+              - name: swpmi_rx_dma
+                value: 91
+              - name: swpmi_tx_dma
+                value: 92
+              - name: spdifrx_dat_dma
+                value: 93
+              - name: spdifrx_ctrl_dma
+                value: 94
+              - name: hr_req1
+                value: 95
+              - name: hr_req2
+                value: 96
+              - name: hr_req3
+                value: 97
+              - name: hr_req4
+                value: 98
+              - name: hr_req5
+                value: 99
+              - name: hr_req6
+                value: 100
+              - name: dfsdm1_dma0
+                value: 101
+              - name: dfsdm1_dma1
+                value: 102
+              - name: dfsdm1_dma2
+                value: 103
+              - name: dfsdm1_dma3
+                value: 104
+              - name: tim15_ch1
+                value: 105
+              - name: tim15_up
+                value: 106
+              - name: tim15_trig
+                value: 107
+              - name: tim15_com
+                value: 108
+              - name: tim16_ch1
+                value: 109
+              - name: tim16_up
+                value: 110
+              - name: tim17_ch1
+                value: 111
+              - name: tim17_up
+                value: 112
+              - name: sai3_a_dma
+                value: 113
+              - name: sai3_b_dma
+                value: 114
+              - name: adc3_dma
+                value: 115
+      - name: SOIE
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: SOIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EGE
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: EGE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SE
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: SE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SPOL
+        bitOffset: 17
+        bitWidth: 2
+        enumeratedValues:
+          - name: SPOL
+            usage: read-write
+            values:
+              - name: NoEdge
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: NBREQ
+        bitOffset: 19
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 31
+      - name: SYNC_ID
+        bitOffset: 24
+        bitWidth: 5
+        enumeratedValues:
+          - name: SYNC_ID
+            usage: read-write
+            values:
+              - name: dmamux1_evt0
+                value: 0
+              - name: dmamux1_evt1
+                value: 1
+              - name: dmamux1_evt2
+                value: 2
+              - name: lptim1_out
+                value: 3
+              - name: lptim2_out
+                value: 4
+              - name: lptim3_out
+                value: 5
+              - name: extit0
+                value: 6
+              - name: tim12_trgo
+                value: 7
+- register:
+    name: CSR
+    addressOffset: 128
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: SOF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: SOF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: SOF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: SOF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: SOF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: SOF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: SOF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: SOF7
+        bitOffset: 7
+        bitWidth: 1
+      - name: SOF8
+        bitOffset: 8
+        bitWidth: 1
+      - name: SOF9
+        bitOffset: 9
+        bitWidth: 1
+      - name: SOF10
+        bitOffset: 10
+        bitWidth: 1
+      - name: SOF11
+        bitOffset: 11
+        bitWidth: 1
+      - name: SOF12
+        bitOffset: 12
+        bitWidth: 1
+      - name: SOF13
+        bitOffset: 13
+        bitWidth: 1
+      - name: SOF14
+        bitOffset: 14
+        bitWidth: 1
+      - name: SOF15
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: CFR
+    addressOffset: 132
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: CSOF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: CSOF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: CSOF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: CSOF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: CSOF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: CSOF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: CSOF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: CSOF7
+        bitOffset: 7
+        bitWidth: 1
+      - name: CSOF8
+        bitOffset: 8
+        bitWidth: 1
+      - name: CSOF9
+        bitOffset: 9
+        bitWidth: 1
+      - name: CSOF10
+        bitOffset: 10
+        bitWidth: 1
+      - name: CSOF11
+        bitOffset: 11
+        bitWidth: 1
+      - name: CSOF12
+        bitOffset: 12
+        bitWidth: 1
+      - name: CSOF13
+        bitOffset: 13
+        bitWidth: 1
+      - name: CSOF14
+        bitOffset: 14
+        bitWidth: 1
+      - name: CSOF15
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    dim: 8
+    dimIncrement: 4
+    dimIndex:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+    name: RGCR%s
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SIG_ID
+        bitOffset: 0
+        bitWidth: 5
+        enumeratedValues:
+          - name: SIG_ID
+            usage: read-write
+            values:
+              - name: dmamux1_evt0
+                value: 0
+              - name: dmamux1_evt1
+                value: 1
+              - name: dmamux1_evt2
+                value: 2
+              - name: lptim1_out
+                value: 3
+              - name: lptim2_out
+                value: 4
+              - name: lptim3_out
+                value: 5
+              - name: extit0
+                value: 6
+              - name: tim12_trgo
+                value: 7
+      - name: OIE
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: OIE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GE
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: GE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: GPOL
+        bitOffset: 17
+        bitWidth: 2
+        enumeratedValues:
+          - name: GPOL
+            usage: read-write
+            values:
+              - name: NoEdge
+                value: 0
+              - name: RisingEdge
+                value: 1
+              - name: FallingEdge
+                value: 2
+              - name: BothEdges
+                value: 3
+      - name: GNBREQ
+        bitOffset: 19
+        bitWidth: 5
+        writeConstraint:
+          range:
+            minimum: 0
+            maximum: 31
+- register:
+    name: RGSR
+    addressOffset: 320
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: OF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: OF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: OF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: OF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: OF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: OF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: OF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: OF7
+        bitOffset: 7
+        bitWidth: 1
+- register:
+    name: RGCFR
+    addressOffset: 324
+    size: 32
+    access: write-only
+    resetValue: 0
+    fields:
+      - name: COF0
+        bitOffset: 0
+        bitWidth: 1
+      - name: COF1
+        bitOffset: 1
+        bitWidth: 1
+      - name: COF2
+        bitOffset: 2
+        bitWidth: 1
+      - name: COF3
+        bitOffset: 3
+        bitWidth: 1
+      - name: COF4
+        bitOffset: 4
+        bitWidth: 1
+      - name: COF5
+        bitOffset: 5
+        bitWidth: 1
+      - name: COF6
+        bitOffset: 6
+        bitWidth: 1
+      - name: COF7
+        bitOffset: 7
+        bitWidth: 1

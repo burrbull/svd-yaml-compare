@@ -1,0 +1,274 @@
+---
+- register:
+    name: CR
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 4096
+    fields:
+      - name: LPSDSR
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: LPSDSR
+            usage: read-write
+            values:
+              - name: MAIN_MODE
+                value: 0
+              - name: LOW_POWER_MODE
+                value: 1
+      - name: PDDS
+        bitOffset: 1
+        bitWidth: 1
+        enumeratedValues:
+          - name: PDDS
+            usage: read-write
+            values:
+              - name: STOP_MODE
+                value: 0
+              - name: STANDBY_MODE
+                value: 1
+      - name: CWUF
+        bitOffset: 2
+        bitWidth: 1
+        enumeratedValues:
+          - name: CWUFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: CSBF
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: CSBFW
+            usage: write
+            values:
+              - name: Clear
+                value: 1
+      - name: PVDE
+        bitOffset: 4
+        bitWidth: 1
+        enumeratedValues:
+          - name: PVDE
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: PLS
+        bitOffset: 5
+        bitWidth: 3
+        enumeratedValues:
+          - name: PLS
+            usage: read-write
+            values:
+              - name: V1_9
+                value: 0
+              - name: V2_1
+                value: 1
+              - name: V2_3
+                value: 2
+              - name: V2_5
+                value: 3
+              - name: V2_7
+                value: 4
+              - name: V2_9
+                value: 5
+              - name: V3_1
+                value: 6
+              - name: External
+                value: 7
+      - name: DBP
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: DBP
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ULP
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: ULP
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: FWU
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: FWU
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: VOS
+        bitOffset: 11
+        bitWidth: 2
+        enumeratedValues:
+          - name: VOS
+            usage: read-write
+            values:
+              - name: V1_8
+                value: 1
+              - name: V1_5
+                value: 2
+              - name: V1_2
+                value: 3
+      - name: DS_EE_KOFF
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: DS_EE_KOFF
+            usage: read-write
+            values:
+              - name: NVMWakeUp
+                value: 0
+              - name: NVMSleep
+                value: 1
+      - name: LPRUN
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: LPRUN
+            usage: read-write
+            values:
+              - name: MAIN_MODE
+                value: 0
+              - name: LOW_POWER_MODE
+                value: 1
+      - name: LPDS
+        bitOffset: 16
+        bitWidth: 1
+        enumeratedValues:
+          - name: LPDS
+            usage: read-write
+            values:
+              - name: MAIN_MODE
+                value: 0
+              - name: LOW_POWER_MODE
+                value: 1
+- register:
+    name: CSR
+    addressOffset: 4
+    size: 32
+    resetValue: 0
+    fields:
+      - name: WUF
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: WUFR
+            usage: read
+            values:
+              - name: NoWakeupEvent
+                value: 0
+              - name: WakeupEvent
+                value: 1
+      - name: SBF
+        bitOffset: 1
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: SBFR
+            usage: read
+            values:
+              - name: NoStandbyEvent
+                value: 0
+              - name: StandbyEvent
+                value: 1
+      - name: PVDO
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: PVDOR
+            usage: read
+            values:
+              - name: AboveThreshold
+                value: 0
+              - name: BelowThreshold
+                value: 1
+      - name: VREFINTRDYF
+        bitOffset: 3
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: VREFINTRDYFR
+            usage: read
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+      - name: VOSF
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: VOSFR
+            usage: read
+            values:
+              - name: Ready
+                value: 0
+              - name: NotReady
+                value: 1
+      - name: REGLPF
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: REGLPFR
+            usage: read
+            values:
+              - name: Ready
+                value: 0
+              - name: NotReady
+                value: 1
+      - name: EWUP1
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: EWUP1
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EWUP2
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: EWUP2
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: EWUP3
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: EWUP3
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1

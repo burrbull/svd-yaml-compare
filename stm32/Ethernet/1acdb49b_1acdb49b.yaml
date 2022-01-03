@@ -1,0 +1,370 @@
+---
+- register:
+    name: DMAMR
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: SWR
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: DA
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TXPR
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: PR
+        bitOffset: 12
+        bitWidth: 3
+        access: read-write
+      - name: INTM
+        bitOffset: 16
+        bitWidth: 2
+        access: read-write
+- register:
+    name: DMASBMR
+    addressOffset: 4
+    size: 32
+    resetValue: 16842752
+    fields:
+      - name: FB
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: AAL
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: MB
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: RB
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+- register:
+    name: DMAISR
+    addressOffset: 8
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: DC0IS
+        bitOffset: 0
+        bitWidth: 1
+      - name: MTLIS
+        bitOffset: 16
+        bitWidth: 1
+      - name: MACIS
+        bitOffset: 17
+        bitWidth: 1
+- register:
+    name: DMADSR
+    addressOffset: 12
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: AXWHSTS
+        bitOffset: 0
+        bitWidth: 1
+      - name: RPS0
+        bitOffset: 8
+        bitWidth: 4
+      - name: TPS0
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: DMACCR
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MSS
+        bitOffset: 0
+        bitWidth: 14
+      - name: PBLX8
+        bitOffset: 16
+        bitWidth: 1
+      - name: DSL
+        bitOffset: 18
+        bitWidth: 3
+- register:
+    name: DMACTxCR
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ST
+        bitOffset: 0
+        bitWidth: 1
+      - name: OSF
+        bitOffset: 4
+        bitWidth: 1
+      - name: TSE
+        bitOffset: 12
+        bitWidth: 1
+      - name: TXPBL
+        bitOffset: 16
+        bitWidth: 6
+- register:
+    name: DMACRxCR
+    addressOffset: 264
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SR
+        bitOffset: 0
+        bitWidth: 1
+      - name: RBSZ
+        bitOffset: 1
+        bitWidth: 14
+      - name: RXPBL
+        bitOffset: 16
+        bitWidth: 6
+      - name: RPF
+        bitOffset: 31
+        bitWidth: 1
+- register:
+    name: DMACTxDLAR
+    addressOffset: 276
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDESLA
+        bitOffset: 2
+        bitWidth: 30
+- register:
+    name: DMACRxDLAR
+    addressOffset: 284
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RDESLA
+        bitOffset: 2
+        bitWidth: 30
+- register:
+    name: DMACTxDTPR
+    addressOffset: 288
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDT
+        bitOffset: 2
+        bitWidth: 30
+- register:
+    name: DMACRxDTPR
+    addressOffset: 296
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RDT
+        bitOffset: 2
+        bitWidth: 30
+- register:
+    name: DMACTxRLR
+    addressOffset: 300
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TDRL
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: DMACRxRLR
+    addressOffset: 304
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RDRL
+        bitOffset: 0
+        bitWidth: 10
+- register:
+    name: DMACIER
+    addressOffset: 308
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: TIE
+        bitOffset: 0
+        bitWidth: 1
+      - name: TXSE
+        bitOffset: 1
+        bitWidth: 1
+      - name: TBUE
+        bitOffset: 2
+        bitWidth: 1
+      - name: RIE
+        bitOffset: 6
+        bitWidth: 1
+      - name: RBUE
+        bitOffset: 7
+        bitWidth: 1
+      - name: RSE
+        bitOffset: 8
+        bitWidth: 1
+      - name: RWTE
+        bitOffset: 9
+        bitWidth: 1
+      - name: ETIE
+        bitOffset: 10
+        bitWidth: 1
+      - name: ERIE
+        bitOffset: 11
+        bitWidth: 1
+      - name: FBEE
+        bitOffset: 12
+        bitWidth: 1
+      - name: CDEE
+        bitOffset: 13
+        bitWidth: 1
+      - name: AIE
+        bitOffset: 14
+        bitWidth: 1
+      - name: NIE
+        bitOffset: 15
+        bitWidth: 1
+- register:
+    name: DMACRxIWTR
+    addressOffset: 312
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: RWT
+        bitOffset: 0
+        bitWidth: 8
+- register:
+    name: DMACCATxDR
+    addressOffset: 324
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CURTDESAPTR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DMACCARxDR
+    addressOffset: 332
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CURRDESAPTR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DMACCATxBR
+    addressOffset: 340
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CURTBUFAPTR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DMACCARxBR
+    addressOffset: 348
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CURRBUFAPTR
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: DMACSR
+    addressOffset: 352
+    size: 32
+    resetValue: 0
+    fields:
+      - name: TI
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: TPS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: TBU
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: RI
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: RBU
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: RPS
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: RWT
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: ET
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: ER
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: FBE
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: CDE
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: AIS
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: NIS
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: TEB
+        bitOffset: 16
+        bitWidth: 3
+        access: read-only
+      - name: REB
+        bitOffset: 19
+        bitWidth: 3
+        access: read-only
+- register:
+    name: DMACMFCR
+    addressOffset: 364
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: MFC
+        bitOffset: 0
+        bitWidth: 11
+      - name: MFCO
+        bitOffset: 15
+        bitWidth: 1

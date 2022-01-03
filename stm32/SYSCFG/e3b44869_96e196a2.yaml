@@ -1,0 +1,779 @@
+---
+- register:
+    name: CFGR1
+    addressOffset: 0
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MEM_MODE
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - name: MEM_MODE
+            usage: read-write
+            values:
+              - name: MainFlash
+                value: 0
+              - name: SystemFlash
+                value: 1
+              - name: SRAM
+                value: 3
+      - name: UFB
+        bitOffset: 3
+        bitWidth: 1
+        enumeratedValues:
+          - name: UFB
+            usage: read-write
+            values:
+              - name: Bank1
+                value: 0
+              - name: Bank2
+                value: 1
+      - name: BOOT_MODE
+        bitOffset: 8
+        bitWidth: 2
+        access: read-only
+        enumeratedValues:
+          - name: BOOT_MODE
+            usage: read-write
+            values:
+              - name: MainFlash
+                value: 0
+              - name: SystemFlash
+                value: 1
+              - name: SRAM
+                value: 3
+- register:
+    name: CFGR2
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: FWDIS
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: FWDIS
+            usage: read-write
+            values:
+              - name: Enabled
+                value: 0
+              - name: Disabled
+                value: 1
+      - name: I2C_PB6_FMP
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C_PB6_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C_PB7_FMP
+        bitOffset: 9
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C_PB7_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C_PB8_FMP
+        bitOffset: 10
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C_PB8_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C_PB9_FMP
+        bitOffset: 11
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C_PB9_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C1_FMP
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C1_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C2_FMP
+        bitOffset: 13
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C2_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+      - name: I2C3_FMP
+        bitOffset: 14
+        bitWidth: 1
+        enumeratedValues:
+          - name: I2C3_FMP
+            usage: read-write
+            values:
+              - name: Standard
+                value: 0
+              - name: FMP
+                value: 1
+- register:
+    name: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI0
+            usage: read-write
+            values:
+              - name: PA0
+                value: 0
+              - name: PB0
+                value: 1
+              - name: PC0
+                value: 2
+              - name: PD0
+                value: 3
+              - name: PE0
+                value: 4
+              - name: PH0
+                value: 5
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI1
+            usage: read-write
+            values:
+              - name: PA1
+                value: 0
+              - name: PB1
+                value: 1
+              - name: PC1
+                value: 2
+              - name: PD1
+                value: 3
+              - name: PE1
+                value: 4
+              - name: PH1
+                value: 5
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI2
+            usage: read-write
+            values:
+              - name: PA2
+                value: 0
+              - name: PB2
+                value: 1
+              - name: PC2
+                value: 2
+              - name: PD2
+                value: 3
+              - name: PE2
+                value: 4
+              - name: PH2
+                value: 5
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI3
+            usage: read-write
+            values:
+              - name: PA3
+                value: 0
+              - name: PB3
+                value: 1
+              - name: PC3
+                value: 2
+              - name: PD3
+                value: 3
+              - name: PE3
+                value: 4
+              - name: PH3
+                value: 5
+- register:
+    name: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI4
+            usage: read-write
+            values:
+              - name: PA4
+                value: 0
+              - name: PB4
+                value: 1
+              - name: PC4
+                value: 2
+              - name: PD4
+                value: 3
+              - name: PE4
+                value: 4
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI5
+            usage: read-write
+            values:
+              - name: PA5
+                value: 0
+              - name: PB5
+                value: 1
+              - name: PC5
+                value: 2
+              - name: PD5
+                value: 3
+              - name: PE5
+                value: 4
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI6
+            usage: read-write
+            values:
+              - name: PA6
+                value: 0
+              - name: PB6
+                value: 1
+              - name: PC6
+                value: 2
+              - name: PD6
+                value: 3
+              - name: PE6
+                value: 4
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI7
+            usage: read-write
+            values:
+              - name: PA7
+                value: 0
+              - name: PB7
+                value: 1
+              - name: PC7
+                value: 2
+              - name: PD7
+                value: 3
+              - name: PE7
+                value: 4
+- register:
+    name: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI8
+            usage: read-write
+            values:
+              - name: PA8
+                value: 0
+              - name: PB8
+                value: 1
+              - name: PC8
+                value: 2
+              - name: PD8
+                value: 3
+              - name: PE8
+                value: 4
+              - name: PH8
+                value: 5
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI9
+            usage: read-write
+            values:
+              - name: PA9
+                value: 0
+              - name: PB9
+                value: 1
+              - name: PC9
+                value: 2
+              - name: PD9
+                value: 3
+              - name: PE9
+                value: 4
+              - name: PH9
+                value: 5
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI10
+            usage: read-write
+            values:
+              - name: PA10
+                value: 0
+              - name: PB10
+                value: 1
+              - name: PC10
+                value: 2
+              - name: PD10
+                value: 3
+              - name: PE10
+                value: 4
+              - name: PH10
+                value: 5
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI11
+            usage: read-write
+            values:
+              - name: PA11
+                value: 0
+              - name: PB11
+                value: 1
+              - name: PC11
+                value: 2
+              - name: PD11
+                value: 3
+              - name: PE11
+                value: 4
+              - name: PH11
+                value: 5
+- register:
+    name: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI12
+            usage: read-write
+            values:
+              - name: PA12
+                value: 0
+              - name: PB12
+                value: 1
+              - name: PC12
+                value: 2
+              - name: PD12
+                value: 3
+              - name: PE12
+                value: 4
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI13
+            usage: read-write
+            values:
+              - name: PA13
+                value: 0
+              - name: PB13
+                value: 1
+              - name: PC13
+                value: 2
+              - name: PD13
+                value: 3
+              - name: PE13
+                value: 4
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI14
+            usage: read-write
+            values:
+              - name: PA14
+                value: 0
+              - name: PB14
+                value: 1
+              - name: PC14
+                value: 2
+              - name: PD14
+                value: 3
+              - name: PE14
+                value: 4
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 4
+        enumeratedValues:
+          - name: EXTI15
+            usage: read-write
+            values:
+              - name: PA15
+                value: 0
+              - name: PB15
+                value: 1
+              - name: PC15
+                value: 2
+              - name: PD15
+                value: 3
+              - name: PE15
+                value: 4
+- register:
+    name: COMP1_CSR
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP1EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP1EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: COMP1INNSEL
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - name: COMP1INNSEL
+            usage: read-write
+            values:
+              - name: VREFINT
+                value: 0
+              - name: PA0
+                value: 1
+              - name: PA4
+                value: 2
+              - name: PA5
+                value: 3
+      - name: COMP1WM
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP1WM
+            usage: read-write
+            values:
+              - name: PA1
+                value: 0
+              - name: Comp2Plus
+                value: 1
+      - name: COMP1LPTIMIN1
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP1LPTIMIN1
+            usage: read-write
+            values:
+              - name: Gated
+                value: 0
+              - name: NotGated
+                value: 1
+      - name: COMP1POLARITY
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP1POLARITY
+            usage: read-write
+            values:
+              - name: NotInverted
+                value: 0
+              - name: Inverted
+                value: 1
+      - name: COMP1VALUE
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP1VALUER
+            usage: read
+            values:
+              - name: NotEqual
+                value: 0
+              - name: Equal
+                value: 1
+      - name: COMP1LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP1LOCK
+            usage: read-write
+            values:
+              - name: ReadWrite
+                value: 0
+              - name: ReadOnly
+                value: 1
+- register:
+    name: COMP2_CSR
+    addressOffset: 28
+    size: 32
+    resetValue: 0
+    fields:
+      - name: COMP2EN
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2EN
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: COMP2SPEED
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2SPEED
+            usage: read-write
+            values:
+              - name: Slow
+                value: 0
+              - name: Fast
+                value: 1
+      - name: COMP2INNSEL
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP2INNSEL
+            usage: read-write
+            values:
+              - name: VREFINT
+                value: 0
+              - name: PA2
+                value: 1
+              - name: PA4
+                value: 2
+              - name: PA5
+                value: 3
+              - name: VREFINT_Div4
+                value: 4
+              - name: VREFINT_Div2
+                value: 5
+              - name: VREFINT_Div3_4
+                value: 6
+              - name: PB3
+                value: 7
+      - name: COMP2INPSEL
+        bitOffset: 8
+        bitWidth: 3
+        access: read-write
+        enumeratedValues:
+          - name: COMP2INPSEL
+            usage: read-write
+            values:
+              - name: PA3
+                value: 0
+              - name: PB4
+                value: 1
+              - name: PB5
+                value: 2
+              - name: PB6
+                value: 3
+              - name: PB7
+                value: 4
+              - name: PA7
+                value: 5
+      - name: COMP2LPTIMIN2
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2LPTIMIN2
+            usage: read-write
+            values:
+              - name: Gated
+                value: 0
+              - name: NotGated
+                value: 1
+      - name: COMP2LPTIMIN1
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2LPTIMIN1
+            usage: read-write
+            values:
+              - name: Gated
+                value: 0
+              - name: NotGated
+                value: 1
+      - name: COMP2POLARITY
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: COMP2POLARITY
+            usage: read-write
+            values:
+              - name: NotInverted
+                value: 0
+              - name: Inverted
+                value: 1
+      - name: COMP2VALUE
+        bitOffset: 20
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP2VALUER
+            usage: read
+            values:
+              - name: NotEqual
+                value: 0
+              - name: Equal
+                value: 1
+      - name: COMP2LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: COMP2LOCK
+            usage: read-write
+            values:
+              - name: ReadWrite
+                value: 0
+              - name: ReadOnly
+                value: 1
+- register:
+    name: CFGR3
+    addressOffset: 32
+    size: 32
+    resetValue: 0
+    fields:
+      - name: EN_VREFINT
+        bitOffset: 0
+        bitWidth: 1
+        enumeratedValues:
+          - name: EN_VREFINT
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: SEL_VREF_OUT
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+        enumeratedValues:
+          - name: SEL_VREF_OUT
+            usage: read-write
+            values:
+              - name: NoConnection
+                value: 0
+              - name: PB0
+                value: 1
+              - name: PB1
+                value: 2
+              - name: Both
+                value: 3
+      - name: ENBUF_VREFINT_ADC
+        bitOffset: 8
+        bitWidth: 1
+        enumeratedValues:
+          - name: ENBUF_VREFINT_ADC
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ENBUF_SENSOR_ADC
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: ENBUF_SENSOR_ADC
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ENBUF_VREFINT_COMP2
+        bitOffset: 12
+        bitWidth: 1
+        enumeratedValues:
+          - name: ENBUF_VREFINT_COMP2
+            usage: read-write
+            values:
+              - name: Disabled
+                value: 0
+              - name: Enabled
+                value: 1
+      - name: ENREF_HSI48
+        bitOffset: 13
+        bitWidth: 1
+      - name: VREFINT_RDYF
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+        enumeratedValues:
+          - name: VREFINT_RDYF
+            usage: read-write
+            values:
+              - name: NotReady
+                value: 0
+              - name: Ready
+                value: 1
+      - name: REF_LOCK
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+        enumeratedValues:
+          - name: REF_LOCK
+            usage: read-write
+            values:
+              - name: ReadWrite
+                value: 0
+              - name: ReadOnly
+                value: 1

@@ -1,0 +1,636 @@
+---
+- register:
+    name: GOTGCTL
+    addressOffset: 0
+    size: 32
+    resetValue: 2048
+    fields:
+      - name: SRQSCS
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: SRQ
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: HNGSCS
+        bitOffset: 8
+        bitWidth: 1
+        access: read-only
+      - name: HNPRQ
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: HSHNPEN
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: DHNPEN
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: CIDSTS
+        bitOffset: 16
+        bitWidth: 1
+        access: read-only
+      - name: DBCT
+        bitOffset: 17
+        bitWidth: 1
+        access: read-only
+      - name: ASVLD
+        bitOffset: 18
+        bitWidth: 1
+        access: read-only
+      - name: BSVLD
+        bitOffset: 19
+        bitWidth: 1
+        access: read-only
+- register:
+    name: GOTGINT
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: SEDET
+        bitOffset: 2
+        bitWidth: 1
+      - name: SRSSCHG
+        bitOffset: 8
+        bitWidth: 1
+      - name: HNSSCHG
+        bitOffset: 9
+        bitWidth: 1
+      - name: HNGDET
+        bitOffset: 17
+        bitWidth: 1
+      - name: ADTOCHG
+        bitOffset: 18
+        bitWidth: 1
+      - name: DBCDNE
+        bitOffset: 19
+        bitWidth: 1
+- register:
+    name: GAHBCFG
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: GINT
+        bitOffset: 0
+        bitWidth: 1
+      - name: HBSTLEN
+        bitOffset: 1
+        bitWidth: 4
+      - name: DMAEN
+        bitOffset: 5
+        bitWidth: 1
+      - name: TXFELVL
+        bitOffset: 7
+        bitWidth: 1
+      - name: PTXFELVL
+        bitOffset: 8
+        bitWidth: 1
+- register:
+    name: GUSBCFG
+    addressOffset: 12
+    size: 32
+    resetValue: 2560
+    fields:
+      - name: TOCAL
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+      - name: PHYSEL
+        bitOffset: 6
+        bitWidth: 1
+        access: write-only
+      - name: SRPCAP
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      - name: HNPCAP
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      - name: TRDT
+        bitOffset: 10
+        bitWidth: 4
+        access: read-write
+      - name: PHYLPCS
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: ULPIFSLS
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+      - name: ULPIAR
+        bitOffset: 18
+        bitWidth: 1
+        access: read-write
+      - name: ULPICSM
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+      - name: ULPIEVBUSD
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: ULPIEVBUSI
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: TSDPS
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      - name: PCCI
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      - name: PTCI
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write
+      - name: ULPIIPD
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      - name: FHMOD
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: FDMOD
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: CTXPKT
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: GRSTCTL
+    addressOffset: 16
+    size: 32
+    resetValue: 536870912
+    fields:
+      - name: CSRST
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      - name: HSRST
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: FCRST
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: RXFFLSH
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: TXFFLSH
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: TXFNUM
+        bitOffset: 6
+        bitWidth: 5
+        access: read-write
+      - name: DMAREQ
+        bitOffset: 30
+        bitWidth: 1
+        access: read-only
+      - name: AHBIDL
+        bitOffset: 31
+        bitWidth: 1
+        access: read-only
+- register:
+    name: GINTSTS
+    addressOffset: 20
+    size: 32
+    resetValue: 67108896
+    fields:
+      - name: CMOD
+        bitOffset: 0
+        bitWidth: 1
+        access: read-only
+      - name: MMIS
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: OTGINT
+        bitOffset: 2
+        bitWidth: 1
+        access: read-only
+      - name: SOF
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: RXFLVL
+        bitOffset: 4
+        bitWidth: 1
+        access: read-only
+      - name: NPTXFE
+        bitOffset: 5
+        bitWidth: 1
+        access: read-only
+      - name: GINAKEFF
+        bitOffset: 6
+        bitWidth: 1
+        access: read-only
+      - name: BOUTNAKEFF
+        bitOffset: 7
+        bitWidth: 1
+        access: read-only
+      - name: ESUSP
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: USBSUSP
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: USBRST
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: ENUMDNE
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: ISOODRP
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: EOPF
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: IEPINT
+        bitOffset: 18
+        bitWidth: 1
+        access: read-only
+      - name: OEPINT
+        bitOffset: 19
+        bitWidth: 1
+        access: read-only
+      - name: IISOIXFR
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: PXFR_INCOMPISOOUT
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: DATAFSUSP
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      - name: HPRTINT
+        bitOffset: 24
+        bitWidth: 1
+        access: read-only
+      - name: HCINT
+        bitOffset: 25
+        bitWidth: 1
+        access: read-only
+      - name: PTXFE
+        bitOffset: 26
+        bitWidth: 1
+        access: read-only
+      - name: CIDSCHG
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: DISCINT
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: SRQINT
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: WKUPINT
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: GINTMSK
+    addressOffset: 24
+    size: 32
+    resetValue: 0
+    fields:
+      - name: MMISM
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      - name: OTGINT
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      - name: SOFM
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      - name: RXFLVLM
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      - name: NPTXFEM
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      - name: GINAKEFFM
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      - name: GONAKEFFM
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      - name: ESUSPM
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      - name: USBSUSPM
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      - name: USBRST
+        bitOffset: 12
+        bitWidth: 1
+        access: read-write
+      - name: ENUMDNEM
+        bitOffset: 13
+        bitWidth: 1
+        access: read-write
+      - name: ISOODRPM
+        bitOffset: 14
+        bitWidth: 1
+        access: read-write
+      - name: EOPFM
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      - name: EPMISM
+        bitOffset: 17
+        bitWidth: 1
+        access: read-write
+      - name: IEPINT
+        bitOffset: 18
+        bitWidth: 1
+        access: read-write
+      - name: OEPINT
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+      - name: IISOIXFRM
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+      - name: PXFRM_IISOOXFRM
+        bitOffset: 21
+        bitWidth: 1
+        access: read-write
+      - name: FSUSPM
+        bitOffset: 22
+        bitWidth: 1
+        access: read-write
+      - name: PRTIM
+        bitOffset: 24
+        bitWidth: 1
+        access: read-only
+      - name: HCIM
+        bitOffset: 25
+        bitWidth: 1
+        access: read-write
+      - name: PTXFEM
+        bitOffset: 26
+        bitWidth: 1
+        access: read-write
+      - name: CIDSCHGM
+        bitOffset: 28
+        bitWidth: 1
+        access: read-write
+      - name: DISCINT
+        bitOffset: 29
+        bitWidth: 1
+        access: read-write
+      - name: SRQIM
+        bitOffset: 30
+        bitWidth: 1
+        access: read-write
+      - name: WUIM
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+- register:
+    name: GRXSTSR_Host
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CHNUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: BCNT
+        bitOffset: 4
+        bitWidth: 11
+      - name: DPID
+        bitOffset: 15
+        bitWidth: 2
+      - name: PKTSTS
+        bitOffset: 17
+        bitWidth: 4
+- register:
+    name: GRXSTSR_Peripheral
+    alternateRegister: OTG_HS_GRXSTSR_Host
+    addressOffset: 28
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EPNUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: BCNT
+        bitOffset: 4
+        bitWidth: 11
+      - name: DPID
+        bitOffset: 15
+        bitWidth: 2
+      - name: PKTSTS
+        bitOffset: 17
+        bitWidth: 4
+      - name: FRMNUM
+        bitOffset: 21
+        bitWidth: 4
+- register:
+    name: GRXSTSP_Host
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CHNUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: BCNT
+        bitOffset: 4
+        bitWidth: 11
+      - name: DPID
+        bitOffset: 15
+        bitWidth: 2
+      - name: PKTSTS
+        bitOffset: 17
+        bitWidth: 4
+- register:
+    name: GRXSTSP_Peripheral
+    alternateRegister: OTG_HS_GRXSTSP_Host
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: EPNUM
+        bitOffset: 0
+        bitWidth: 4
+      - name: BCNT
+        bitOffset: 4
+        bitWidth: 11
+      - name: DPID
+        bitOffset: 15
+        bitWidth: 2
+      - name: PKTSTS
+        bitOffset: 17
+        bitWidth: 4
+      - name: FRMNUM
+        bitOffset: 21
+        bitWidth: 4
+- register:
+    name: GRXFSIZ
+    addressOffset: 36
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: RXFD
+        bitOffset: 0
+        bitWidth: 16
+- register:
+    name: GNPTXFSIZ
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: NPTXFSA
+        bitOffset: 0
+        bitWidth: 16
+      - name: NPTXFD
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: TX0FSIZ
+    alternateRegister: GNPTXFSIZ
+    addressOffset: 40
+    size: 32
+    access: read-write
+    resetValue: 512
+    fields:
+      - name: TX0FSA
+        bitOffset: 0
+        bitWidth: 16
+      - name: TX0FD
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    name: GNPTXSTS
+    addressOffset: 44
+    size: 32
+    access: read-only
+    resetValue: 524800
+    fields:
+      - name: NPTXFSAV
+        bitOffset: 0
+        bitWidth: 16
+      - name: NPTQXSAV
+        bitOffset: 16
+        bitWidth: 8
+      - name: NPTXQTOP
+        bitOffset: 24
+        bitWidth: 7
+- register:
+    name: GCCFG
+    addressOffset: 56
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: PWRDWN
+        bitOffset: 16
+        bitWidth: 1
+      - name: I2CPADEN
+        bitOffset: 17
+        bitWidth: 1
+      - name: VBUSASEN
+        bitOffset: 18
+        bitWidth: 1
+      - name: VBUSBSEN
+        bitOffset: 19
+        bitWidth: 1
+      - name: SOFOUTEN
+        bitOffset: 20
+        bitWidth: 1
+      - name: NOVBUSSENS
+        bitOffset: 21
+        bitWidth: 1
+- register:
+    name: CID
+    addressOffset: 60
+    size: 32
+    access: read-write
+    resetValue: 4608
+    fields:
+      - name: PRODUCT_ID
+        bitOffset: 0
+        bitWidth: 32
+- register:
+    name: HPTXFSIZ
+    addressOffset: 256
+    size: 32
+    access: read-write
+    resetValue: 33555968
+    fields:
+      - name: PTXSA
+        bitOffset: 0
+        bitWidth: 16
+      - name: PTXFD
+        bitOffset: 16
+        bitWidth: 16
+- register:
+    dim: 5
+    dimIncrement: 4
+    dimIndex:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    name: DIEPTXF%s
+    addressOffset: 260
+    size: 32
+    access: read-write
+    resetValue: 33555456
+    fields:
+      - name: INEPTXSA
+        bitOffset: 0
+        bitWidth: 16
+      - name: INEPTXFD
+        bitOffset: 16
+        bitWidth: 16

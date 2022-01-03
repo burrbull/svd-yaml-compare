@@ -1,0 +1,122 @@
+---
+- register:
+    name: MEMRMP
+    addressOffset: 0
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: MEM_BOOT
+        bitOffset: 0
+        bitWidth: 1
+      - name: SWP_FMC
+        bitOffset: 10
+        bitWidth: 2
+- register:
+    name: PMC
+    addressOffset: 4
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: ADC1DC2
+        bitOffset: 16
+        bitWidth: 1
+      - name: ADC2DC2
+        bitOffset: 17
+        bitWidth: 1
+      - name: ADC3DC2
+        bitOffset: 18
+        bitWidth: 1
+      - name: MII_RMII_SEL
+        bitOffset: 23
+        bitWidth: 1
+- register:
+    name: EXTICR1
+    addressOffset: 8
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI0
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI1
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI2
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI3
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR2
+    addressOffset: 12
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI4
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI5
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI6
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI7
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR3
+    addressOffset: 16
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI8
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI9
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI10
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI11
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: EXTICR4
+    addressOffset: 20
+    size: 32
+    access: read-write
+    resetValue: 0
+    fields:
+      - name: EXTI12
+        bitOffset: 0
+        bitWidth: 4
+      - name: EXTI13
+        bitOffset: 4
+        bitWidth: 4
+      - name: EXTI14
+        bitOffset: 8
+        bitWidth: 4
+      - name: EXTI15
+        bitOffset: 12
+        bitWidth: 4
+- register:
+    name: CMPCR
+    addressOffset: 32
+    size: 32
+    access: read-only
+    resetValue: 0
+    fields:
+      - name: CMP_PD
+        bitOffset: 0
+        bitWidth: 1
+      - name: READY
+        bitOffset: 8
+        bitWidth: 1
