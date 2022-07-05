@@ -1,2 +1,0 @@
-0e24c6a9_0e24c6a9 OctoSPII_O_Manager STM32H73x
-0e24c6a9_0e24c6a9 OctoSPII_O_Manager STM32H7B3x

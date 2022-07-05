@@ -1,3 +1,0 @@
-167ecba6_167ecba6 Ethernet_DMA STM32H73x
-f7dd8f8b_f7dd8f8b Ethernet_DMA STM32H757_CM4
-f7dd8f8b_f7dd8f8b Ethernet_DMA STM32H757_CM7
