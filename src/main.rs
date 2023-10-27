@@ -1,10 +1,25 @@
+use clap::Parser;
 use std::io::{self, BufRead, Read, Write};
+use std::path::{Path, PathBuf};
 use std::{fs, path};
 use svd_rs as svd;
 
+/// Simple program to greet a person
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    /// Path to SVDs
+    inpath: Option<PathBuf>,
+
+    /// Number of times to greet
+    #[arg(long)]
+    keep_descriptions: bool,
+}
+
 fn main() {
+    let args = Args::parse();
     let pth = path::Path::new("yamls");
-    for entry in fs::read_dir(".").unwrap() {
+    for entry in fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new("."))).unwrap() {
         let svd_fn = entry.unwrap().path();
         if svd_fn.extension() == Some(std::ffi::OsStr::new("patched")) {
             let svd_xml = &mut String::new();
@@ -24,7 +39,9 @@ fn main() {
 
             println!("Device {} ({:?})", device.name, svd_fn);
 
-            clean_device(&mut device);
+            if !args.keep_descriptions {
+                clean_device(&mut device);
+            }
 
             for p in &device.peripherals {
                 let mut p2 = p.clone();
