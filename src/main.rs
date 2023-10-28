@@ -19,6 +19,9 @@ struct Args {
 fn main() {
     let args = Args::parse();
     let pth = path::Path::new("yamls");
+    if pth.is_dir() {
+        std::fs::remove_dir_all(&pth).unwrap();
+    }
     for entry in fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new("."))).unwrap() {
         let svd_fn = entry.unwrap().path();
         if svd_fn.extension() == Some(std::ffi::OsStr::new("patched")) {
