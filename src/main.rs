@@ -11,20 +11,25 @@ struct Args {
     /// Path to SVDs
     inpath: Option<PathBuf>,
 
-    /// Number of times to greet
-    #[arg(long)]
+    /// Don't delete descriptions
+    #[arg(short('d'), long)]
     keep_descriptions: bool,
+
+    /// Compare ogirin files instead of patched
+    #[arg(short('o'), long)]
+    origin: bool,
 }
 
 fn main() {
     let args = Args::parse();
-    let pth = path::Path::new("yamls");
+    let pth = path::Path::new(if args.origin { "yamls_orig" } else { "yamls" });
     if pth.is_dir() {
         std::fs::remove_dir_all(&pth).unwrap();
     }
     for entry in fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new("."))).unwrap() {
         let svd_fn = entry.unwrap().path();
-        if svd_fn.extension() == Some(std::ffi::OsStr::new("patched")) {
+        let ext = if args.origin { "svd" } else { "patched" };
+        if svd_fn.extension() == Some(std::ffi::OsStr::new(ext)) {
             let svd_xml = &mut String::new();
             fs::File::open(&svd_fn)
                 .expect("Failed to open SVD input file")
