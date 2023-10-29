@@ -36,7 +36,7 @@ fn main() {
                 .read_to_string(svd_xml)
                 .expect("Failed to read SVD input file to a String");
 
-            let config = svd_parser::Config::default();
+            let config = svd_parser::Config::default().validate_level(svd::ValidateLevel::Disabled);
             //config.validate_level = svd::ValidateLevel::Strict;
             let mut device = svd_parser::parse_with_config(svd_xml, &config)
                 .expect("Failed to parse the SVD file into Rust structs");
