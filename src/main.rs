@@ -18,6 +18,9 @@ struct Args {
     /// Compare ogirin files instead of patched
     #[arg(short('o'), long)]
     origin: bool,
+
+    #[arg(short('n'), long)]
+    show_name: bool,
 }
 
 fn main() {
@@ -61,7 +64,11 @@ fn main() {
                     let s2 = serde_yaml::to_string(&registers2).expect("Serialization failed");
                     let digest1 = format!("{:?}", md5::compute(s1.as_bytes()));
                     let digest2 = format!("{:?}", md5::compute(s2.as_bytes()));
-                    let digest = format!("{}_{}", &digest1[..8], &digest2[..8]);
+                    let digest = if args.show_name {
+                        format!("{}_{}_{}", &digest1[..8], device.name, p.name)
+                    } else {
+                        format!("{}_{}", &digest1[..8], &digest2[..8])
+                    };
                     let yaml_fn = format!("{}.yaml", digest,);
                     let refer = format!("{} {} {}\n", digest, p.name, device.name);
                     let mut pth = path::PathBuf::from(pth);
@@ -77,14 +84,16 @@ fn main() {
                             .write_all(s1.as_bytes())
                             .expect("Failed to write to JSON output file");
                     }
-                    fs::OpenOptions::new()
-                        .write(true)
-                        .append(true)
-                        .create(true)
-                        .open(&txtpth)
-                        .expect("Failed to open txt output file")
-                        .write_all(refer.as_bytes())
-                        .expect("Failed to write to txt output file");
+                    if !args.show_name {
+                        fs::OpenOptions::new()
+                            .write(true)
+                            .append(true)
+                            .create(true)
+                            .open(&txtpth)
+                            .expect("Failed to open txt output file")
+                            .write_all(refer.as_bytes())
+                            .expect("Failed to write to txt output file");
+                    }
                 }
             }
         }
