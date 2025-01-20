@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::collections::BTreeSet;
 use std::io::{self, BufRead, Read, Write};
 use std::path::{Path, PathBuf};
 use std::{fs, path};
@@ -29,8 +30,13 @@ fn main() {
     if pth.is_dir() {
         std::fs::remove_dir_all(&pth).unwrap();
     }
-    for entry in fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new("."))).unwrap() {
-        let svd_fn = entry.unwrap().path();
+    let mut entries: Vec<_> = fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new(".")))
+        .unwrap()
+        .filter_map(|f| f.ok())
+        .collect();
+    entries.sort_by_key(|e| e.path());
+    for entry in entries {
+        let svd_fn = entry.path();
         let ext = if args.origin { "svd" } else { "patched" };
         if svd_fn.extension() == Some(std::ffi::OsStr::new(ext)) {
             let svd_xml = &mut String::new();
@@ -54,7 +60,38 @@ fn main() {
                 clean_device(&mut device);
             }
 
+            let mut tims = vec![BTreeSet::new(); 9];
+
             for p in &device.peripherals {
+                if p.derived_from.is_none() {
+                    if ["TIM1", "TIM8", "TIM20"].contains(&p.name.as_str()) {
+                        tims[0].insert(p.name.to_string());
+                    }
+                    if ["TIM2", "TIM5", "TIM23", "TIM24"].contains(&p.name.as_str()) {
+                        tims[1].insert(p.name.to_string());
+                    }
+                    if ["TIM3", "TIM4", "TIM19"].contains(&p.name.as_str()) {
+                        tims[2].insert(p.name.to_string());
+                    }
+                    if ["TIM6", "TIM7", "TIM18"].contains(&p.name.as_str()) {
+                        tims[3].insert(p.name.to_string());
+                    }
+                    if ["TIM9", "TIM12"].contains(&p.name.as_str()) {
+                        tims[4].insert(p.name.to_string());
+                    }
+                    if ["TIM10", "TIM11", "TIM13", "TIM14"].contains(&p.name.as_str()) {
+                        tims[5].insert(p.name.to_string());
+                    }
+                    if p.name == "TIM15" {
+                        tims[6].insert(p.name.to_string());
+                    }
+                    if ["TIM16", "TIM17"].contains(&p.name.as_str()) {
+                        tims[7].insert(p.name.to_string());
+                    }
+                    if ["TIM21", "TIM22"].contains(&p.name.as_str()) {
+                        tims[8].insert(p.name.to_string());
+                    }
+                }
                 let mut p2 = p.clone();
                 clear_fields(&mut p2);
                 if let (Some(registers1), Some(registers2)) =
@@ -94,6 +131,11 @@ fn main() {
                             .write_all(refer.as_bytes())
                             .expect("Failed to write to txt output file");
                     }
+                }
+            }
+            for tim in tims {
+                if !tim.is_empty() {
+                    println!("{}", tim.iter().cloned().collect::<Vec<_>>().join(","));
                 }
             }
         }
@@ -136,7 +178,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
     for r in p.all_registers_mut() {
         if r.name.starts_with(&pname) {
-            println!("  r: {}", r.name);
+            //println!("  r: {}", r.name);
         }
         if let Some(fields) = r.fields.as_mut() {
             for f in fields {
