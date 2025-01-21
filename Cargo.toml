@@ -11,3 +11,4 @@ svd-rs = { version = "0.14.6", features = ["serde"] }
 serde_yaml = "0.8.26"
 md5 = "0.7.0"
 clap = { version = "4.4.11", features = ["derive"] }
+similar = "2.6.0"

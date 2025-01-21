@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::collections::BTreeSet;
 use std::io::{self, BufRead, Read, Write};
 use std::path::{Path, PathBuf};
 use std::{fs, path};
@@ -21,6 +22,9 @@ struct Args {
 
     #[arg(short('n'), long)]
     show_name: bool,
+
+    #[arg(short('p'), long)]
+    compare_percent: bool,
 }
 
 fn main() {
@@ -55,6 +59,9 @@ fn main() {
             }
 
             for p in &device.peripherals {
+                if p.name.starts_with("TIM") {
+                    println!("\t{}", p.name);
+                }
                 let mut p2 = p.clone();
                 clear_fields(&mut p2);
                 if let (Some(registers1), Some(registers2)) =
@@ -98,13 +105,15 @@ fn main() {
             }
         }
     }
-    sort_txts(pth);
+    sort_txts(pth, &args);
 }
 
-fn sort_txts(pth: &path::Path) {
+fn sort_txts(pth: &path::Path, args: &Args) {
     for dir in fs::read_dir(pth).unwrap() {
         if pth.is_dir() {
-            let mut txtpth = path::PathBuf::from(dir.unwrap().path());
+            let dirpth = path::PathBuf::from(dir.unwrap().path());
+            //println!("Group = {dirpth:?}");
+            let mut txtpth = dirpth.clone();
             txtpth.push("peripherals.txt");
             if txtpth.exists() {
                 let mut lines = read_lines(&txtpth)
@@ -112,12 +121,54 @@ fn sort_txts(pth: &path::Path) {
                     .flatten()
                     .collect::<Vec<_>>();
                 lines.sort();
+                let mut digests = BTreeSet::new();
+                if args.compare_percent && !args.show_name {
+                    for line in &lines {
+                        if let Some(d) = line.split(' ').next() {
+                            digests.insert(d);
+                        }
+                    }
+                }
+                let mut pairs = BTreeSet::new();
+                let mut compares = Vec::new();
+                for &d1 in &digests {
+                    for &d2 in &digests {
+                        if d1 != d2 {
+                            pairs.insert(if d1 < d2 { (d1, d2) } else { (d2, d1) });
+                        }
+                    }
+                }
+                for (d1, d2) in pairs {
+                    let mut p1 = dirpth.clone();
+                    p1.push(&format!("{d1}.yaml"));
+                    let mut p2 = dirpth.clone();
+                    p2.push(&format!("{d2}.yaml"));
+                    let mut s1 = String::new();
+                    fs::File::open(&p1)
+                        .unwrap()
+                        .read_to_string(&mut s1)
+                        .unwrap();
+                    let mut s2 = String::new();
+                    fs::File::open(&p2)
+                        .unwrap()
+                        .read_to_string(&mut s2)
+                        .unwrap();
+                    let diff = similar::capture_diff_slices(
+                        similar::Algorithm::Myers,
+                        s1.as_bytes(),
+                        s2.as_bytes(),
+                    );
+                    let ratio = similar::get_diff_ratio(&diff, s1.len(), s2.len()) * 100.0;
+                    compares.push(format!("{ratio:5.1}% {d1} {d2}"));
+                }
+                compares.sort();
+                let res = lines.join("\n") + "\n" + &compares.join("\n");
                 fs::OpenOptions::new()
                     .write(true)
                     .truncate(true)
                     .open(txtpth)
                     .expect("Failed to open txt output file")
-                    .write_all(lines.join("\n").as_bytes())
+                    .write_all(res.as_bytes())
                     .expect("Failed to write to txt output file");
             }
         }
@@ -136,7 +187,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
     for r in p.all_registers_mut() {
         if r.name.starts_with(&pname) {
-            println!("  r: {}", r.name);
+            //println!("  r: {}", r.name);
         }
         if let Some(fields) = r.fields.as_mut() {
             for f in fields {
