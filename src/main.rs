@@ -29,8 +29,13 @@ fn main() {
     if pth.is_dir() {
         std::fs::remove_dir_all(&pth).unwrap();
     }
-    for entry in fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new("."))).unwrap() {
-        let svd_fn = entry.unwrap().path();
+    let mut entries: Vec<_> = fs::read_dir(args.inpath.as_deref().unwrap_or(Path::new(".")))
+        .unwrap()
+        .filter_map(|f| f.ok())
+        .collect();
+    entries.sort_by_key(|e| e.path());
+    for entry in entries {
+        let svd_fn = entry.path();
         let ext = if args.origin { "svd" } else { "patched" };
         if svd_fn.extension() == Some(std::ffi::OsStr::new(ext)) {
             let svd_xml = &mut String::new();
@@ -136,7 +141,17 @@ fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
     for r in p.all_registers_mut() {
         if r.name.starts_with(&pname) {
-            println!("  r: {}", r.name);
+            if !r.name.starts_with("OPAMP")
+                && !r.name.starts_with("COMP")
+                && !r.name.starts_with("EXTICR")
+                && !(r.name.starts_with("TIM")
+                    && (r.name.ends_with("_OR")
+                        || r.name.ends_with("_AF1")
+                        || r.name.ends_with("_AF1")
+                        || r.name.ends_with("_TISEL")))
+            {
+                println!("  r: {}", r.name);
+            }
         }
         if let Some(fields) = r.fields.as_mut() {
             for f in fields {
