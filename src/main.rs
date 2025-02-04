@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::collections::{BTreeMap, BTreeSet};
 use std::io::{self, BufRead, Read, Write};
 use std::path::{Path, PathBuf};
 use std::{fs, path};
@@ -59,9 +60,17 @@ fn main() {
                 clean_device(&mut device);
             }
 
+            let mut groups: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
+
             for p in &device.peripherals {
                 let mut p2 = p.clone();
                 clear_fields(&mut p2);
+                if p.derived_from.is_none() {
+                    groups
+                        .entry(p.group_name.clone().unwrap_or_else(|| p.name.clone()))
+                        .or_default()
+                        .insert(p.name.clone());
+                }
                 if let (Some(registers1), Some(registers2)) =
                     (p.registers.as_ref(), p2.registers.as_ref())
                 {
@@ -99,6 +108,34 @@ fn main() {
                             .write_all(refer.as_bytes())
                             .expect("Failed to write to txt output file");
                     }
+                }
+            }
+            for (g, periphs) in &groups {
+                if periphs.iter().all(|p| p.starts_with(g)) {
+                    let idx = periphs
+                        .iter()
+                        .map(|p| {
+                            let suf = p.strip_prefix(g).unwrap();
+                            if suf.len() == 0 {
+                                'x'.to_string()
+                            } else if suf.len() == 1 {
+                                suf.to_string()
+                            } else {
+                                format!("{{{suf}}}")
+                            }
+                        })
+                        .collect::<Vec<_>>()
+                        .join("");
+                    if idx == "x" {
+                        println!("{g}");
+                    } else {
+                        println!("{g}[{idx}]",)
+                    }
+                } else {
+                    println!(
+                        "{g}: {}",
+                        periphs.iter().cloned().collect::<Vec<_>>().join(", ")
+                    );
                 }
             }
         }
