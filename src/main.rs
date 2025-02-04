@@ -128,6 +128,8 @@ fn main() {
                         .join("");
                     if idx == "x" {
                         println!("{g}");
+                    } else if idx.len() == 1 {
+                        println!("{g}{idx}");
                     } else {
                         println!("{g}[{idx}]",)
                     }
@@ -187,7 +189,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
                         || r.name.ends_with("_AF1")
                         || r.name.ends_with("_TISEL")))
             {
-                println!("  r: {}", r.name);
+                //println!("  r: {}", r.name);
             }
         }
         if let Some(fields) = r.fields.as_mut() {
