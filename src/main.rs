@@ -66,10 +66,10 @@ fn main() {
                 let mut p2 = p.clone();
                 clear_fields(&mut p2);
                 if p.derived_from.is_none() {
-                    groups
-                        .entry(p.group_name.clone().unwrap_or_else(|| p.name.clone()))
-                        .or_default()
-                        .insert(p.name.clone());
+                    let group = p.group_name.clone().unwrap_or_else(|| p.name.clone());
+                    if !["NVIC", "MPU", "FPU", "SCB"].contains(&group.as_str()) {
+                        groups.entry(group).or_default().insert(p.name.clone());
+                    }
                 }
                 if let (Some(registers1), Some(registers2)) =
                     (p.registers.as_ref(), p2.registers.as_ref())
@@ -127,11 +127,11 @@ fn main() {
                         .collect::<Vec<_>>()
                         .join("");
                     if idx == "x" {
-                        println!("{g}");
+                        println!("{g}: {{}}");
                     } else if idx.len() == 1 {
-                        println!("{g}{idx}");
+                        println!("{g}{idx}: {{}}");
                     } else {
-                        println!("{g}[{idx}]",)
+                        println!("{g}[{idx}]: {{}}",)
                     }
                 } else {
                     println!(
@@ -178,8 +178,10 @@ where
 
 fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
+    let gname = p.group_name.clone();
     for r in p.all_registers_mut() {
-        if r.name.starts_with(&pname) {
+        if r.name.starts_with(&pname) || gname.as_ref().filter(|&g| r.name.starts_with(g)).is_some()
+        {
             if !r.name.starts_with("OPAMP")
                 && !r.name.starts_with("COMP")
                 && !r.name.starts_with("EXTICR")
@@ -189,7 +191,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
                         || r.name.ends_with("_AF1")
                         || r.name.ends_with("_TISEL")))
             {
-                //println!("  r: {}", r.name);
+                //    println!("  {pname}: {}", r.name);
             }
         }
         if let Some(fields) = r.fields.as_mut() {
