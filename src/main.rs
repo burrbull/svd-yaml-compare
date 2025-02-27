@@ -45,7 +45,9 @@ fn main() {
                 .read_to_string(svd_xml)
                 .expect("Failed to read SVD input file to a String");
 
-            let config = svd_parser::Config::default().validate_level(svd::ValidateLevel::Disabled);
+            let config = svd_parser::Config::default()
+                .expand_properties(true)
+                .validate_level(svd::ValidateLevel::Disabled);
             //config.validate_level = svd::ValidateLevel::Strict;
             let mut device = svd_parser::parse_with_config(svd_xml, &config)
                 .expect("Failed to parse the SVD file into Rust structs");
@@ -63,6 +65,8 @@ fn main() {
             let mut groups: BTreeMap<String, BTreeSet<String>> = BTreeMap::new();
 
             for p in &device.peripherals {
+                let mut p = p.clone();
+                clear_props(&mut p);
                 let mut p2 = p.clone();
                 clear_fields(&mut p2);
                 if p.derived_from.is_none() {
@@ -180,11 +184,26 @@ where
     Ok(io::BufReader::new(file).lines())
 }
 
+fn clear_props(p: &mut svd::Peripheral) {
+    for r in p.all_registers_mut() {
+        let ra = r.properties.access;
+        if let Some(fields) = r.fields.as_mut() {
+            for f in fields {
+                match (ra, f.access) {
+                    (Some(ra), Some(fa)) if ra == fa => {
+                        f.access = None;
+                    }
+                    _ => {}
+                }
+            }
+        }
+    }
+}
+
 fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
     let gname = p.group_name.clone();
     for r in p.all_registers_mut() {
-        let ra = r.properties.access;
         if r.name.starts_with(&pname) || gname.as_ref().filter(|&g| r.name.starts_with(g)).is_some()
         {
             if !r.name.starts_with("OPAMP")
@@ -201,12 +220,6 @@ fn clear_fields(p: &mut svd::Peripheral) {
         }
         if let Some(fields) = r.fields.as_mut() {
             for f in fields {
-                match (ra, f.access) {
-                    (Some(ra), Some(fa)) if ra == fa => {
-                        f.access = None;
-                    }
-                    _ => {}
-                }
                 f.enumerated_values = vec![];
                 f.write_constraint = None;
             }
