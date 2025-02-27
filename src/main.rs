@@ -86,7 +86,11 @@ fn main() {
                     let yaml_fn = format!("{}.yaml", digest,);
                     let refer = format!("{} {} {}\n", digest, p.name, device.name);
                     let mut pth = path::PathBuf::from(pth);
-                    pth.push(p.group_name.as_ref().unwrap_or_else(|| &p.name));
+                    if p.name.starts_with("TIM") {
+                        pth.push(&p.name);
+                    } else {
+                        pth.push(p.group_name.as_ref().unwrap_or_else(|| &p.name));
+                    }
                     fs::create_dir_all(&pth).unwrap();
                     let mut ymlpth = pth.clone();
                     let mut txtpth = pth.clone();
@@ -180,6 +184,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
     let pname = p.name.clone();
     let gname = p.group_name.clone();
     for r in p.all_registers_mut() {
+        let ra = r.properties.access;
         if r.name.starts_with(&pname) || gname.as_ref().filter(|&g| r.name.starts_with(g)).is_some()
         {
             if !r.name.starts_with("OPAMP")
@@ -196,6 +201,12 @@ fn clear_fields(p: &mut svd::Peripheral) {
         }
         if let Some(fields) = r.fields.as_mut() {
             for f in fields {
+                match (ra, f.access) {
+                    (Some(ra), Some(fa)) if ra == fa => {
+                        f.access = None;
+                    }
+                    _ => {}
+                }
                 f.enumerated_values = vec![];
                 f.write_constraint = None;
             }
