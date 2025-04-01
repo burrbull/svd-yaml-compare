@@ -78,6 +78,23 @@ fn main() {
                 if let (Some(registers1), Some(registers2)) =
                     (p.registers.as_ref(), p2.registers.as_ref())
                 {
+                    if p.name.starts_with("TIM") {
+                        if let Some(r) = p.get_register("CR2") {
+                            for f in r.fields() {
+                                if [4, 25].contains(&f.bit_offset()) {
+                                    println!("{}.CR2.{}", p.name, f.name);
+                                }
+                            }
+                        }
+                        if let Some(r) = p.get_register("SMCR") {
+                            for f in r.fields() {
+                                if [0, 4, 16, 20].contains(&f.bit_offset()) {
+                                    println!("{}.SMCR.{}", p.name, f.name);
+                                }
+                            }
+                        }
+                    }
+
                     let s1 = serde_yaml::to_string(&registers1).expect("Serialization failed");
                     let s2 = serde_yaml::to_string(&registers2).expect("Serialization failed");
                     let digest1 = format!("{:?}", md5::compute(s1.as_bytes()));
@@ -88,7 +105,7 @@ fn main() {
                         format!("{}_{}", &digest1[..8], &digest2[..8])
                     };
                     let yaml_fn = format!("{}.yaml", digest,);
-                    let refer = format!("{} {} {}\n", digest, p.name, device.name);
+                    let refer = format!("{}.yaml {} {}\n", digest, p.name, device.name);
                     let mut pth = path::PathBuf::from(pth);
                     if p.name.starts_with("TIM") {
                         pth.push(&p.name);
@@ -135,17 +152,17 @@ fn main() {
                         .collect::<Vec<_>>()
                         .join("");
                     if idx == "x" {
-                        println!("{g}: {{}}");
+                        //println!("{g}: {{}}");
                     } else if idx.len() == 1 {
-                        println!("{g}{idx}: {{}}");
+                        //println!("{g}{idx}: {{}}");
                     } else {
-                        println!("{g}[{idx}]: {{}}",)
+                        //println!("{g}[{idx}]: {{}}",)
                     }
                 } else {
-                    println!(
+                    /*println!(
                         "{g}: {}",
                         periphs.iter().cloned().collect::<Vec<_>>().join(", ")
-                    );
+                    );*/
                 }
             }
         }
