@@ -1,5 +1,5 @@
 use clap::Parser;
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::io::{self, BufRead, Read, Write};
 use std::path::{Path, PathBuf};
 use std::{fs, path};
@@ -23,8 +23,8 @@ struct Args {
     #[arg(short('n'), long)]
     show_name: bool,
 
-    #[arg(short('p'), long)]
-    compare_percent: bool,
+    #[arg(short('c'), long)]
+    compare_with: Option<String>,
 }
 
 fn main() {
@@ -79,7 +79,7 @@ fn main() {
                         format!("{}_{}", &digest1[..8], &digest2[..8])
                     };
                     let yaml_fn = format!("{}.yaml", digest,);
-                    let refer = format!("{} {} {}\n", digest, p.name, device.name);
+                    let refer = format!("{}.yaml {} {}\n", digest, p.name, device.name);
                     let mut pth = path::PathBuf::from(pth);
                     pth.push(p.group_name.as_ref().unwrap_or_else(|| &p.name));
                     fs::create_dir_all(&pth).unwrap();
@@ -123,55 +123,64 @@ fn sort_txts(pth: &path::Path, args: &Args) {
                     .flatten()
                     .collect::<Vec<_>>();
                 lines.sort();
-                let mut digests = BTreeSet::new();
-                if args.compare_percent && !args.show_name {
+                let mut digests = BTreeMap::new();
+                if let Some(device) = args.compare_with.as_ref() {
+                    let mut dev_digest = Vec::new();
+                    assert!(!args.show_name);
                     for line in &lines {
-                        if let Some(d) = line.split(' ').next() {
-                            digests.insert(d);
+                        let mut it = line.split(' ');
+                        if let Some(d) = it.next() {
+                            it.next();
+                            if let Some(n) = it.next() {
+                                digests.insert(d, n);
+                                if n.to_lowercase() == device.to_lowercase() {
+                                    dev_digest.push(d);
+                                }
+                            }
                         }
                     }
-                }
-                let mut pairs = BTreeSet::new();
-                let mut compares = Vec::new();
-                for &d1 in &digests {
-                    for &d2 in &digests {
-                        if d1 != d2 {
-                            pairs.insert(if d1 < d2 { (d1, d2) } else { (d2, d1) });
+                    let mut res = lines.join("\n");
+                    for dev_digest in dev_digest {
+                        println!("Group = {dirpth:?}");
+                        println!("Primary: {device} -> {dev_digest}");
+                        let mut p1 = dirpth.clone();
+                        p1.push(dev_digest);
+                        let mut compares = Vec::new();
+                        for (d2, n2) in digests.iter().filter(|(&d2, _)| d2 != dev_digest) {
+                            let mut p2 = dirpth.clone();
+                            p2.push(d2);
+                            let mut s1 = String::new();
+                            fs::File::open(&p1)
+                                .unwrap()
+                                .read_to_string(&mut s1)
+                                .unwrap();
+                            let mut s2 = String::new();
+                            fs::File::open(&p2)
+                                .unwrap()
+                                .read_to_string(&mut s2)
+                                .unwrap();
+                            let diff = similar::capture_diff_slices(
+                                similar::Algorithm::Myers,
+                                s1.as_bytes(),
+                                s2.as_bytes(),
+                            );
+                            let ratio = similar::get_diff_ratio(&diff, s1.len(), s2.len()) * 100.0;
+                            compares.push(format!("{ratio:5.1}% {d2} {n2}"));
                         }
+                        compares.sort();
+                        compares.reverse();
+
+                        res += &(format!("\n\nPrimary: {device} -> {dev_digest}\n\n")
+                            + &compares.join("\n"));
                     }
+                    fs::OpenOptions::new()
+                        .write(true)
+                        .truncate(true)
+                        .open(&txtpth)
+                        .expect("Failed to open txt output file")
+                        .write_all(res.as_bytes())
+                        .expect("Failed to write to txt output file");
                 }
-                for (d1, d2) in pairs {
-                    let mut p1 = dirpth.clone();
-                    p1.push(&format!("{d1}.yaml"));
-                    let mut p2 = dirpth.clone();
-                    p2.push(&format!("{d2}.yaml"));
-                    let mut s1 = String::new();
-                    fs::File::open(&p1)
-                        .unwrap()
-                        .read_to_string(&mut s1)
-                        .unwrap();
-                    let mut s2 = String::new();
-                    fs::File::open(&p2)
-                        .unwrap()
-                        .read_to_string(&mut s2)
-                        .unwrap();
-                    let diff = similar::capture_diff_slices(
-                        similar::Algorithm::Myers,
-                        s1.as_bytes(),
-                        s2.as_bytes(),
-                    );
-                    let ratio = similar::get_diff_ratio(&diff, s1.len(), s2.len()) * 100.0;
-                    compares.push(format!("{ratio:5.1}% {d1} {d2}"));
-                }
-                compares.sort();
-                let res = lines.join("\n") + "\n" + &compares.join("\n");
-                fs::OpenOptions::new()
-                    .write(true)
-                    .truncate(true)
-                    .open(txtpth)
-                    .expect("Failed to open txt output file")
-                    .write_all(res.as_bytes())
-                    .expect("Failed to write to txt output file");
             }
         }
     }
@@ -198,7 +207,7 @@ fn clear_fields(p: &mut svd::Peripheral) {
                         || r.name.ends_with("_AF1")
                         || r.name.ends_with("_TISEL")))
             {
-                println!("  r: {}", r.name);
+                //println!("  r: {}", r.name);
             }
         }
         if let Some(fields) = r.fields.as_mut() {
@@ -256,12 +265,14 @@ fn clean_register(r: &mut svd::Register) {
         for f in fields {
             f.description = None;
 
-            for evs in &mut f.enumerated_values {
+            f.enumerated_values.clear();
+            f.modified_write_values = None;
+            /*for evs in &mut f.enumerated_values {
                 evs.values.sort_by_key(|ev| ev.value);
                 for ev in &mut evs.values {
                     ev.description = None;
                 }
-            }
+            }*/
         }
     }
 }
