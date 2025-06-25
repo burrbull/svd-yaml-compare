@@ -111,9 +111,12 @@ fn main() {
 }
 
 fn sort_txts(pth: &path::Path, args: &Args) {
+    let mut dirs = BTreeSet::new();
+    let mut alldirs = BTreeSet::new();
     for dir in fs::read_dir(pth).unwrap() {
         if pth.is_dir() {
             let dirpth = path::PathBuf::from(dir.unwrap().path());
+            alldirs.insert(dirpth.clone());
             //println!("Group = {dirpth:?}");
             let mut txtpth = dirpth.clone();
             txtpth.push("peripherals.txt");
@@ -169,6 +172,9 @@ fn sort_txts(pth: &path::Path, args: &Args) {
                         }
                         compares.sort();
                         compares.reverse();
+                        if !compares.is_empty() {
+                            dirs.insert(dirpth.clone());
+                        }
 
                         res += &(format!("\n\nPrimary: {device} -> {dev_digest}\n\n")
                             + &compares.join("\n"));
@@ -183,6 +189,9 @@ fn sort_txts(pth: &path::Path, args: &Args) {
                 }
             }
         }
+    }
+    for d in alldirs.difference(&dirs) {
+        fs::remove_dir_all(d).unwrap();
     }
 }
 
