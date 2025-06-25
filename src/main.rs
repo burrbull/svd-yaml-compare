@@ -190,8 +190,10 @@ fn sort_txts(pth: &path::Path, args: &Args) {
             }
         }
     }
-    for d in alldirs.difference(&dirs) {
-        fs::remove_dir_all(d).unwrap();
+    if args.compare_with.is_some() {
+        for d in alldirs.difference(&dirs) {
+            fs::remove_dir_all(d).unwrap();
+        }
     }
 }
 
